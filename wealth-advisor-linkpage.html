@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wealth Advisor — Sydney</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #0B1B2B;
+    --navy-deep: #071320;
+    --cream: #F6F3EC;
+    --burgundy: #8C2F39;
+    --gold: #C6A15B;
+    --grey: #8C93A0;
+    --line: rgba(246,243,236,0.14);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  body{
+    background: var(--navy-deep);
+    background-image:
+      radial-gradient(ellipse 900px 500px at 50% -10%, rgba(140,47,57,0.25), transparent 60%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .page{
+    width: 100%;
+    max-width: 460px;
+    min-height: 100vh;
+    padding: 56px 28px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Signature element: an ascending horizon line — market chart meeting sunrise,
+     evoking transition beyond the business */
+  .horizon{
+    width: 100%;
+    height: 90px;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.15s forwards;
+  }
+  .horizon path{
+    stroke: var(--gold);
+    stroke-width: 1.4;
+    fill: none;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: draw 1.6s ease-out 0.3s forwards;
+  }
+  .horizon circle{
+    fill: var(--gold);
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out 1.7s forwards;
+  }
+
+  @keyframes draw{ to{ stroke-dashoffset: 0; } }
+  @keyframes fadeIn{ to{ opacity: 1; } }
+  @keyframes rise{ from{ opacity:0; transform: translateY(10px);} to{ opacity:1; transform: translateY(0);} }
+
+  .eyebrow{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    opacity: 0;
+    animation: rise 0.7s ease-out 0.5s forwards;
+  }
+
+  h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    opacity: 0;
+    animation: rise 0.7s ease-out 0.6s forwards;
+  }
+
+  .role{
+    font-size: 15px;
+    color: var(--grey);
+    margin-bottom: 26px;
+    opacity: 0;
+    animation: rise 0.7s ease-out 0.7s forwards;
+  }
+  .role strong{ color: var(--cream); font-weight: 500; }
+
+  .divider{
+    width: 36px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 26px;
+    opacity: 0;
+    animation: rise 0.7s ease-out 0.8s forwards;
+  }
+
+  .bio{
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: rgba(246,243,236,0.82);
+    margin-bottom: 34px;
+    opacity: 0;
+    animation: rise 0.7s ease-out 0.9s forwards;
+  }
+
+  .focus-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: rise 0.7s ease-out 1s forwards;
+  }
+  .tag{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    padding: 6px 11px;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    color: var(--grey);
+  }
+
+  .actions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: auto;
+  }
+  .actions a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 16px 18px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    opacity: 0;
+    animation: rise 0.7s ease-out forwards;
+  }
+  .actions a:nth-child(1){ animation-delay: 1.05s; }
+  .actions a:nth-child(2){ animation-delay: 1.12s; }
+  .actions a:nth-child(3){ animation-delay: 1.19s; }
+  .actions a:nth-child(4){ animation-delay: 1.26s; }
+
+  .actions a .arrow{ font-size: 15px; transition: transform 0.18s ease; }
+  .actions a:hover .arrow{ transform: translateX(3px); }
+  .actions a:active{ transform: scale(0.985); }
+
+  .primary{
+    background: var(--burgundy);
+    color: var(--cream);
+    border: 1px solid var(--burgundy);
+  }
+  .primary:hover{ background: #9C363F; }
+
+  .secondary{
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid var(--line);
+  }
+  .secondary:hover{ border-color: rgba(246,243,236,0.35); background: rgba(246,243,236,0.03); }
+
+  footer{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    opacity: 0;
+    animation: rise 0.7s ease-out 1.35s forwards;
+  }
+  .firm{
+    font-size: 12.5px;
+    color: var(--grey);
+    margin-bottom: 6px;
+  }
+  .disclosure{
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: rgba(140,147,160,0.65);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; animation-delay: 0s !important; }
+    .horizon path{ stroke-dashoffset: 0; }
+  }
+
+  a:focus-visible, .page:focus-visible{
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <svg class="horizon" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,68 C60,68 90,66 120,60 C160,52 170,30 210,22 C250,14 270,32 310,26 C340,21 360,15 400,10" />
+    <circle cx="400" cy="10" r="3.5"/>
+  </svg>
+
+  <div class="eyebrow">UBS · Global Wealth Management</div>
+
+  <h1>Addy&nbsp;Nehra, CFA</h1>
+  <p class="role">Senior Wealth Advisor, <strong>UBS Sydney</strong></p>
+
+  <div class="divider"></div>
+
+  <p class="bio">
+    I work with business owners before, during, and after an exit — structuring wealth ahead of a sale, managing liquidity once it lands, and planning what comes next for the family.
+  </p>
+
+  <div class="focus-row">
+    <span class="tag">EXIT PLANNING</span>
+    <span class="tag">SUCCESSION</span>
+    <span class="tag">FAMILY OFFICE</span>
+    <span class="tag">INVESTING</span>
+  </div>
+
+  <div class="actions">
+    <a class="primary" href="https://www.linkedin.com/in/addy-nehra" target="_blank" rel="noopener">
+      Connect on LinkedIn <span class="arrow">→</span>
+    </a>
+    <a class="secondary" href="https://wa.me/61422391448?text=Hi%2C%20I%27d%20like%20to%20get%20in%20touch" target="_blank" rel="noopener">
+      Message on WhatsApp <span class="arrow">→</span>
+    </a>
+    <a class="secondary" href="mailto:aditi.nehra@ubs.com">
+      Email me <span class="arrow">→</span>
+    </a>
+    <a class="secondary" href="tel:+61422391448">
+      Call direct <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <p class="firm">UBS Wealth Management Australia · Sydney</p>
+    <p class="disclosure">
+      This page is for informational purposes and does not constitute financial advice.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
