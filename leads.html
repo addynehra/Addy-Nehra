@@ -76,16 +76,17 @@
   }
   .chip.on{ color: var(--navy-deep); background: var(--gold); border-color: var(--gold); font-weight: 600; }
 
-  button.btn{
+  .btn{
     font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; padding: 9px 16px;
     border-radius: 6px; cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--cream);
-    transition: all 0.15s ease;
+    transition: all 0.15s ease; text-decoration: none;
   }
-  button.btn:hover{ border-color: rgba(246,243,236,0.35); background: rgba(246,243,236,0.03); }
-  button.btn.primary{ background: var(--burgundy); border-color: var(--burgundy); }
-  button.btn.primary:hover{ background: #9C363F; }
-  button.btn.gold{ background: var(--gold); border-color: var(--gold); color: var(--navy-deep); font-weight: 600; }
-  button.btn.small{ padding: 5px 10px; font-size: 11.5px; }
+  .btn:hover{ border-color: rgba(246,243,236,0.35); background: rgba(246,243,236,0.03); }
+  .btn.primary{ background: var(--burgundy); border-color: var(--burgundy); }
+  .btn.primary:hover{ background: #9C363F; }
+  .btn.gold{ background: var(--gold); border-color: var(--gold); color: var(--navy-deep); font-weight: 600; }
+  .btn.gold:hover{ background: #D4AE68; }
+  .btn.small{ padding: 5px 10px; font-size: 11.5px; }
 
   .output-box{
     background: rgba(0,0,0,0.25); border: 1px solid var(--line); border-radius: 6px;
