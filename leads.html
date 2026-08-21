@@ -154,6 +154,28 @@
 
   .empty-state{ text-align:center; padding: 40px 20px; color: var(--grey); font-size: 13px; }
 
+  code{
+    font-family: 'JetBrains Mono', monospace; font-size: 11.5px; background: rgba(246,243,236,0.06);
+    padding: 1px 5px; border-radius: 3px; color: var(--gold);
+  }
+
+  .news-item{
+    padding: 14px 0; border-bottom: 1px dashed var(--line); display:flex; flex-direction:column; gap: 6px;
+  }
+  .news-item:last-child{ border-bottom:none; }
+  .news-item .news-top{ display:flex; justify-content:space-between; align-items:baseline; gap: 10px; flex-wrap:wrap; }
+  .news-item .news-company{
+    font-family:'JetBrains Mono', monospace; font-size: 10.5px; text-transform:uppercase; letter-spacing:0.05em; color: var(--gold);
+  }
+  .news-item .news-date{ font-size: 11px; color: var(--grey); white-space:nowrap; }
+  .news-item .news-title{ font-size: 14px; line-height:1.4; }
+  .news-item .news-title a{ color: var(--cream); text-decoration:none; }
+  .news-item .news-title a:hover{ text-decoration: underline; color: var(--gold); }
+  .news-item .news-source{ font-size: 11.5px; color: var(--grey); }
+  .news-item .news-actions{ margin-top: 2px; }
+  .news-item .news-logged{ font-size: 11.5px; color: var(--good); }
+  .news-item .news-nomatch{ font-size: 11.5px; color: rgba(140,147,160,0.7); }
+
   footer.note{ margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 11px; color: rgba(140,147,160,0.65); line-height: 1.6; }
 </style>
 </head>
@@ -169,6 +191,7 @@
   <nav class="tabs">
     <button class="active" data-tab="search">Search Builder</button>
     <button data-tab="pipeline">Pipeline</button>
+    <button data-tab="news">News Signals</button>
     <button data-tab="templates">Outreach Templates</button>
   </nav>
 
@@ -336,6 +359,28 @@
         </table>
         <div class="empty-state" id="leads-empty" style="display:none;">No leads yet. Add one above or import a CSV.</div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWS SIGNALS ===================== -->
+  <section class="panel" id="tab-news">
+    <div class="card">
+      <h2>Automated exit-news watch</h2>
+      <p class="hint">A scheduled GitHub Action checks Google News once a day for each company in your watchlist, looking for exit-related coverage (acquisitions, succession, retirement, trade sales). Nothing here logs into LinkedIn — this only reads public news.</p>
+      <div id="news-status" class="hint" style="margin-bottom:0;">Loading…</div>
+    </div>
+
+    <div class="card">
+      <h2>Watchlist</h2>
+      <p class="hint">The automated check only looks at companies listed in <code>data/watchlist.json</code> in this repo. That file is separate from your local Pipeline (which never leaves this browser), so sync it manually when your pipeline changes: copy the JSON below and commit it to <code>data/watchlist.json</code>.</p>
+      <div class="output-box" id="watchlist-preview">(no companies in Pipeline yet)</div>
+      <button class="btn small" id="btn-copy-watchlist">Copy watchlist JSON</button>
+    </div>
+
+    <div class="card">
+      <h2>Matches</h2>
+      <div id="news-items-list"></div>
+      <div class="empty-state" id="news-empty" style="display:none;">No news matches yet.</div>
     </div>
   </section>
 
@@ -708,7 +753,7 @@
     if(leads.some(l => l.id === current)) sel.value = current;
   }
 
-  function renderAll(){ renderFunnel(); renderLeads(); renderTemplateLeadSelect(); }
+  function renderAll(){ renderFunnel(); renderLeads(); renderTemplateLeadSelect(); renderWatchlistPreview(); renderNewsItems(); }
 
   document.getElementById('btn-add-lead').addEventListener('click', () => {
     const name = document.getElementById('l-name').value.trim();
@@ -876,6 +921,105 @@
       navigator.clipboard.writeText(ta.value).then(() => flashCopied(btn));
     });
   });
+
+  // ---------- News Signals ----------
+  let newsData = null;       // { generatedAt, watchlistSize, items: [] } once loaded
+  let newsLoadFailed = false;
+
+  function renderWatchlistPreview(){
+    const companies = Array.from(new Set(leads.map(l => (l.company||'').trim()).filter(Boolean)));
+    const box = document.getElementById('watchlist-preview');
+    box.textContent = companies.length ? JSON.stringify(companies, null, 2) : '(no companies in Pipeline yet — add leads first)';
+  }
+  document.getElementById('btn-copy-watchlist').addEventListener('click', () => {
+    const companies = Array.from(new Set(leads.map(l => (l.company||'').trim()).filter(Boolean)));
+    navigator.clipboard.writeText(JSON.stringify(companies, null, 2))
+      .then(() => flashCopied(document.getElementById('btn-copy-watchlist')));
+  });
+
+  function findMatchingLead(company){
+    const c = (company||'').trim().toLowerCase();
+    if(!c) return null;
+    return leads.find(l => {
+      const lc = (l.company||'').trim().toLowerCase();
+      return lc && (lc === c || lc.includes(c) || c.includes(lc));
+    }) || null;
+  }
+
+  function formatNewsDate(pubDate){
+    if(!pubDate) return '';
+    const d = new Date(pubDate);
+    return isNaN(d) ? pubDate : d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+  }
+
+  function renderNewsItems(){
+    const statusEl = document.getElementById('news-status');
+    const listEl = document.getElementById('news-items-list');
+    const emptyEl = document.getElementById('news-empty');
+
+    if(newsLoadFailed){
+      statusEl.innerHTML = 'Could not load <code>data/news-results.json</code>. This tab needs the page served over http/https (e.g. your published site) — opening this file directly (file://) blocks the request. Once the News Watch GitHub Action has run at least once on the deployed site, this will populate automatically.';
+      listEl.innerHTML = '';
+      emptyEl.style.display = 'none';
+      return;
+    }
+    if(!newsData){
+      statusEl.textContent = 'Loading…';
+      return;
+    }
+
+    const when = newsData.generatedAt ? new Date(newsData.generatedAt).toLocaleString() : 'never (workflow hasn\'t run yet)';
+    statusEl.textContent = 'Last checked: ' + when + ' · watching ' + (newsData.watchlistSize||0) + ' compan' + ((newsData.watchlistSize||0) === 1 ? 'y' : 'ies') + ' · ' + (newsData.items||[]).length + ' match(es) on file';
+
+    const items = (newsData.items||[]).slice();
+    listEl.innerHTML = '';
+    emptyEl.style.display = items.length ? 'none' : 'block';
+
+    items.forEach(item => {
+      const lead = findMatchingLead(item.company);
+      const alreadyLogged = lead && lead.signalUrl === item.link;
+
+      const row = document.createElement('div');
+      row.className = 'news-item';
+      row.innerHTML =
+        '<div class="news-top">' +
+          '<span class="news-company">'+escapeHTML(item.company)+'</span>' +
+          '<span class="news-date">'+escapeHTML(formatNewsDate(item.pubDate))+'</span>' +
+        '</div>' +
+        '<div class="news-title"><a href="'+escapeAttr(item.link)+'" target="_blank" rel="noopener">'+escapeHTML(item.title)+'</a></div>' +
+        '<div class="news-source">'+escapeHTML(item.source||'')+'</div>' +
+        '<div class="news-actions"></div>';
+
+      const actions = row.querySelector('.news-actions');
+      if(alreadyLogged){
+        actions.innerHTML = '<span class="news-logged">✓ Logged to '+escapeHTML(lead.name||'lead')+'</span>';
+      } else if(lead){
+        const btn = document.createElement('button');
+        btn.className = 'btn small';
+        btn.textContent = 'Log signal to ' + (lead.name || 'lead');
+        btn.addEventListener('click', () => {
+          lead.signalType = 'News article';
+          lead.signalUrl = item.link;
+          lead.signalNote = (item.source ? item.source + ', ' : '') + formatNewsDate(item.pubDate) + ': ' + item.title;
+          saveLeads(leads);
+          renderAll();
+        });
+        actions.appendChild(btn);
+      } else {
+        const span = document.createElement('span');
+        span.className = 'news-nomatch';
+        span.textContent = 'No matching lead in Pipeline — add "' + item.company + '" as a lead to log this.';
+        actions.appendChild(span);
+      }
+
+      listEl.appendChild(row);
+    });
+  }
+
+  fetch('data/news-results.json')
+    .then(res => { if(!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+    .then(data => { newsData = data; renderNewsItems(); })
+    .catch(() => { newsLoadFailed = true; renderNewsItems(); });
 
   renderAll();
 })();
