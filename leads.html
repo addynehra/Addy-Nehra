@@ -192,7 +192,7 @@
         </div>
         <div>
           <label>Company headcount</label>
-          <input type="text" id="f-headcount" placeholder="11-200">
+          <input type="text" id="f-headcount" placeholder="51+">
         </div>
       </div>
       <div class="row">
@@ -203,6 +203,21 @@
         <div>
           <label>Years in current position</label>
           <input type="text" id="f-tenure" placeholder="10+">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Annual company revenue</label>
+          <input type="text" id="f-revenue" placeholder="$10M+">
+        </div>
+        <div>
+          <label>Minimum company size to qualify</label>
+          <select id="f-size-logic">
+            <option value="either">50+ employees OR $10M+ revenue</option>
+            <option value="headcount">50+ employees only</option>
+            <option value="revenue">$10M+ revenue only</option>
+            <option value="both">Both 50+ employees AND $10M+ revenue</option>
+          </select>
         </div>
       </div>
 
@@ -230,6 +245,7 @@
       <h2 style="margin-top:22px;">Filters to set manually</h2>
       <p class="hint">Apply these in the Sales Navigator filter panel after the search opens.</p>
       <ul class="filter-checklist" id="output-filters"></ul>
+      <p class="hint" id="output-size-note" style="margin-top:10px;"></p>
     </div>
   </section>
 
@@ -356,7 +372,9 @@
       titles: "Owner, Founder, Managing Director, CEO, Managing Partner",
       seniority: "Owner, Partner, CXO",
       geo: "Sydney, New South Wales, Australia",
-      headcount: "11-200",
+      headcount: "51+",
+      revenue: "$10M+",
+      sizeLogic: "either",
       industry: "",
       tenure: "10+",
       signals: ["succession planning", "exit strategy", "selling my business", "retiring"]
@@ -366,7 +384,9 @@
       titles: "Director, Vice President, General Manager, Next Generation",
       seniority: "Director, VP, Owner",
       geo: "Sydney, New South Wales, Australia",
-      headcount: "11-200",
+      headcount: "51+",
+      revenue: "$10M+",
+      sizeLogic: "either",
       industry: "",
       tenure: "5+",
       signals: ["family business", "second generation", "family office", "generational transition"]
@@ -376,14 +396,16 @@
       titles: "Founder, Co-Founder, Former CEO, Former Owner",
       seniority: "Owner, CXO",
       geo: "Sydney, New South Wales, Australia",
-      headcount: "",
+      headcount: "51+",
+      revenue: "$10M+",
+      sizeLogic: "either",
       industry: "",
       tenure: "",
       signals: ["sold my business", "acquired by", "recently exited", "post-exit"]
     },
     custom: {
       label: "Start from scratch",
-      titles: "", seniority: "", geo: "", headcount: "", industry: "", tenure: "", signals: []
+      titles: "", seniority: "", geo: "", headcount: "", revenue: "", sizeLogic: "either", industry: "", tenure: "", signals: []
     }
   };
 
@@ -417,6 +439,8 @@
     document.getElementById('f-seniority').value = p.seniority;
     document.getElementById('f-geo').value = p.geo;
     document.getElementById('f-headcount').value = p.headcount;
+    document.getElementById('f-revenue').value = p.revenue;
+    document.getElementById('f-size-logic').value = p.sizeLogic;
     document.getElementById('f-industry').value = p.industry;
     document.getElementById('f-tenure').value = p.tenure;
     document.getElementById('f-custom').value = '';
@@ -449,10 +473,15 @@
     const url = 'https://www.linkedin.com/sales/search/people?keywords=' + encodeURIComponent(boolean);
     document.getElementById('btn-open-navigator').href = url;
 
+    const headcount = document.getElementById('f-headcount').value.trim();
+    const revenue = document.getElementById('f-revenue').value.trim();
+    const sizeLogic = document.getElementById('f-size-logic').value;
+
     const filters = [
       ['Geography', document.getElementById('f-geo').value || '—'],
       ['Industry', document.getElementById('f-industry').value || '—'],
-      ['Company headcount', document.getElementById('f-headcount').value || '—'],
+      ['Company headcount', headcount || '—'],
+      ['Annual company revenue', revenue || '—'],
       ['Seniority level', document.getElementById('f-seniority').value || '—'],
       ['Years in current position', document.getElementById('f-tenure').value || '—']
     ];
@@ -463,6 +492,19 @@
       li.innerHTML = '<span class="fname">' + name + '</span><span class="fval">' + val + '</span>';
       list.appendChild(li);
     });
+
+    const note = document.getElementById('output-size-note');
+    if(headcount && revenue && sizeLogic === 'either'){
+      note.textContent = 'Note: Sales Navigator ANDs filters together, so it can\'t express "headcount OR revenue" in a single search. Run this search twice — once with only the headcount filter (' + headcount + ') applied, once with only the revenue filter (' + revenue + ') applied — then combine the results in your Pipeline. Selecting one qualifying filter is usually enough on its own.';
+    } else if(headcount && revenue && sizeLogic === 'both'){
+      note.textContent = 'Set both the headcount (' + headcount + ') and revenue (' + revenue + ') filters in the same search — Sales Navigator ANDs them together automatically.';
+    } else if(sizeLogic === 'headcount'){
+      note.textContent = 'Only the headcount filter (' + (headcount || 'not set') + ') is needed to qualify company size for this search.';
+    } else if(sizeLogic === 'revenue'){
+      note.textContent = 'Only the annual revenue filter (' + (revenue || 'not set') + ') is needed to qualify company size for this search.';
+    } else {
+      note.textContent = '';
+    }
   });
 
   document.getElementById('btn-copy-boolean').addEventListener('click', () => {
