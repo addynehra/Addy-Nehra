@@ -128,6 +128,12 @@
   .stage-Client{ background: var(--good); color: var(--navy-deep); border-color: var(--good); font-weight:600; }
   .stage-NotFit{ color: rgba(140,147,160,0.6); text-decoration: line-through; }
 
+  .signal-badge{
+    font-family:'JetBrains Mono', monospace; font-size: 10px; padding: 3px 8px; border-radius: 10px;
+    display:inline-block; border: 1px solid var(--gold); color: var(--gold); text-decoration:none; cursor: help;
+  }
+  .signal-none{ color: rgba(140,147,160,0.5); font-size: 12px; }
+
   .funnel{ display:flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
   .funnel .stat{
     background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; flex: 1 1 100px;
@@ -224,6 +230,10 @@
       <label>Exit-signal keyword phrases (click to toggle)</label>
       <div class="chip-group" id="signal-chips"></div>
 
+      <label>Recent-activity Spotlights (click to toggle)</label>
+      <p class="hint" style="margin-top:-8px;">These are Sales Navigator's own activity filters — not keyword-searchable, so they show up in the filter checklist below instead of the boolean string.</p>
+      <div class="chip-group" id="spotlight-chips"></div>
+
       <label>Additional custom keywords</label>
       <input type="text" id="f-custom" placeholder="e.g. \"family business\", \"retiring\"">
 
@@ -277,6 +287,26 @@
       </div>
       <label>Notes</label>
       <textarea id="l-notes" placeholder="Context, connection point, exit timeline signals..."></textarea>
+
+      <label>Exit signal (optional — from a news article, LinkedIn post, or other public source you found manually)</label>
+      <div class="row">
+        <div>
+          <label style="font-weight:400;">Signal type</label>
+          <select id="l-signal-type">
+            <option value="">No signal logged</option>
+            <option value="News article">News article</option>
+            <option value="LinkedIn post">LinkedIn post</option>
+            <option value="Job change">Job change</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-weight:400;">Source link</label>
+          <input type="url" id="l-signal-url" placeholder="https://...">
+        </div>
+      </div>
+      <label style="font-weight:400;">Signal summary</label>
+      <textarea id="l-signal-note" placeholder="e.g. Reuters, 12 Aug 2026: company exploring a sale process."></textarea>
       <div class="actions-row">
         <button class="btn primary" id="btn-add-lead">Add lead</button>
         <button class="btn" id="btn-import-csv-trigger">Import CSV</button>
@@ -298,7 +328,7 @@
         <table id="leads-table">
           <thead>
             <tr>
-              <th>Name</th><th>Company</th><th>Title</th><th>Stage</th><th>Follow-up</th><th>Source</th><th></th>
+              <th>Name</th><th>Company</th><th>Title</th><th>Stage</th><th>Signal</th><th>Follow-up</th><th>Source</th><th></th>
             </tr>
           </thead>
           <tbody id="leads-tbody"></tbody>
@@ -377,7 +407,8 @@
       sizeLogic: "either",
       industry: "",
       tenure: "10+",
-      signals: ["succession planning", "exit strategy", "selling my business", "retiring"]
+      signals: ["succession planning", "exit strategy", "selling my business", "retiring"],
+      spotlights: ["Posted on LinkedIn in the past 30 days"]
     },
     family_business: {
       label: "Family business successors",
@@ -389,7 +420,8 @@
       sizeLogic: "either",
       industry: "",
       tenure: "5+",
-      signals: ["family business", "second generation", "family office", "generational transition"]
+      signals: ["family business", "second generation", "family office", "generational transition"],
+      spotlights: []
     },
     liquidity_event: {
       label: "Recent liquidity event",
@@ -401,11 +433,12 @@
       sizeLogic: "either",
       industry: "",
       tenure: "",
-      signals: ["sold my business", "acquired by", "recently exited", "post-exit"]
+      signals: ["sold my business", "acquired by", "recently exited", "post-exit"],
+      spotlights: ["Changed jobs in the past 90 days"]
     },
     custom: {
       label: "Start from scratch",
-      titles: "", seniority: "", geo: "", headcount: "", revenue: "", sizeLogic: "either", industry: "", tenure: "", signals: []
+      titles: "", seniority: "", geo: "", headcount: "", revenue: "", sizeLogic: "either", industry: "", tenure: "", signals: [], spotlights: []
     }
   };
 
@@ -420,18 +453,23 @@
     "family business","second generation","family office","generational transition",
     "sold my business","acquired by","recently exited","post-exit","business transition","liquidity event"];
 
+  const ALL_SPOTLIGHTS = ["Posted on LinkedIn in the past 30 days", "Changed jobs in the past 90 days"];
+
   const chipContainer = document.getElementById('signal-chips');
-  function renderChips(activeList){
-    chipContainer.innerHTML = '';
-    ALL_SIGNALS.forEach(sig => {
+  const spotlightContainer = document.getElementById('spotlight-chips');
+  function renderChipSet(container, allValues, activeList){
+    container.innerHTML = '';
+    allValues.forEach(val => {
       const chip = document.createElement('span');
-      chip.className = 'chip' + (activeList.includes(sig) ? ' on' : '');
-      chip.textContent = sig;
-      chip.dataset.value = sig;
+      chip.className = 'chip' + (activeList.includes(val) ? ' on' : '');
+      chip.textContent = val;
+      chip.dataset.value = val;
       chip.addEventListener('click', () => chip.classList.toggle('on'));
-      chipContainer.appendChild(chip);
+      container.appendChild(chip);
     });
   }
+  function renderChips(activeList){ renderChipSet(chipContainer, ALL_SIGNALS, activeList); }
+  function renderSpotlightChips(activeList){ renderChipSet(spotlightContainer, ALL_SPOTLIGHTS, activeList); }
 
   function applyPreset(key){
     const p = PRESETS[key];
@@ -445,6 +483,7 @@
     document.getElementById('f-tenure').value = p.tenure;
     document.getElementById('f-custom').value = '';
     renderChips(p.signals);
+    renderSpotlightChips(p.spotlights);
     document.getElementById('output-card').style.display = 'none';
   }
   presetSelect.addEventListener('change', () => applyPreset(presetSelect.value));
@@ -476,6 +515,7 @@
     const headcount = document.getElementById('f-headcount').value.trim();
     const revenue = document.getElementById('f-revenue').value.trim();
     const sizeLogic = document.getElementById('f-size-logic').value;
+    const activeSpotlights = Array.from(spotlightContainer.querySelectorAll('.chip.on')).map(c => c.dataset.value);
 
     const filters = [
       ['Geography', document.getElementById('f-geo').value || '—'],
@@ -483,7 +523,8 @@
       ['Company headcount', headcount || '—'],
       ['Annual company revenue', revenue || '—'],
       ['Seniority level', document.getElementById('f-seniority').value || '—'],
-      ['Years in current position', document.getElementById('f-tenure').value || '—']
+      ['Years in current position', document.getElementById('f-tenure').value || '—'],
+      ['Spotlights (Recent activity filter)', activeSpotlights.length ? activeSpotlights.join('; ') : '—']
     ];
     const list = document.getElementById('output-filters');
     list.innerHTML = '';
@@ -577,11 +618,17 @@
       const nameCell = l.url
         ? '<a href="'+escapeAttr(l.url)+'" target="_blank" rel="noopener">'+escapeHTML(l.name||'(unnamed)')+'</a>'
         : escapeHTML(l.name||'(unnamed)');
+      const signalCell = l.signalType
+        ? (l.signalUrl
+            ? '<a class="signal-badge" href="'+escapeAttr(l.signalUrl)+'" target="_blank" rel="noopener" title="'+escapeAttr(l.signalNote||'')+'">'+escapeHTML(l.signalType)+'</a>'
+            : '<span class="signal-badge" title="'+escapeAttr(l.signalNote||'')+'">'+escapeHTML(l.signalType)+'</span>')
+        : '<span class="signal-none">—</span>';
       tr.innerHTML =
         '<td>'+nameCell+'</td>' +
         '<td>'+escapeHTML(l.company||'')+'</td>' +
         '<td>'+escapeHTML(l.title||'')+'</td>' +
         '<td><select class="stage-select" data-id="'+l.id+'">'+stageOptionsHTML(l.stage)+'</select></td>' +
+        '<td>'+signalCell+'</td>' +
         '<td>'+escapeHTML(l.followup||'—')+'</td>' +
         '<td>'+escapeHTML(l.source||'manual')+'</td>' +
         '<td><button class="icon-btn" data-del="'+l.id+'" title="Delete">✕</button></td>';
@@ -635,14 +682,18 @@
       stage: document.getElementById('l-stage').value,
       followup: document.getElementById('l-followup').value,
       notes: document.getElementById('l-notes').value.trim(),
+      signalType: document.getElementById('l-signal-type').value,
+      signalUrl: document.getElementById('l-signal-url').value.trim(),
+      signalNote: document.getElementById('l-signal-note').value.trim(),
       source: 'manual',
       added: new Date().toISOString().slice(0,10)
     };
     leads.push(lead);
     saveLeads(leads);
-    ['l-name','l-company','l-title','l-url','l-industry','l-location','l-notes'].forEach(id => document.getElementById(id).value = '');
+    ['l-name','l-company','l-title','l-url','l-industry','l-location','l-notes','l-signal-url','l-signal-note'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('l-followup').value = '';
     document.getElementById('l-stage').value = 'New';
+    document.getElementById('l-signal-type').value = '';
     renderAll();
   });
 
@@ -651,7 +702,7 @@
 
   // CSV export
   function toCSV(rows){
-    const headers = ['name','company','title','url','industry','location','stage','followup','notes','source','added'];
+    const headers = ['name','company','title','url','industry','location','stage','followup','notes','signalType','signalUrl','signalNote','source','added'];
     const lines = [headers.join(',')];
     rows.forEach(r => {
       lines.push(headers.map(h => csvEscape(r[h] ?? '')).join(','));
@@ -727,6 +778,9 @@
           stage: (idx['stage'] !== undefined && STAGES.includes(r[idx['stage']])) ? r[idx['stage']] : 'New',
           followup: idx['followup'] !== undefined ? r[idx['followup']] : '',
           notes: idx['notes'] !== undefined ? r[idx['notes']] : '',
+          signalType: idx['signaltype'] !== undefined ? r[idx['signaltype']] : '',
+          signalUrl: idx['signalurl'] !== undefined ? r[idx['signalurl']] : '',
+          signalNote: idx['signalnote'] !== undefined ? r[idx['signalnote']] : '',
           source: 'csv-import',
           added: new Date().toISOString().slice(0,10)
         });
