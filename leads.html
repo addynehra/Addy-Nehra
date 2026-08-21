@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lead Pipeline — Sales Navigator Toolkit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #0B1B2B;
+    --navy-deep: #071320;
+    --panel: #0F2237;
+    --cream: #F6F3EC;
+    --burgundy: #8C2F39;
+    --gold: #C6A15B;
+    --grey: #8C93A0;
+    --line: rgba(246,243,236,0.14);
+    --good: #5FA88A;
+    --warn: #C6A15B;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{
+    background: var(--navy-deep);
+    background-image: radial-gradient(ellipse 900px 500px at 50% -10%, rgba(140,47,57,0.18), transparent 60%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+  }
+  .wrap{ max-width: 980px; margin: 0 auto; padding: 40px 24px 80px; }
+  header.top{ margin-bottom: 28px; }
+  .eyebrow{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px;
+  }
+  h1{ font-family: 'Fraunces', serif; font-weight: 500; font-size: 30px; margin-bottom: 6px; }
+  .sub{ color: var(--grey); font-size: 14px; max-width: 640px; line-height: 1.5; }
+
+  nav.tabs{ display:flex; gap: 8px; margin: 28px 0 20px; border-bottom: 1px solid var(--line); }
+  nav.tabs button{
+    background: none; border: none; color: var(--grey); font-family: 'Inter', sans-serif;
+    font-size: 13.5px; font-weight: 500; padding: 10px 4px; margin-right: 18px; cursor: pointer;
+    border-bottom: 2px solid transparent; transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  nav.tabs button.active{ color: var(--cream); border-bottom-color: var(--gold); }
+  nav.tabs button:hover{ color: var(--cream); }
+
+  section.panel{ display: none; }
+  section.panel.active{ display: block; }
+
+  .card{
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 22px; margin-bottom: 18px;
+  }
+  .card h2{ font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; margin-bottom: 4px; }
+  .card .hint{ color: var(--grey); font-size: 12.5px; margin-bottom: 16px; line-height: 1.5; }
+
+  label{ display:block; font-size: 12px; color: var(--grey); margin-bottom: 6px; font-weight: 500; }
+  input[type=text], input[type=date], input[type=url], select, textarea{
+    width: 100%; background: rgba(246,243,236,0.04); border: 1px solid var(--line); color: var(--cream);
+    padding: 10px 12px; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 13.5px;
+    margin-bottom: 14px; outline: none;
+  }
+  input:focus, select:focus, textarea:focus{ border-color: var(--gold); }
+  textarea{ resize: vertical; min-height: 64px; }
+  .row{ display:flex; gap: 14px; flex-wrap: wrap; }
+  .row > div{ flex: 1 1 200px; }
+
+  .chip-group{ display:flex; flex-wrap:wrap; gap: 8px; margin-bottom: 14px; }
+  .chip{
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 6px 10px;
+    border: 1px solid var(--line); border-radius: 20px; color: var(--grey); cursor: pointer;
+    transition: all 0.15s ease; user-select: none;
+  }
+  .chip.on{ color: var(--navy-deep); background: var(--gold); border-color: var(--gold); font-weight: 600; }
+
+  button.btn{
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; padding: 9px 16px;
+    border-radius: 6px; cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--cream);
+    transition: all 0.15s ease;
+  }
+  button.btn:hover{ border-color: rgba(246,243,236,0.35); background: rgba(246,243,236,0.03); }
+  button.btn.primary{ background: var(--burgundy); border-color: var(--burgundy); }
+  button.btn.primary:hover{ background: #9C363F; }
+  button.btn.gold{ background: var(--gold); border-color: var(--gold); color: var(--navy-deep); font-weight: 600; }
+  button.btn.small{ padding: 5px 10px; font-size: 11.5px; }
+
+  .output-box{
+    background: rgba(0,0,0,0.25); border: 1px solid var(--line); border-radius: 6px;
+    padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--cream);
+    line-height: 1.6; white-space: pre-wrap; word-break: break-word; margin-bottom: 12px;
+  }
+  .actions-row{ display:flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+
+  .filter-checklist{ list-style:none; margin-bottom: 8px; }
+  .filter-checklist li{
+    display:flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--line);
+    font-size: 13px;
+  }
+  .filter-checklist li:last-child{ border-bottom:none; }
+  .filter-checklist .fname{ color: var(--grey); }
+  .filter-checklist .fval{ color: var(--cream); font-weight: 500; text-align:right; }
+
+  table{ width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th{
+    text-align:left; font-family:'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--grey); padding: 8px 8px; border-bottom: 1px solid var(--line);
+  }
+  td{ padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tr:hover td{ background: rgba(246,243,236,0.02); }
+  td a{ color: var(--gold); text-decoration: none; }
+  td a:hover{ text-decoration: underline; }
+  select.stage-select{ margin:0; padding: 5px 8px; font-size: 11.5px; }
+  .table-wrap{ overflow-x: auto; }
+
+  .stage-badge{
+    font-family:'JetBrains Mono', monospace; font-size: 10px; padding: 3px 8px; border-radius: 10px;
+    display:inline-block; border: 1px solid var(--line); color: var(--grey);
+  }
+  .stage-New{ color: var(--grey); }
+  .stage-Connected{ color: var(--gold); border-color: var(--gold); }
+  .stage-Messaged{ color: var(--gold); border-color: var(--gold); }
+  .stage-Replied{ color: var(--good); border-color: var(--good); }
+  .stage-Meeting{ color: var(--good); border-color: var(--good); }
+  .stage-Client{ background: var(--good); color: var(--navy-deep); border-color: var(--good); font-weight:600; }
+  .stage-NotFit{ color: rgba(140,147,160,0.6); text-decoration: line-through; }
+
+  .funnel{ display:flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+  .funnel .stat{
+    background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; flex: 1 1 100px;
+  }
+  .funnel .stat .num{ font-family:'Fraunces', serif; font-size: 22px; color: var(--gold); }
+  .funnel .stat .lbl{ font-size: 10.5px; color: var(--grey); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+
+  .toolbar{ display:flex; gap:10px; flex-wrap: wrap; align-items:center; margin-bottom: 16px; }
+  .toolbar input, .toolbar select{ margin-bottom:0; width: auto; min-width: 160px; }
+  .toolbar .grow{ flex: 1 1 auto; }
+
+  .template-card{ margin-bottom: 14px; }
+  .charcount{ font-size: 11px; color: var(--grey); text-align:right; margin-top: -8px; margin-bottom: 12px; }
+  .charcount.over{ color: var(--burgundy); font-weight: 600; }
+
+  .icon-btn{ background:none; border:none; color: var(--grey); cursor:pointer; font-size: 14px; padding: 2px 4px; }
+  .icon-btn:hover{ color: var(--cream); }
+
+  .empty-state{ text-align:center; padding: 40px 20px; color: var(--grey); font-size: 13px; }
+
+  footer.note{ margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 11px; color: rgba(140,147,160,0.65); line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">Internal Tool · Not for client distribution</div>
+    <h1>Sales Navigator Lead Toolkit</h1>
+    <p class="sub">Build targeted search queries for LinkedIn Sales Navigator, track prospects through your pipeline, and send consistent outreach — all run manually in your browser, nothing here logs into LinkedIn or scrapes it. Data is stored only on this device (localStorage).</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="active" data-tab="search">Search Builder</button>
+    <button data-tab="pipeline">Pipeline</button>
+    <button data-tab="templates">Outreach Templates</button>
+  </nav>
+
+  <!-- ===================== SEARCH BUILDER ===================== -->
+  <section class="panel active" id="tab-search">
+    <div class="card">
+      <h2>Ideal Client Profile</h2>
+      <p class="hint">Pick a preset for your niche (business owners approaching an exit) or start from scratch, then tune it. This produces (1) a boolean keyword string to paste into Sales Navigator's search box and (2) a checklist of filters to set manually in the Sales Navigator UI — Sales Navigator doesn't support deep-linking filters via URL, so those still need a couple of clicks.</p>
+
+      <label>Preset</label>
+      <select id="preset-select"></select>
+
+      <div class="row">
+        <div>
+          <label>Job titles (comma-separated)</label>
+          <input type="text" id="f-titles" placeholder="Owner, Founder, Managing Director, CEO">
+        </div>
+        <div>
+          <label>Seniority level</label>
+          <input type="text" id="f-seniority" placeholder="Owner, Partner, CXO">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Geography</label>
+          <input type="text" id="f-geo" placeholder="Sydney, New South Wales, Australia">
+        </div>
+        <div>
+          <label>Company headcount</label>
+          <input type="text" id="f-headcount" placeholder="11-200">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Industry</label>
+          <input type="text" id="f-industry" placeholder="e.g. Construction, Manufacturing, Professional Services">
+        </div>
+        <div>
+          <label>Years in current position</label>
+          <input type="text" id="f-tenure" placeholder="10+">
+        </div>
+      </div>
+
+      <label>Exit-signal keyword phrases (click to toggle)</label>
+      <div class="chip-group" id="signal-chips"></div>
+
+      <label>Additional custom keywords</label>
+      <input type="text" id="f-custom" placeholder="e.g. \"family business\", \"retiring\"">
+
+      <div class="actions-row">
+        <button class="btn primary" id="btn-generate">Generate query</button>
+        <button class="btn" id="btn-reset-search">Reset</button>
+      </div>
+    </div>
+
+    <div class="card" id="output-card" style="display:none;">
+      <h2>Boolean keyword string</h2>
+      <p class="hint">Paste this into the keyword field of Sales Navigator's Lead Search.</p>
+      <div class="output-box" id="output-boolean"></div>
+      <div class="actions-row">
+        <button class="btn small" id="btn-copy-boolean">Copy string</button>
+        <a class="btn small gold" id="btn-open-navigator" href="#" target="_blank" rel="noopener" style="text-decoration:none; display:inline-block;">Open in Sales Navigator →</a>
+      </div>
+
+      <h2 style="margin-top:22px;">Filters to set manually</h2>
+      <p class="hint">Apply these in the Sales Navigator filter panel after the search opens.</p>
+      <ul class="filter-checklist" id="output-filters"></ul>
+    </div>
+  </section>
+
+  <!-- ===================== PIPELINE ===================== -->
+  <section class="panel" id="tab-pipeline">
+    <div class="funnel" id="funnel-stats"></div>
+
+    <div class="card">
+      <h2>Add a lead</h2>
+      <p class="hint">Add prospects you find in Sales Navigator here (copy their name, title, company, and profile URL manually).</p>
+      <div class="row">
+        <div><label>Full name</label><input type="text" id="l-name"></div>
+        <div><label>Company</label><input type="text" id="l-company"></div>
+      </div>
+      <div class="row">
+        <div><label>Title</label><input type="text" id="l-title"></div>
+        <div><label>LinkedIn profile URL</label><input type="url" id="l-url" placeholder="https://www.linkedin.com/in/..."></div>
+      </div>
+      <div class="row">
+        <div><label>Industry</label><input type="text" id="l-industry"></div>
+        <div><label>Location</label><input type="text" id="l-location"></div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Stage</label>
+          <select id="l-stage"></select>
+        </div>
+        <div><label>Next follow-up</label><input type="date" id="l-followup"></div>
+      </div>
+      <label>Notes</label>
+      <textarea id="l-notes" placeholder="Context, connection point, exit timeline signals..."></textarea>
+      <div class="actions-row">
+        <button class="btn primary" id="btn-add-lead">Add lead</button>
+        <button class="btn" id="btn-import-csv-trigger">Import CSV</button>
+        <input type="file" id="csv-file" accept=".csv" style="display:none;">
+        <button class="btn" id="btn-export-csv">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="toolbar">
+        <input type="text" id="search-filter" placeholder="Search name or company...">
+        <select id="stage-filter">
+          <option value="">All stages</option>
+        </select>
+        <div class="grow"></div>
+        <span class="hint" id="lead-count" style="margin:0;"></span>
+      </div>
+      <div class="table-wrap">
+        <table id="leads-table">
+          <thead>
+            <tr>
+              <th>Name</th><th>Company</th><th>Title</th><th>Stage</th><th>Follow-up</th><th>Source</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody"></tbody>
+        </table>
+        <div class="empty-state" id="leads-empty" style="display:none;">No leads yet. Add one above or import a CSV.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEMPLATES ===================== -->
+  <section class="panel" id="tab-templates">
+    <div class="card">
+      <h2>Preview with a lead</h2>
+      <p class="hint">Pick a lead to fill in {{firstName}} and {{company}} below, or leave blank to see raw placeholders.</p>
+      <select id="template-lead-select"><option value="">— no lead selected —</option></select>
+    </div>
+
+    <div class="card template-card" id="tmpl-connection">
+      <h2>Connection request note</h2>
+      <p class="hint">LinkedIn limits connection notes to 300 characters.</p>
+      <textarea class="tmpl-text" data-default="Hi {{firstName}}, I work with founders and owners on structuring wealth ahead of an exit. Came across your profile at {{company}} and would love to connect."></textarea>
+      <div class="charcount">0 / 300</div>
+      <button class="btn small" data-action="copy">Copy</button>
+    </div>
+
+    <div class="card template-card" id="tmpl-followup1">
+      <h2>Follow-up message #1 (after connecting)</h2>
+      <textarea class="tmpl-text" data-default="Thanks for connecting, {{firstName}}. I help business owners like yourself at {{company}} think through the financial side of an eventual exit — liquidity structuring, timing, and what comes after. Happy to share what I'm seeing with similar founders if useful, no pressure either way."></textarea>
+      <div class="charcount"></div>
+      <button class="btn small" data-action="copy">Copy</button>
+    </div>
+
+    <div class="card template-card" id="tmpl-followup2">
+      <h2>Follow-up message #2 (no reply, 1-2 weeks later)</h2>
+      <textarea class="tmpl-text" data-default="Hi {{firstName}}, following up in case this got buried. I put together some notes on exit-readiness for owners in situations like {{company}}'s — happy to send them over or jump on a short call, whichever is easier."></textarea>
+      <div class="charcount"></div>
+      <button class="btn small" data-action="copy">Copy</button>
+    </div>
+
+    <div class="card template-card" id="tmpl-meeting">
+      <h2>Meeting request</h2>
+      <textarea class="tmpl-text" data-default="{{firstName}}, would a 20-minute call make sense in the next couple of weeks? I'd like to understand where you're at with {{company}} and share how I typically work with owners approaching a sale or succession. Here's a link to grab a time: [scheduling link]"></textarea>
+      <div class="charcount"></div>
+      <button class="btn small" data-action="copy">Copy</button>
+    </div>
+  </section>
+
+  <footer class="note">
+    This tool does not connect to LinkedIn, does not automate logins, and does not scrape data. All searches must be run manually inside Sales Navigator by a licensed seat, and all lead data you enter is stored locally in this browser only (localStorage) — clearing browser data will remove it. Export CSV regularly if you want a backup.
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- Tabs ----------
+  document.querySelectorAll('nav.tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('nav.tabs button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('section.panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // ---------- Search Builder ----------
+  const PRESETS = {
+    exit_ready: {
+      label: "Business owners nearing exit",
+      titles: "Owner, Founder, Managing Director, CEO, Managing Partner",
+      seniority: "Owner, Partner, CXO",
+      geo: "Sydney, New South Wales, Australia",
+      headcount: "11-200",
+      industry: "",
+      tenure: "10+",
+      signals: ["succession planning", "exit strategy", "selling my business", "retiring"]
+    },
+    family_business: {
+      label: "Family business successors",
+      titles: "Director, Vice President, General Manager, Next Generation",
+      seniority: "Director, VP, Owner",
+      geo: "Sydney, New South Wales, Australia",
+      headcount: "11-200",
+      industry: "",
+      tenure: "5+",
+      signals: ["family business", "second generation", "family office", "generational transition"]
+    },
+    liquidity_event: {
+      label: "Recent liquidity event",
+      titles: "Founder, Co-Founder, Former CEO, Former Owner",
+      seniority: "Owner, CXO",
+      geo: "Sydney, New South Wales, Australia",
+      headcount: "",
+      industry: "",
+      tenure: "",
+      signals: ["sold my business", "acquired by", "recently exited", "post-exit"]
+    },
+    custom: {
+      label: "Start from scratch",
+      titles: "", seniority: "", geo: "", headcount: "", industry: "", tenure: "", signals: []
+    }
+  };
+
+  const presetSelect = document.getElementById('preset-select');
+  Object.entries(PRESETS).forEach(([key, p]) => {
+    const opt = document.createElement('option');
+    opt.value = key; opt.textContent = p.label;
+    presetSelect.appendChild(opt);
+  });
+
+  const ALL_SIGNALS = ["succession planning","exit strategy","selling my business","retiring",
+    "family business","second generation","family office","generational transition",
+    "sold my business","acquired by","recently exited","post-exit","business transition","liquidity event"];
+
+  const chipContainer = document.getElementById('signal-chips');
+  function renderChips(activeList){
+    chipContainer.innerHTML = '';
+    ALL_SIGNALS.forEach(sig => {
+      const chip = document.createElement('span');
+      chip.className = 'chip' + (activeList.includes(sig) ? ' on' : '');
+      chip.textContent = sig;
+      chip.dataset.value = sig;
+      chip.addEventListener('click', () => chip.classList.toggle('on'));
+      chipContainer.appendChild(chip);
+    });
+  }
+
+  function applyPreset(key){
+    const p = PRESETS[key];
+    document.getElementById('f-titles').value = p.titles;
+    document.getElementById('f-seniority').value = p.seniority;
+    document.getElementById('f-geo').value = p.geo;
+    document.getElementById('f-headcount').value = p.headcount;
+    document.getElementById('f-industry').value = p.industry;
+    document.getElementById('f-tenure').value = p.tenure;
+    document.getElementById('f-custom').value = '';
+    renderChips(p.signals);
+    document.getElementById('output-card').style.display = 'none';
+  }
+  presetSelect.addEventListener('change', () => applyPreset(presetSelect.value));
+  applyPreset('exit_ready');
+
+  document.getElementById('btn-reset-search').addEventListener('click', () => {
+    presetSelect.value = 'custom';
+    applyPreset('custom');
+  });
+
+  document.getElementById('btn-generate').addEventListener('click', () => {
+    const titles = document.getElementById('f-titles').value.split(',').map(s=>s.trim()).filter(Boolean);
+    const activeSignals = Array.from(chipContainer.querySelectorAll('.chip.on')).map(c => c.dataset.value);
+    const custom = document.getElementById('f-custom').value.trim();
+
+    const titlePart = titles.length ? '(' + titles.map(t => '"' + t + '"').join(' OR ') + ')' : '';
+    const signalPart = activeSignals.length ? '(' + activeSignals.map(s => '"' + s + '"').join(' OR ') + ')' : '';
+    const customPart = custom ? custom : '';
+
+    const parts = [titlePart, signalPart, customPart].filter(Boolean);
+    const boolean = parts.join(' AND ');
+
+    document.getElementById('output-boolean').textContent = boolean || '(no keywords selected)';
+    document.getElementById('output-card').style.display = 'block';
+
+    const url = 'https://www.linkedin.com/sales/search/people?keywords=' + encodeURIComponent(boolean);
+    document.getElementById('btn-open-navigator').href = url;
+
+    const filters = [
+      ['Geography', document.getElementById('f-geo').value || '—'],
+      ['Industry', document.getElementById('f-industry').value || '—'],
+      ['Company headcount', document.getElementById('f-headcount').value || '—'],
+      ['Seniority level', document.getElementById('f-seniority').value || '—'],
+      ['Years in current position', document.getElementById('f-tenure').value || '—']
+    ];
+    const list = document.getElementById('output-filters');
+    list.innerHTML = '';
+    filters.forEach(([name, val]) => {
+      const li = document.createElement('li');
+      li.innerHTML = '<span class="fname">' + name + '</span><span class="fval">' + val + '</span>';
+      list.appendChild(li);
+    });
+  });
+
+  document.getElementById('btn-copy-boolean').addEventListener('click', () => {
+    const text = document.getElementById('output-boolean').textContent;
+    navigator.clipboard.writeText(text).then(() => flashCopied(document.getElementById('btn-copy-boolean')));
+  });
+
+  function flashCopied(btn){
+    const orig = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = orig, 1200);
+  }
+
+  // ---------- Pipeline (CRM) ----------
+  const STAGES = ['New','Connected','Messaged','Replied','Meeting','Client','NotFit'];
+  const STAGE_LABELS = {New:'New', Connected:'Connected', Messaged:'Messaged', Replied:'Replied', Meeting:'Meeting Booked', Client:'Client', NotFit:'Not a Fit'};
+
+  function loadLeads(){
+    try{ return JSON.parse(localStorage.getItem('sn_leads') || '[]'); }
+    catch(e){ return []; }
+  }
+  function saveLeads(leads){ localStorage.setItem('sn_leads', JSON.stringify(leads)); }
+  let leads = loadLeads();
+
+  function stageOptionsHTML(selected){
+    return STAGES.map(s => '<option value="'+s+'"'+(s===selected?' selected':'')+'>'+STAGE_LABELS[s]+'</option>').join('');
+  }
+  document.getElementById('l-stage').innerHTML = stageOptionsHTML('New');
+
+  const stageFilter = document.getElementById('stage-filter');
+  STAGES.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s; opt.textContent = STAGE_LABELS[s];
+    stageFilter.appendChild(opt);
+  });
+
+  function uid(){ return 'l_' + Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+
+  function renderFunnel(){
+    const counts = {};
+    STAGES.forEach(s => counts[s] = 0);
+    leads.forEach(l => counts[l.stage] = (counts[l.stage]||0) + 1);
+    const el = document.getElementById('funnel-stats');
+    el.innerHTML = '';
+    STAGES.forEach(s => {
+      const div = document.createElement('div');
+      div.className = 'stat';
+      div.innerHTML = '<div class="num">'+counts[s]+'</div><div class="lbl">'+STAGE_LABELS[s]+'</div>';
+      el.appendChild(div);
+    });
+  }
+
+  function renderLeads(){
+    const searchVal = document.getElementById('search-filter').value.trim().toLowerCase();
+    const stageVal = stageFilter.value;
+    const tbody = document.getElementById('leads-tbody');
+    tbody.innerHTML = '';
+
+    const filtered = leads.filter(l => {
+      const matchesSearch = !searchVal || (l.name||'').toLowerCase().includes(searchVal) || (l.company||'').toLowerCase().includes(searchVal);
+      const matchesStage = !stageVal || l.stage === stageVal;
+      return matchesSearch && matchesStage;
+    });
+
+    document.getElementById('lead-count').textContent = filtered.length + ' of ' + leads.length + ' leads';
+    document.getElementById('leads-empty').style.display = filtered.length ? 'none' : 'block';
+
+    filtered.slice().reverse().forEach(l => {
+      const tr = document.createElement('tr');
+      const nameCell = l.url
+        ? '<a href="'+escapeAttr(l.url)+'" target="_blank" rel="noopener">'+escapeHTML(l.name||'(unnamed)')+'</a>'
+        : escapeHTML(l.name||'(unnamed)');
+      tr.innerHTML =
+        '<td>'+nameCell+'</td>' +
+        '<td>'+escapeHTML(l.company||'')+'</td>' +
+        '<td>'+escapeHTML(l.title||'')+'</td>' +
+        '<td><select class="stage-select" data-id="'+l.id+'">'+stageOptionsHTML(l.stage)+'</select></td>' +
+        '<td>'+escapeHTML(l.followup||'—')+'</td>' +
+        '<td>'+escapeHTML(l.source||'manual')+'</td>' +
+        '<td><button class="icon-btn" data-del="'+l.id+'" title="Delete">✕</button></td>';
+      tbody.appendChild(tr);
+    });
+
+    tbody.querySelectorAll('.stage-select').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const lead = leads.find(x => x.id === sel.dataset.id);
+        if(lead){ lead.stage = sel.value; saveLeads(leads); renderFunnel(); }
+      });
+    });
+    tbody.querySelectorAll('[data-del]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        leads = leads.filter(x => x.id !== btn.dataset.del);
+        saveLeads(leads); renderAll();
+      });
+    });
+  }
+
+  function escapeHTML(s){
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function escapeAttr(s){ return escapeHTML(s); }
+
+  function renderTemplateLeadSelect(){
+    const sel = document.getElementById('template-lead-select');
+    const current = sel.value;
+    sel.innerHTML = '<option value="">— no lead selected —</option>';
+    leads.forEach(l => {
+      const opt = document.createElement('option');
+      opt.value = l.id; opt.textContent = (l.name||'(unnamed)') + (l.company ? ' — '+l.company : '');
+      sel.appendChild(opt);
+    });
+    if(leads.some(l => l.id === current)) sel.value = current;
+  }
+
+  function renderAll(){ renderFunnel(); renderLeads(); renderTemplateLeadSelect(); }
+
+  document.getElementById('btn-add-lead').addEventListener('click', () => {
+    const name = document.getElementById('l-name').value.trim();
+    if(!name){ document.getElementById('l-name').focus(); return; }
+    const lead = {
+      id: uid(),
+      name,
+      company: document.getElementById('l-company').value.trim(),
+      title: document.getElementById('l-title').value.trim(),
+      url: document.getElementById('l-url').value.trim(),
+      industry: document.getElementById('l-industry').value.trim(),
+      location: document.getElementById('l-location').value.trim(),
+      stage: document.getElementById('l-stage').value,
+      followup: document.getElementById('l-followup').value,
+      notes: document.getElementById('l-notes').value.trim(),
+      source: 'manual',
+      added: new Date().toISOString().slice(0,10)
+    };
+    leads.push(lead);
+    saveLeads(leads);
+    ['l-name','l-company','l-title','l-url','l-industry','l-location','l-notes'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('l-followup').value = '';
+    document.getElementById('l-stage').value = 'New';
+    renderAll();
+  });
+
+  document.getElementById('search-filter').addEventListener('input', renderLeads);
+  stageFilter.addEventListener('change', renderLeads);
+
+  // CSV export
+  function toCSV(rows){
+    const headers = ['name','company','title','url','industry','location','stage','followup','notes','source','added'];
+    const lines = [headers.join(',')];
+    rows.forEach(r => {
+      lines.push(headers.map(h => csvEscape(r[h] ?? '')).join(','));
+    });
+    return lines.join('\n');
+  }
+  function csvEscape(val){
+    const s = String(val);
+    if(/[",\n]/.test(s)) return '"' + s.replace(/"/g,'""') + '"';
+    return s;
+  }
+  document.getElementById('btn-export-csv').addEventListener('click', () => {
+    const csv = toCSV(leads);
+    const blob = new Blob([csv], {type: 'text/csv'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'leads-export-' + new Date().toISOString().slice(0,10) + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  });
+
+  // CSV import — small parser handling quoted fields and commas
+  function parseCSV(text){
+    const rows = [];
+    let row = [], field = '', inQuotes = false;
+    for(let i=0; i<text.length; i++){
+      const c = text[i];
+      if(inQuotes){
+        if(c === '"'){
+          if(text[i+1] === '"'){ field += '"'; i++; }
+          else inQuotes = false;
+        } else field += c;
+      } else {
+        if(c === '"') inQuotes = true;
+        else if(c === ','){ row.push(field); field = ''; }
+        else if(c === '\n' || c === '\r'){
+          if(c === '\r' && text[i+1] === '\n') i++;
+          row.push(field); field = '';
+          if(row.length > 1 || row[0] !== '') rows.push(row);
+          row = [];
+        } else field += c;
+      }
+    }
+    if(field !== '' || row.length){ row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  document.getElementById('btn-import-csv-trigger').addEventListener('click', () => {
+    document.getElementById('csv-file').click();
+  });
+  document.getElementById('csv-file').addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const rows = parseCSV(reader.result);
+      if(!rows.length) return;
+      const header = rows[0].map(h => h.trim().toLowerCase());
+      const idx = {};
+      header.forEach((h,i) => idx[h] = i);
+
+      const nameIdx = idx['name'] ?? idx['full name'] ?? idx['fullname'];
+      let imported = 0;
+      rows.slice(1).forEach(r => {
+        if(nameIdx === undefined || !r[nameIdx]) return;
+        leads.push({
+          id: uid(),
+          name: r[nameIdx] || '',
+          company: idx['company'] !== undefined ? r[idx['company']] : '',
+          title: idx['title'] !== undefined ? r[idx['title']] : '',
+          url: idx['url'] !== undefined ? r[idx['url']] : (idx['linkedin'] !== undefined ? r[idx['linkedin']] : ''),
+          industry: idx['industry'] !== undefined ? r[idx['industry']] : '',
+          location: idx['location'] !== undefined ? r[idx['location']] : '',
+          stage: (idx['stage'] !== undefined && STAGES.includes(r[idx['stage']])) ? r[idx['stage']] : 'New',
+          followup: idx['followup'] !== undefined ? r[idx['followup']] : '',
+          notes: idx['notes'] !== undefined ? r[idx['notes']] : '',
+          source: 'csv-import',
+          added: new Date().toISOString().slice(0,10)
+        });
+        imported++;
+      });
+      saveLeads(leads);
+      renderAll();
+      alert(imported + ' lead(s) imported.');
+      e.target.value = '';
+    };
+    reader.readAsText(file);
+  });
+
+  // ---------- Templates ----------
+  const templateLeadSelect = document.getElementById('template-lead-select');
+  document.querySelectorAll('.tmpl-text').forEach(ta => {
+    ta.value = ta.dataset.default;
+    const counter = ta.parentElement.querySelector('.charcount');
+    function updateCount(){
+      if(!counter) return;
+      const len = ta.value.length;
+      const isConnection = ta.closest('#tmpl-connection');
+      if(isConnection){
+        counter.textContent = len + ' / 300';
+        counter.classList.toggle('over', len > 300);
+      } else {
+        counter.textContent = len + ' characters';
+      }
+    }
+    ta.addEventListener('input', updateCount);
+    updateCount();
+  });
+
+  function applyLeadToTemplates(){
+    const leadId = templateLeadSelect.value;
+    const lead = leads.find(l => l.id === leadId);
+    document.querySelectorAll('.tmpl-text').forEach(ta => {
+      let text = ta.dataset.default;
+      const firstName = lead ? (lead.name.split(' ')[0] || lead.name) : '{{firstName}}';
+      const company = lead ? (lead.company || '{{company}}') : '{{company}}';
+      text = text.replace(/{{firstName}}/g, firstName).replace(/{{company}}/g, company);
+      ta.value = text;
+      ta.dispatchEvent(new Event('input'));
+    });
+  }
+  templateLeadSelect.addEventListener('change', applyLeadToTemplates);
+
+  document.querySelectorAll('[data-action="copy"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ta = btn.closest('.template-card').querySelector('.tmpl-text');
+      navigator.clipboard.writeText(ta.value).then(() => flashCopied(btn));
+    });
+  });
+
+  renderAll();
+})();
+</script>
+</body>
+</html>
