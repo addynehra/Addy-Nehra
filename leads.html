@@ -195,6 +195,7 @@
         <div>
           <label>Geography</label>
           <input type="text" id="f-geo" placeholder="Sydney, New South Wales, Australia">
+          <div class="chip-group" id="geo-chips" style="margin-top:-8px;"></div>
         </div>
         <div>
           <label>Company headcount</label>
@@ -455,8 +456,22 @@
 
   const ALL_SPOTLIGHTS = ["Posted on LinkedIn in the past 30 days", "Changed jobs in the past 90 days"];
 
+  const AU_LOCATIONS = [
+    { label: "Sydney", value: "Sydney, New South Wales, Australia" },
+    { label: "Melbourne", value: "Melbourne, Victoria, Australia" },
+    { label: "Brisbane", value: "Brisbane, Queensland, Australia" },
+    { label: "Perth", value: "Perth, Western Australia, Australia" },
+    { label: "Adelaide", value: "Adelaide, South Australia, Australia" },
+    { label: "Canberra", value: "Canberra, Australian Capital Territory, Australia" },
+    { label: "Gold Coast", value: "Gold Coast, Queensland, Australia" },
+    { label: "Australia-wide", value: "Australia" }
+  ];
+
   const chipContainer = document.getElementById('signal-chips');
   const spotlightContainer = document.getElementById('spotlight-chips');
+  const geoChipContainer = document.getElementById('geo-chips');
+  const geoInput = document.getElementById('f-geo');
+
   function renderChipSet(container, allValues, activeList){
     container.innerHTML = '';
     allValues.forEach(val => {
@@ -471,6 +486,32 @@
   function renderChips(activeList){ renderChipSet(chipContainer, ALL_SIGNALS, activeList); }
   function renderSpotlightChips(activeList){ renderChipSet(spotlightContainer, ALL_SPOTLIGHTS, activeList); }
 
+  // Geography uses "; " to separate multiple full locations, since each
+  // location itself is a "City, State, Country" string containing commas.
+  function getGeoSegments(){
+    return geoInput.value.split(';').map(s => s.trim()).filter(Boolean);
+  }
+  function renderGeoChips(){
+    const active = getGeoSegments();
+    geoChipContainer.innerHTML = '';
+    AU_LOCATIONS.forEach(loc => {
+      const chip = document.createElement('span');
+      chip.className = 'chip' + (active.includes(loc.value) ? ' on' : '');
+      chip.textContent = loc.label;
+      chip.dataset.value = loc.value;
+      chip.addEventListener('click', () => {
+        const segments = getGeoSegments();
+        const idx = segments.indexOf(loc.value);
+        if(idx === -1) segments.push(loc.value);
+        else segments.splice(idx, 1);
+        geoInput.value = segments.join('; ');
+        renderGeoChips();
+      });
+      geoChipContainer.appendChild(chip);
+    });
+  }
+  geoInput.addEventListener('input', renderGeoChips);
+
   function applyPreset(key){
     const p = PRESETS[key];
     document.getElementById('f-titles').value = p.titles;
@@ -484,6 +525,7 @@
     document.getElementById('f-custom').value = '';
     renderChips(p.signals);
     renderSpotlightChips(p.spotlights);
+    renderGeoChips();
     document.getElementById('output-card').style.display = 'none';
   }
   presetSelect.addEventListener('change', () => applyPreset(presetSelect.value));
