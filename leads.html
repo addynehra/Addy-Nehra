@@ -252,7 +252,12 @@
       </div>
 
       <label>Exit-signal keyword phrases (click to toggle)</label>
+      <p class="hint" style="margin-top:-8px;">These are exact phrases — most matching profiles won't literally contain one. Left unchecked below, they're excluded from the search itself and shown only as manual triage cues once you're looking at results. Checking the box ANDs them into the query, which usually collapses results toward zero.</p>
       <div class="chip-group" id="signal-chips"></div>
+      <label style="display:flex; align-items:center; gap:8px; font-weight:400; margin-top:-6px;">
+        <input type="checkbox" id="f-require-signals" style="width:auto; margin:0;">
+        Require a signal phrase in the search (narrows results significantly)
+      </label>
 
       <label>Recent-activity Spotlights (click to toggle)</label>
       <p class="hint" style="margin-top:-8px;">These are Sales Navigator's own activity filters — not keyword-searchable, so they show up in the filter checklist below instead of the boolean string.</p>
@@ -271,6 +276,7 @@
       <h2>Boolean keyword string</h2>
       <p class="hint">Paste this into the keyword field of Sales Navigator's Lead Search.</p>
       <div class="output-box" id="output-boolean"></div>
+      <p class="hint" id="output-signal-cues" style="display:none; margin-bottom:14px;"></p>
       <div class="actions-row">
         <button class="btn small" id="btn-copy-boolean">Copy string</button>
         <a class="btn small gold" id="btn-open-navigator" href="#" target="_blank" rel="noopener" style="text-decoration:none; display:inline-block;">Open in Sales Navigator →</a>
@@ -372,7 +378,12 @@
 
     <div class="card">
       <h2>Watchlist</h2>
-      <p class="hint">The automated check only looks at companies listed in <code>data/watchlist.json</code> in this repo. That file is separate from your local Pipeline (which never leaves this browser), so sync it manually when your pipeline changes: copy the JSON below and commit it to <code>data/watchlist.json</code>.</p>
+      <p class="hint">The automated check only looks at companies listed in <code>data/watchlist.json</code> in this repo — it cannot see your Pipeline directly, since Pipeline data lives only in this browser's localStorage. Three steps, repeated whenever your Pipeline companies change:</p>
+      <ol class="hint" style="margin: 0 0 14px 18px; padding:0;">
+        <li>Add leads with a <strong>Company</strong> filled in on the Pipeline tab (the box below fills in automatically from those).</li>
+        <li>Click <strong>Copy watchlist JSON</strong> below.</li>
+        <li>Paste it into <code>data/watchlist.json</code> in this repo and commit — the daily check reads whatever is committed there, nothing else.</li>
+      </ol>
       <div class="output-box" id="watchlist-preview">(no companies in Pipeline yet)</div>
       <button class="btn small" id="btn-copy-watchlist">Copy watchlist JSON</button>
     </div>
@@ -568,6 +579,7 @@
     document.getElementById('f-industry').value = p.industry;
     document.getElementById('f-tenure').value = p.tenure;
     document.getElementById('f-custom').value = '';
+    document.getElementById('f-require-signals').checked = false;
     renderChips(p.signals);
     renderSpotlightChips(p.spotlights);
     renderGeoChips();
@@ -584,19 +596,31 @@
   document.getElementById('btn-generate').addEventListener('click', () => {
     const titles = document.getElementById('f-titles').value.split(',').map(s=>s.trim()).filter(Boolean);
     const activeSignals = Array.from(chipContainer.querySelectorAll('.chip.on')).map(c => c.dataset.value);
+    const requireSignals = document.getElementById('f-require-signals').checked;
     const custom = document.getElementById('f-custom').value.trim();
 
     const titlePart = titles.length ? '(' + titles.map(t => '"' + t + '"').join(' OR ') + ')' : '';
     const signalPart = activeSignals.length ? '(' + activeSignals.map(s => '"' + s + '"').join(' OR ') + ')' : '';
     const customPart = custom ? custom : '';
 
-    const parts = [titlePart, signalPart, customPart].filter(Boolean);
+    const parts = [titlePart, requireSignals ? signalPart : '', customPart].filter(Boolean);
     const boolean = parts.join(' AND ');
 
     document.getElementById('output-boolean').textContent = boolean || '(no keywords selected)';
     document.getElementById('output-card').style.display = 'block';
 
-    const url = 'https://www.linkedin.com/sales/search/people?keywords=' + encodeURIComponent(boolean);
+    const cuesEl = document.getElementById('output-signal-cues');
+    if(!requireSignals && activeSignals.length){
+      cuesEl.textContent = 'Not included in the search — scan results for these phrases instead: ' + activeSignals.join(', ');
+      cuesEl.style.display = 'block';
+    } else {
+      cuesEl.style.display = 'none';
+    }
+
+    // Sales Navigator's people search takes a structured query=(...) param, not a
+    // plain ?keywords= param — the latter opens the search UI without applying
+    // any filter at all, silently discarding the query.
+    const url = 'https://www.linkedin.com/sales/search/people?query=(keywords:' + encodeURIComponent(boolean) + ')';
     document.getElementById('btn-open-navigator').href = url;
 
     const headcount = document.getElementById('f-headcount').value.trim();
@@ -969,7 +993,11 @@
     }
 
     const when = newsData.generatedAt ? new Date(newsData.generatedAt).toLocaleString() : 'never (workflow hasn\'t run yet)';
-    statusEl.textContent = 'Last checked: ' + when + ' · watching ' + (newsData.watchlistSize||0) + ' compan' + ((newsData.watchlistSize||0) === 1 ? 'y' : 'ies') + ' · ' + (newsData.items||[]).length + ' match(es) on file';
+    const watching = newsData.watchlistSize || 0;
+    statusEl.textContent = 'Last checked: ' + when + ' · watching ' + watching + ' compan' + (watching === 1 ? 'y' : 'ies') + ' · ' + (newsData.items||[]).length + ' match(es) on file';
+    if(watching === 0){
+      statusEl.textContent += '. Watching 0 companies means data/watchlist.json is empty in the repo — this only happens once you (1) add leads with a Company in the Pipeline tab, (2) copy the watchlist JSON below, and (3) commit it into data/watchlist.json yourself. The Action can\'t discover companies on its own; it only checks what\'s already committed there.';
+    }
 
     const items = (newsData.items||[]).slice();
     listEl.innerHTML = '';
