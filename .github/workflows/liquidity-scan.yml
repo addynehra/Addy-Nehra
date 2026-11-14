@@ -1,0 +1,55 @@
+name: Liquidity Scan
+
+on:
+  schedule:
+    # ~19:30 UTC daily = ~5:30am AEST / 6:30am AEDT Sydney, ahead of News Watch
+    - cron: '30 19 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: liquidity-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Run liquidity scan
+        env:
+          # Optional. Add as a repository secret to name founders/owners via AI research.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ENRICH_MAX: '8'
+          ENRICH_MIN_SCORE: '50'
+          LOOKBACK_DAYS: '30'
+        run: node scripts/liquidity-scan.mjs
+
+      - name: Commit results if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/liquidity-events.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update liquidity scan results"
+            git pull --rebase
+            git push
+          fi
