@@ -176,6 +176,44 @@
   .news-item .news-logged{ font-size: 11.5px; color: var(--good); }
   .news-item .news-nomatch{ font-size: 11.5px; color: rgba(140,147,160,0.7); }
 
+
+  .liq-filters{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .liq-filters input, .liq-filters select{ margin-bottom:0; width:auto; min-width:140px; flex: 1 1 140px; }
+  .liq-filters .range{ display:flex; align-items:center; gap:8px; font-size:12px; color: var(--grey); flex: 1 1 200px; }
+  .liq-filters input[type=range]{ accent-color: var(--gold); min-width: 100px; }
+  .liq-filters .check{ display:flex; align-items:center; gap:8px; margin:0; font-size:12px; color: var(--grey); flex: 0 0 auto; cursor:pointer; }
+  .liq-filters .check input{ width:auto; min-width:0; flex:none; margin:0; accent-color: var(--gold); }
+  nav.tabs{ overflow-x: auto; scrollbar-width: none; }
+  nav.tabs button{ white-space: nowrap; }
+  .liq-event{ padding: 16px 0; border-bottom: 1px dashed var(--line); display:grid; grid-template-columns: 52px 1fr; gap: 14px; }
+  .liq-event:last-child{ border-bottom: none; }
+  .liq-score{ width:52px; height:52px; border-radius: 50%; border: 1.5px solid var(--grey); display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-size: 19px; color: var(--grey); }
+  .liq-score.hi{ border-color: var(--gold); color: var(--gold); }
+  .liq-score.top{ background: var(--gold); border-color: var(--gold); color: var(--navy-deep); font-weight: 600; }
+  .liq-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap: 8px 10px; margin-bottom: 4px; }
+  .liq-company{ font-family:'Fraunces', serif; font-size: 17px; }
+  .liq-type{ font-family:'JetBrains Mono', monospace; font-size: 10px; padding: 3px 8px; border-radius: 10px; border:1px solid var(--line); color: var(--grey); text-transform: uppercase; letter-spacing: .04em; }
+  .liq-type.exit, .liq-type.selldown{ border-color: var(--gold); color: var(--gold); }
+  .liq-type.pe{ border-color: var(--good); color: var(--good); }
+  .liq-meta{ font-size: 12px; color: var(--grey); margin-bottom: 8px; line-height: 1.5; }
+  .liq-meta strong{ color: var(--cream); font-weight: 500; }
+  .liq-summary{ font-size: 13px; line-height: 1.55; color: rgba(246,243,236,0.85); margin-bottom: 8px; }
+  .liq-articles{ list-style: none; margin: 0 0 8px; padding: 0; font-size: 12.5px; }
+  .liq-articles li{ margin-bottom: 3px; line-height: 1.4; }
+  .liq-articles a{ color: var(--cream); text-decoration: none; }
+  .liq-articles a:hover{ color: var(--gold); text-decoration: underline; }
+  .liq-articles .src{ color: var(--grey); font-size: 11.5px; }
+  .liq-people{ margin: 6px 0 8px; display:flex; flex-direction:column; gap: 6px; }
+  .liq-person{ display:flex; flex-wrap:wrap; align-items:center; gap: 6px 10px; font-size: 12.5px; padding: 8px 10px; background: rgba(246,243,236,0.03); border: 1px solid var(--line); border-radius: 6px; }
+  .liq-person .pname{ font-weight: 600; }
+  .liq-person .prole{ color: var(--grey); }
+  .liq-person .grow{ flex: 1 1 auto; }
+  .liq-actions{ display:flex; flex-wrap:wrap; gap: 8px; align-items:center; }
+  .liq-why{ font-size: 11px; color: rgba(140,147,160,0.8); cursor: pointer; }
+  .liq-why-text{ display:none; font-size: 11.5px; color: var(--grey); margin-top: 6px; line-height: 1.5; }
+  .liq-event.show-why .liq-why-text{ display:block; }
+  @media (max-width: 560px){ .liq-event{ grid-template-columns: 1fr; } .liq-score{ width:44px; height:44px; font-size:16px; } }
   footer.note{ margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 11px; color: rgba(140,147,160,0.65); line-height: 1.6; }
 </style>
 </head>
@@ -190,6 +228,7 @@
 
   <nav class="tabs">
     <button class="active" data-tab="search">Search Builder</button>
+    <button data-tab="liquidity">Liquidity Events</button>
     <button data-tab="pipeline">Pipeline</button>
     <button data-tab="news">News Signals</button>
     <button data-tab="templates">Outreach Templates</button>
@@ -289,6 +328,40 @@
     </div>
   </section>
 
+  <!-- ===================== LIQUIDITY EVENTS ===================== -->
+  <section class="panel" id="tab-liquidity">
+    <div class="card">
+      <h2>Recent Australian liquidity events</h2>
+      <p class="hint">A scheduled GitHub Action scans public Australian business news every day for companies that were <strong>sold, took private-equity money, listed on the ASX, were taken over, or raised capital</strong>. Each event gets a score out of 100 for how likely it is that the owners received meaningful cash. With an <code>ANTHROPIC_API_KEY</code> repo secret set, the top events are also researched to name the founders or owners as publicly reported. Always check the source articles before you contact anyone.</p>
+      <div id="liq-status" class="hint" style="margin-bottom:0;">Loading…</div>
+    </div>
+
+    <div class="card">
+      <div class="liq-filters">
+        <input type="text" id="liq-search" placeholder="Search company, person, buyer...">
+        <select id="liq-type"><option value="">All event types</option></select>
+        <select id="liq-window">
+          <option value="7">Last 7 days</option>
+          <option value="30" selected>Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="9999">All on file</option>
+        </select>
+        <label class="range">Min score <input type="range" id="liq-min" min="0" max="90" step="5" value="45"> <span id="liq-min-val">45</span></label>
+        <label class="check"><input type="checkbox" id="liq-people-only"> Named owners only</label>
+      </div>
+      <div class="actions-row" style="margin-top:14px;">
+        <span class="hint" id="liq-count" style="margin:0;"></span>
+        <div style="flex:1"></div>
+        <button class="btn small" id="btn-liq-export">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div id="liq-list"></div>
+      <div class="empty-state" id="liq-empty" style="display:none;">No events match these filters.</div>
+    </div>
+  </section>
+
   <!-- ===================== PIPELINE ===================== -->
   <section class="panel" id="tab-pipeline">
     <div class="funnel" id="funnel-stats"></div>
@@ -324,6 +397,7 @@
           <label style="font-weight:400;">Signal type</label>
           <select id="l-signal-type">
             <option value="">No signal logged</option>
+            <option value="Liquidity event">Liquidity event</option>
             <option value="News article">News article</option>
             <option value="LinkedIn post">LinkedIn post</option>
             <option value="Job change">Job change</option>
@@ -777,7 +851,7 @@
     if(leads.some(l => l.id === current)) sel.value = current;
   }
 
-  function renderAll(){ renderFunnel(); renderLeads(); renderTemplateLeadSelect(); renderWatchlistPreview(); renderNewsItems(); }
+  function renderAll(){ renderFunnel(); renderLeads(); renderTemplateLeadSelect(); renderWatchlistPreview(); renderNewsItems(); renderLiquidity(); }
 
   document.getElementById('btn-add-lead').addEventListener('click', () => {
     const name = document.getElementById('l-name').value.trim();
@@ -1043,6 +1117,220 @@
       listEl.appendChild(row);
     });
   }
+
+
+  // ---------- Liquidity Events ----------
+  let liqData = null;
+  let liqLoadFailed = false;
+  const LIQ_TYPE_LABELS = {
+    exit: 'Acquisition / trade sale', selldown: 'Founder sell-down', pe: 'Private equity deal',
+    takeover: 'Takeover / scheme', ipo: 'IPO / listing', funding: 'Funding round'
+  };
+  const liqTypeSel = document.getElementById('liq-type');
+  Object.entries(LIQ_TYPE_LABELS).forEach(([k, v]) => {
+    const o = document.createElement('option'); o.value = k; o.textContent = v; liqTypeSel.appendChild(o);
+  });
+
+  function liqCompany(ev){ return (ev.enrichment && ev.enrichment.company) || ev.company || ''; }
+  function liqCounterparty(ev){ return (ev.enrichment && ev.enrichment.counterparty) || ev.counterparty || ''; }
+  function liqAmount(ev){
+    const v = ev.enrichment && typeof ev.enrichment.deal_value_aud_m === 'number' ? ev.enrichment.deal_value_aud_m : ev.amountAudM;
+    if(v == null) return '';
+    return v >= 1000 ? 'A$' + (v/1000).toFixed(v >= 10000 ? 0 : 1) + 'b' : 'A$' + (v >= 10 ? Math.round(v) : v) + 'm';
+  }
+  function liqPeople(ev){ return (ev.enrichment && Array.isArray(ev.enrichment.people)) ? ev.enrichment.people.filter(p => p && p.name) : []; }
+
+  function liqFiltered(){
+    if(!liqData) return [];
+    const q = document.getElementById('liq-search').value.trim().toLowerCase();
+    const type = liqTypeSel.value;
+    const days = parseInt(document.getElementById('liq-window').value, 10);
+    const min = parseInt(document.getElementById('liq-min').value, 10);
+    const peopleOnly = document.getElementById('liq-people-only').checked;
+    const cutoff = Date.now() - days * 86400000;
+    return (liqData.events || []).filter(ev => {
+      if(ev.score < min) return false;
+      if(type && ev.type !== type) return false;
+      const d = new Date(ev.latestPubDate || ev.firstSeen);
+      if(!isNaN(d) && d.getTime() < cutoff) return false;
+      if(peopleOnly && !liqPeople(ev).length) return false;
+      if(q){
+        const hay = [liqCompany(ev), liqCounterparty(ev), ...ev.articles.map(a => a.title), ...liqPeople(ev).map(p => p.name)].join(' ').toLowerCase();
+        if(!hay.includes(q)) return false;
+      }
+      return true;
+    });
+  }
+
+  function liqLeadExists(name, company){
+    const n = (name||'').trim().toLowerCase(), c = (company||'').trim().toLowerCase();
+    return leads.some(l => (l.name||'').trim().toLowerCase() === n && (l.company||'').trim().toLowerCase() === c);
+  }
+
+  function liqAddLead(ev, person){
+    const company = liqCompany(ev);
+    const art = ev.articles[0] || {};
+    const e = ev.enrichment || {};
+    const name = person ? person.name : (company ? company + ' — owner TBC' : 'Owner TBC');
+    if(liqLeadExists(name, company)) return;
+    const noteBits = [
+      (LIQ_TYPE_LABELS[ev.type] || ev.type) + (liqAmount(ev) ? ' · ' + liqAmount(ev) : '') + (liqCounterparty(ev) ? ' · with ' + liqCounterparty(ev) : ''),
+      e.company_description || '',
+      person && person.stake_note ? 'Stake: ' + person.stake_note : '',
+      e.liquidity_assessment || '',
+      'Liquidity score ' + ev.score + '/100'
+    ].filter(Boolean);
+    leads.push({
+      id: uid(),
+      name,
+      company,
+      title: person ? (person.role || '') : '',
+      url: '',
+      industry: '',
+      location: person ? (person.location || '') : '',
+      stage: 'New',
+      followup: '',
+      notes: noteBits.join('\n'),
+      signalType: 'Liquidity event',
+      signalUrl: (person && person.source_url) || art.link || '',
+      signalNote: (art.source ? art.source + ', ' : '') + formatNewsDate(art.pubDate) + ': ' + (art.title || ''),
+      source: 'liquidity-scan',
+      added: new Date().toISOString().slice(0,10)
+    });
+    saveLeads(leads);
+    renderAll();
+  }
+
+  function liqLinkedInSearch(name, company){
+    return 'https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent([name, company].filter(Boolean).join(' '));
+  }
+
+  function renderLiquidity(){
+    const statusEl = document.getElementById('liq-status');
+    const listEl = document.getElementById('liq-list');
+    const emptyEl = document.getElementById('liq-empty');
+    if(liqLoadFailed){
+      statusEl.innerHTML = 'Could not load <code>data/liquidity-events.json</code>. Open this page from your published site (http/https), not as a local file, and make sure the Liquidity Scan GitHub Action has run at least once.';
+      listEl.innerHTML = ''; emptyEl.style.display = 'none'; return;
+    }
+    if(!liqData){ statusEl.textContent = 'Loading…'; return; }
+
+    const okSources = (liqData.sources||[]).filter(s => s.ok).length;
+    statusEl.textContent = 'Last scan: ' + (liqData.generatedAt ? new Date(liqData.generatedAt).toLocaleString() : 'never') +
+      ' · ' + (liqData.events||[]).length + ' events on file · ' + okSources + '/' + (liqData.sources||[]).length + ' sources OK · AI enrichment ' + (liqData.enrichment || 'off');
+
+    const items = liqFiltered();
+    document.getElementById('liq-count').textContent = items.length + ' event' + (items.length === 1 ? '' : 's') + ' shown';
+    listEl.innerHTML = '';
+    emptyEl.style.display = items.length ? 'none' : 'block';
+
+    items.forEach(ev => {
+      const company = liqCompany(ev);
+      const cp = liqCounterparty(ev);
+      const amt = liqAmount(ev);
+      const e = ev.enrichment || {};
+      const people = liqPeople(ev);
+      const scoreCls = ev.score >= 75 ? 'top' : ev.score >= 55 ? 'hi' : '';
+      const meta = [
+        amt ? '<strong>' + escapeHTML(amt) + '</strong>' : '',
+        cp ? (ev.type === 'funding' ? 'Investor: ' : 'Buyer/investor: ') + '<strong>' + escapeHTML(cp) + '</strong>' : '',
+        'Latest coverage ' + escapeHTML(formatNewsDate(ev.latestPubDate)),
+        ev.enrichment ? 'AI-checked (' + escapeHTML(e.confidence || '?') + ' confidence)' : ''
+      ].filter(Boolean).join(' · ');
+
+      const row = document.createElement('div');
+      row.className = 'liq-event';
+      row.innerHTML =
+        '<div class="liq-score ' + scoreCls + '" title="Liquidity score">' + ev.score + '</div>' +
+        '<div>' +
+          '<div class="liq-head"><span class="liq-company">' + escapeHTML(company || 'Company unclear: see headline') + '</span>' +
+          '<span class="liq-type ' + escapeAttr(ev.type) + '">' + escapeHTML(LIQ_TYPE_LABELS[ev.type] || ev.type) + '</span></div>' +
+          '<div class="liq-meta">' + meta + '</div>' +
+          (e.company_description || e.liquidity_assessment ? '<div class="liq-summary">' + escapeHTML([e.company_description, e.liquidity_assessment].filter(Boolean).join(' ')) + '</div>' : '') +
+          '<ul class="liq-articles">' + ev.articles.slice(0, 3).map(a =>
+            '<li><a href="' + escapeAttr(a.link) + '" target="_blank" rel="noopener">' + escapeHTML(a.title) + '</a> <span class="src">' + escapeHTML([a.source, formatNewsDate(a.pubDate)].filter(Boolean).join(', ')) + '</span></li>'
+          ).join('') + (ev.articles.length > 3 ? '<li class="src">+' + (ev.articles.length - 3) + ' more</li>' : '') + '</ul>' +
+          '<div class="liq-people"></div>' +
+          '<div class="liq-actions"></div>' +
+          '<div class="liq-why-text">' + escapeHTML((ev.reasons || []).join(' · ')) + '</div>' +
+        '</div>';
+
+      const peopleEl = row.querySelector('.liq-people');
+      people.forEach(p => {
+        const div = document.createElement('div');
+        div.className = 'liq-person';
+        div.innerHTML = '<span class="pname">' + escapeHTML(p.name) + '</span>' +
+          '<span class="prole">' + escapeHTML([p.role, p.location].filter(Boolean).join(' · ')) + '</span>' +
+          (p.stake_note ? '<span class="prole">· ' + escapeHTML(p.stake_note) + '</span>' : '') +
+          '<span class="grow"></span>';
+        const li = document.createElement('a');
+        li.className = 'btn small'; li.target = '_blank'; li.rel = 'noopener';
+        li.href = liqLinkedInSearch(p.name, company); li.textContent = 'Find on LinkedIn';
+        div.appendChild(li);
+        if(liqLeadExists(p.name, company)){
+          const s = document.createElement('span'); s.className = 'news-logged'; s.textContent = '✓ In pipeline'; div.appendChild(s);
+        } else {
+          const b = document.createElement('button'); b.className = 'btn small primary'; b.textContent = 'Add to pipeline';
+          b.addEventListener('click', () => liqAddLead(ev, p)); div.appendChild(b);
+        }
+        peopleEl.appendChild(div);
+      });
+      if(!people.length) peopleEl.remove();
+
+      const actions = row.querySelector('.liq-actions');
+      if(!people.length){
+        const tbcName = (company ? company + ' — owner TBC' : 'Owner TBC');
+        if(liqLeadExists(tbcName, company)){
+          const s = document.createElement('span'); s.className = 'news-logged'; s.textContent = '✓ Company in pipeline'; actions.appendChild(s);
+        } else {
+          const b = document.createElement('button'); b.className = 'btn small primary'; b.textContent = 'Add company to pipeline';
+          b.addEventListener('click', () => liqAddLead(ev, null)); actions.appendChild(b);
+        }
+        const li = document.createElement('a');
+        li.className = 'btn small'; li.target = '_blank'; li.rel = 'noopener';
+        li.href = liqLinkedInSearch(company ? company + ' founder' : '', ''); li.textContent = 'Search founders on LinkedIn';
+        if(company) actions.appendChild(li);
+      }
+      const why = document.createElement('span');
+      why.className = 'liq-why'; why.textContent = 'Why this score?';
+      why.addEventListener('click', () => row.classList.toggle('show-why'));
+      actions.appendChild(why);
+
+      listEl.appendChild(row);
+    });
+  }
+
+  ['liq-search','liq-type','liq-window','liq-min','liq-people-only'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener(el.tagName === 'SELECT' || el.type === 'checkbox' ? 'change' : 'input', () => {
+      document.getElementById('liq-min-val').textContent = document.getElementById('liq-min').value;
+      renderLiquidity();
+    });
+  });
+
+  document.getElementById('btn-liq-export').addEventListener('click', () => {
+    const rows = [['Score','Event type','Company','Buyer/investor','Deal value (AUD)','Latest coverage','Person','Role','Stake note','Location','Assessment','Source link']];
+    liqFiltered().forEach(ev => {
+      const base = [ev.score, LIQ_TYPE_LABELS[ev.type] || ev.type, liqCompany(ev), liqCounterparty(ev), liqAmount(ev), (ev.latestPubDate||'').slice(0,10)];
+      const people = liqPeople(ev);
+      const assess = (ev.enrichment && ev.enrichment.liquidity_assessment) || '';
+      const link = (ev.articles[0] || {}).link || '';
+      if(people.length) people.forEach(p => rows.push([...base, p.name, p.role, p.stake_note, p.location, assess, p.source_url || link]));
+      else rows.push([...base, '', '', '', '', assess, link]);
+    });
+    const csv = rows.map(r => r.map(v => csvEscape(v ?? '')).join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'liquidity-events-' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+
+  fetch('data/liquidity-events.json')
+    .then(res => { if(!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+    .then(data => { liqData = data; renderLiquidity(); })
+    .catch(() => { liqLoadFailed = true; renderLiquidity(); });
 
   fetch('data/news-results.json')
     .then(res => { if(!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
