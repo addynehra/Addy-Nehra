@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T23:14:05.714Z",
+  "generatedAt": "2026-11-15T23:27:48.212Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -16,12 +16,12 @@
     {
       "id": "private-equity",
       "ok": true,
-      "count": 33
+      "count": 27
     },
     {
       "id": "pe-firms",
       "ok": true,
-      "count": 51
+      "count": 47
     },
     {
       "id": "funding-late",
@@ -36,12 +36,12 @@
     {
       "id": "ipo",
       "ok": true,
-      "count": 29
+      "count": 28
     },
     {
       "id": "takeover",
       "ok": true,
-      "count": 21
+      "count": 20
     },
     {
       "id": "selldown",
@@ -61,12 +61,12 @@
     {
       "id": "site-businessnews",
       "ok": true,
-      "count": 36
+      "count": 33
     },
     {
       "id": "site-capitalbrief",
       "ok": true,
-      "count": 80
+      "count": 76
     },
     {
       "id": "startupdaily",
@@ -119,7 +119,96 @@
         "Acquisition / trade sale (+40)",
         "~A$760m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
+      ]
+    },
+    {
+      "id": "co:programmed",
+      "company": "Programmed",
+      "counterparty": "Service Stream",
+      "type": "exit",
+      "tags": [
+        "exit",
+        "funding"
+      ],
+      "amountAudM": 975,
+      "amountText": "$975m",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Service Stream buys Programmed for $975m, raising $475m Service Stream buys Programmed for $975m, raising $475m The Australian",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Service Stream buys Programmed for $975m, raising $475m",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNSGx4U2VBZUV1VllFZ2pPOHNzRVpoLU1WTUprVDRoRHc3U1E2NDlfZFJHUnkzMEg0NFFuZnFKUm9uMmJPRG5nZDE5NTQ3TnJGXzE5R2xZQVNXbW00aVQ1akk4dmVUOVZ3Q3BtRkJPRXBpdGNlTU9uSXQ0ck94c29yVWRiMm9NNm90Qm5UTEpmd0gtMGdkNGpiR2dLTDFWYWRDNGZhdFBfWWhsZ0R3QnpoOXppQzl3dHVHSlZuTWVLWWpPU0xKRjBTOEZJd2VGdWRNWnRHd3NnTG9VVXVJenhBVQ?oc=5",
+          "source": "The Australian",
+          "pubDate": "Sun, 08 Nov 2026 22:22:00 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-11-08T22:22:00.000Z",
+      "score": 76,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "~A$975m deal (+25)",
+        "Australian signal 2/3 (+7)",
+        "recent (7d ago, +4)"
+      ]
+    },
+    {
+      "id": "co:shadey",
+      "company": "Shadey",
+      "counterparty": "DIYblinds",
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": true,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group Business News Australia DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group Business News Australia DIY Blinds acquires fast-growing rival Shadey in home furnishings shake-up DIY Blinds acquires fast-growing rival Shadey in home furnishings shake-up SmartCompany DIY Blinds acquires fast-growing rival Shadey in home furnishings shake-up DIY Blinds has acquired fast-growing rival Shadey, launching a new parent company after founder Liam Dobson regained sole ownership of the Melbourne business. The post DIY Blinds acquires fast-growing rival Shadey in home furnishings shake-up appeared first on SmartCompany .",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "DIY Blinds acquires fast-growing rival Shadey in home furnishings shake-up",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNczBkMlREUS1mOHVDMTBnWEc3VjVENkxXSnU3N25MU2wtYTMzWWFNRHU4T29yV2p4TEpndUxhZHUtVTBuZ2tmbUZtZ1pyeW9KeUlNRm96S3ZHUWxkMy1jVkt2NkpKalh1My1INzRzQVhKVkxqbFIyeEQxT3dfajJUV1J2VkpESUJQVG5xb3Fn?oc=5",
+          "source": "SmartCompany",
+          "pubDate": "Sun, 15 Nov 2026 22:19:54 GMT",
+          "via": "private-equity"
+        },
+        {
+          "title": "DIY Blinds acquires fast-growing rival Shadey in home furnishings shake-up",
+          "link": "https://www.smartcompany.com.au/retail/diy-blinds-acquires-fast-growing-rival-shadey/",
+          "source": "SmartCompany",
+          "pubDate": "Sun, 15 Nov 2026 22:19:54 +0000",
+          "via": "smartcompany"
+        },
+        {
+          "title": "DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group",
+          "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOTE9veVk5UnlUdjdmQzNBMEV6X2lJMGItOUtEVm44d2txVXRSaS11Z0swRzcxNGMtc3JRTUpUVDZXN29UUi04bjFYekZLMHRlMG9wNTFmd0UwLXBZSmF6RHF3d0s5YmlGY3VoZUFBMUEzblpyWFdWTm9JeWdoSFZZZnlZckZGQnNqTG5LZFRpbFhhRlhIYWJ2c0wyR1RiUU01SV9UMkV1blJHTXA4WXkxcEhmWF92U3NVSFFna2ZEVkNIYXU5RnNoVXVhc09TemtpTURQc3NyNnA1bkxpa09tUmUzRWRUbEx1MXpQNtIB7AFBVV95cUxOTE9veVk5UnlUdjdmQzNBMEV6X2lJMGItOUtEVm44d2txVXRSaS11Z0swRzcxNGMtc3JRTUpUVDZXN29UUi04bjFYekZLMHRlMG9wNTFmd0UwLXBZSmF6RHF3d0s5YmlGY3VoZUFBMUEzblpyWFdWTm9JeWdoSFZZZnlZckZGQnNqTG5LZFRpbFhhRlhIYWJ2c0wyR1RiUU01SV9UMkV1blJHTXA4WXkxcEhmWF92U3NVSFFna2ZEVkNIYXU5RnNoVXVhc09TemtpTURQc3NyNnA1bkxpa09tUmUzRWRUbEx1MXpQNg?oc=5",
+          "source": "Business News Australia",
+          "pubDate": "Thu, 12 Nov 2026 00:53:04 GMT",
+          "via": "private-equity"
+        },
+        {
+          "title": "DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQT2M0ZzBsbS1KRmRiQ1hLT2s1a3dmVW1fUlZpMW1NRUtSTlUxaGZWNjZxZjY2ZG5JS3AxSUw1WEozblpCUUhxNEJHa2tjLWxqa1lUNEhRRTNoVmlRS2taYXBTeG9GblVjYXViaGRVeWQzdXh5R252RFFFLWs3SFFJdF9STnhJUlZYaG5oeTgyZFAxQ2o1SDNsRi14WTVHLWhiTWRXSkxITXhYcmI4TXhXbExtVnlRUWplT01NM2dFaTE1amtCQmFFaEN2dkFLUmRnZFRnNmNmZlNFbzFJY29nQtIB7AFBVV95cUxOTE9veVk5UnlUdjdmQzNBMEV6X2lJMGItOUtEVm44d2txVXRSaS11Z0swRzcxNGMtc3JRTUpUVDZXN29UUi04bjFYekZLMHRlMG9wNTFmd0UwLXBZSmF6RHF3d0s5YmlGY3VoZUFBMUEzblpyWFdWTm9JeWdoSFZZZnlZckZGQnNqTG5LZFRpbFhhRlhIYWJ2c0wyR1RiUU01SV9UMkV1blJHTXA4WXkxcEhmWF92U3NVSFFna2ZEVkNIYXU5RnNoVXVhc09TemtpTURQc3NyNnA1bkxpa09tUmUzRWRUbEx1MXpQNg?oc=5",
+          "source": "Business News Australia",
+          "pubDate": "Thu, 12 Nov 2026 00:51:57 GMT",
+          "via": "founder-exit"
+        }
+      ],
+      "latestPubDate": "2026-11-15T22:19:54.000Z",
+      "score": 73,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "founder/family-owned mention (+12)",
+        "Australian signal 2/3 (+7)",
+        "recent (0d ago, +8)",
+        "4 articles (+6)"
       ]
     },
     {
@@ -152,40 +241,7 @@
         "Acquisition / trade sale (+40)",
         "~A$1450m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (12d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:potentia lays groundwork to exit 550m buyout of nitro amid",
-      "company": null,
-      "counterparty": null,
-      "type": "pe",
-      "tags": [
-        "pe"
-      ],
-      "amountAudM": 550,
-      "amountText": "$550m",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Potentia lays groundwork to exit $550m buyout of Nitro amid AI threat Potentia lays groundwork to exit $550m buyout of Nitro amid AI threat AFR",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Potentia lays groundwork to exit $550m buyout of Nitro amid AI threat",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNDdfSGVkRmpmWlBTajBJbHE5MFlVLXc4UzhZRkNmZ0hkMVFYeEpYWEx1c08yN1FxU2NvT2ZNM2M0QkJFOHRmeVRjWC1VMUtyanQ0dGo2MWNiSXpBSW9yX2hmc21Xa2JFbjRpeXBFYnNfeVlwckNTNGRIQkVFQVVvWXJiWHY5VFZoVks3Rmcxclo2Y1JpTm5JMWhDOGptc0FXaEVXN201ZGIzYTBiV0Y5NGppSVF4dw?oc=5",
-          "source": "AFR",
-          "pubDate": "Sun, 08 Nov 2026 09:00:00 GMT",
-          "via": "private-equity"
-        }
-      ],
-      "latestPubDate": "2026-11-08T09:00:00.000Z",
-      "score": 70,
-      "reasons": [
-        "Private equity deal (+34)",
-        "~A$550m deal (+25)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -218,7 +274,7 @@
         "Private equity deal (+34)",
         "~A$3400m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -251,7 +307,7 @@
         "Private equity deal (+34)",
         "~A$2200m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (20d ago, +4)"
+        "recent (21d ago, +4)"
       ]
     },
     {
@@ -284,40 +340,40 @@
         "Founder sell-down (+38)",
         "~A$3300m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
-      "id": "co:shadey",
-      "company": "Shadey",
-      "counterparty": "DIYblinds",
-      "type": "exit",
+      "id": "hl:potentia lays groundwork to exit 550m buyout of nitro amid",
+      "company": null,
+      "counterparty": null,
+      "type": "pe",
       "tags": [
-        "exit"
+        "pe"
       ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": true,
+      "amountAudM": 550,
+      "amountText": "$550m",
+      "founderSignal": false,
       "secondarySignal": false,
-      "auConfidence": 2,
-      "text": "DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group Business News Australia",
+      "auConfidence": 1,
+      "text": "Potentia lays groundwork to exit $550m buyout of Nitro amid AI threat Potentia lays groundwork to exit $550m buyout of Nitro amid AI threat AFR",
       "firstSeen": "2026-11-14T23:14:05.714Z",
       "articles": [
         {
-          "title": "DIYblinds acquires fast-growing challenger Shadey as founder Liam Dobson launches DIYHome Group",
-          "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOTE9veVk5UnlUdjdmQzNBMEV6X2lJMGItOUtEVm44d2txVXRSaS11Z0swRzcxNGMtc3JRTUpUVDZXN29UUi04bjFYekZLMHRlMG9wNTFmd0UwLXBZSmF6RHF3d0s5YmlGY3VoZUFBMUEzblpyWFdWTm9JeWdoSFZZZnlZckZGQnNqTG5LZFRpbFhhRlhIYWJ2c0wyR1RiUU01SV9UMkV1blJHTXA4WXkxcEhmWF92U3NVSFFna2ZEVkNIYXU5RnNoVXVhc09TemtpTURQc3NyNnA1bkxpa09tUmUzRWRUbEx1MXpQNtIB7AFBVV95cUxOTE9veVk5UnlUdjdmQzNBMEV6X2lJMGItOUtEVm44d2txVXRSaS11Z0swRzcxNGMtc3JRTUpUVDZXN29UUi04bjFYekZLMHRlMG9wNTFmd0UwLXBZSmF6RHF3d0s5YmlGY3VoZUFBMUEzblpyWFdWTm9JeWdoSFZZZnlZckZGQnNqTG5LZFRpbFhhRlhIYWJ2c0wyR1RiUU01SV9UMkV1blJHTXA4WXkxcEhmWF92U3NVSFFna2ZEVkNIYXU5RnNoVXVhc09TemtpTURQc3NyNnA1bkxpa09tUmUzRWRUbEx1MXpQNg?oc=5",
-          "source": "Business News Australia",
-          "pubDate": "Thu, 12 Nov 2026 00:53:04 GMT",
+          "title": "Potentia lays groundwork to exit $550m buyout of Nitro amid AI threat",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNDdfSGVkRmpmWlBTajBJbHE5MFlVLXc4UzhZRkNmZ0hkMVFYeEpYWEx1c08yN1FxU2NvT2ZNM2M0QkJFOHRmeVRjWC1VMUtyanQ0dGo2MWNiSXpBSW9yX2hmc21Xa2JFbjRpeXBFYnNfeVlwckNTNGRIQkVFQVVvWXJiWHY5VFZoVks3Rmcxclo2Y1JpTm5JMWhDOGptc0FXaEVXN201ZGIzYTBiV0Y5NGppSVF4dw?oc=5",
+          "source": "AFR",
+          "pubDate": "Sun, 08 Nov 2026 09:00:00 GMT",
           "via": "private-equity"
         }
       ],
-      "latestPubDate": "2026-11-12T00:53:04.000Z",
-      "score": 67,
+      "latestPubDate": "2026-11-08T09:00:00.000Z",
+      "score": 66,
       "reasons": [
-        "Acquisition / trade sale (+40)",
-        "founder/family-owned mention (+12)",
-        "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
+        "Private equity deal (+34)",
+        "~A$550m deal (+25)",
+        "Australian signal 1/3 (+3)",
+        "recent (8d ago, +4)"
       ]
     },
     {
@@ -350,7 +406,7 @@
         "Private equity deal (+34)",
         "~A$5600m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -383,7 +439,7 @@
         "Takeover / scheme (+28)",
         "~A$9300m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -416,7 +472,7 @@
         "Founder sell-down (+38)",
         "~A$89.5m deal (+15)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -449,7 +505,7 @@
         "IPO / listing (+28)",
         "~A$34.4m deal (+15)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -490,8 +546,41 @@
         "IPO / listing (+28)",
         "~A$180m deal (+20)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)",
+        "recent (25d ago, +4)",
         "2 articles (+2)"
+      ]
+    },
+    {
+      "id": "hl:wiluna mining returns to asx with 126m gold ipo",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": 126,
+      "amountText": "$126M",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Wiluna Mining returns to ASX with $126M gold IPO Wiluna Mining returns to ASX with $126M gold IPO Dealroom",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Wiluna Mining returns to ASX with $126M gold IPO",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSTY2SXg1ZVZKZ0JPendKRXlscGNWTV8xMlZWcFdFVlNvV0tVWE5sWkhGQ0g3X2gtMUJTWE5sTDI1LXBpR2xqbmI2QmItaUhfRFNSdEFuTHBCZW5tVHZtQ1RnYm5KblBLaS1Rc2FXWEpWc0hJU3pwSU5BSzhpQlplZXdzMU4xa3Zz?oc=5",
+          "source": "Dealroom",
+          "pubDate": "Wed, 21 Oct 2026 09:52:59 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-10-21T09:52:59.000Z",
+      "score": 55,
+      "reasons": [
+        "IPO / listing (+28)",
+        "~A$126m deal (+20)",
+        "Australian signal 1/3 (+3)",
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -524,7 +613,7 @@
         "IPO / listing (+28)",
         "~A$45m deal (+15)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -556,7 +645,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -588,7 +677,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -620,7 +709,39 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:private equity funds snub nine buyout pitch",
+      "company": null,
+      "counterparty": null,
+      "type": "pe",
+      "tags": [
+        "pe"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Private equity funds snub Nine buyout pitch Private equity funds snub Nine buyout pitch The Australian",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Private equity funds snub Nine buyout pitch",
+          "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOaHl3ZEZhUWxhTjlnUUlscWJOanhUMjFWakE4RDBHYjVLc0lHdDIwbzRxcHFtbFh2czQtVjMwRlF0Nml5aVlWR25vZEZDS29RQkhoUzdMX0ZhdlRtNGE2UmtGRDVDeFJuRzNJdEQwV09jM09HZEUwVmRyU2dCbmZUbkpjWWpRTzZqTy03SFBsVmVmUmdYS291NFg0cXJ0MnVzM2VsT0dWcURJYm9RR1NCSTE0WlZ4YldVVzl6aUljTDJhSjhHd2ZwNUtxNGF3eE5GOU9IbThPcnpRS2dVeExmcHpNMFVGc1VrWDh2UVMtMzlRcmVCdGlJNWpTdmdhMWNMV3YySkpOOU1Va3Yxb2c?oc=5",
+          "source": "The Australian",
+          "pubDate": "Sun, 15 Nov 2026 16:28:15 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-11-15T16:28:15.000Z",
+      "score": 49,
+      "reasons": [
+        "Private equity deal (+34)",
+        "Australian signal 2/3 (+7)",
+        "recent (0d ago, +8)"
       ]
     },
     {
@@ -652,7 +773,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -686,7 +807,7 @@
         "~A$1400m deal (+13)",
         "late-stage round (+6)",
         "Australian signal 2/3 (+7)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -718,7 +839,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -750,7 +871,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)"
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -782,7 +903,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -814,7 +935,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -846,7 +967,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -879,7 +1000,7 @@
         "IPO / listing (+28)",
         "~A$8m deal (+5)",
         "Australian signal 3/3 (+10)",
-        "recent (28d ago, +4)"
+        "recent (29d ago, +4)"
       ]
     },
     {
@@ -911,7 +1032,48 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
+      ]
+    },
+    {
+      "id": "co:jacaranda natural resources",
+      "company": "Jacaranda Natural Resources",
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": 8,
+      "amountText": "$8 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Jacaranda Natural Resources debuts on ASX after $8 million IPO Jacaranda Natural Resources debuts on ASX after $8 million IPO Mining.com.au Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share Kalkine",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Jacaranda Natural Resources debuts on ASX after $8 million IPO",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYjBTd25rYWZ6RW5vcWVycmp5djhxb1lZeEtlXzk1eUpkY0hZZDlrYTFvNDk0a2VTMGdEcnU3NHBTdWlmYmIwX0RKV0JDYmpiQkFuR3JYTV8wRHU5dHhvVDBUejNTc05XZFZaY2dtM1pXVDRMUF9tWllOcE5ESjN0d3FUNjIzbEItMUxrQg?oc=5",
+          "source": "Mining.com.au",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "ipo"
+        },
+        {
+          "title": "Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORjdFaTBtOFIwRHdMcFk2QTd5eVVuV0VnMmxGTktESVJJV2tWV3NRNVcxRkF6bUFJeU45eW80OFc2aGl1Vm9ZQ1NRWlZiZ0F3dzZvNEpRYUUwTjFZcjRNRzdMaFV5eTF3NlY3SUJpQmZ2OG9neGRZLU9TLUVEVHc3cVBGMkppY1ZET0tlXzNpdUR0THNYeFhSeExYU3VqZHlRUTVnOTZzeFlid2Vmc051R3lMcjYzNmU4NE1TZkR1T1JKZw?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Wed, 28 Oct 2026 00:53:39 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-10-28T07:00:00.000Z",
+      "score": 46,
+      "reasons": [
+        "IPO / listing (+28)",
+        "~A$8m deal (+5)",
+        "Australian signal 2/3 (+7)",
+        "recent (19d ago, +4)",
+        "2 articles (+2)"
       ]
     },
     {
@@ -944,40 +1106,7 @@
         "IPO / listing (+28)",
         "~A$6m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
-      ]
-    },
-    {
-      "id": "co:jacaranda natural resources",
-      "company": "Jacaranda Natural Resources",
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": 8,
-      "amountText": "$8 million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 2,
-      "text": "Jacaranda Natural Resources debuts on ASX after $8 million IPO Jacaranda Natural Resources debuts on ASX after $8 million IPO Mining.com.au",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Jacaranda Natural Resources debuts on ASX after $8 million IPO",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYjBTd25rYWZ6RW5vcWVycmp5djhxb1lZeEtlXzk1eUpkY0hZZDlrYTFvNDk0a2VTMGdEcnU3NHBTdWlmYmIwX0RKV0JDYmpiQkFuR3JYTV8wRHU5dHhvVDBUejNTc05XZFZaY2dtM1pXVDRMUF9tWllOcE5ESjN0d3FUNjIzbEItMUxrQg?oc=5",
-          "source": "Mining.com.au",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-10-28T07:00:00.000Z",
-      "score": 44,
-      "reasons": [
-        "IPO / listing (+28)",
-        "~A$8m deal (+5)",
-        "Australian signal 2/3 (+7)",
-        "recent (18d ago, +4)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -1011,7 +1140,7 @@
         "IPO / listing (+28)",
         "~A$8.4m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (26d ago, +4)"
+        "recent (27d ago, +4)"
       ]
     },
     {
@@ -1043,7 +1172,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -1075,7 +1204,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -1109,7 +1238,7 @@
         "~A$415m deal (+10)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -1141,7 +1270,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -1173,7 +1302,80 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:australias cleanaway agrees to 6 5 bln eqt buyout bid",
+      "company": null,
+      "counterparty": null,
+      "type": "pe",
+      "tags": [
+        "pe"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Australia’s Cleanaway agrees to $6.5 bln EQT buyout bid; shares surge Australia’s Cleanaway agrees to $6.5 bln EQT buyout bid; shares surge Yahoo Finance Australia",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Australia’s Cleanaway agrees to $6.5 bln EQT buyout bid; shares surge",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa2ttb1FwOFRHc2k1MnU3MF9tdmdlQW5BTGU1WVlCMDZDM3k0bWJxMEd2RkJkZDhieUFBNWQ3eEVueGdkbkg3am1BYWpBTzBHV1YyeVh2MjF5Q09rZkNUZEVIdGx0eE5NMG9PaWEya1djb3BFSm9BSjNFaWpMbnhXa0tWZXV2QQ?oc=5",
+          "source": "Yahoo Finance Australia",
+          "pubDate": "Sun, 18 Oct 2026 07:00:00 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-10-18T07:00:00.000Z",
+      "score": 41,
+      "reasons": [
+        "Private equity deal (+34)",
+        "Australian signal 1/3 (+3)",
+        "recent (29d ago, +4)"
+      ]
+    },
+    {
+      "id": "co:six anz",
+      "company": "Six ANZ",
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": 525,
+      "amountText": "$525 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Six ANZ startups that raised $525 million this week Keep reading to learn about quantum giant Q-CTRL, along with Alta, Vudoo, Refilled, Provectus Algae, and Aimer Farming. The post Six ANZ startups that raised $525 million this week appeared first on SmartCompany . Six ANZ startups that raised $525 million this week Six ANZ startups that raised $525 million this week SmartCompany",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Six ANZ startups that raised $525 million this week",
+          "link": "https://www.smartcompany.com.au/startupsmart/six-anz-startups-that-raised-525-million-this-week/",
+          "source": "SmartCompany",
+          "pubDate": "Fri, 13 Nov 2026 04:44:13 +0000",
+          "via": "smartcompany"
+        },
+        {
+          "title": "Six ANZ startups that raised $525 million this week",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdXlGa1JPQjNSZjg5TFQ5NF8wWFdMTXAwOE5Mb3YxUlJUYjR3TUJDZmpMcTdwZWo3OXlBakEyRmQ3TW1zRE5NMmZaWjZpM3JXQlZCV25PMWRFOGdOSWVUWThUTkVjUEtncFM0Ump0YnRRTEd2U050bFlyQjAxOTNKcy1MNGZ0V3RINmgxQV9fdzRFRzg2Tm5Nb2l2dk8?oc=5",
+          "source": "SmartCompany",
+          "pubDate": "Fri, 13 Nov 2026 04:44:13 GMT",
+          "via": "funding-late"
+        }
+      ],
+      "latestPubDate": "2026-11-13T04:44:13.000Z",
+      "score": 40,
+      "reasons": [
+        "Funding round (+14)",
+        "~A$525m deal (+13)",
+        "Australian signal 1/3 (+3)",
+        "recent (3d ago, +8)",
+        "2 articles (+2)"
       ]
     },
     {
@@ -1206,74 +1408,7 @@
         "IPO / listing (+28)",
         "~A$3.6m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)"
-      ]
-    },
-    {
-      "id": "co:overwatch technologies",
-      "company": "Overwatch Technologies",
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo",
-        "funding"
-      ],
-      "amountAudM": 8,
-      "amountText": "A$8 Million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Overwatch Technologies Lists on ASX After Raising A$8 Million in IPO Overwatch Technologies Lists on ASX After Raising A$8 Million in IPO Kalkine",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Overwatch Technologies Lists on ASX After Raising A$8 Million in IPO",
-          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNT0J5cFM2Q0dqWk4wMFFKUEk3eDFpekJxdEVrQ3VwbWZJLVZVSDhzLUI1NjhDNHo2aUZSa1gxSW9USTRTWkZtMFNFbks1NVlqOFVITmtHWG8tek1NRVlIM1lteGhXcHJLMGtoTjFRNGxQOExtZUt6UENBSkRkM1JhdERMaFZ0UlVrd1czVWVJNXVXTnVZOWlrbHExQWdGUVd6ODdzb2NDeElraW1uRWc?oc=5",
-          "source": "Kalkine",
-          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-10-16T07:00:00.000Z",
-      "score": 40,
-      "reasons": [
-        "IPO / listing (+28)",
-        "~A$8m deal (+5)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:overwatch technologies makes asx debut after successful 8 million ipo",
-      "company": null,
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": 8,
-      "amountText": "$8 million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Overwatch Technologies makes ASX debut after successful $8 million IPO at 20 cents per share Overwatch Technologies makes ASX debut after successful $8 million IPO at 20 cents per share Proactive financial news",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Overwatch Technologies makes ASX debut after successful $8 million IPO at 20 cents per share",
-          "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQRTVjeHhYN3pBVmw5VnZvU2tGanlLYVRYZHc3M2NPNGx2cUJELWwtSzR5d3ctTWMzaE9SOXJBZG1KSWJMbHhab1B0N3RSSEtCa28ydkxPSXZaSmwxQXRWcUEtQmo5bjY2V3FXOWdOTDlhalJ6ck91QkpTLWg1MHpLb3Y3bjVpZHhBc1AtVW4tZl9HT2ZSdzJ0YUJ4ckFNdktYTTVuTW8tQ0UwT0JBWlE1OFFjOTNYdFFVc0NINXRxNERGS2NPNnFONmFzS3hRZlFpNk1KbGVXWlZ5TXNkTEZMNlJhOEpRN1ZiNnBZMm1rT0traWtx?oc=5",
-          "source": "Proactive financial news",
-          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-10-16T07:00:00.000Z",
-      "score": 40,
-      "reasons": [
-        "IPO / listing (+28)",
-        "~A$8m deal (+5)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -1305,7 +1440,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -1337,7 +1472,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -1369,7 +1504,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -1401,7 +1536,39 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:idp education shares surge on blackstones revised takeover bid",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "IDP Education shares surge on Blackstone’s revised takeover bid IDP Education shares surge on Blackstone’s revised takeover bid Capital Brief",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "IDP Education shares surge on Blackstone’s revised takeover bid",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNWE9LNEF0aURCYWgxdUR4YzRwMEI3UDFXaDJFU01hcDhXMFFCYWk5U2tNNE1PbVZmRlQ3MDEyTFRkdUJXZ1hUb1QxSTIxRVE2d2FKTmdpZkQtWk5uQW5tMEQwS0tOOXNZZXBDR0I1VU53ZHJmeE10elhjQkM2NlBNdDI2al8zcGptLXZ6cjRhbE50YmpLWGdERFNXYW14NWxwLS1SRk5RZ2VOOUVFRUlSUjRjcnFlNUZ1VmtEeUg1VWhvVENmOElMTGRPZXhocTJJNkRhYw?oc=5",
+          "source": "Capital Brief",
+          "pubDate": "Wed, 11 Nov 2026 00:23:00 GMT",
+          "via": "site-capitalbrief"
+        }
+      ],
+      "latestPubDate": "2026-11-11T00:23:00.000Z",
+      "score": 39,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -1433,7 +1600,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -1465,7 +1632,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -1497,7 +1664,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -1529,7 +1696,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -1561,7 +1728,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -1593,7 +1760,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -1625,40 +1792,72 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
-      "id": "co:six anz",
-      "company": "Six ANZ",
+      "id": "co:overwatch technologies",
+      "company": "Overwatch Technologies",
       "counterparty": null,
-      "type": "funding",
+      "type": "ipo",
       "tags": [
+        "ipo",
         "funding"
       ],
-      "amountAudM": 525,
-      "amountText": "$525 million",
+      "amountAudM": 8,
+      "amountText": "A$8 Million",
       "founderSignal": false,
       "secondarySignal": false,
       "auConfidence": 1,
-      "text": "Six ANZ startups that raised $525 million this week Keep reading to learn about quantum giant Q-CTRL, along with Alta, Vudoo, Refilled, Provectus Algae, and Aimer Farming. The post Six ANZ startups that raised $525 million this week appeared first on SmartCompany .",
+      "text": "Overwatch Technologies Lists on ASX After Raising A$8 Million in IPO Overwatch Technologies Lists on ASX After Raising A$8 Million in IPO Kalkine",
       "firstSeen": "2026-11-14T23:14:05.714Z",
       "articles": [
         {
-          "title": "Six ANZ startups that raised $525 million this week",
-          "link": "https://www.smartcompany.com.au/startupsmart/six-anz-startups-that-raised-525-million-this-week/",
-          "source": "SmartCompany",
-          "pubDate": "Fri, 13 Nov 2026 04:44:13 +0000",
-          "via": "smartcompany"
+          "title": "Overwatch Technologies Lists on ASX After Raising A$8 Million in IPO",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNT0J5cFM2Q0dqWk4wMFFKUEk3eDFpekJxdEVrQ3VwbWZJLVZVSDhzLUI1NjhDNHo2aUZSa1gxSW9USTRTWkZtMFNFbks1NVlqOFVITmtHWG8tek1NRVlIM1lteGhXcHJLMGtoTjFRNGxQOExtZUt6UENBSkRkM1JhdERMaFZ0UlVrd1czVWVJNXVXTnVZOWlrbHExQWdGUVd6ODdzb2NDeElraW1uRWc?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "via": "ipo"
         }
       ],
-      "latestPubDate": "2026-11-13T04:44:13.000Z",
-      "score": 38,
+      "latestPubDate": "2026-10-16T07:00:00.000Z",
+      "score": 36,
       "reasons": [
-        "Funding round (+14)",
-        "~A$525m deal (+13)",
-        "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "IPO / listing (+28)",
+        "~A$8m deal (+5)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "hl:overwatch technologies makes asx debut after successful 8 million ipo",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": 8,
+      "amountText": "$8 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Overwatch Technologies makes ASX debut after successful $8 million IPO at 20 cents per share Overwatch Technologies makes ASX debut after successful $8 million IPO at 20 cents per share Proactive financial news",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Overwatch Technologies makes ASX debut after successful $8 million IPO at 20 cents per share",
+          "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQRTVjeHhYN3pBVmw5VnZvU2tGanlLYVRYZHc3M2NPNGx2cUJELWwtSzR5d3ctTWMzaE9SOXJBZG1KSWJMbHhab1B0N3RSSEtCa28ydkxPSXZaSmwxQXRWcUEtQmo5bjY2V3FXOWdOTDlhalJ6ck91QkpTLWg1MHpLb3Y3bjVpZHhBc1AtVW4tZl9HT2ZSdzJ0YUJ4ckFNdktYTTVuTW8tQ0UwT0JBWlE1OFFjOTNYdFFVc0NINXRxNERGS2NPNnFONmFzS3hRZlFpNk1KbGVXWlZ5TXNkTEZMNlJhOEpRN1ZiNnBZMm1rT0traWtx?oc=5",
+          "source": "Proactive financial news",
+          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-10-16T07:00:00.000Z",
+      "score": 36,
+      "reasons": [
+        "IPO / listing (+28)",
+        "~A$8m deal (+5)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -1691,7 +1890,7 @@
         "Funding round (+14)",
         "~A$420m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -1723,7 +1922,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -1755,7 +1954,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -1787,7 +1986,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -1820,7 +2019,7 @@
         "Funding round (+14)",
         "~A$125m deal (+10)",
         "Australian signal 2/3 (+7)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -1852,7 +2051,39 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:gold road resources asx gor completes landmark scheme of arrangement",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Gold Road Resources (ASX:GOR) Completes Landmark Scheme of Arrangement with Gold Fields at 99% Approval Gold Road Resources (ASX:GOR) Completes Landmark Scheme of Arrangement with Gold Fields at 99% Approval Kalkine",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Gold Road Resources (ASX:GOR) Completes Landmark Scheme of Arrangement with Gold Fields at 99% Approval",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTjR0dzZTMUpFcWVLRGREQWpwdV9RVVVTbU1zOTFoWXhFR05Tb0xkZ2RJSFlRRWVPM1gzU3dIcXlIMjhMd2tWcHpPUkVNWjE4ZkpKN180OXJzd01ZLTBEbWhUa0hvSkd2QVdrNVJmYlcwUEljYzJkdks3T19ydjRqdEdSTGR0RVVSNHhyUURETnFucGpmMWFEdU14SnlaU0tOeWRTZTl3S0V0RlMteVpxaGpYUE9HTERrUVlZMzhJUldIZWZDNldndGNtQjVPczQ?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-10-29T07:00:00.000Z",
+      "score": 35,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -1884,7 +2115,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -1917,7 +2148,40 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
+      ]
+    },
+    {
+      "id": "co:macallum new energy",
+      "company": "Macallum New Energy",
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo",
+        "funding"
+      ],
+      "amountAudM": 2.1,
+      "amountText": "$2.11M",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Macallum New Energy raises $2.11M months after ASX debut Macallum New Energy raises $2.11M months after ASX debut Dealroom",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Macallum New Energy raises $2.11M months after ASX debut",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWjFCc0dSMlpfRm90aFg5WWplZkRfcFJqOVpkRE1lejBIUWNrZklKVFpyUmFUQ3ZNRmJyRlJGMVVaSTNsV01RWVZSeFdaU05vM0pYb2FPUG5jeW9ISkJLOFJTVF9ZZW00ei1ORmxPdGRnMkwtcWRIbENyMFNvM3U5WkxkVWxsWUwyWXU2dk5DT2hmWlE?oc=5",
+          "source": "Dealroom",
+          "pubDate": "Wed, 28 Oct 2026 03:21:07 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-10-28T03:21:07.000Z",
+      "score": 35,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -1949,7 +2213,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -1981,7 +2245,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)"
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -2013,7 +2277,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)"
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -2045,7 +2309,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -2077,7 +2341,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -2109,7 +2373,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -2141,7 +2405,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -2173,7 +2437,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -2205,7 +2469,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -2237,71 +2501,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (27d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:ingenia communities group asx ina shares may trade at a",
-      "company": null,
-      "counterparty": null,
-      "type": "takeover",
-      "tags": [
-        "takeover"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Ingenia Communities Group (ASX:INA) Shares May Trade At A Discount After Takeover Bid Ingenia Communities Group (ASX:INA) Shares May Trade At A Discount After Takeover Bid Yahoo Finance",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Ingenia Communities Group (ASX:INA) Shares May Trade At A Discount After Takeover Bid",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQV3ZuUWs1SkJiRFc1bVlLa1Zkc2dxUDhfSEx5YTlTT2J1NXR2ZUNyNTkwSndvSTZvTmFnRHQ1Z0VxeUNXMVFyQXZNMnVVU1oyS3pHU2pBaVhVQjlqZzN3YV92bEFtRVRqcXU0dHNLdm1YdkRYQUVsMGFDOEdyazQ2ckNuclFnRTZ1UU1DZUtySGI3NS15QURXazVLSGxmX1k?oc=5",
-          "source": "Yahoo Finance",
-          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
-          "via": "takeover"
-        }
-      ],
-      "latestPubDate": "2026-10-16T07:00:00.000Z",
-      "score": 35,
-      "reasons": [
-        "Takeover / scheme (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:how has ifms takeover offer reshaped the register at atlas",
-      "company": null,
-      "counterparty": null,
-      "type": "takeover",
-      "tags": [
-        "takeover"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "How Has IFM's Takeover Offer Reshaped the Register at Atlas Arteria (ASX:ALX)? How Has IFM's Takeover Offer Reshaped the Register at Atlas Arteria (ASX:ALX)? Kalkine",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "How Has IFM's Takeover Offer Reshaped the Register at Atlas Arteria (ASX:ALX)?",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRzFNbHc4NGc1dlVIcHN1WVFsdU1HZ3N0bnR5QnpkdmttLWZvS3dXV09kdGx1YThzMlFhOGFSdS1ISEtyZ2E5RVN3Z3JfdXM4c0tsV2xTZUtLRnNoNWlqOGVyd1FTZ2d2MXNyLVJaSzhlV2ZkS2UzMjBpYndHUVRvR1F3aXp3Z1YwSkJMcy05OS1VbksxQ1lpdXR3U09hZWZ0MHFNNkd5WDRnN3ZCQnlIZ25sNA?oc=5",
-          "source": "Kalkine",
-          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
-          "via": "takeover"
-        }
-      ],
-      "latestPubDate": "2026-10-16T07:00:00.000Z",
-      "score": 35,
-      "reasons": [
-        "Takeover / scheme (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -2334,7 +2534,7 @@
         "Funding round (+14)",
         "~A$22m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (6d ago, +8)"
+        "recent (7d ago, +8)"
       ]
     },
     {
@@ -2367,7 +2567,7 @@
         "Funding round (+14)",
         "~A$67m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2400,7 +2600,7 @@
         "Funding round (+14)",
         "~A$31m deal (+8)",
         "Australian signal 2/3 (+7)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -2440,7 +2640,7 @@
         "Funding round (+14)",
         "~A$10m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)",
+        "recent (4d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -2474,7 +2674,69 @@
         "Funding round (+14)",
         "~A$115m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:ingenia communities group asx ina shares may trade at a",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Ingenia Communities Group (ASX:INA) Shares May Trade At A Discount After Takeover Bid Ingenia Communities Group (ASX:INA) Shares May Trade At A Discount After Takeover Bid Yahoo Finance",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Ingenia Communities Group (ASX:INA) Shares May Trade At A Discount After Takeover Bid",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQV3ZuUWs1SkJiRFc1bVlLa1Zkc2dxUDhfSEx5YTlTT2J1NXR2ZUNyNTkwSndvSTZvTmFnRHQ1Z0VxeUNXMVFyQXZNMnVVU1oyS3pHU2pBaVhVQjlqZzN3YV92bEFtRVRqcXU0dHNLdm1YdkRYQUVsMGFDOEdyazQ2ckNuclFnRTZ1UU1DZUtySGI3NS15QURXazVLSGxmX1k?oc=5",
+          "source": "Yahoo Finance",
+          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-10-16T07:00:00.000Z",
+      "score": 31,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "hl:how has ifms takeover offer reshaped the register at atlas",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "How Has IFM's Takeover Offer Reshaped the Register at Atlas Arteria (ASX:ALX)? How Has IFM's Takeover Offer Reshaped the Register at Atlas Arteria (ASX:ALX)? Kalkine",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "How Has IFM's Takeover Offer Reshaped the Register at Atlas Arteria (ASX:ALX)?",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRzFNbHc4NGc1dlVIcHN1WVFsdU1HZ3N0bnR5QnpkdmttLWZvS3dXV09kdGx1YThzMlFhOGFSdS1ISEtyZ2E5RVN3Z3JfdXM4c0tsV2xTZUtLRnNoNWlqOGVyd1FTZ2d2MXNyLVJaSzhlV2ZkS2UzMjBpYndHUVRvR1F3aXp3Z1YwSkJMcy05OS1VbksxQ1lpdXR3U09hZWZ0MHFNNkd5WDRnN3ZCQnlIZ25sNA?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-10-16T07:00:00.000Z",
+      "score": 31,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -2507,7 +2769,7 @@
         "Funding round (+14)",
         "~A$15m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (6d ago, +8)"
+        "recent (7d ago, +8)"
       ]
     },
     {
@@ -2540,7 +2802,7 @@
         "Funding round (+14)",
         "~A$5.6m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -2573,7 +2835,7 @@
         "Funding round (+14)",
         "~A$6.9m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -2613,7 +2875,7 @@
         "Funding round (+14)",
         "~A$23m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)",
+        "recent (20d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -2654,8 +2916,41 @@
         "Funding round (+14)",
         "~A$20m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)",
+        "recent (25d ago, +4)",
         "2 articles (+2)"
+      ]
+    },
+    {
+      "id": "co:australias mp space",
+      "company": "Australia's MP Space",
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": 16,
+      "amountText": "$16m",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Australia's MP Space raises $16m to scale spacecraft power systems Australia's MP Space raises $16m to scale spacecraft power systems DealStreetAsia",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Australia's MP Space raises $16m to scale spacecraft power systems",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8xRTA3YnhjNEQ0U3ZOSjA5ZEE2bXhiek1OVGxvM3BfZWlicS1rcHJQbnFUczBpY01COEdvRVRlb2hBeGVZeGpCTDU5cGpjOVQ3NkF6MnBrM2hUYU9vbmlRVFNZZXdHVWhBTk5HenZHMC1VN29qamlJMUNRYmk?oc=5",
+          "source": "DealStreetAsia",
+          "pubDate": "Tue, 27 Oct 2026 07:00:00 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-10-27T07:00:00.000Z",
+      "score": 26,
+      "reasons": [
+        "Funding round (+14)",
+        "~A$16m deal (+5)",
+        "Australian signal 1/3 (+3)",
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -2688,40 +2983,7 @@
         "Funding round (+14)",
         "~A$20m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
-      ]
-    },
-    {
-      "id": "co:three anz",
-      "company": "Three ANZ",
-      "counterparty": null,
-      "type": "funding",
-      "tags": [
-        "funding"
-      ],
-      "amountAudM": 20.3,
-      "amountText": "$20.3 million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Three ANZ startups that raised $20.3 million this week Three ANZ startups that raised $20.3 million this week SmartCompany",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Three ANZ startups that raised $20.3 million this week",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaWhwZ1hUTkl3VWMxbzJBYk8zZGFyd21wWTZ1emZqQ0J5eVV2em9YMWh3OEU1Z1hhZG5oaGtheGlvVFlhRUF2NTQtbmJ4Mnk2di1TOFVmMkd3VEZPbzJub2xDbnFoeWU0c2xHaDJPeHFtblZzZ0dpQU1oZWlJVmxVN19uVF9oeUdtOU1WNy1LWVY5RmtjUTFfTEUzVUl6a094?oc=5",
-          "source": "SmartCompany",
-          "pubDate": "Fri, 16 Oct 2026 07:00:00 GMT",
-          "via": "funding-any"
-        }
-      ],
-      "latestPubDate": "2026-10-16T07:00:00.000Z",
-      "score": 26,
-      "reasons": [
-        "Funding round (+14)",
-        "~A$20.3m deal (+5)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -2753,7 +3015,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -2785,7 +3047,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2817,7 +3079,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2849,7 +3111,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (6d ago, +8)"
+        "recent (7d ago, +8)"
       ]
     },
     {
@@ -2881,7 +3143,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 2/3 (+7)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -2913,7 +3175,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 2/3 (+7)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     }
   ]
