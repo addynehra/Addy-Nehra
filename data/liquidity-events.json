@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-21T00:55:14.477Z",
+  "generatedAt": "2026-11-21T23:52:47.416Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
     {
       "id": "founder-exit",
       "ok": true,
-      "count": 79
+      "count": 35
     },
     {
       "id": "trade-sale",
       "ok": true,
-      "count": 18
+      "count": 16
     },
     {
       "id": "private-equity",
@@ -21,17 +21,17 @@
     {
       "id": "pe-firms",
       "ok": true,
-      "count": 74
+      "count": 56
     },
     {
       "id": "funding-late",
       "ok": true,
-      "count": 33
+      "count": 34
     },
     {
       "id": "funding-any",
       "ok": true,
-      "count": 34
+      "count": 33
     },
     {
       "id": "ipo",
@@ -41,32 +41,32 @@
     {
       "id": "takeover",
       "ok": true,
-      "count": 31
+      "count": 24
     },
     {
       "id": "selldown",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "id": "site-startupdaily",
       "ok": true,
-      "count": 36
+      "count": 35
     },
     {
       "id": "site-smartcompany",
       "ok": true,
-      "count": 41
+      "count": 42
     },
     {
       "id": "site-businessnews",
       "ok": true,
-      "count": 28
+      "count": 24
     },
     {
       "id": "site-capitalbrief",
       "ok": true,
-      "count": 65
+      "count": 60
     },
     {
       "id": "startupdaily",
@@ -119,7 +119,7 @@
         "Acquisition / trade sale (+40)",
         "~A$975m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (12d ago, +4)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -152,7 +152,7 @@
         "Private equity deal (+34)",
         "~A$604m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -185,7 +185,7 @@
         "Private equity deal (+34)",
         "~A$834m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -239,7 +239,7 @@
         "Acquisition / trade sale (+40)",
         "founder/family-owned mention (+12)",
         "Australian signal 2/3 (+7)",
-        "recent (5d ago, +8)",
+        "recent (6d ago, +8)",
         "4 articles (+6)"
       ]
     },
@@ -274,7 +274,7 @@
         "Acquisition / trade sale (+40)",
         "~A$760m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -307,7 +307,7 @@
         "Acquisition / trade sale (+40)",
         "~A$1450m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -340,7 +340,7 @@
         "Acquisition / trade sale (+40)",
         "~A$1450m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -374,7 +374,7 @@
         "Private equity deal (+34)",
         "~A$1000m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -407,7 +407,7 @@
         "Private equity deal (+34)",
         "~A$4000m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -440,7 +440,7 @@
         "Private equity deal (+34)",
         "~A$3400m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (20d ago, +4)"
+        "recent (21d ago, +4)"
       ]
     },
     {
@@ -473,7 +473,7 @@
         "Private equity deal (+34)",
         "~A$2200m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (26d ago, +4)"
+        "recent (27d ago, +4)"
       ]
     },
     {
@@ -506,7 +506,7 @@
         "Private equity deal (+34)",
         "~A$550m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (13d ago, +4)"
+        "recent (14d ago, +4)"
       ]
     },
     {
@@ -540,7 +540,7 @@
         "Private equity deal (+34)",
         "~A$43000m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -612,7 +612,7 @@
         "Acquisition / trade sale (+40)",
         "founder/family-owned mention (+12)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)",
+        "recent (3d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -646,7 +646,7 @@
         "Takeover / scheme (+28)",
         "~A$604m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -679,7 +679,7 @@
         "Takeover / scheme (+28)",
         "~A$604m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -744,7 +744,7 @@
         "IPO / listing (+28)",
         "~A$1100m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -777,7 +777,7 @@
         "Takeover / scheme (+28)",
         "~A$9300m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -810,6 +810,79 @@
         "Takeover / scheme (+28)",
         "~A$8000m deal (+25)",
         "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
+      "id": "hl:capability x hits asx after a 12 million ipo at",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": 34.4,
+      "amountText": "A$34.4 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Yahoo Finance Australia Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Proactive financial news",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Capability X hits ASX after A$12 million IPO at A$34.4 million valuation",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9nSkdQX0owdTF1OVVxTm44dFJENHRGc1liTXI0eTRrVUJSSVVSUUkwYlBQRmNGTFZSZE4zWXFsemtSTERPZ29kOVB3dmM4TVpEbmdaZl9KaThfcnpHTzBjVWMybktxbFZuRU1HSm11Nk83RF9mWENVRHBjeUlzdw?oc=5",
+          "source": "Yahoo Finance Australia",
+          "pubDate": "Thu, 12 Nov 2026 02:45:00 GMT",
+          "via": "ipo"
+        },
+        {
+          "title": "Capability X hits ASX after A$12 million IPO at A$34.4 million valuation",
+          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVFQzMnR4cWF5c3Y2eFdTcWlFWFl4VTJfdzNDTXF4dTY1QkM1eW5EMFBVMm1seVVxQm1OV01fRnV4UFNfVTFWUl92RS05Nm1mY09sUDlBM2dYcnRLakc3YVBKRF9KQkh2VjZJZU15TlR0WW94eEVfNTRRa2Y2MGVwblRiWXNKQXctQWhWaHp2c3V0WjRoVUh2WHBlLTVkME5CdVNPeXpvdExVX0dIZFJJZVVHV0QtNG1OWmpKQTBUQnNVbzU3ZnhySy1LeGZteGkxSnJvMFNQZlVzaE0?oc=5",
+          "source": "Proactive financial news",
+          "pubDate": "Thu, 12 Nov 2026 02:45:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-12T02:45:00.000Z",
+      "score": 56,
+      "reasons": [
+        "IPO / listing (+28)",
+        "~A$34.4m deal (+15)",
+        "Australian signal 2/3 (+7)",
+        "recent (10d ago, +4)",
+        "2 articles (+2)"
+      ]
+    },
+    {
+      "id": "hl:tdm cashes out 89 5m at guzman y gomez in",
+      "company": null,
+      "counterparty": null,
+      "type": "selldown",
+      "tags": [
+        "selldown"
+      ],
+      "amountAudM": 89.5,
+      "amountText": "$89.5m",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "TDM cashes out $89.5m at Guzman y Gomez in block trade TDM cashes out $89.5m at Guzman y Gomez in block trade AFR",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "TDM cashes out $89.5m at Guzman y Gomez in block trade",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYTdndFhEbXZxMFVXYnNFX2JsTm1BSXdCVFpGTjRxQXlydnBHa0pfdVVQOFp1U0pqZXVoNE5OYzV1dS1EUkRad2tleFBCZ2VPaVVBN1N2YzA4ZGZTdkx0XzJEWFM3WHhTeFR1VG1CS2xmNVItLVNrMFRZVklZYlg1MG1DMFhCXzlrc0taYUVaXzlQNUVKc255VEVMWTJ6YVlMZ24w?oc=5",
+          "source": "AFR",
+          "pubDate": "Wed, 21 Oct 2026 07:00:00 GMT",
+          "via": "selldown"
+        }
+      ],
+      "latestPubDate": "2026-10-21T07:00:00.000Z",
+      "score": 56,
+      "reasons": [
+        "Founder sell-down (+38)",
+        "~A$89.5m deal (+15)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -852,86 +925,44 @@
         }
       ],
       "latestPubDate": "2026-10-22T07:00:00.000Z",
-      "score": 59,
+      "score": 55,
       "reasons": [
         "IPO / listing (+28)",
         "~A$180m deal (+20)",
         "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)",
         "3 articles (+4)"
       ]
     },
     {
-      "id": "hl:capability x hits asx after a 12 million ipo at",
-      "company": null,
-      "counterparty": null,
-      "type": "ipo",
+      "id": "co:pickles",
+      "company": "Pickles",
+      "counterparty": "EQT",
+      "type": "exit",
       "tags": [
-        "ipo"
+        "exit"
       ],
-      "amountAudM": 34.4,
-      "amountText": "A$34.4 million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 2,
-      "text": "Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Yahoo Finance Australia Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Capability X hits ASX after A$12 million IPO at A$34.4 million valuation Proactive financial news",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Capability X hits ASX after A$12 million IPO at A$34.4 million valuation",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9nSkdQX0owdTF1OVVxTm44dFJENHRGc1liTXI0eTRrVUJSSVVSUUkwYlBQRmNGTFZSZE4zWXFsemtSTERPZ29kOVB3dmM4TVpEbmdaZl9KaThfcnpHTzBjVWMybktxbFZuRU1HSm11Nk83RF9mWENVRHBjeUlzdw?oc=5",
-          "source": "Yahoo Finance Australia",
-          "pubDate": "Thu, 12 Nov 2026 02:45:00 GMT",
-          "via": "ipo"
-        },
-        {
-          "title": "Capability X hits ASX after A$12 million IPO at A$34.4 million valuation",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVFQzMnR4cWF5c3Y2eFdTcWlFWFl4VTJfdzNDTXF4dTY1QkM1eW5EMFBVMm1seVVxQm1OV01fRnV4UFNfVTFWUl92RS05Nm1mY09sUDlBM2dYcnRLakc3YVBKRF9KQkh2VjZJZU15TlR0WW94eEVfNTRRa2Y2MGVwblRiWXNKQXctQWhWaHp2c3V0WjRoVUh2WHBlLTVkME5CdVNPeXpvdExVX0dIZFJJZVVHV0QtNG1OWmpKQTBUQnNVbzU3ZnhySy1LeGZteGkxSnJvMFNQZlVzaE0?oc=5",
-          "source": "Proactive financial news",
-          "pubDate": "Thu, 12 Nov 2026 02:45:00 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-11-12T02:45:00.000Z",
-      "score": 56,
-      "reasons": [
-        "IPO / listing (+28)",
-        "~A$34.4m deal (+15)",
-        "Australian signal 2/3 (+7)",
-        "recent (9d ago, +4)",
-        "2 articles (+2)"
-      ]
-    },
-    {
-      "id": "hl:tdm cashes out 89 5m at guzman y gomez in",
-      "company": null,
-      "counterparty": null,
-      "type": "selldown",
-      "tags": [
-        "selldown"
-      ],
-      "amountAudM": 89.5,
-      "amountText": "$89.5m",
+      "amountAudM": null,
+      "amountText": null,
       "founderSignal": false,
       "secondarySignal": false,
       "auConfidence": 1,
-      "text": "TDM cashes out $89.5m at Guzman y Gomez in block trade TDM cashes out $89.5m at Guzman y Gomez in block trade AFR",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "text": "EQT to acquire Australian auction platform Pickles from Apax EQT to acquire Australian auction platform Pickles from Apax Alternatives Watch",
+      "firstSeen": "2026-11-21T23:52:47.416Z",
       "articles": [
         {
-          "title": "TDM cashes out $89.5m at Guzman y Gomez in block trade",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYTdndFhEbXZxMFVXYnNFX2JsTm1BSXdCVFpGTjRxQXlydnBHa0pfdVVQOFp1U0pqZXVoNE5OYzV1dS1EUkRad2tleFBCZ2VPaVVBN1N2YzA4ZGZTdkx0XzJEWFM3WHhTeFR1VG1CS2xmNVItLVNrMFRZVklZYlg1MG1DMFhCXzlrc0taYUVaXzlQNUVKc255VEVMWTJ6YVlMZ24w?oc=5",
-          "source": "AFR",
-          "pubDate": "Wed, 21 Oct 2026 07:00:00 GMT",
-          "via": "selldown"
+          "title": "EQT to acquire Australian auction platform Pickles from Apax",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObEV5WXZ6TmRFSVozUUNwX21Qd3AtRDZPQ0E2VXVBVHR2OXhpYW44UFh0em01Q2huUWI3R0hhc2t5bEZOWGQyQUpuZ2gtVC0xSmpqMnV3MjJNTVBGcW93R2ZsSllJbGhxVlZlcHVuVW02NE9Wd0FrTTl0aDRTOXJRYlMwdzZ2VHcwc3FzdUVZbDk5cXVBMUZESVdZUm96ajlzU01z?oc=5",
+          "source": "Alternatives Watch",
+          "pubDate": "Sat, 21 Nov 2026 23:07:54 GMT",
+          "via": "private-equity"
         }
       ],
-      "latestPubDate": "2026-10-21T07:00:00.000Z",
-      "score": 56,
+      "latestPubDate": "2026-11-21T23:07:54.000Z",
+      "score": 51,
       "reasons": [
-        "Founder sell-down (+38)",
-        "~A$89.5m deal (+15)",
-        "Australian signal 1/3 (+3)"
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
       ]
     },
     {
@@ -963,7 +994,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -995,7 +1026,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 2/3 (+7)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -1060,7 +1091,7 @@
         "IPO / listing (+28)",
         "~A$45m deal (+15)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -1092,7 +1123,7 @@
       "reasons": [
         "Founder sell-down (+38)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -1124,7 +1155,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 2/3 (+7)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -1171,7 +1202,7 @@
         "IPO / listing (+28)",
         "~A$8m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (24d ago, +4)",
+        "recent (25d ago, +4)",
         "3 articles (+4)"
       ]
     },
@@ -1204,7 +1235,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -1236,7 +1267,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -1268,7 +1299,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -1300,7 +1331,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -1332,7 +1363,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -1364,7 +1395,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -1396,7 +1427,40 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)"
+        "recent (20d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:bae systems sale of dormant australian naval shipyard raises concerns",
+      "company": null,
+      "counterparty": null,
+      "type": "exit",
+      "tags": [
+        "exit",
+        "funding"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "BAE Systems' Sale of Dormant Australian Naval Shipyard Raises Concerns BAE Systems' Sale of Dormant Australian Naval Shipyard Raises Concerns The Maritime Executive",
+      "firstSeen": "2026-11-21T23:52:47.416Z",
+      "articles": [
+        {
+          "title": "BAE Systems' Sale of Dormant Australian Naval Shipyard Raises Concerns",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNDNXVVk2d0JRTGxlM0FjejV1OWxWTmFjOVVaYUdIUjUtVXBXSGFJZUJtb29ObEk1WXV5MG85Qk5nZkJZcm5vejF6WjlTTnAxNHFDOUs1dUtneWFYQVR0Sy02anJlcjU3YlBRNkNRM0J5UnZNcVpqMXFfYU5XS3V3ZEt2X3VYUTExakJDZkZqNnBHVFFSTTdpZDFiaVE4Z090cXpKZmJLUG1BOXdPWF9qNWFqUkc?oc=5",
+          "source": "The Maritime Executive",
+          "pubDate": "Mon, 02 Nov 2026 08:00:00 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-11-02T08:00:00.000Z",
+      "score": 47,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -1428,7 +1492,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -1460,39 +1524,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
-      ]
-    },
-    {
-      "id": "co:barossa",
-      "company": "Barossa",
-      "counterparty": "Hamilton Island",
-      "type": "exit",
-      "tags": [
-        "exit"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Billionaire family behind major Hamilton Island sale snaps up Barossa winery Billionaire family behind major Hamilton Island sale snaps up Barossa winery Glam Adelaide",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Billionaire family behind major Hamilton Island sale snaps up Barossa winery",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOHVxRmh1cGVKblZFcWNBWW1Gamo2bTRMakpjWW5HLVRFczhGZEJhY3NnVWpEMloyWWkwczc4T0RuUUhBTWV4dk5DM0JyRXdkY09TdjhUYmJXcy1FZ2pQdTVFOUc3VDlvVjNHUTQ4dEp6bm9FZWJWZ24tdHkzWWZCXzhDUUZ3ODlfTlpOUzlmNW5BbC03eXBVVTlvdXBVY0VGaUpma1FiREE?oc=5",
-          "source": "Glam Adelaide",
-          "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
-          "via": "trade-sale"
-        }
-      ],
-      "latestPubDate": "2026-10-22T07:00:00.000Z",
-      "score": 47,
-      "reasons": [
-        "Acquisition / trade sale (+40)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -1524,7 +1556,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -1564,7 +1596,7 @@
         "IPO / listing (+28)",
         "~A$6m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)",
+        "recent (6d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -1604,7 +1636,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (2d ago, +8)",
+        "recent (3d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -1638,7 +1670,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -1670,7 +1702,39 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 2/3 (+7)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:buyback paused is dyno nobel plotting a buyout",
+      "company": null,
+      "counterparty": null,
+      "type": "pe",
+      "tags": [
+        "pe"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Buyback paused – is Dyno Nobel plotting a buyout? Buyback paused – is Dyno Nobel plotting a buyout? The Australian",
+      "firstSeen": "2026-11-21T23:52:47.416Z",
+      "articles": [
+        {
+          "title": "Buyback paused – is Dyno Nobel plotting a buyout?",
+          "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxObDIwM0dwTnl5cWJEcnhRWVNrZmNpWUN2ZEpYM2VCR0o3YzVQajJ3NUliZlhzVkNxV3pWQTlSX2llOUN5R2J5VElEUWRFLXpiMm0tYUpVelR2aHRweUVJc21IUUZEVVMySlc3a0dXRnhIVllUZF9aeXo3dkJWWmNCWjJOWWN6b3BQTFVYazZiUEV6RER4NUVTYVhRX3hYT2tJWjB3TTh0eVVnRnBwQWhzRWpmVHRoN2VsZkF6bHdqQzNISXJRYWozZHdNT2UySC1sQ3kzNTB6dkVteGRfckZnLURCLWpnZFlzZnRDM2JjazhFLXUyV2FBY3FQekRFTzU2S3VOR2VLM2FrQQ?oc=5",
+          "source": "The Australian",
+          "pubDate": "Mon, 26 Oct 2026 07:00:00 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-10-26T07:00:00.000Z",
+      "score": 45,
+      "reasons": [
+        "Private equity deal (+34)",
+        "Australian signal 2/3 (+7)",
+        "recent (27d ago, +4)"
       ]
     },
     {
@@ -1737,7 +1801,7 @@
         "~A$1400m deal (+13)",
         "late-stage round (+6)",
         "Australian signal 2/3 (+7)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -1776,7 +1840,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (9d ago, +4)",
+        "recent (10d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -1810,7 +1874,7 @@
         "IPO / listing (+28)",
         "~A$8m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -1842,7 +1906,38 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
+      ]
+    },
+    {
+      "id": "co:barossa",
+      "company": "Barossa",
+      "counterparty": "Hamilton Island",
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Billionaire family behind major Hamilton Island sale snaps up Barossa winery Billionaire family behind major Hamilton Island sale snaps up Barossa winery Glam Adelaide",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Billionaire family behind major Hamilton Island sale snaps up Barossa winery",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOHVxRmh1cGVKblZFcWNBWW1Gamo2bTRMakpjWW5HLVRFczhGZEJhY3NnVWpEMloyWWkwczc4T0RuUUhBTWV4dk5DM0JyRXdkY09TdjhUYmJXcy1FZ2pQdTVFOUc3VDlvVjNHUTQ4dEp6bm9FZWJWZ24tdHkzWWZCXzhDUUZ3ODlfTlpOUzlmNW5BbC03eXBVVTlvdXBVY0VGaUpma1FiREE?oc=5",
+          "source": "Glam Adelaide",
+          "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
+          "via": "trade-sale"
+        }
+      ],
+      "latestPubDate": "2026-10-22T07:00:00.000Z",
+      "score": 43,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -1968,39 +2063,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (23d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:wiluna mining shares sink on asx debut dataroom",
-      "company": null,
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 3,
-      "text": "Wiluna Mining shares sink on ASX debut: DataRoom Wiluna Mining shares sink on ASX debut: DataRoom The Australian",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Wiluna Mining shares sink on ASX debut: DataRoom",
-          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOTm1YdjQxM21PQk83OUNYVUZDNnhKQ1BtcFJGTjRGbG1YWVBaMVo4ckNoM0g0N3dVbHNJcVZfYUwzeDl1N1hSYXNlR0dYRW45N3BkZUM1cVJ0VkNlZll6VUFtT21hY2FPZHp2TTlxbTg5RTJtcGtsc1BIc3hpZFZXY21wNmhPT3J4RDMzWDN0VWpjOVRncmpnM18yMjJienJoQXZTclZTWDFBd1A2djUxNzcxTFJ2UnpkQzQxMHBXc1BjWW1PcmdELWstWDRfQQ?oc=5",
-          "source": "The Australian",
-          "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-10-22T07:00:00.000Z",
-      "score": 42,
-      "reasons": [
-        "IPO / listing (+28)",
-        "Australian signal 3/3 (+10)",
-        "recent (30d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -2032,7 +2095,39 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:david jones private equity owner mulls taking back failed retailer",
+      "company": null,
+      "counterparty": null,
+      "type": "pe",
+      "tags": [
+        "pe"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "David Jones’ private equity owner mulls taking back failed retailer David Jones’ private equity owner mulls taking back failed retailer AFR",
+      "firstSeen": "2026-11-21T23:52:47.416Z",
+      "articles": [
+        {
+          "title": "David Jones’ private equity owner mulls taking back failed retailer",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMGk3ckNIclhrX2xlQ1FPbHRCdFFKamxTMVZpazJuTDJta3BaUF9IVTlCZzhjTGZGRm5SZjJ1TVZycTJxMDY3UVN5Y0hxcUp6WU5SNjVoNDRPeDRra1VtVXBiREc1b3NZTkE4VklaTFd6UDZ5VVluMlYtRGxGZ2NKRlU4T2k3OE41TTM2YjlQX19seElGZm9wWU1HTFJlWVZsemVLRGdlRXhqUzdScjM2Rkx2dVFoVEJsQWtWbVZkbHI?oc=5",
+          "source": "AFR",
+          "pubDate": "Thu, 05 Nov 2026 08:00:00 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-11-05T08:00:00.000Z",
+      "score": 41,
+      "reasons": [
+        "Private equity deal (+34)",
+        "Australian signal 1/3 (+3)",
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -2064,7 +2159,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -2098,7 +2193,7 @@
         "~A$3.7m deal (+3)",
         "founder/family-owned mention (+12)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -2131,7 +2226,7 @@
         "IPO / listing (+28)",
         "~A$3.6m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -2196,7 +2291,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -2228,7 +2323,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -2260,7 +2355,39 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:lunch wrap copper miners bleed as anthropic finally puts price",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Lunch Wrap: Copper miners bleed as Anthropic finally puts price on blockbuster IPO Lunch Wrap: Copper miners bleed as Anthropic finally puts price on blockbuster IPO Stockhead",
+      "firstSeen": "2026-11-21T23:52:47.416Z",
+      "articles": [
+        {
+          "title": "Lunch Wrap: Copper miners bleed as Anthropic finally puts price on blockbuster IPO",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPci1EZERUNndHekZ1TWFGT1J3dW5nTGdQcmtzbXRLR2hYaFpSZ2tPU1drUDUyTVVYOHRTUW1adWxYdVpMdkhnZm5kLTJqa2F5OFA4a1ZYOUx2T2RYaG9JVGw1WkhHSkhpVTJYOGNZeGItcXBCSElMOTRuWERoMU5XbVMtaVp1RzhFR1RmWTJrQzRtd1ZTQkdPQWFBWWhxWkxrTVR4NjA3MTNIWjl0LTV0WlN3?oc=5",
+          "source": "Stockhead",
+          "pubDate": "Thu, 19 Nov 2026 02:15:57 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-19T02:15:57.000Z",
+      "score": 39,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -2292,7 +2419,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -2324,7 +2451,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -2356,7 +2483,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2388,7 +2515,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2420,7 +2547,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2452,7 +2579,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (20d ago, +4)"
+        "recent (21d ago, +4)"
       ]
     },
     {
@@ -2484,7 +2611,38 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (22d ago, +4)"
+        "recent (23d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:wiluna mining shares sink on asx debut dataroom",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 3,
+      "text": "Wiluna Mining shares sink on ASX debut: DataRoom Wiluna Mining shares sink on ASX debut: DataRoom The Australian",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Wiluna Mining shares sink on ASX debut: DataRoom",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOTm1YdjQxM21PQk83OUNYVUZDNnhKQ1BtcFJGTjRGbG1YWVBaMVo4ckNoM0g0N3dVbHNJcVZfYUwzeDl1N1hSYXNlR0dYRW45N3BkZUM1cVJ0VkNlZll6VUFtT21hY2FPZHp2TTlxbTg5RTJtcGtsc1BIc3hpZFZXY21wNmhPT3J4RDMzWDN0VWpjOVRncmpnM18yMjJienJoQXZTclZTWDFBd1A2djUxNzcxTFJ2UnpkQzQxMHBXc1BjWW1PcmdELWstWDRfQQ?oc=5",
+          "source": "The Australian",
+          "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-10-22T07:00:00.000Z",
+      "score": 38,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 3/3 (+10)"
       ]
     },
     {
@@ -2517,7 +2675,7 @@
         "Funding round (+14)",
         "~A$46.5m deal (+8)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -2551,7 +2709,7 @@
         "~A$415m deal (+10)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -2622,7 +2780,7 @@
         "Funding round (+14)",
         "~A$525m deal (+13)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)",
+        "recent (9d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -2728,7 +2886,7 @@
         "Funding round (+14)",
         "~A$92m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)",
+        "recent (5d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -2761,7 +2919,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -2793,7 +2951,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -2825,7 +2983,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -2857,7 +3015,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -2889,7 +3047,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -2921,7 +3079,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -2953,7 +3111,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -2985,7 +3143,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -3049,7 +3207,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -3081,7 +3239,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -3113,7 +3271,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -3146,7 +3304,39 @@
         "Funding round (+14)",
         "~A$125m deal (+10)",
         "Australian signal 2/3 (+7)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:alvear moves to bridge tungsten supply gap with ipo and",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Alvear moves to bridge tungsten supply gap with IPO and Argentine mine restart Alvear moves to bridge tungsten supply gap with IPO and Argentine mine restart Stockhead",
+      "firstSeen": "2026-11-21T23:52:47.416Z",
+      "articles": [
+        {
+          "title": "Alvear moves to bridge tungsten supply gap with IPO and Argentine mine restart",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNTB6d1k4VDc3OUVTRDhMb0x4VTJnYlJYNFdKaXBIcDkzbVY4YWIzWGtGX1ExcXNjZ050WkRwVDNZYmRocHpORkx3enk0dEVwZE1KdEJrVWZ0R0JRNGFqUzd2UDIxbjRndTctTG9JMDNJOVk5N21ESkFSYnptQWlaa1p1XzhwVG4xWTFKUVpTZzlVYU92WmZaWjA1UGtKUEUweDFfRGJ4Y0FGeEZGSGRCOHJ0YzU?oc=5",
+          "source": "Stockhead",
+          "pubDate": "Wed, 04 Nov 2026 08:00:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-04T08:00:00.000Z",
+      "score": 35,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -3178,7 +3368,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (20d ago, +4)"
+        "recent (21d ago, +4)"
       ]
     },
     {
@@ -3210,7 +3400,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -3242,7 +3432,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -3274,7 +3464,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -3307,7 +3497,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -3339,7 +3529,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -3372,7 +3562,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -3404,7 +3594,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -3436,7 +3626,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -3468,7 +3658,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -3500,7 +3690,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -3532,7 +3722,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (26d ago, +4)"
+        "recent (27d ago, +4)"
       ]
     },
     {
@@ -3564,7 +3754,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (29d ago, +4)"
+        "recent (30d ago, +4)"
       ]
     },
     {
@@ -3596,7 +3786,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (29d ago, +4)"
+        "recent (30d ago, +4)"
       ]
     },
     {
@@ -3628,7 +3818,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (29d ago, +4)"
+        "recent (30d ago, +4)"
       ]
     },
     {
@@ -3761,7 +3951,7 @@
         "Funding round (+14)",
         "~A$7m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)",
+        "recent (4d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -3802,7 +3992,7 @@
         "Funding round (+14)",
         "~A$3.7m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (5d ago, +8)",
+        "recent (6d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -3843,7 +4033,7 @@
         "Funding round (+14)",
         "~A$6.3m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (6d ago, +8)",
+        "recent (7d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -3877,7 +4067,7 @@
         "Funding round (+14)",
         "~A$62m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -3910,7 +4100,7 @@
         "Funding round (+14)",
         "~A$31m deal (+8)",
         "Australian signal 2/3 (+7)",
-        "recent (22d ago, +4)"
+        "recent (23d ago, +4)"
       ]
     },
     {
@@ -3950,7 +4140,7 @@
         "Funding round (+14)",
         "~A$16.7m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)",
+        "recent (2d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -3984,7 +4174,7 @@
         "Funding round (+14)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -4023,7 +4213,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 2/3 (+7)",
-        "recent (1d ago, +8)",
+        "recent (2d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -4057,7 +4247,7 @@
         "Funding round (+14)",
         "~A$420m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -4090,7 +4280,7 @@
         "Funding round (+14)",
         "~A$115m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -4123,7 +4313,7 @@
         "Funding round (+14)",
         "~A$304m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (22d ago, +4)"
+        "recent (23d ago, +4)"
       ]
     },
     {
@@ -4373,7 +4563,7 @@
         "Funding round (+14)",
         "~A$11m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -4406,7 +4596,7 @@
         "Funding round (+14)",
         "~A$22m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (12d ago, +4)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -4439,7 +4629,7 @@
         "Funding round (+14)",
         "~A$67m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -4472,7 +4662,7 @@
         "Funding round (+14)",
         "~A$3.7m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -4512,7 +4702,7 @@
         "Funding round (+14)",
         "~A$10m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)",
+        "recent (10d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -4553,48 +4743,7 @@
         "Funding round (+14)",
         "~A$23m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)",
-        "2 articles (+2)"
-      ]
-    },
-    {
-      "id": "co:cuttable",
-      "company": "Cuttable",
-      "counterparty": null,
-      "type": "funding",
-      "tags": [
-        "funding"
-      ],
-      "amountAudM": 20,
-      "amountText": "$20 million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Cuttable raises $20 million to help brands post social media ads at scale Cuttable raises $20 million to help brands post social media ads at scale SmartCompany Cuttable raises $20m and relaunches AI ad platform Cuttable raises $20m and relaunches AI ad platform Capital Brief",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Cuttable raises $20 million to help brands post social media ads at scale",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVzhvcmdLOWtCc0RWbEp1TFk3bUVtUV9YRkpnZzFtSnk0X2gweDJPMnJlVkNOWWNxRDJPUGs4dzU2a0hIaU1ySUJNSVliN05NaHRtNXY1TVVucFBnei1FRDJGT3lNcFV0Q2hNOEFiWThDUVVNbV94UTBTcmxaYU5ZRi1aajE0SnB4dllLajhwYjhObk9zdkNHT3ROQlNXNGlHQTJHcnl4SE4?oc=5",
-          "source": "SmartCompany",
-          "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
-          "via": "funding-any"
-        },
-        {
-          "title": "Cuttable raises $20m and relaunches AI ad platform",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUWxaY1dqQUo2dnEwb3o0eGY1WnNWSVVpbnNpSGJvbWtsZGlwU1diZE8yZzktMllDQXZqc1NXeC1ja2o2SDYxYk1DME9XWUJVcVRMSjNVOEJoV0hicmdFZDhMdFNDbEZVOVdudDNSX3o5S3o4QXFISFVLalJhMTA4aG5XQzdQTnVqYWNCVU12SlNDcFJ6N3ZmRUdnM1dfSTFBYU5xeU9KMHFHTkdOMk5GaEpwdUpSdnJIV2lPNWtqRUs3S1k?oc=5",
-          "source": "Capital Brief",
-          "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
-          "via": "site-capitalbrief"
-        }
-      ],
-      "latestPubDate": "2026-10-22T07:00:00.000Z",
-      "score": 28,
-      "reasons": [
-        "Funding round (+14)",
-        "~A$20m deal (+5)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)",
+        "recent (26d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -4634,7 +4783,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)",
+        "recent (2d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -4668,7 +4817,7 @@
         "Funding round (+14)",
         "~A$15m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (12d ago, +4)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -4701,40 +4850,7 @@
         "Funding round (+14)",
         "~A$16m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:sam kroonenburgs adtech cuttable adds 20m million series a",
-      "company": null,
-      "counterparty": null,
-      "type": "funding",
-      "tags": [
-        "funding"
-      ],
-      "amountAudM": 20,
-      "amountText": "$20m",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Sam Kroonenburg’s adtech, Cuttable, adds $20m million Series A Sam Kroonenburg’s adtech, Cuttable, adds $20m million Series A Startup Daily",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Sam Kroonenburg’s adtech, Cuttable, adds $20m million Series A",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRm1SeXBlb2IzbmRPZU5DTFVuRGdnUzFoc2ZuN0xPNHd6Q3NjZGxLN3ljaGlZaDBVcFNOSzNSSVVuTk93Mm9hUm1ldDVVckFySFhSNy1uQmc4ekkwQ2tCaXdGWUJMeXpFckZXSUpsZnF6Rm4zaU5zalFacDhaOG52Qm9hWVZ6UXZ4S3ZEVWZXSjFjYnZCRkw4ZkpiQTAxSEQ1SzRlZA?oc=5",
-          "source": "Startup Daily",
-          "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
-          "via": "funding-any"
-        }
-      ],
-      "latestPubDate": "2026-10-22T07:00:00.000Z",
-      "score": 26,
-      "reasons": [
-        "Funding round (+14)",
-        "~A$20m deal (+5)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -4766,7 +4882,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -4798,7 +4914,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     }
   ]
