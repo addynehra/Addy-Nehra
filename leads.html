@@ -196,6 +196,7 @@
   .liq-type{ font-family:'JetBrains Mono', monospace; font-size: 10px; padding: 3px 8px; border-radius: 10px; border:1px solid var(--line); color: var(--grey); text-transform: uppercase; letter-spacing: .04em; }
   .liq-type.exit, .liq-type.selldown{ border-color: var(--gold); color: var(--gold); }
   .liq-type.founder_liquidity, .liq-type.rich_list{ border-color: var(--gold); color: var(--gold); }
+  .liq-type.referral_partner{ border-color: var(--burgundy); color: #D98C95; }
   .liq-type.women_investing, .liq-type.philanthropy{ border-color: var(--good); color: var(--good); }
   .liq-type.pe{ border-color: var(--good); color: var(--good); }
   .liq-meta{ font-size: 12px; color: var(--grey); margin-bottom: 8px; line-height: 1.5; }
@@ -241,7 +242,7 @@
   <section class="panel active" id="tab-search">
     <div class="card">
       <h2>Ideal Client Profile</h2>
-      <p class="hint">Pick a preset for your niche (business owners approaching an exit) or start from scratch, then tune it. This produces (1) a boolean keyword string to paste into Sales Navigator's search box and (2) a checklist of filters to set manually in the Sales Navigator UI — Sales Navigator doesn't support deep-linking filters via URL, so those still need a couple of clicks.</p>
+      <p class="hint">Pick a preset for your niche (business owners approaching an exit, or lawyers and accountants who serve women clients as referral partners) or start from scratch, then tune it. This produces (1) a boolean keyword string to paste into Sales Navigator's search box and (2) a checklist of filters to set manually in the Sales Navigator UI — Sales Navigator doesn't support deep-linking filters via URL, so those still need a couple of clicks.</p>
 
       <label>Preset</label>
       <select id="preset-select"></select>
@@ -369,7 +370,7 @@
   <section class="panel" id="tab-women">
     <div class="card">
       <h2>Women &amp; wealth signals</h2>
-      <p class="hint">A daily scan of public Australian business news for women who have <strong>sold, raised or listed a business, taken over a family business or family office, made major gifts, appeared on a Rich List, or are active in women's investing networks</strong> (Scale Investors, Australians Investing in Women, Chief Executive Women and similar). Someone counts as a woman only when the article says so (she/her, businesswoman); names are never used to guess. Obituaries, estates, inheritance disputes, divorces and court cases are excluded on purpose.</p>
+      <p class="hint">A daily scan of public Australian business news for women who have <strong>sold, raised or listed a business, taken over a family business or family office, made major gifts, appeared on a Rich List, or are active in women's investing networks</strong> (Scale Investors, Australians Investing in Women, Chief Executive Women and similar). Someone counts as a woman only when the article says so (she/her, businesswoman); names are never used to guess. Obituaries, estates, inheritance disputes, divorces and court cases are excluded on purpose. <strong>Referral partner</strong> signals are lawyers and accountants publicly running women-focused work: programs, events, networks or practices.</p>
       <div id="wom-status" class="hint" style="margin-bottom:0;">Loading…</div>
     </div>
 
@@ -436,6 +437,7 @@
             <option value="">No signal logged</option>
             <option value="Liquidity event">Liquidity event</option>
             <option value="Women &amp; wealth signal">Women &amp; wealth signal</option>
+            <option value="Referral partner">Referral partner</option>
             <option value="News article">News article</option>
             <option value="LinkedIn post">LinkedIn post</option>
             <option value="Job change">Job change</option>
@@ -605,6 +607,36 @@
       signals: ["sold my business", "acquired by", "recently exited", "post-exit"],
       spotlights: ["Changed jobs in the past 90 days"]
     },
+    women_ref_lawyers: {
+      label: "Referral partners: lawyers serving women",
+      titles: "Partner, Principal, Special Counsel, Senior Associate, Family Lawyer, Estate Planning Lawyer, Private Client Lawyer",
+      seniority: "Partner, Owner, Director",
+      geo: "Sydney, New South Wales, Australia",
+      headcount: "",
+      revenue: "",
+      sizeLogic: "either",
+      industry: "Law Practice, Legal Services",
+      tenure: "5+",
+      signals: ["women in business", "women's wealth", "female founders", "women clients", "financial independence for women"],
+      custom: '("family law" OR "estate planning" OR "wills and estates" OR "private client" OR "succession planning")',
+      requireSignals: true, // the women focus is the point of this search
+      spotlights: ["Posted on LinkedIn in the past 30 days"]
+    },
+    women_ref_accountants: {
+      label: "Referral partners: accountants serving women",
+      titles: "Partner, Director, Principal, Private Client Director, Family Office Director, Chartered Accountant",
+      seniority: "Partner, Owner, Director",
+      geo: "Sydney, New South Wales, Australia",
+      headcount: "",
+      revenue: "",
+      sizeLogic: "either",
+      industry: "Accounting",
+      tenure: "5+",
+      signals: ["women in business", "women's wealth", "female founders", "women clients", "financial independence for women"],
+      custom: '("tax" OR "advisory" OR "private client" OR "family office" OR "business services")',
+      requireSignals: true, // the women focus is the point of this search
+      spotlights: ["Posted on LinkedIn in the past 30 days"]
+    },
     custom: {
       label: "Start from scratch",
       titles: "", seniority: "", geo: "", headcount: "", revenue: "", sizeLogic: "either", industry: "", tenure: "", signals: [], spotlights: []
@@ -620,7 +652,9 @@
 
   const ALL_SIGNALS = ["succession planning","exit strategy","selling my business","retiring",
     "family business","second generation","family office","generational transition",
-    "sold my business","acquired by","recently exited","post-exit","business transition","liquidity event"];
+    "sold my business","acquired by","recently exited","post-exit","business transition","liquidity event",
+    "women in business","women's wealth","female founders","women clients","women investors","financial independence for women",
+    "family law","estate planning","private clients"];
 
   const ALL_SPOTLIGHTS = ["Posted on LinkedIn in the past 30 days", "Changed jobs in the past 90 days"];
 
@@ -690,8 +724,8 @@
     document.getElementById('f-size-logic').value = p.sizeLogic;
     document.getElementById('f-industry').value = p.industry;
     document.getElementById('f-tenure').value = p.tenure;
-    document.getElementById('f-custom').value = '';
-    document.getElementById('f-require-signals').checked = false;
+    document.getElementById('f-custom').value = p.custom || '';
+    document.getElementById('f-require-signals').checked = !!p.requireSignals;
     renderChips(p.signals);
     renderSpotlightChips(p.spotlights);
     renderGeoChips();
@@ -1376,12 +1410,12 @@
   let womLoadFailed = false;
   const WOM_CAT_LABELS = {
     founder_liquidity: 'Founder: sale / raise / listing', rich_list: 'Rich List', family_business: 'Family business / family office',
-    philanthropy: 'Philanthropy', women_investing: 'Women investing initiative'
+    philanthropy: 'Philanthropy', women_investing: 'Women investing initiative', referral_partner: 'Referral partner (law / accounting)'
   };
   const womCatSel = document.getElementById('wom-cat');
   Object.entries(WOM_CAT_LABELS).forEach(([k, v]) => { const o = document.createElement('option'); o.value = k; o.textContent = v; womCatSel.appendChild(o); });
 
-  function womE(s){ return s.enrichment && s.enrichment.is_woman_identified !== false ? s.enrichment : {}; }
+  function womE(s){ return s.enrichment && (s.enrichment.is_woman_identified !== false || s.category === 'referral_partner') ? s.enrichment : {}; }
   function womName(s){ return womE(s).name || s.person || ''; }
   function womOrg(s){ return womE(s).organisation || s.organisation || ''; }
   function womWealth(s){
@@ -1420,7 +1454,7 @@
       stage: 'New', followup: '',
       notes: [WOM_CAT_LABELS[s.category] + (womWealth(s) ? ' · ' + womWealth(s) : ''), e.organisation_description, e.wealth_indicator && 'Wealth basis: ' + e.wealth_indicator,
               e.investing_interests && 'Interests: ' + e.investing_interests, e.summary, 'Signal score ' + s.score + '/100'].filter(Boolean).join('\n'),
-      signalType: 'Women & wealth signal',
+      signalType: s.category === 'referral_partner' ? 'Referral partner' : 'Women & wealth signal',
       signalUrl: e.source_url || art.link || '',
       signalNote: (art.source ? art.source + ', ' : '') + formatNewsDate(art.pubDate) + ': ' + (art.title || ''),
       source: 'women-scan', added: new Date().toISOString().slice(0,10)

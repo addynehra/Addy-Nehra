@@ -2,7 +2,7 @@
 // involved in women's investing: a business sale or raise she led, taking over
 // a family business, philanthropy, Rich List coverage, or women-investing
 // networks. Built on the liquidity parser; pure functions, no network.
-import { classify, extractAmount, auConfidence, cleanTitle, isNoise, normaliseName, extractParties } from '../liquidity/parse.mjs';
+import { classify, extractAmount, auConfidence, cleanTitle, isNoise, normaliseName, extractParties, tidyName } from '../liquidity/parse.mjs';
 
 export const CATEGORIES = {
   founder_liquidity: { label: 'Founder: sale / raise / listing', weight: 36 },
@@ -10,12 +10,17 @@ export const CATEGORIES = {
   family_business:   { label: 'Family business / family office', weight: 32 },
   philanthropy:      { label: 'Philanthropy',                    weight: 30 },
   women_investing:   { label: 'Women investing initiative',      weight: 28 },
+  referral_partner:  { label: 'Referral partner (law / accounting)', weight: 26 },
 };
 
 const RICH_LIST = /\b(rich list|young rich|richest (?:women|woman|australians?)|wealthiest (?:women|woman)|billionaire|self-made)\b/i;
 const FAMILY = /\b(takes? (?:over )?the (?:helm|reins)|succeeds? her (?:father|mother|parents)|next generation|(?:second|third|fourth)-generation|family[- ](?:business|company|firm|office|empire|dynasty|owned|wealth)|matriarch|heiress|appointed (?:chair|chairwoman|chief executive|ceo|managing director)|new (?:chair|chairwoman|chief executive))\b/i;
 const PHILANTHROPY = /\b(philanthrop\w*|donat(?:es|ed|ion)|gift of|pledges?|launch(?:es|ed)? (?:a |her )?(?:foundation|fund|trust)|private ancillary fund|endow\w*|giving circle)\b/i;
 const WOMEN_INVESTING = /\b(scale investors|angel investors?|angel network|invest(?:s|ing)? in women|women investors?|female investors?|women-led funds?|gender[- ]lens|backs? (?:female|women) founders|australians investing in women|women donors|chief executive women|springboard enterprises|league of extraordinary women|women in (?:finance|investing|wealth|venture)|female founders? fund|women'?s (?:investment|investing|wealth) (?:club|network|summit|series|program))\b/i;
+
+// Lawyers and accountants whose work is aimed at women clients: referral partners.
+const PROFESSIONAL = /\b(law firms?|lawyers?|solicitors?|barristers?|legal (?:practice|firm)|family law|estate planning|wills and estates|succession law|accountants?|accounting (?:firm|practice)|chartered accountants?|CA ANZ|CPA(?: Australia)?|tax (?:advisers?|advisors?|agents?)|bookkeep\w*)\b/i;
+const WOMEN_FOCUS = /\b(for women|women clients|female clients|women in business|women business owners|female business owners|female founders|women founders|women'?s (?:network|program|programme|event|series|wealth|financial)|women and money|financial (?:independence|literacy|confidence) for women|women in (?:law|accounting|finance)|women lawyers|women accountants)\b/i;
 
 // Explicit textual reference to a woman. Gender is never guessed from a name.
 const FEMALE = /\b(she|her|hers|herself|woman|women|female|businesswom[ae]n|chairwoman|matriarch|heiress|daughters?|mother|sisters?|granddaughter|niece|mum|mrs|ms|dame|lady)\b/gi;
@@ -46,6 +51,7 @@ export function categorise(text) {
   if (FAMILY.test(text)) cats.push('family_business');
   if (PHILANTHROPY.test(text)) cats.push('philanthropy');
   if (WOMEN_INVESTING.test(text)) cats.push('women_investing');
+  if (PROFESSIONAL.test(text) && WOMEN_FOCUS.test(text)) cats.push('referral_partner');
   return cats;
 }
 
@@ -70,6 +76,15 @@ export function extractPerson(headline) {
 //   au:       the search required Australian terms
 //   category: fallback signal type when the headline alone doesn't say
 // Returns { signal } or { reason } (why it was dropped).
+// "<Org> launches / hosts / appoints ..." — the organisation doing something.
+const ACTOR = /^(.+?)\s+(?:launches|launched|hosts|hosted|appoints|opens|announces|unveils|partners with|introduces|starts|creates|forms|expands|backs|wins)\b/;
+function extractOrganisation(headline) {
+  const t = extractParties(headline).target;
+  if (t) return t;
+  const m = headline.match(ACTOR);
+  return m ? tidyName(m[1]) : null;
+}
+
 export function evaluateArticle(article, meta = {}) {
   const headline = cleanTitle(article.title || '', article.source || '');
   if (!headline) return { reason: 'empty' };
@@ -82,14 +97,15 @@ export function evaluateArticle(article, meta = {}) {
   let inferred = false;
   // Only initiative stories may borrow the search's category; for the rest, the
   // headline/snippet must say what happened (sale, raise, gift, list...).
-  if (!cats.length && meta.category === 'women_investing' && femaleSignal(text) > 0) { cats = [meta.category]; inferred = true; }
+  if (!cats.length && (meta.category === 'women_investing' || meta.category === 'referral_partner') && femaleSignal(text) > 0) { cats = [meta.category]; inferred = true; }
   if (!cats.length) return { reason: 'no_signal_type' };
   const category = cats.slice().sort((a, b) => CATEGORIES[b].weight - CATEGORIES[a].weight)[0];
 
   let female = femaleSignal(text);
-  if (female === 0 && MALE.test(text)) return { reason: 'about_a_man' };
+  // Referral partners can be any gender; what matters is that their work targets women.
+  if (female === 0 && MALE.test(text) && !cats.includes('referral_partner')) return { reason: 'about_a_man' };
   const femaleFromSearch = female === 0 && meta.female;
-  if (female === 0 && !meta.female && !cats.includes('women_investing')) return { reason: 'no_female_signal' };
+  if (female === 0 && !meta.female && !cats.includes('women_investing') && !cats.includes('referral_partner')) return { reason: 'no_female_signal' };
 
   if (FOREIGN.test(headline) && !AU_IN_HEADLINE.test(headline)) return { reason: 'foreign' };
   let au = auConfidence(text, article.source, article.link);
@@ -104,7 +120,7 @@ export function evaluateArticle(article, meta = {}) {
     tags: cats,
     categoryInferred: inferred,
     person: extractPerson(headline),
-    organisation: extractParties(headline).target,
+    organisation: extractOrganisation(headline),
     amountAudM: amount ? amount.audM : null,
     amountText: amount ? amount.text : null,
     femaleSignal: female,
@@ -156,7 +172,7 @@ export function scoreSignal(s, now = new Date()) {
 
   const e = s.enrichment;
   if (e) {
-    if (e.is_woman_identified === false) { score -= 40; reasons.push('AI review: not identified as a woman in sources (−40)'); }
+    if (e.is_woman_identified === false && s.category !== 'referral_partner') { score -= 40; reasons.push('AI review: not identified as a woman in sources (−40)'); }
     if (e.is_australian === false) { score -= 20; reasons.push('AI review: not Australian (−20)'); }
     if (e.name) { score += 5; reasons.push('named and verified (+5)'); }
   }

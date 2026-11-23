@@ -98,7 +98,7 @@ function lastProperNounRun(s) {
   return NOT_A_NAME.test(run) ? '' : run;
 }
 
-function tidyName(raw) {
+export function tidyName(raw) {
   if (!raw) return null;
   let s = raw.replace(/^['"‘’“”]+|['"‘’“”]+$/g, '').replace(STOP_TAIL, '').trim();
   s = s.replace(/[,:;.!?]+$/, '').trim();

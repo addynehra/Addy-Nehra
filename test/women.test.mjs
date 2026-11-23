@@ -40,7 +40,10 @@ test('end-to-end scan on fixtures', async () => {
   execFileSync('node', ['scripts/women-scan.mjs', '--fixtures', 'test/fixtures/women', '--out', out, '--no-enrich'], { cwd: ROOT });
   const o = JSON.parse(await fs.readFile(out, 'utf8'));
   const links = o.signals.flatMap(s => s.articles.map(a => a.link));
-  assert.equal(o.signals.length, 4);
+  assert.equal(o.signals.length, 5);
+  const ref = o.signals.find(s => s.category === 'referral_partner');
+  assert.ok(ref && ref.organisation === 'Example Legal', 'referral partner found (any gender)');
+  assert.ok(!links.some(l => l.endsWith('r-nowomen')), 'accountant story without a women focus is excluded');
   for (const bad of ['w-obit', 'w-dispute', 'w-male']) assert.ok(!links.some(l => l.endsWith(bad)), bad + ' should be excluded');
   assert.equal(o.signals[0].person, 'Priya Example');
 });

@@ -33,6 +33,10 @@ export const QUERIES = [
   { id: 'w-angel-groups',  female: false, au: true, category: 'women_investing', q: `("Sydney Angels" OR "Melbourne Angels" OR "Brisbane Angels" OR "Perth Angels" OR "Scale Investors" OR "Artesian" OR "Giant Leap" OR "Rampersand") (women OR female OR she OR her)` },
   { id: 'w-networks',      female: true, au: true, category: 'women_investing', q: `("Chief Executive Women" OR "Springboard Enterprises" OR "League of Extraordinary Women" OR "Women in Super" OR "Women in Banking and Finance")` },
   { id: 'w-women-wealth',  female: true, au: true, category: 'women_investing', q: `("women and wealth" OR "women investors" OR "female investors" OR "women in investing" OR "financial independence for women" OR "wealthy women") ${AU}` },
+  // Referral partners: lawyers and accountants whose work targets women clients
+  { id: 'w-ref-law',       female: false, au: true, category: 'referral_partner', q: `("law firm" OR lawyer OR lawyers OR "family law" OR "estate planning" OR "wills and estates") ("for women" OR "women clients" OR "women in business" OR "female founders" OR "women's network" OR "women and money" OR "women's wealth") ${AU}` },
+  { id: 'w-ref-accounting', female: false, au: true, category: 'referral_partner', q: `(accountant OR accountants OR "accounting firm" OR "chartered accountant" OR "CPA Australia" OR "CA ANZ") ("for women" OR "women clients" OR "women in business" OR "female founders" OR "women business owners" OR "women and money" OR "financial independence") ${AU}` },
+  { id: 'w-ref-networks',  female: false, au: true, category: 'referral_partner', q: `("Australian Women Lawyers" OR "Women Lawyers Association" OR "Women in Accounting" OR "women in law" OR "Women in Tax" OR "Women in Family Business") (launch OR event OR appointed OR award OR president OR partner)` },
   { id: 'w-site-womensagenda', female: true, au: 'outlet', category: 'women_investing', q: `site:womensagenda.com.au (invest OR investor OR raises OR sold OR acquired OR founder OR philanthropy OR "family business" OR wealth)` },
 ];
 
@@ -67,7 +71,7 @@ export const PROFILE_TOOL = {
       role: { type: 'string', description: 'Business or community role, e.g. "Co-founder, former CEO", "Chair of the family company", "Angel investor, Scale Investors member".' },
       organisation: { type: 'string' },
       organisation_description: { type: 'string', description: 'One line on the organisation and where it is based.' },
-      signal_type: { type: 'string', enum: ['business_sale', 'capital_raise', 'ipo', 'family_business_leadership', 'family_office', 'philanthropy', 'women_investing_initiative', 'rich_list', 'other'] },
+      signal_type: { type: 'string', enum: ['business_sale', 'capital_raise', 'ipo', 'family_business_leadership', 'family_office', 'philanthropy', 'women_investing_initiative', 'rich_list', 'referral_partner', 'other'] },
       wealth_indicator: { type: 'string', description: 'The publicly reported basis for thinking she has significant wealth (e.g. "sold her 60% stake for a reported $40m", "Rich List 2026, $350m"). Empty if none is published.' },
       published_wealth_aud_m: { type: ['number', 'null'], description: 'Only a figure that a publication has printed (Rich List estimate, sale proceeds), in AUD millions; otherwise null.' },
       investing_interests: { type: 'string', description: 'Publicly stated investing or giving interests (e.g. backs female founders, climate, education). Empty if none.' },
@@ -85,6 +89,7 @@ Research the story you are given and identify the woman at its centre, using rep
 
 Rules:
 - Only record people whom public sources explicitly describe as women. Never infer gender from a name.
+- Exception, referral partners: if the story is about a lawyer, accountant or their firm running work aimed at women clients (programs, events, networks, a women-focused practice), record the professional leading that work (any gender) with signal_type referral_partner. Set is_woman_identified to whether sources describe that person as a woman.
 - Record only information published about her in a business, investing or philanthropic capacity: name, role, organisation, published wealth figures, stated investing interests and business location.
 - Do not research or record deaths, estates, wills, inheritances, divorces, family disputes, health, home addresses, contact details or children.
 - If the story is mainly about a death, a family dispute or a court case, record is_woman_identified as false and leave the other fields empty.
