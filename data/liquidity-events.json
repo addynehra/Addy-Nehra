@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-23T11:34:33.491Z",
+  "generatedAt": "2026-11-23T11:37:28.442Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
     {
       "id": "founder-exit",
       "ok": true,
-      "count": 34
+      "count": 79
     },
     {
       "id": "trade-sale",
@@ -16,7 +16,7 @@
     {
       "id": "private-equity",
       "ok": true,
-      "count": 33
+      "count": 34
     },
     {
       "id": "pe-firms",
@@ -41,7 +41,7 @@
     {
       "id": "takeover",
       "ok": true,
-      "count": 31
+      "count": 32
     },
     {
       "id": "selldown",
@@ -51,22 +51,22 @@
     {
       "id": "site-startupdaily",
       "ok": true,
-      "count": 37
+      "count": 36
     },
     {
       "id": "site-smartcompany",
       "ok": true,
-      "count": 43
+      "count": 42
     },
     {
       "id": "site-businessnews",
       "ok": true,
-      "count": 24
+      "count": 23
     },
     {
       "id": "site-capitalbrief",
       "ok": true,
-      "count": 100
+      "count": 76
     },
     {
       "id": "startupdaily",
