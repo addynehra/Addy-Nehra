@@ -52,3 +52,9 @@ test('overseas stories and end-of-life stories are excluded', () => {
   assert.equal(articleToSignal(art('German female-founded startup Finches raises €2 million', 'She said', 'Startup Daily'), { female: true, au: 'outlet' }), null);
   assert.equal(articleToSignal(art('Roz Hervey had hours left to live. She asked her family to press record', '', "Women's Agenda"), { female: true, au: 'outlet', category: 'philanthropy' }), null);
 });
+
+test('a law firm serving women is not excluded by family-law words', () => {
+  const s = articleToSignal(art('Building a divorce law firm for women, by women - Lawyers Weekly', 'Sydney practice', 'Lawyers Weekly'), { au: true, category: 'referral_partner' });
+  assert.equal(s && s.category, 'referral_partner');
+  assert.equal(articleToSignal(art('Sydney businesswoman finalises divorce', '', 'SMH')), null);
+});
