@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T10:14:12.939Z",
+  "generatedAt": "2026-11-23T10:17:48.546Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -11,7 +11,7 @@
     {
       "id": "trade-sale",
       "ok": true,
-      "count": 55
+      "count": 15
     },
     {
       "id": "private-equity",
@@ -21,7 +21,7 @@
     {
       "id": "pe-firms",
       "ok": true,
-      "count": 75
+      "count": 74
     },
     {
       "id": "funding-late",
@@ -66,7 +66,7 @@
     {
       "id": "site-capitalbrief",
       "ok": true,
-      "count": 77
+      "count": 100
     },
     {
       "id": "startupdaily",
@@ -2811,6 +2811,38 @@
       ]
     },
     {
+      "id": "hl:anthropic ipo to be priced at top of range bloomberg",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Anthropic IPO to be priced at top of range: Bloomberg Anthropic IPO to be priced at top of range: Bloomberg Capital Brief",
+      "firstSeen": "2026-11-23T10:17:48.546Z",
+      "articles": [
+        {
+          "title": "Anthropic IPO to be priced at top of range: Bloomberg",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOVzQzVlBUM2VlMHJrdnVOanRuOFg0ME04cnZPZGczRENEdTN6ZG5tQXhIc203d0RTT252b05ubV9FU0dCcXMzeGFJMzBZcFdNRE4xTDQ2OF9iS3ZoNHV3WDRBUEhVTl9SNXlMME5nbmdxSThUSFV1M2pDU1RTMTg4S19HQ2Vkb1dFS3N4c25qWlNPaDgtWjV3ZzMzaXlaeVM0WTVubUdEamNUT3JGNWJqTGhqTVJKUEYyOHNoakRGX3hnTzlEQ1Jv?oc=5",
+          "source": "Capital Brief",
+          "pubDate": "Tue, 17 Nov 2026 16:56:20 GMT",
+          "via": "site-capitalbrief"
+        }
+      ],
+      "latestPubDate": "2026-11-17T16:56:20.000Z",
+      "score": 39,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (6d ago, +8)"
+      ]
+    },
+    {
       "id": "hl:mayne pharma shares surge on 407 mln takeover offer from",
       "company": null,
       "counterparty": null,
@@ -2960,6 +2992,38 @@
           "source": "Kalkine",
           "pubDate": "Tue, 03 Nov 2026 08:00:00 GMT",
           "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-03T08:00:00.000Z",
+      "score": 39,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 2/3 (+7)",
+        "recent (20d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:anthropic hires eight australian brokers for blockbuster ipo",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Anthropic hires eight Australian brokers for blockbuster IPO Anthropic hires eight Australian brokers for blockbuster IPO Capital Brief",
+      "firstSeen": "2026-11-23T10:17:48.546Z",
+      "articles": [
+        {
+          "title": "Anthropic hires eight Australian brokers for blockbuster IPO",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPLV81dkhrc01MMnJDcFZPaDczcTBSbTAtOHlTWExmcUt5bHgxQmpadEhZYi1TZXhhcUxzMVJ1ajFyRFozQTVfNkRhNU1FcWJVcndyS19YX2pVR0FjeU1DZnM4ZGVPOEZWVGpLLTFZWjZkUnBCNGZLWE83VjFoblZFTEVsWnBPbm5zTjB2ZlF5Ql9STjdmajNSZlJrd2Vidl8xNW9kSnRfX24xUXhaMXJwUTlmaUlXUHlaU1B5X1ZqY1VST2s3VDFmMXpGczF2VmpJMEE?oc=5",
+          "source": "Capital Brief",
+          "pubDate": "Tue, 03 Nov 2026 08:00:00 GMT",
+          "via": "site-capitalbrief"
         }
       ],
       "latestPubDate": "2026-11-03T08:00:00.000Z",
@@ -5570,6 +5634,38 @@
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
         "recent (4d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:ex tesla duos startup lands one of australias biggest space",
+      "company": null,
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Ex-Tesla duo’s startup lands one of Australia’s biggest space seed rounds Ex-Tesla duo’s startup lands one of Australia’s biggest space seed rounds Forbes Australia",
+      "firstSeen": "2026-11-23T10:17:48.546Z",
+      "articles": [
+        {
+          "title": "Ex-Tesla duo’s startup lands one of Australia’s biggest space seed rounds",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSFZ4UFNmZGhVbzQ4VlFYbU5ORFZuMkpIQjJsdnhsM2kwYjBFSVktei1ESEFiTHB5VEdvZF90TGk1STZLN2Q0SWZjSEQxQS1rNzBhZ3haWmVhSVo3dDRXeUg0UTdFRW55bmh6WW1DTjZIQzdjRGF6eUVEVDcxbllUbjFzbFNXZURFOGE2bkdncnZYZnhla3VsOEZwWG5pbDQ?oc=5",
+          "source": "Forbes Australia",
+          "pubDate": "Mon, 26 Oct 2026 07:00:00 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-10-26T07:00:00.000Z",
+      "score": 25,
+      "reasons": [
+        "Funding round (+14)",
+        "Australian signal 2/3 (+7)",
+        "recent (28d ago, +4)"
       ]
     }
   ]
