@@ -13,7 +13,7 @@ export const EVENT_TYPES = {
 };
 
 const TYPE_PATTERNS = [
-  ['exit', /\b(acquires?|acquired|acquisition of|to acquire|buys|bought|snaps? up|snapped up|sold to|sells (?:to|its|the|business|company|majority)|sale of|trade sale|merges? with|merger with|swoops on|scoops? up|takes over|deal to buy|agrees? to buy|agreed to buy)\b/i],
+  ['exit', /\b(acquires?|acquired|acquisition of|to acquire|buys|bought|snaps? up|snapped up|sold to|sells (?:to|its|the|her|his|their|a|business|company|majority|stake)|sold (?:her|his|their) (?:stake|business|company|brand)|sale of|trade sale|merges? with|merger with|swoops on|scoops? up|takes over|deal to buy|agrees? to buy|agreed to buy)\b/i],
   ['selldown', /\b(sells? down|sell-down|selldown|block trade|offloads? (?:shares|stake|\$)|secondary (?:sale|transaction|shares)|cash(?:es|ed)? out|cash(?:es|ed)? in)\b/i],
   ['pe', /\b(private equity|buy-?out|majority stake|minority stake|significant stake|growth (?:equity|investment)|pe firm|pe-backed|recapitali[sz])/i],
   ['takeover', /\b(takeover (?:bid|offer)|scheme of arrangement|binding offer|non-binding (?:indicative )?(?:offer|proposal)|take-?private|privatis(?:e|ation))/i],

@@ -75,14 +75,15 @@ export function enrichmentAvailable() {
   return Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
 }
 
-// Returns the tool input object, or null if Claude didn't produce one.
-export async function enrichEvent(client, ev, { maxSearches = 5 } = {}) {
+// Runs one research conversation: Claude searches the web, then calls `tool`
+// once. Returns the tool input object, or null if Claude didn't produce one.
+export async function researchWithTool(client, { system, prompt, tool, maxSearches = 5 }) {
   const tools = [
     { type: 'web_search_20260209', name: 'web_search', max_uses: maxSearches,
       user_location: { type: 'approximate', country: 'AU', timezone: 'Australia/Sydney' } },
-    RECORD_TOOL,
+    tool,
   ];
-  const messages = [{ role: 'user', content: eventPrompt(ev) }];
+  const messages = [{ role: 'user', content: prompt }];
 
   for (let attempt = 0; attempt < 5; attempt++) {
     const response = await client.beta.messages.create({
@@ -91,46 +92,46 @@ export async function enrichEvent(client, ev, { maxSearches = 5 } = {}) {
       betas: ['server-side-fallback-2026-07-01'],
       fallbacks: 'default',
       output_config: { effort: 'medium' },
-      system: SYSTEM,
+      system,
       tools,
       messages,
     });
 
-    if (response.stop_reason === 'refusal') {
-      console.error(`  enrichment declined for "${ev.company || ev.articles[0].title}"`);
-      return null;
-    }
-    const call = response.content.find(b => b.type === 'tool_use' && b.name === RECORD_TOOL.name);
+    if (response.stop_reason === 'refusal') return null;
+    const call = response.content.find(b => b.type === 'tool_use' && b.name === tool.name);
     if (call) return call.input;
 
-    if (response.stop_reason === 'pause_turn') {
-      // Server-side search loop paused; resend so it resumes where it left off.
-      messages.push({ role: 'assistant', content: response.content });
-      continue;
-    }
-    // Finished without calling the tool: nudge once.
     messages.push({ role: 'assistant', content: response.content });
-    messages.push({ role: 'user', content: 'Please call record_liquidity_event now with what you found (use empty values where unknown).' });
+    // pause_turn: the server-side search loop paused; resending resumes it.
+    if (response.stop_reason !== 'pause_turn') {
+      messages.push({ role: 'user', content: `Please call ${tool.name} now with what you found (use empty values where unknown).` });
+    }
   }
   return null;
 }
 
-export async function enrichEvents(events, { max, minScore, maxSearches }) {
+export function enrichEvent(client, ev, { maxSearches = 5 } = {}) {
+  return researchWithTool(client, { system: SYSTEM, prompt: eventPrompt(ev), tool: RECORD_TOOL, maxSearches });
+}
+
+// Researches the top-scoring un-enriched items in place. `research(client, item)`
+// returns the tool input or null. Returns the number enriched.
+export async function enrichTop(items, { max, minScore, label, research }) {
   const client = new Anthropic();
-  const todo = events
+  const todo = items
     .filter(e => !e.enrichment && !e.enrichmentFailed && e.score >= minScore)
     .sort((a, b) => b.score - a.score)
     .slice(0, max);
   let done = 0;
-  for (const ev of todo) {
-    console.log(`  enriching: ${ev.company || ev.articles[0].title}`);
+  for (const item of todo) {
+    console.log(`  researching: ${label(item)}`);
     try {
-      const result = await enrichEvent(client, ev, { maxSearches });
+      const result = await research(client, item);
       if (result) {
-        ev.enrichment = { ...result, model: MODEL, at: new Date().toISOString() };
+        item.enrichment = { ...result, model: MODEL, at: new Date().toISOString() };
         done++;
       } else {
-        ev.enrichmentFailed = new Date().toISOString();
+        item.enrichmentFailed = new Date().toISOString();
       }
     } catch (err) {
       if (err instanceof Anthropic.AuthenticationError) {
@@ -147,4 +148,12 @@ export async function enrichEvents(events, { max, minScore, maxSearches }) {
     }
   }
   return done;
+}
+
+export function enrichEvents(events, { max, minScore, maxSearches }) {
+  return enrichTop(events, {
+    max, minScore,
+    label: ev => ev.company || ev.articles[0].title,
+    research: (client, ev) => enrichEvent(client, ev, { maxSearches }),
+  });
 }

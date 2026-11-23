@@ -88,10 +88,11 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // Returns { articles: [...], log: [{ id, ok, count, error }] }.
 // If fixturesDir is set, reads <id>.xml from there instead of the network (for tests/dev).
-export async function collectArticles({ lookbackDays, delayMs = 1500, fixturesDir = null }) {
+export async function collectArticles({ lookbackDays, delayMs = 1500, fixturesDir = null,
+  queries = GOOGLE_NEWS_QUERIES, feeds = DIRECT_FEEDS }) {
   const jobs = [
-    ...GOOGLE_NEWS_QUERIES.map(q => ({ id: q.id, url: googleNewsUrl(q.q, lookbackDays), source: '' })),
-    ...DIRECT_FEEDS,
+    ...queries.map(q => ({ id: q.id, url: googleNewsUrl(q.q, lookbackDays), source: '' })),
+    ...feeds,
   ];
   const articles = [];
   const log = [];
