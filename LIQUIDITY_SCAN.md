@@ -56,6 +56,7 @@ The scan only uses information that has been published about people in their bus
 | Family business / family office | Takes over as chair or CEO of a family company; next-generation leader; family office news |
 | Philanthropy | Major gifts, pledges, setting up a foundation or private ancillary fund |
 | Women investing initiative | Scale Investors, Australians Investing in Women, Chief Executive Women, Springboard Enterprises, women's angel networks, gender-lens investing |
+| Referral partner (law / accounting) | Lawyers or accountants publicly running women-focused work: women-and-money programs, events and networks for female business owners, women-focused practices. These can be any gender. |
 
 ## Built-in limits
 
@@ -64,3 +65,16 @@ The scan only uses information that has been published about people in their bus
 - **AI research** (with the `ANTHROPIC_API_KEY` secret) records only business, investing and philanthropic information: name, role, organisation, published wealth figures, stated investing interests and business location. It does not look up contact details, home addresses, children or anything else personal. The settings are `WOMEN_ENRICH_MAX` and `WOMEN_ENRICH_MIN_SCORE` in the workflow.
 
 The compliance notes above apply here too.
+
+## Finding referral partners on LinkedIn
+
+The **Search Builder** tab has two presets for finding these people in Sales Navigator:
+- **Referral partners: lawyers serving women**
+- **Referral partners: accountants serving women**
+
+Each builds a search string that combines three groups:
+- senior titles (Partner, Principal, Special Counsel, Private Client Director and so on)
+- women-focus keywords (women in business, women's wealth, female founders, women clients)
+- practice-area keywords (family law, estate planning, private client, tax, family office)
+
+Paste the string into Sales Navigator and set the listed filters by hand. The tool never logs in to LinkedIn and never scrapes it.
