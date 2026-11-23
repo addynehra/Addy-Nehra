@@ -64,7 +64,27 @@ const NAME_AT_START = /^([A-Z][a-z'’-]+\s[A-Z][a-z'’-]+(?:\s[A-Z][a-z'’-]+
 const NOT_NAMES = /^(?:The|This|How|Why|What|When|Where|Who|Meet|Inside|Australian|Australia|Sydney|Melbourne|Brisbane|Perth|Adelaide|Hobart|Canberra|Gold|New|West|South|North|East|Rich|Young|Chief|Women|Female|Family|Private|Scale|Forbes|League|Springboard|Victorian|Queensland|Business|Startup|Federal|State|National|Top|Exclusive)\b/;
 
 // Best-effort person name from a headline; enrichment confirms or replaces it.
+// Event pages: "Women in Law Forum 2025 - Belinda Cohen" (speaker or sponsor after the dash).
+const EVENT_PAGE = /^(?:Agenda\s*[-–—]\s*)?Women in (?:Law|Accounting|Finance|Business|Banking)[^-–—]*?\s[-–—]\s+(.+)$/i;
+export function eventPageName(headline) {
+  const m = headline.match(EVENT_PAGE);
+  if (!m) return null;
+  const name = m[1].replace(/^The Honourable\s+/i, '').trim();
+  if (/^(?:Melbourne|Sydney|Brisbane|Perth|Adelaide|\d{4})$/i.test(name) || name.length > 60) return null;
+  return name;
+}
+
+const COMPANY_WORD = /\b(Limited|Ltd|Pty|Inc|Group|Digital|Platform|Partners|Legal|Lawyers|Law|Associates|Accountants|Accounting|Advisory|Advisers|Capital|Property|Properties|Media|Mediators|Consulting|Solutions|Holdings|Bank|Financial|Wealth|Fund|Foundation|Awards|Forum|Finalists|Network)\b/;
+const isPersonName = n => n && !COMPANY_WORD.test(n) && /^[A-Z][a-z'’-]+(?:\s[A-Z][a-z'’-]+){1,3}$/.test(n);
+
 export function extractPerson(headline) {
+  const p = extractPersonRaw(headline);
+  return isPersonName(p) ? p : null;
+}
+
+function extractPersonRaw(headline) {
+  const ev = eventPageName(headline);
+  if (ev) return ev;
   let m = headline.match(ROLE_BEFORE_NAME);
   if (m && !NOT_NAMES.test(m[1])) return m[1];
   m = headline.match(NAME_AT_START);
@@ -81,10 +101,13 @@ export function extractPerson(headline) {
 // "<Org> launches / hosts / appoints ..." — the organisation doing something.
 const ACTOR = /^(.+?)\s+(?:launches|launched|hosts|hosted|appoints|opens|announces|unveils|partners with|introduces|starts|creates|forms|expands|backs|wins)\b/;
 function extractOrganisation(headline) {
+  const ev = eventPageName(headline);
+  if (ev && !extractPerson(headline) && !/^(?:\d|Women\b)/.test(ev)) return ev;
   const t = extractParties(headline).target;
   if (t) return t;
   const m = headline.match(ACTOR);
-  return m ? tidyName(m[1]) : null;
+  const org = m ? tidyName(m[1]) : null;
+  return org && !/^(?:\d|Women$|Woman$|She$|Her$)/.test(org) ? org : null;
 }
 
 export function evaluateArticle(article, meta = {}) {
