@@ -42,3 +42,25 @@ node scripts/liquidity-scan.mjs --fixtures test/fixtures --out /tmp/out.json --n
 ## Compliance notes
 
 The scan only uses information that has been published about people in their business roles. Before you contact anyone, check that your outreach meets the Privacy Act 1988 (APP 3 and APP 5: collection and notification), the Spam Act 2003 and the Do Not Call Register Act, and your firm's own prospecting and compliance policies. Headline parsing makes mistakes, so always read the source article before acting on an event.
+
+---
+
+# Women & Wealth Scan
+
+`scripts/women-scan.mjs` runs as a second step of the same daily workflow and feeds the **Women & Wealth** tab in `leads.html`. It looks for Australian women in public business news who show one of these signals:
+
+| Signal | Examples |
+|---|---|
+| Founder: sale / raise / listing | She sold or listed her company, or led a large funding round |
+| Rich List | Rich List or Young Rich coverage |
+| Family business / family office | Takes over as chair or CEO of a family company; next-generation leader; family office news |
+| Philanthropy | Major gifts, pledges, setting up a foundation or private ancillary fund |
+| Women investing initiative | Scale Investors, Australians Investing in Women, Chief Executive Women, Springboard Enterprises, women's angel networks, gender-lens investing |
+
+## Built-in limits
+
+- **Gender comes only from the article's own words** (she/her, businesswoman, daughter and so on). A name is never used to guess.
+- **Sensitive stories are dropped**: obituaries, deaths, estates and wills, inheritance disputes, divorces, family court, lawsuits and other court cases. This scanner deliberately does not identify recently bereaved women. Inherited wealth shows up through the public business signals above instead, such as a woman taking over a family company or a family office.
+- **AI research** (with the `ANTHROPIC_API_KEY` secret) records only business, investing and philanthropic information: name, role, organisation, published wealth figures, stated investing interests and business location. It does not look up contact details, home addresses, children or anything else personal. The settings are `WOMEN_ENRICH_MAX` and `WOMEN_ENRICH_MIN_SCORE` in the workflow.
+
+The compliance notes above apply here too.

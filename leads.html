@@ -195,6 +195,8 @@
   .liq-company{ font-family:'Fraunces', serif; font-size: 17px; }
   .liq-type{ font-family:'JetBrains Mono', monospace; font-size: 10px; padding: 3px 8px; border-radius: 10px; border:1px solid var(--line); color: var(--grey); text-transform: uppercase; letter-spacing: .04em; }
   .liq-type.exit, .liq-type.selldown{ border-color: var(--gold); color: var(--gold); }
+  .liq-type.founder_liquidity, .liq-type.rich_list{ border-color: var(--gold); color: var(--gold); }
+  .liq-type.women_investing, .liq-type.philanthropy{ border-color: var(--good); color: var(--good); }
   .liq-type.pe{ border-color: var(--good); color: var(--good); }
   .liq-meta{ font-size: 12px; color: var(--grey); margin-bottom: 8px; line-height: 1.5; }
   .liq-meta strong{ color: var(--cream); font-weight: 500; }
@@ -229,6 +231,7 @@
   <nav class="tabs">
     <button class="active" data-tab="search">Search Builder</button>
     <button data-tab="liquidity">Liquidity Events</button>
+    <button data-tab="women">Women &amp; Wealth</button>
     <button data-tab="pipeline">Pipeline</button>
     <button data-tab="news">News Signals</button>
     <button data-tab="templates">Outreach Templates</button>
@@ -362,6 +365,39 @@
     </div>
   </section>
 
+  <!-- ===================== WOMEN & WEALTH ===================== -->
+  <section class="panel" id="tab-women">
+    <div class="card">
+      <h2>Women &amp; wealth signals</h2>
+      <p class="hint">A daily scan of public Australian business news for women who have <strong>sold, raised or listed a business, taken over a family business or family office, made major gifts, appeared on a Rich List, or are active in women's investing networks</strong> (Scale Investors, Australians Investing in Women, Chief Executive Women and similar). Someone counts as a woman only when the article says so (she/her, businesswoman); names are never used to guess. Obituaries, estates, inheritance disputes, divorces and court cases are excluded on purpose.</p>
+      <div id="wom-status" class="hint" style="margin-bottom:0;">Loading…</div>
+    </div>
+
+    <div class="card">
+      <div class="liq-filters">
+        <input type="text" id="wom-search" placeholder="Search name, organisation, headline...">
+        <select id="wom-cat"><option value="">All signal types</option></select>
+        <select id="wom-window">
+          <option value="30">Last 30 days</option>
+          <option value="90" selected>Last 90 days</option>
+          <option value="9999">All on file</option>
+        </select>
+        <label class="range">Min score <input type="range" id="wom-min" min="0" max="90" step="5" value="40"> <span id="wom-min-val">40</span></label>
+        <label class="check"><input type="checkbox" id="wom-named-only"> Named women only</label>
+      </div>
+      <div class="actions-row" style="margin-top:14px;">
+        <span class="hint" id="wom-count" style="margin:0;"></span>
+        <div style="flex:1"></div>
+        <button class="btn small" id="btn-wom-export">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div id="wom-list"></div>
+      <div class="empty-state" id="wom-empty" style="display:none;">No signals match these filters.</div>
+    </div>
+  </section>
+
   <!-- ===================== PIPELINE ===================== -->
   <section class="panel" id="tab-pipeline">
     <div class="funnel" id="funnel-stats"></div>
@@ -398,6 +434,7 @@
           <select id="l-signal-type">
             <option value="">No signal logged</option>
             <option value="Liquidity event">Liquidity event</option>
+            <option value="Women &amp; wealth signal">Women &amp; wealth signal</option>
             <option value="News article">News article</option>
             <option value="LinkedIn post">LinkedIn post</option>
             <option value="Job change">Job change</option>
@@ -851,7 +888,7 @@
     if(leads.some(l => l.id === current)) sel.value = current;
   }
 
-  function renderAll(){ renderFunnel(); renderLeads(); renderTemplateLeadSelect(); renderWatchlistPreview(); renderNewsItems(); renderLiquidity(); }
+  function renderAll(){ renderFunnel(); renderLeads(); renderTemplateLeadSelect(); renderWatchlistPreview(); renderNewsItems(); renderLiquidity(); renderWomen(); }
 
   document.getElementById('btn-add-lead').addEventListener('click', () => {
     const name = document.getElementById('l-name').value.trim();
@@ -1331,6 +1368,157 @@
     .then(res => { if(!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
     .then(data => { liqData = data; renderLiquidity(); })
     .catch(() => { liqLoadFailed = true; renderLiquidity(); });
+
+
+  // ---------- Women & Wealth ----------
+  let womData = null;
+  let womLoadFailed = false;
+  const WOM_CAT_LABELS = {
+    founder_liquidity: 'Founder: sale / raise / listing', rich_list: 'Rich List', family_business: 'Family business / family office',
+    philanthropy: 'Philanthropy', women_investing: 'Women investing initiative'
+  };
+  const womCatSel = document.getElementById('wom-cat');
+  Object.entries(WOM_CAT_LABELS).forEach(([k, v]) => { const o = document.createElement('option'); o.value = k; o.textContent = v; womCatSel.appendChild(o); });
+
+  function womE(s){ return s.enrichment && s.enrichment.is_woman_identified !== false ? s.enrichment : {}; }
+  function womName(s){ return womE(s).name || s.person || ''; }
+  function womOrg(s){ return womE(s).organisation || s.organisation || ''; }
+  function womWealth(s){
+    const e = womE(s);
+    // Amounts in network/initiative stories are usually money invested, not personal wealth.
+    const v = typeof e.published_wealth_aud_m === 'number' ? e.published_wealth_aud_m : (s.category === 'women_investing' ? null : s.amountAudM);
+    if(v == null) return '';
+    return v >= 1000 ? 'A$' + (v/1000).toFixed(1) + 'b' : 'A$' + (v >= 10 ? Math.round(v) : v) + 'm';
+  }
+
+  function womFiltered(){
+    if(!womData) return [];
+    const q = document.getElementById('wom-search').value.trim().toLowerCase();
+    const cat = womCatSel.value;
+    const cutoff = Date.now() - parseInt(document.getElementById('wom-window').value, 10) * 86400000;
+    const min = parseInt(document.getElementById('wom-min').value, 10);
+    const namedOnly = document.getElementById('wom-named-only').checked;
+    return (womData.signals || []).filter(s => {
+      if(s.score < min) return false;
+      if(cat && s.category !== cat && !(s.tags||[]).includes(cat)) return false;
+      const d = new Date(s.latestPubDate || s.firstSeen);
+      if(!isNaN(d) && d.getTime() < cutoff) return false;
+      if(namedOnly && !womName(s)) return false;
+      if(q && ![womName(s), womOrg(s), ...s.articles.map(a => a.title)].join(' ').toLowerCase().includes(q)) return false;
+      return true;
+    });
+  }
+
+  function womAddLead(s){
+    const e = womE(s);
+    const art = s.articles[0] || {};
+    const name = womName(s) || ((womOrg(s) || 'Women & wealth signal') + ' — contact TBC');
+    if(liqLeadExists(name, womOrg(s))) return;
+    leads.push({
+      id: uid(), name, company: womOrg(s), title: e.role || '', url: '', industry: '', location: e.location || '',
+      stage: 'New', followup: '',
+      notes: [WOM_CAT_LABELS[s.category] + (womWealth(s) ? ' · ' + womWealth(s) : ''), e.organisation_description, e.wealth_indicator && 'Wealth basis: ' + e.wealth_indicator,
+              e.investing_interests && 'Interests: ' + e.investing_interests, e.summary, 'Signal score ' + s.score + '/100'].filter(Boolean).join('\n'),
+      signalType: 'Women & wealth signal',
+      signalUrl: e.source_url || art.link || '',
+      signalNote: (art.source ? art.source + ', ' : '') + formatNewsDate(art.pubDate) + ': ' + (art.title || ''),
+      source: 'women-scan', added: new Date().toISOString().slice(0,10)
+    });
+    saveLeads(leads);
+    renderAll();
+  }
+
+  function renderWomen(){
+    const statusEl = document.getElementById('wom-status');
+    const listEl = document.getElementById('wom-list');
+    const emptyEl = document.getElementById('wom-empty');
+    if(womLoadFailed){
+      statusEl.innerHTML = 'Could not load <code>data/women-signals.json</code>. Open this page from your published site, and make sure the Liquidity Scan workflow has run since this tab was added.';
+      listEl.innerHTML = ''; emptyEl.style.display = 'none'; return;
+    }
+    if(!womData){ statusEl.textContent = 'Loading…'; return; }
+    statusEl.textContent = 'Last scan: ' + (womData.generatedAt ? new Date(womData.generatedAt).toLocaleString() : 'never') + ' · ' +
+      (womData.signals||[]).length + ' signals on file · ' + (womData.sources||[]).filter(x => x.ok).length + '/' + (womData.sources||[]).length +
+      ' sources OK · AI research ' + (womData.enrichment || 'off');
+
+    const items = womFiltered();
+    document.getElementById('wom-count').textContent = items.length + ' signal' + (items.length === 1 ? '' : 's') + ' shown';
+    listEl.innerHTML = '';
+    emptyEl.style.display = items.length ? 'none' : 'block';
+
+    items.forEach(s => {
+      const e = womE(s);
+      const name = womName(s), org = womOrg(s);
+      const meta = [
+        womWealth(s) ? '<strong>' + escapeHTML(womWealth(s)) + '</strong>' : '',
+        e.role ? escapeHTML(e.role) : '',
+        org ? '<strong>' + escapeHTML(org) + '</strong>' : '',
+        e.location ? escapeHTML(e.location) : '',
+        'Latest coverage ' + escapeHTML(formatNewsDate(s.latestPubDate)),
+        s.enrichment ? 'AI-checked (' + escapeHTML(s.enrichment.confidence || '?') + ' confidence)' : ''
+      ].filter(Boolean).join(' · ');
+      const summary = [e.summary, e.wealth_indicator && 'Wealth basis: ' + e.wealth_indicator, e.investing_interests && 'Interests: ' + e.investing_interests].filter(Boolean).map(escapeHTML).join('<br>');
+      const row = document.createElement('div');
+      row.className = 'liq-event';
+      row.innerHTML =
+        '<div class="liq-score ' + (s.score >= 75 ? 'top' : s.score >= 55 ? 'hi' : '') + '" title="Signal score">' + s.score + '</div>' +
+        '<div>' +
+          '<div class="liq-head"><span class="liq-company">' + escapeHTML(name || org || 'Name unclear: see headline') + '</span>' +
+          '<span class="liq-type ' + escapeAttr(s.category) + '">' + escapeHTML(WOM_CAT_LABELS[s.category] || s.category) + '</span></div>' +
+          '<div class="liq-meta">' + meta + '</div>' +
+          (summary ? '<div class="liq-summary">' + summary + '</div>' : '') +
+          '<ul class="liq-articles">' + s.articles.slice(0, 3).map(a =>
+            '<li><a href="' + escapeAttr(a.link) + '" target="_blank" rel="noopener">' + escapeHTML(a.title) + '</a> <span class="src">' + escapeHTML([a.source, formatNewsDate(a.pubDate)].filter(Boolean).join(', ')) + '</span></li>'
+          ).join('') + '</ul>' +
+          '<div class="liq-actions"></div>' +
+          '<div class="liq-why-text">' + escapeHTML((s.reasons || []).join(' · ')) + '</div>' +
+        '</div>';
+      const actions = row.querySelector('.liq-actions');
+      const leadName = name || ((org || 'Women & wealth signal') + ' — contact TBC');
+      if(liqLeadExists(leadName, org)){
+        const x = document.createElement('span'); x.className = 'news-logged'; x.textContent = '✓ In pipeline'; actions.appendChild(x);
+      } else {
+        const b = document.createElement('button'); b.className = 'btn small primary'; b.textContent = name ? 'Add to pipeline' : 'Add as lead (name TBC)';
+        b.addEventListener('click', () => womAddLead(s)); actions.appendChild(b);
+      }
+      if(name || org){
+        const l = document.createElement('a'); l.className = 'btn small'; l.target = '_blank'; l.rel = 'noopener';
+        l.href = liqLinkedInSearch(name, org); l.textContent = 'Find on LinkedIn'; actions.appendChild(l);
+      }
+      const why = document.createElement('span'); why.className = 'liq-why'; why.textContent = 'Why this score?';
+      why.addEventListener('click', () => row.classList.toggle('show-why'));
+      actions.appendChild(why);
+      listEl.appendChild(row);
+    });
+  }
+
+  ['wom-search','wom-cat','wom-window','wom-min','wom-named-only'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener(el.tagName === 'SELECT' || el.type === 'checkbox' ? 'change' : 'input', () => {
+      document.getElementById('wom-min-val').textContent = document.getElementById('wom-min').value;
+      renderWomen();
+    });
+  });
+
+  document.getElementById('btn-wom-export').addEventListener('click', () => {
+    const rows = [['Score','Signal','Name','Role','Organisation','Location','Published wealth (AUD)','Wealth basis','Investing interests','Summary','Latest coverage','Source link']];
+    womFiltered().forEach(s => {
+      const e = womE(s);
+      rows.push([s.score, WOM_CAT_LABELS[s.category], womName(s), e.role, womOrg(s), e.location, womWealth(s), e.wealth_indicator, e.investing_interests, e.summary,
+        (s.latestPubDate||'').slice(0,10), e.source_url || (s.articles[0]||{}).link]);
+    });
+    const csv = rows.map(r => r.map(v => csvEscape(v ?? '')).join(',')).join('\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+    a.download = 'women-wealth-signals-' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+
+  fetch('data/women-signals.json')
+    .then(res => { if(!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+    .then(data => { womData = data; renderWomen(); })
+    .catch(() => { womLoadFailed = true; renderWomen(); });
 
   fetch('data/news-results.json')
     .then(res => { if(!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
