@@ -58,3 +58,8 @@ test('a law firm serving women is not excluded by family-law words', () => {
   assert.equal(s && s.category, 'referral_partner');
   assert.equal(articleToSignal(art('Sydney businesswoman finalises divorce', '', 'SMH')), null);
 });
+
+test('Australian legal and accounting trade press counts as Australian', () => {
+  const s = articleToSignal(art('Right Property Group confirmed as principal partner for Women in Accounting Awards - Accountants Daily', '', 'Accountants Daily'), { au: true, category: 'referral_partner' });
+  assert.equal(s && s.category, 'referral_partner');
+});
