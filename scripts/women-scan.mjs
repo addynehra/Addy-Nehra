@@ -41,6 +41,9 @@ async function run(now = new Date()) {
     // Re-check saved signals against the current rules, so tightening a filter cleans old results too.
     const stillValid = s.articles.some(a => evaluateArticle({ ...a, title: a.title + (a.source ? ' - ' + a.source : '') }, SEARCH_META[a.via] || {}).signal);
     if (!stillValid && !(s.enrichment && s.enrichment.is_woman_identified)) { pruned++; continue; }
+    // Re-extract names with the current rules (enrichment, if any, is kept separately and takes precedence in the UI).
+    const r = evaluateArticle({ ...s.articles[0], title: s.articles[0].title + (s.articles[0].source ? ' - ' + s.articles[0].source : '') }, SEARCH_META[s.articles[0].via] || {});
+    if (r.signal) { s.person = r.signal.person; s.organisation = r.signal.organisation; }
     byId.set(s.id, s);
   }
   const seen = new Set([...byId.values()].flatMap(s => s.articles.map(a => a.link)));

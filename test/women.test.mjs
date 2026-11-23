@@ -63,3 +63,9 @@ test('Australian legal and accounting trade press counts as Australian', () => {
   const s = articleToSignal(art('Right Property Group confirmed as principal partner for Women in Accounting Awards - Accountants Daily', '', 'Accountants Daily'), { au: true, category: 'referral_partner' });
   assert.equal(s && s.category, 'referral_partner');
 });
+
+test('names are taken from women-in-law event pages', () => {
+  assert.equal(extractPerson('Women in Law Forum 2025 - Belinda Cohen'), 'Belinda Cohen');
+  assert.equal(extractPerson('Women in Law Forum 2025 - The Honourable Lorraine Walker'), 'Lorraine Walker');
+  assert.equal(extractPerson('Women in Law Forum 2026 — Melbourne'), null);
+});
