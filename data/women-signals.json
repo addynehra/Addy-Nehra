@@ -1,7 +1,177 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-11-23T09:57:19.865Z",
   "lookbackDays": 30,
-  "enrichment": "off (workflow has not run yet)",
-  "sources": [],
-  "signals": []
+  "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
+  "sources": [
+    {
+      "id": "w-founder-exit",
+      "ok": true,
+      "count": 35
+    },
+    {
+      "id": "w-founder-raise",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "id": "w-founder-ipo",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "id": "w-family",
+      "ok": true,
+      "count": 32
+    },
+    {
+      "id": "w-family-office",
+      "ok": true,
+      "count": 8
+    },
+    {
+      "id": "w-philanthropy",
+      "ok": true,
+      "count": 34
+    },
+    {
+      "id": "w-invest-women",
+      "ok": true,
+      "count": 31
+    },
+    {
+      "id": "w-angels",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "id": "w-networks",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "id": "w-rich-list",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "id": "w-site-womensagenda",
+      "ok": true,
+      "count": 30
+    },
+    {
+      "id": "w-site-smartcompany",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "id": "w-womensagenda",
+      "ok": true,
+      "count": 12
+    }
+  ],
+  "categories": {
+    "founder_liquidity": "Founder: sale / raise / listing",
+    "rich_list": "Rich List",
+    "family_business": "Family business / family office",
+    "philanthropy": "Philanthropy",
+    "women_investing": "Women investing initiative"
+  },
+  "signals": [
+    {
+      "id": "h:10 million funding round to engage boys and men in",
+      "category": "founder_liquidity",
+      "tags": [
+        "founder_liquidity"
+      ],
+      "person": null,
+      "organisation": null,
+      "amountAudM": 10,
+      "amountText": "$10 million",
+      "femaleSignal": 1,
+      "auConfidence": 1,
+      "headline": "$10 million funding round to engage boys and men in preventing violence against women",
+      "firstSeen": "2026-11-23T09:57:19.865Z",
+      "articles": [
+        {
+          "title": "$10 million funding round to engage boys and men in preventing violence against women",
+          "link": "https://womensagenda.com.au/latest/10-million-funding-round-to-engage-boys-and-men-in-preventing-violence-against-women/",
+          "source": "Women's Agenda",
+          "pubDate": "Mon, 23 Nov 2026 00:35:23 +0000",
+          "via": "w-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-11-23T00:35:23.000Z",
+      "score": 59,
+      "reasons": [
+        "Founder: sale / raise / listing (+36)",
+        "~A$10m mentioned (+8)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
+      "id": "h:the 20 richest women in australia for 2026",
+      "category": "rich_list",
+      "tags": [
+        "rich_list"
+      ],
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "auConfidence": 1,
+      "headline": "The 20 richest women in Australia for 2026",
+      "firstSeen": "2026-11-23T09:57:19.865Z",
+      "articles": [
+        {
+          "title": "The 20 richest women in Australia for 2026",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZEdaS0hSYXh5VFdqZ1FCY0dRclBLMXJDUVZ2dkxuN3p6c2hCZjZIeXBQTG14X2NsSW5Kb3JRMktQQzM0NGc4LVd2Z2RfV0l2UEFEemJTcGFzbTFFQnNNcmZHWE5Qb2hrS3M1dXJ2NkRpX0FUaGxQeGU4R3Y4YXR0d3RDa2JpbEdJSnJiX2h1czlyYzVEdFprZk9YUHcwd214ZjlTRWMyMlh0M1k4dGJFeVNNR0p5SGc5bk42VmtPYzUtV09Lc3hhWVZ3WdIB0AFBVV95cUxOcDQtVkJlQk1uMGt5NXpWMlY4WkZsUlQ5SFdjTUhpUFBzTHJqMVJMZUg3RjJkNWhDbHFCaDhQSkdxaTQ4TkdJWUloWTRxZ0dHb3ZOZHAyekIzRkpFa204cFI0QU1LMXEtcXFXTXh0WHJWXzJTY3E5UWM3UUJpODJudWxMM2Q2X1lsR1VLSjR5VEU5SmlncFBIU2FBa2ttS0ZSV3VTcUZXRFBnUkNjY0wtMkNmazF6V19CZjdndHZhS3k1ay12c2VhdFI3cC1HWVVx?oc=5",
+          "source": "Vogue Australia",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "w-rich-list"
+        }
+      ],
+      "latestPubDate": "2026-10-28T07:00:00.000Z",
+      "score": 47,
+      "reasons": [
+        "Rich List (+36)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (26d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:policy experts champion australian gender lens amid growing climate emergency",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 0,
+      "auConfidence": 1,
+      "headline": "Policy experts champion Australian gender lens amid growing climate emergency",
+      "firstSeen": "2026-11-23T09:57:19.865Z",
+      "articles": [
+        {
+          "title": "Policy experts champion Australian gender lens amid growing climate emergency",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORVhiSHBDU3pvaE5EZU8zc2F3REFqV2REbEVNcC01QTl1LUoyYUt2MEtLbWRsTU85ejFiX0lyZFRoZHhxQ2k4V1U1Z3pGTHBnU0ozRDFKWkExeS13WmFvWlFGWHJMRzRKV3REanhnME90TUw1TFdGZW95M1RXMV91OWo1X04ya0JzX0ZmcVJ4Z0lzOFJGOTFjSWxUSW55RDI2VDJCYUpRSU13M0E5N0NuTVFrZnhpSGc?oc=5",
+          "source": "The Mandarin",
+          "pubDate": "Thu, 12 Nov 2026 18:41:36 GMT",
+          "via": "w-invest-women"
+        }
+      ],
+      "latestPubDate": "2026-11-12T18:41:36.000Z",
+      "score": 35,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (11d ago, +4)"
+      ]
+    }
+  ]
 }

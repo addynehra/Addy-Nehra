@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T00:24:23.983Z",
+  "generatedAt": "2026-11-23T09:56:46.706Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -16,12 +16,12 @@
     {
       "id": "private-equity",
       "ok": true,
-      "count": 33
+      "count": 34
     },
     {
       "id": "pe-firms",
       "ok": true,
-      "count": 100
+      "count": 74
     },
     {
       "id": "funding-late",
@@ -31,17 +31,17 @@
     {
       "id": "funding-any",
       "ok": true,
-      "count": 34
+      "count": 35
     },
     {
       "id": "ipo",
       "ok": true,
-      "count": 25
+      "count": 27
     },
     {
       "id": "takeover",
       "ok": true,
-      "count": 24
+      "count": 33
     },
     {
       "id": "selldown",
@@ -51,12 +51,12 @@
     {
       "id": "site-startupdaily",
       "ok": true,
-      "count": 33
+      "count": 37
     },
     {
       "id": "site-smartcompany",
       "ok": true,
-      "count": 40
+      "count": 43
     },
     {
       "id": "site-businessnews",
@@ -66,7 +66,7 @@
     {
       "id": "site-capitalbrief",
       "ok": true,
-      "count": 60
+      "count": 77
     },
     {
       "id": "startupdaily",
@@ -255,39 +255,6 @@
       ]
     },
     {
-      "id": "hl:blackstone gets schooled as idp rejects 834m buyout",
-      "company": null,
-      "counterparty": null,
-      "type": "pe",
-      "tags": [
-        "pe"
-      ],
-      "amountAudM": 834,
-      "amountText": "$834m",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 2,
-      "text": "Blackstone gets schooled as IDP rejects $834m buyout Blackstone gets schooled as IDP rejects $834m buyout The Australian",
-      "firstSeen": "2026-11-17T02:34:03.253Z",
-      "articles": [
-        {
-          "title": "Blackstone gets schooled as IDP rejects $834m buyout",
-          "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOLUlOY1VPZHRJQnBaM2h2Rk1uWDlPN29rbEIzRUVlM3B0X3lrYmdtZUxYNUhqU0lVYmdIWXdmc1F3UU12MldpQ3FKOUIzWExYU25Gd0ZHMHJnLUZkY3lvNVFlMzVuTFdaM09XVWUwMmZuS0h2bUM5eGVnVjBNVXVwemVKcnlCZVVCdDZjOGNUNEZkemZtTkVJSnhUR1JKVFBmWkpra29mbnJSOTltdlNyTUM0UXU4SGttbXdzazJoRUdNQ2lEZHZ0amJuREJqQnVCdHc5WGhtNWtldDQwd0hEbUU1YlVqbkg3cDBYa2NrMW43aC1RQnM0Ty1LUGljcnBBYWUzZVd0d2U3TmhHLVNxcGhGZw?oc=5",
-          "source": "The Australian",
-          "pubDate": "Mon, 16 Nov 2026 08:10:08 GMT",
-          "via": "private-equity"
-        }
-      ],
-      "latestPubDate": "2026-11-16T08:10:08.000Z",
-      "score": 74,
-      "reasons": [
-        "Private equity deal (+34)",
-        "~A$834m deal (+25)",
-        "Australian signal 2/3 (+7)",
-        "recent (7d ago, +8)"
-      ]
-    },
-    {
       "id": "hl:scott farquhar is cashing in 760 million of his atlassian",
       "company": null,
       "counterparty": null,
@@ -419,6 +386,39 @@
         "~A$1000m deal (+25)",
         "Australian signal 1/3 (+3)",
         "recent (5d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:blackstone gets schooled as idp rejects 834m buyout",
+      "company": null,
+      "counterparty": null,
+      "type": "pe",
+      "tags": [
+        "pe"
+      ],
+      "amountAudM": 834,
+      "amountText": "$834m",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Blackstone gets schooled as IDP rejects $834m buyout Blackstone gets schooled as IDP rejects $834m buyout The Australian",
+      "firstSeen": "2026-11-17T02:34:03.253Z",
+      "articles": [
+        {
+          "title": "Blackstone gets schooled as IDP rejects $834m buyout",
+          "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOLUlOY1VPZHRJQnBaM2h2Rk1uWDlPN29rbEIzRUVlM3B0X3lrYmdtZUxYNUhqU0lVYmdIWXdmc1F3UU12MldpQ3FKOUIzWExYU25Gd0ZHMHJnLUZkY3lvNVFlMzVuTFdaM09XVWUwMmZuS0h2bUM5eGVnVjBNVXVwemVKcnlCZVVCdDZjOGNUNEZkemZtTkVJSnhUR1JKVFBmWkpra29mbnJSOTltdlNyTUM0UXU4SGttbXdzazJoRUdNQ2lEZHZ0amJuREJqQnVCdHc5WGhtNWtldDQwd0hEbUU1YlVqbkg3cDBYa2NrMW43aC1RQnM0Ty1LUGljcnBBYWUzZVd0d2U3TmhHLVNxcGhGZw?oc=5",
+          "source": "The Australian",
+          "pubDate": "Mon, 16 Nov 2026 08:10:08 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-11-16T08:10:08.000Z",
+      "score": 70,
+      "reasons": [
+        "Private equity deal (+34)",
+        "~A$834m deal (+25)",
+        "Australian signal 2/3 (+7)",
+        "recent (7d ago, +4)"
       ]
     },
     {
@@ -1190,7 +1190,7 @@
         "IPO / listing (+28)",
         "~A$45m deal (+15)",
         "Australian signal 1/3 (+3)",
-        "recent (12d ago, +4)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -1595,6 +1595,38 @@
       ]
     },
     {
+      "id": "co:aussie",
+      "company": "Aussie",
+      "counterparty": null,
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Canadian fund buys into major Aussie mortgage lender Canadian fund buys into major Aussie mortgage lender Mortgage Professional America",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "Canadian fund buys into major Aussie mortgage lender",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNY1VNVFR3eHpPVzN0ZGxfR2VCT3NOU3JLckQ5UUFSNmJoZ1FTTzJXQXRrV1dSZ3RFemNrMkFmNUJWTEp2SVdDQW5FRXRsQklRYkZFdEticm83bUFSSkRjQVd3N0IwaWZmVmVpc0xVOVVjODZVODhMSVk2RUV4R3l6ZHhMeEVjTnRRLVEzV1lVUFM5alVMWHNvYUdtOTdMXzF4dHVqYmNYV2std0wwUHFVZW94XzgzZw?oc=5",
+          "source": "Mortgage Professional America",
+          "pubDate": "Tue, 27 Oct 2026 07:00:00 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-10-27T07:00:00.000Z",
+      "score": 47,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (27d ago, +4)"
+      ]
+    },
+    {
       "id": "hl:anthropic breaks ipo record asx set to drop",
       "company": null,
       "counterparty": null,
@@ -1624,47 +1656,6 @@
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
         "recent (3d ago, +8)"
-      ]
-    },
-    {
-      "id": "hl:advance metals and sky metals plan combined gold explorer targeting",
-      "company": null,
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": 6,
-      "amountText": "$6m",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Advance Metals and Sky Metals plan combined gold explorer, targeting $6m ASX IPO Advance Metals and Sky Metals plan combined gold explorer, targeting $6m ASX IPO Medianet News Hub Advance Metals and Sky Metals Plan Combined Gold Explorer, Targeting $6 m ASX IPO Advance Metals and Sky Metals Plan Combined Gold Explorer, Targeting $6 m ASX IPO AZoMining",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Advance Metals and Sky Metals Plan Combined Gold Explorer, Targeting $6 m ASX IPO",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBaZ01oT3ZvUjF2YnBpaF8yTUY3UzNzSkZnZ3BzYlRrN2xLU2VZOV9vcWRVUW52Z0dPOFIzRnV1Qngyb1QwMkR0dDZSVnNqTVc2djlwd3ZsMVBNZDZO?oc=5",
-          "source": "AZoMining",
-          "pubDate": "Mon, 16 Nov 2026 04:24:00 GMT",
-          "via": "ipo"
-        },
-        {
-          "title": "Advance Metals and Sky Metals plan combined gold explorer, targeting $6m ASX IPO",
-          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNN2VRZFdsVHg5Yjgxemszd0wtZ2tzaEZBRzFWU1ExZEJaMHJ0RU4zeF9xVHNRcmJmMHZoV3NOVjRXbFF0X2pLNTZ5X1VnNV9rZjQ4TS1lTDlKcGxLMklxeEp3TzUzZmp0eHB3bWpzejMzbWFiNnNBeXNEZlJHTE83OFhhWTdfMXRXQ0Qza0s2X3pDdDBZT3lLSmJXdTVFcWZvcGVWelJvQlNkWEdGN2x1QThENC1hamJjZ3l5TFE0MVp6Uk5f?oc=5",
-          "source": "Medianet News Hub",
-          "pubDate": "Thu, 12 Nov 2026 23:57:39 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-11-16T04:24:00.000Z",
-      "score": 46,
-      "reasons": [
-        "IPO / listing (+28)",
-        "~A$6m deal (+5)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)",
-        "2 articles (+2)"
       ]
     },
     {
@@ -1769,7 +1760,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 2/3 (+7)",
-        "recent (7d ago, +4)"
+        "recent (8d ago, +4)"
       ]
     },
     {
@@ -1900,7 +1891,7 @@
         "~A$1400m deal (+13)",
         "late-stage round (+6)",
         "Australian signal 2/3 (+7)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -1974,6 +1965,70 @@
         "~A$8m deal (+5)",
         "Australian signal 2/3 (+7)",
         "recent (26d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:a takeover bid and a stake raid 2 asx tech",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "A takeover bid and a stake raid: 2 ASX tech names in our AI book jump in November A takeover bid and a stake raid: 2 ASX tech names in our AI book jump in November Investing.com Australia",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "A takeover bid and a stake raid: 2 ASX tech names in our AI book jump in November",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPNGcwNFVlV2lpVnJ5cmZpTUQwOVFNTnEyUGp1LXREVXhITExQODZHNHJjbzdRR0lPdDNPTUZpMjBZQjJZaUxKa292X2Vwemo2SjdDYkNmV1VZcGxTVXo5RVBvS1E3TGNrVno2Z3NYVG9nalhhYzNnel8tNm1UcGpRUnN6ZG44VFpiOEMyazBQeFdBaU1LNGFDazRLNzFOQm1wWGgxT1RfcDM5emRzWU0zc204bkljNzBPdi1Vdlc1OHIzcVRjenpCMVViT3lOS2NNQ0E?oc=5",
+          "source": "Investing.com Australia",
+          "pubDate": "Mon, 23 Nov 2026 03:57:58 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-11-23T03:57:58.000Z",
+      "score": 43,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 2/3 (+7)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:unbelievable anthropics 3 trillion ipo puts global spotlight on melbourne",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "“Unbelievable”: Anthropic’s $3 trillion IPO puts global spotlight on Melbourne gardening business Anthropic celebrated Gardener & Son, which uses AI tools across its business, during its historic public listing. The post “Unbelievable”: Anthropic’s $3 trillion IPO puts global spotlight on Melbourne gardening business appeared first on SmartCompany .",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "“Unbelievable”: Anthropic’s $3 trillion IPO puts global spotlight on Melbourne gardening business",
+          "link": "https://www.smartcompany.com.au/artificial-intelligence/unbelievable-anthropics-3-trillion-ipo-puts-global-spotlight-on-melbourne-gardening-business/",
+          "source": "SmartCompany",
+          "pubDate": "Mon, 23 Nov 2026 00:38:56 +0000",
+          "via": "smartcompany"
+        }
+      ],
+      "latestPubDate": "2026-11-23T00:38:56.000Z",
+      "score": 43,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 2/3 (+7)",
+        "recent (0d ago, +8)"
       ]
     },
     {
@@ -2131,6 +2186,47 @@
         "IPO / listing (+28)",
         "~A$8m deal (+5)",
         "Australian signal 3/3 (+10)"
+      ]
+    },
+    {
+      "id": "hl:advance metals and sky metals plan combined gold explorer targeting",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": 6,
+      "amountText": "$6m",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Advance Metals and Sky Metals plan combined gold explorer, targeting $6m ASX IPO Advance Metals and Sky Metals plan combined gold explorer, targeting $6m ASX IPO Medianet News Hub Advance Metals and Sky Metals Plan Combined Gold Explorer, Targeting $6 m ASX IPO Advance Metals and Sky Metals Plan Combined Gold Explorer, Targeting $6 m ASX IPO AZoMining",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Advance Metals and Sky Metals Plan Combined Gold Explorer, Targeting $6 m ASX IPO",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBaZ01oT3ZvUjF2YnBpaF8yTUY3UzNzSkZnZ3BzYlRrN2xLU2VZOV9vcWRVUW52Z0dPOFIzRnV1Qngyb1QwMkR0dDZSVnNqTVc2djlwd3ZsMVBNZDZO?oc=5",
+          "source": "AZoMining",
+          "pubDate": "Mon, 16 Nov 2026 04:24:00 GMT",
+          "via": "ipo"
+        },
+        {
+          "title": "Advance Metals and Sky Metals plan combined gold explorer, targeting $6m ASX IPO",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNN2VRZFdsVHg5Yjgxemszd0wtZ2tzaEZBRzFWU1ExZEJaMHJ0RU4zeF9xVHNRcmJmMHZoV3NOVjRXbFF0X2pLNTZ5X1VnNV9rZjQ4TS1lTDlKcGxLMklxeEp3TzUzZmp0eHB3bWpzejMzbWFiNnNBeXNEZlJHTE83OFhhWTdfMXRXQ0Qza0s2X3pDdDBZT3lLSmJXdTVFcWZvcGVWelJvQlNkWEdGN2x1QThENC1hamJjZ3l5TFE0MVp6Uk5f?oc=5",
+          "source": "Medianet News Hub",
+          "pubDate": "Thu, 12 Nov 2026 23:57:39 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-16T04:24:00.000Z",
+      "score": 42,
+      "reasons": [
+        "IPO / listing (+28)",
+        "~A$6m deal (+5)",
+        "Australian signal 1/3 (+3)",
+        "recent (7d ago, +4)",
+        "2 articles (+2)"
       ]
     },
     {
@@ -2294,40 +2390,6 @@
       ]
     },
     {
-      "id": "hl:colab founders pocket 3 65 million seed round for insolvency",
-      "company": null,
-      "counterparty": null,
-      "type": "funding",
-      "tags": [
-        "funding"
-      ],
-      "amountAudM": 3.7,
-      "amountText": "$3.65 million",
-      "founderSignal": true,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "CoLab founders pocket $3.65 million Seed round for insolvency fintech named after their former administrator CoLab’s collapse birthed Morgan AI: a $3.65m-backed insolvency copilot hunting creditor cash and UK growth.",
-      "firstSeen": "2026-11-17T02:34:03.253Z",
-      "articles": [
-        {
-          "title": "CoLab founders pocket $3.65 million Seed round for insolvency fintech named after their former administrator",
-          "link": "https://www.startupdaily.net/topic/funding/colab-founders-pocket-3-65-million-seed-round-for-insolvency-fintech-named-after-their-former-administrator/",
-          "source": "Startup Daily",
-          "pubDate": "Mon, 16 Nov 2026 01:36:12 +0000",
-          "via": "startupdaily"
-        }
-      ],
-      "latestPubDate": "2026-11-16T01:36:12.000Z",
-      "score": 40,
-      "reasons": [
-        "Funding round (+14)",
-        "~A$3.7m deal (+3)",
-        "founder/family-owned mention (+12)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)"
-      ]
-    },
-    {
       "id": "hl:innovaero posts a 3 6 million first quarter revenue after",
       "company": null,
       "counterparty": null,
@@ -2394,6 +2456,38 @@
       ]
     },
     {
+      "id": "hl:capability x asx cx8 shares trade 35 above ipo price",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Capability X (ASX:CX8) Shares Trade 35% Above IPO Price Capability X (ASX:CX8) Shares Trade 35% Above IPO Price Kalkine",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "Capability X (ASX:CX8) Shares Trade 35% Above IPO Price",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQTJZTThxLVFWZkdHUTJGOHpvY2JyWXdFTEZleFhtQVVCdnc5S3RxNGVOYUdkNGI4aTQxc1Y0YmVNTHgxVVliY3gzX2pwZ0J3NjY3dDlnU2hFRjJ2UXgwZmktbU5jV0UwSEJOb2xjZDJ1MDQ2Zkp5VWdBcWJ5OW5UVmF4LVMtenIwYjdoZjNHdlZkYVFn?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Mon, 23 Nov 2026 02:58:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-23T02:58:00.000Z",
+      "score": 39,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
       "id": "hl:ceretas limited asx cts advances cere calm alzheimers trial ahead",
       "company": null,
       "counterparty": null,
@@ -2454,7 +2548,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -2710,7 +2804,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (6d ago, +8)"
+        "recent (7d ago, +8)"
       ]
     },
     {
@@ -2743,6 +2837,38 @@
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
         "recent (17d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:how almasar minerals asx amk is building its saudi arabia",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "How Almasar Minerals (ASX:AMK) Is Building Its Saudi Arabia Exploration Platform After ASX Listing How Almasar Minerals (ASX:AMK) Is Building Its Saudi Arabia Exploration Platform After ASX Listing Kalkine",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "How Almasar Minerals (ASX:AMK) Is Building Its Saudi Arabia Exploration Platform After ASX Listing",
+          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOYkQ3YXNzci1DcXFlWG1WVG1kQ0ZjTGJqXzAyMHNYc0lDNHBDSUJKeEFUanVvajFKQkVyVHNnMG9xSWNXbFN6M05LdTFMX0x3TUR3T3FfeDNHcnpobTdwQzNyZHdtcy1oNTg1ZWwyRU5yOThGa0s0ZHZuRElLZkF5UjlJbjRxOWJjdUJlQjVpVnZNU1BQZHhBbE9ZSTU5M1paTmxZaDgxd1U3X3hDeUpDQkRnRGxLVHFfNU91Z1FTal9YQzJwUlBSMkJxVzFHcFg2WVlJVmlQTQ?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Tue, 03 Nov 2026 08:00:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-03T08:00:00.000Z",
+      "score": 39,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 2/3 (+7)",
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -2904,7 +3030,7 @@
         "~A$415m deal (+10)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -2936,6 +3062,40 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "hl:colab founders pocket 3 65 million seed round for insolvency",
+      "company": null,
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": 3.7,
+      "amountText": "$3.65 million",
+      "founderSignal": true,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "CoLab founders pocket $3.65 million Seed round for insolvency fintech named after their former administrator CoLab’s collapse birthed Morgan AI: a $3.65m-backed insolvency copilot hunting creditor cash and UK growth.",
+      "firstSeen": "2026-11-17T02:34:03.253Z",
+      "articles": [
+        {
+          "title": "CoLab founders pocket $3.65 million Seed round for insolvency fintech named after their former administrator",
+          "link": "https://www.startupdaily.net/topic/funding/colab-founders-pocket-3-65-million-seed-round-for-insolvency-fintech-named-after-their-former-administrator/",
+          "source": "Startup Daily",
+          "pubDate": "Mon, 16 Nov 2026 01:36:12 +0000",
+          "via": "startupdaily"
+        }
+      ],
+      "latestPubDate": "2026-11-16T01:36:12.000Z",
+      "score": 36,
+      "reasons": [
+        "Funding round (+14)",
+        "~A$3.7m deal (+3)",
+        "founder/family-owned mention (+12)",
+        "Australian signal 1/3 (+3)",
+        "recent (7d ago, +4)"
       ]
     },
     {
@@ -3146,7 +3306,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -3338,7 +3498,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (12d ago, +4)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -4046,6 +4206,47 @@
       ]
     },
     {
+      "id": "co:brisbane",
+      "company": "Brisbane",
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": 5,
+      "amountText": "$5 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Brisbane medtech lands $5 million pre-Series A to give patients back their lost voices Brisbane medtech lands $5 million pre-Series A to give patients back their lost voices Startup Daily Brisbane medtech lands $5 million pre-Series A to give patients back their lost voices Laronix bags $5m to clone lost voices from 10 seconds of audio and take AVA global—see how medtech is making silence obsolete.",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "Brisbane medtech lands $5 million pre-Series A to give patients back their lost voices",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQemhDQVVMTm1UV1FaVVpzS2lOZjZTbklRaVZHUG1NNDQzeGJHYjVVNl85M2dtcUd1WkVzTS1ldzl1eWJtQkJxd0RyQ0tOM1FSNm5zcEhiNXVxdUswQkpmZHZtUzFreEt3YmpOTmpBRUE0TXR3bW1hQ2pzbkgyS005cEtIZTMzVDNpQThRVms0U29DNVJWQVZHYV84Q3VkeW1MTTFjMldtbC1zNEZ4WlZaQUw2Ql9YWGp1a19yMWZ4Zk5oZy1zNEtfVg?oc=5",
+          "source": "Startup Daily",
+          "pubDate": "Mon, 23 Nov 2026 00:39:34 GMT",
+          "via": "site-startupdaily"
+        },
+        {
+          "title": "Brisbane medtech lands $5 million pre-Series A to give patients back their lost voices",
+          "link": "https://www.startupdaily.net/topic/funding/brisbane-medtech-lands-5-million-pre-series-a-to-give-patients-back-their-lost-voices/",
+          "source": "Startup Daily",
+          "pubDate": "Mon, 23 Nov 2026 00:39:34 +0000",
+          "via": "startupdaily"
+        }
+      ],
+      "latestPubDate": "2026-11-23T00:39:34.000Z",
+      "score": 34,
+      "reasons": [
+        "Funding round (+14)",
+        "~A$5m deal (+3)",
+        "Australian signal 2/3 (+7)",
+        "recent (0d ago, +8)",
+        "2 articles (+2)"
+      ]
+    },
+    {
       "id": "co:celosia therapeutics",
       "company": "Celosia Therapeutics",
       "counterparty": null,
@@ -4296,7 +4497,7 @@
         "Funding round (+14)",
         "~A$420m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -4329,7 +4530,7 @@
         "Funding round (+14)",
         "~A$115m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -4857,6 +5058,105 @@
       ]
     },
     {
+      "id": "hl:coherence raises usd 45 million for cancer implant",
+      "company": null,
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": 45,
+      "amountText": "$45 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Coherence raises USD $45 million for cancer implant Coherence raises USD $45 million for cancer implant IT Brief Australia",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "Coherence raises USD $45 million for cancer implant",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPWVgwQnJfejJ2bm1vRFZOTTBVZy1YazRfckdZa2xXaUg2cGlscEljQ0pwTjZZdUQzOFRuaVF3S0g5NHVreG42SlRoMDg5Z2pNOVpTUV82MFRyRVFMNXUyZHIwZG92ODVfcFlNcnBIWGNFRVlLSGdJM0xlZTRTaDMxMkxEYk8wZw?oc=5",
+          "source": "IT Brief Australia",
+          "pubDate": "Tue, 27 Oct 2026 07:00:00 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-10-27T07:00:00.000Z",
+      "score": 29,
+      "reasons": [
+        "Funding round (+14)",
+        "~A$45m deal (+8)",
+        "Australian signal 1/3 (+3)",
+        "recent (27d ago, +4)"
+      ]
+    },
+    {
+      "id": "co:laronix bionic voice brisbane",
+      "company": "Laronix Bionic Voice: Brisbane",
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": 5,
+      "amountText": "$5M",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Laronix Bionic Voice: Brisbane Raises $5M Pre-Series A Laronix Bionic Voice: Brisbane Raises $5M Pre-Series A shattered.io",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "Laronix Bionic Voice: Brisbane Raises $5M Pre-Series A",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSHRRNm9McVN1OFczbWlqUGFDbFRfVWVFak11TDd2dkVGb3FkNzdmbFBYN0JVR1M3M2ZlU24zTXhRYUxab3Q2eUpkcVdZMkxLVGVxNDFPZzQ2cE91RUl5ZENBS1VEeE1aOWh0YVI0RTZfcENZb3dYTHU5OTBxbGg2TFh0alY2QWdqVjhNakNiaUFyaUdCU0E?oc=5",
+          "source": "shattered.io",
+          "pubDate": "Mon, 23 Nov 2026 01:49:26 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-11-23T01:49:26.000Z",
+      "score": 28,
+      "reasons": [
+        "Funding round (+14)",
+        "~A$5m deal (+3)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:laronix raises aud 5 million to expand voice restoration",
+      "company": null,
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": 5,
+      "amountText": "$5 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Laronix raises AUD $5 million to expand voice restoration Laronix raises AUD $5 million to expand voice restoration CFOtech Australia",
+      "firstSeen": "2026-11-23T09:56:46.706Z",
+      "articles": [
+        {
+          "title": "Laronix raises AUD $5 million to expand voice restoration",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcERhUVpRMmwySEhwa3l1ZHJPMHZ3aHVaWHp5bnFXU2RZZ2I3M3hJcXllTUt0ZnNIbGpaUGNBRnBsRDlBZzlYenBRaTA2Q1NYbGoycnRUbXRzREdJN0h5WVF5eGdxUEd4Y1phTkxoeFA3NldrdmlZVF9sVEVHbXFBR1NPNUlTUTYzLVJEX2ZB?oc=5",
+          "source": "CFOtech Australia",
+          "pubDate": "Mon, 23 Nov 2026 01:36:45 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-11-23T01:36:45.000Z",
+      "score": 28,
+      "reasons": [
+        "Funding round (+14)",
+        "~A$5m deal (+3)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
       "id": "co:laronix",
       "company": "Laronix",
       "counterparty": null,
@@ -4887,39 +5187,6 @@
         "~A$5m deal (+3)",
         "Australian signal 1/3 (+3)",
         "recent (0d ago, +8)"
-      ]
-    },
-    {
-      "id": "hl:morgan raises aud 3 65 million seed round led by",
-      "company": null,
-      "counterparty": null,
-      "type": "funding",
-      "tags": [
-        "funding"
-      ],
-      "amountAudM": 3.7,
-      "amountText": "$3.65 million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Morgan raises AUD $3.65 million seed round led by Blackbird Morgan raises AUD $3.65 million seed round led by Blackbird CFOtech Australia",
-      "firstSeen": "2026-11-17T02:34:03.253Z",
-      "articles": [
-        {
-          "title": "Morgan raises AUD $3.65 million seed round led by Blackbird",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUFo0bzluRFBtMjBPUHBqQk03S1hON3BZT2lIQnhxa3U2UGMwQ05xVXBaTXBLTXdRU0tIRjdSczZLTlc2VlBseXVRY2FneWRiVHFkd2RvUGxHZTdSck1DZ1ZWdTNyMnctYjA5X0RtQ0ptZU9KT29kVkxtNXdvRjVfekxIZlNaVXZWbksybWVnQlE?oc=5",
-          "source": "CFOtech Australia",
-          "pubDate": "Mon, 16 Nov 2026 06:07:00 GMT",
-          "via": "funding-any"
-        }
-      ],
-      "latestPubDate": "2026-11-16T06:07:00.000Z",
-      "score": 28,
-      "reasons": [
-        "Funding round (+14)",
-        "~A$3.7m deal (+3)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)"
       ]
     },
     {
@@ -5139,7 +5406,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (0d ago, +8)"
+        "recent (1d ago, +8)"
       ]
     },
     {
@@ -5203,7 +5470,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     }
   ]
