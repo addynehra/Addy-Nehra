@@ -46,7 +46,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           WOMEN_ENRICH_MAX: '8'
           WOMEN_ENRICH_MIN_SCORE: '50'
-          LOOKBACK_DAYS: '30'
+          WOMEN_LOOKBACK_DAYS: '180'
         run: node scripts/women-scan.mjs
 
       - name: Commit results if changed

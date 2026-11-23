@@ -379,10 +379,11 @@
         <select id="wom-cat"><option value="">All signal types</option></select>
         <select id="wom-window">
           <option value="30">Last 30 days</option>
-          <option value="90" selected>Last 90 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="180" selected>Last 180 days</option>
           <option value="9999">All on file</option>
         </select>
-        <label class="range">Min score <input type="range" id="wom-min" min="0" max="90" step="5" value="40"> <span id="wom-min-val">40</span></label>
+        <label class="range">Min score <input type="range" id="wom-min" min="0" max="90" step="5" value="30"> <span id="wom-min-val">30</span></label>
         <label class="check"><input type="checkbox" id="wom-named-only"> Named women only</label>
       </div>
       <div class="actions-row" style="margin-top:14px;">
