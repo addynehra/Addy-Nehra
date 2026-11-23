@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T09:56:46.706Z",
+  "generatedAt": "2026-11-23T10:14:12.939Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -11,17 +11,17 @@
     {
       "id": "trade-sale",
       "ok": true,
-      "count": 15
+      "count": 55
     },
     {
       "id": "private-equity",
       "ok": true,
-      "count": 34
+      "count": 33
     },
     {
       "id": "pe-firms",
       "ok": true,
-      "count": 74
+      "count": 75
     },
     {
       "id": "funding-late",
@@ -36,7 +36,7 @@
     {
       "id": "ipo",
       "ok": true,
-      "count": 27
+      "count": 26
     },
     {
       "id": "takeover",
@@ -56,12 +56,12 @@
     {
       "id": "site-smartcompany",
       "ok": true,
-      "count": 43
+      "count": 44
     },
     {
       "id": "site-businessnews",
       "ok": true,
-      "count": 24
+      "count": 23
     },
     {
       "id": "site-capitalbrief",
@@ -814,6 +814,39 @@
       ]
     },
     {
+      "id": "co:wangara",
+      "company": "Wangara",
+      "counterparty": "Motormall",
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": 16,
+      "amountText": "$16m",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Motormall buys $16m Wangara site Motormall buys $16m Wangara site Business News",
+      "firstSeen": "2026-11-23T10:14:12.939Z",
+      "articles": [
+        {
+          "title": "Motormall buys $16m Wangara site",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMmRSaVd0RFJHRko5cllfTjhSWWt5X1RJNWxfTWUzTlg2STdobmVrQmZQUml6cEYxakU4V2hpLVNfZnlYUWtYbk5qTDdCOVhFT3pRU1piX0tBekRVRWdMUHNtQXdkSldUNWRXSW1ZQjlzdEZYNUhhQXpVeEFabVFQX1MyWmFWdw?oc=5",
+          "source": "Business News",
+          "pubDate": "Mon, 23 Nov 2026 07:58:53 GMT",
+          "via": "site-businessnews"
+        }
+      ],
+      "latestPubDate": "2026-11-23T07:58:53.000Z",
+      "score": 61,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "~A$16m deal (+10)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
       "id": "hl:what does the firmus ipo withdrawal mean for maas group",
       "company": null,
       "counterparty": null,
@@ -1093,7 +1126,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -1191,6 +1224,40 @@
         "~A$45m deal (+15)",
         "Australian signal 1/3 (+3)",
         "recent (13d ago, +4)"
+      ]
+    },
+    {
+      "id": "co:macquarie backed future secure ai",
+      "company": "Macquarie-backed Future Secure AI",
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo",
+        "funding"
+      ],
+      "amountAudM": 80,
+      "amountText": "$80M",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Macquarie-backed Future Secure AI raises $80M, hits unicorn status ahead of ASX float Macquarie-backed Future Secure AI raises $80M, hits unicorn status ahead of ASX float Dealroom",
+      "firstSeen": "2026-11-23T10:14:12.939Z",
+      "articles": [
+        {
+          "title": "Macquarie-backed Future Secure AI raises $80M, hits unicorn status ahead of ASX float",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcllOTzV5ZHNXVml2R25RS0F2SndKS2RyaVRLN1dmb0dmSGw2OF9SRnFVMGhULWpBQTNuLTgxZWFUUmxhQVlpUEFnMnpiV2MtcnRIRU9wMWR5aWZwNi1xdmx4UlExZURjQXNHNE1ja1RUODg0c0lvY2x2X24yeDIxeHVJSUk0eF9UcjJpTjJOS2NKSFJUUHJUQ1UtdENjVV9yUDF1MUZuOE1nWHQyeVVya3Y1U2RxTzVD?oc=5",
+          "source": "Dealroom",
+          "pubDate": "Fri, 06 Nov 2026 15:47:34 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-11-06T15:47:34.000Z",
+      "score": 50,
+      "reasons": [
+        "IPO / listing (+28)",
+        "~A$80m deal (+15)",
+        "Australian signal 1/3 (+3)",
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -1616,6 +1683,38 @@
           "source": "Mortgage Professional America",
           "pubDate": "Tue, 27 Oct 2026 07:00:00 GMT",
           "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-10-27T07:00:00.000Z",
+      "score": 47,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (27d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:brookfield sells stake in aussie credit manager la trobe to",
+      "company": null,
+      "counterparty": null,
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Brookfield sells stake in Aussie credit manager La Trobe to OMERS Brookfield sells stake in Aussie credit manager La Trobe to OMERS Alternatives Watch",
+      "firstSeen": "2026-11-23T10:14:12.939Z",
+      "articles": [
+        {
+          "title": "Brookfield sells stake in Aussie credit manager La Trobe to OMERS",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObURFQ1hEVTFEaUplWTVSSmFmQk83YU9Zd1Y1bTlUTG82MkVTREF1eUF3OXpCRXVhenJkUzJob0xjTW5nUVVzS2Rfam02UF9pOUFsRUhkUk1tem5FNnBsZWFUdllXSUtaTE1PYlZYTWRFUVZOSS1Dc2I3VTJDcXpTY2hybWtIUTdua21xZmtLcnlZVXlqa2lyS29GZ2x2UWliLWc?oc=5",
+          "source": "Alternatives Watch",
+          "pubDate": "Tue, 27 Oct 2026 07:00:00 GMT",
+          "via": "trade-sale"
         }
       ],
       "latestPubDate": "2026-10-27T07:00:00.000Z",
@@ -3562,7 +3661,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
