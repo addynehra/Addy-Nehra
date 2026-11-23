@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T11:30:00.566Z",
+  "generatedAt": "2026-11-23T11:32:33.678Z",
   "lookbackDays": 180,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -11,7 +11,7 @@
     {
       "id": "w-founder-raise",
       "ok": true,
-      "count": 46
+      "count": 94
     },
     {
       "id": "w-founder-ipo",
@@ -26,7 +26,7 @@
     {
       "id": "w-site-startupdaily",
       "ok": true,
-      "count": 24
+      "count": 23
     },
     {
       "id": "w-site-smartcompany",
@@ -96,7 +96,7 @@
     {
       "id": "w-networks",
       "ok": true,
-      "count": 9
+      "count": 8
     },
     {
       "id": "w-women-wealth",
@@ -111,7 +111,7 @@
     {
       "id": "w-ref-accounting",
       "ok": true,
-      "count": 64
+      "count": 20
     },
     {
       "id": "w-ref-networks",
@@ -148,19 +148,19 @@
     "referral_partner": "Referral partner (law / accounting)"
   },
   "diagnostics": {
-    "articlesFetched": 725,
-    "added": 55,
+    "articlesFetched": 727,
+    "added": 52,
     "merged": 0,
     "prunedByNewRules": 3,
     "belowMinScore": 49,
     "dropped": {
-      "no_signal_type": 161,
+      "no_signal_type": 162,
       "older_than_lookback": 326,
-      "not_australian": 110,
-      "foreign": 16,
+      "not_australian": 107,
+      "foreign": 22,
       "no_female_signal": 19,
       "about_a_man": 2,
-      "sensitive": 10
+      "sensitive": 9
     },
     "droppedSamples": {
       "no_signal_type": [
@@ -169,9 +169,9 @@
         "Nvidia Chief Seen as Target of Chinese Spy Plot - The New York Times",
         "What will be sold at Gibraltar Trade Center 2 at the Mall of Monroe? - Monroe Evening News",
         "'Half my business will be gone' - firms in Canada and US fear trade war - BBC",
-        "2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun",
-        "46 Public Companies Founded by Women - The Story Exchange",
-        "Victoria's government-backed Alice Anderson Fund for women founders scores another $10 million - Startup Daily"
+        "‘Hot Girl Soda’: Female-Founded Feisty Bags Funding for Fizzy Plant Protein Drinks - Green Queen Media",
+        "Women founders and CEOs got only 8.2% of Q1 startup funding - Technext24.com",
+        "2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun"
       ],
       "older_than_lookback": [
         "The Apprentice winner says she's done 'something huge' - BBC",
@@ -187,28 +187,28 @@
         "Owner of liquidated West Coast pie business buys it back under new company - The Press",
         "I’m a female founder with a liberal arts degree and my company has raised $280 million. You don’t need a PhD to build a robotics startup - Yahoo Finance",
         "Tailevu businesswoman raises concerns over cattle theft, market access and ice plant - Fijivillage",
+        "Lubbock-raised businesswoman shares Palestinian roots with food brand - Yahoo",
         "200 Black Women Founders Who've Raised $1 Million In Funding Spotlighted On New List - - Black Enterprise",
+        "Black Women Founders Raise $4.5 Million for Their Innovative Hair Extensions Brand - Black Enterprise",
         "WOCstar looks to turn women founders into rock stars - PEI Private Equity",
-        "In 2021, Reese Witherspoon sold a majority stake in Hello Sunshine at a $900 million valuation; five year - The Times of India",
-        "Anthropic co-founder Daniela Amodei enters world’s top 15 richest women - Adgully",
-        "After Anthropic’s IPO, Daniela Amodei is now the world’s 15th richest woman - Fortune"
+        "In 2021, Reese Witherspoon sold a majority stake in Hello Sunshine at a $900 million valuation; five year - The Times of India"
       ],
       "foreign": [
         "German female-founded startup Finches raises €2 million to bring AI early warnings to agricultural sourcing - EU-Startups",
-        "Lune & Wild raises €2.3 million to scale female-founded, chef-led baby and children’s food brand - EU-Startups",
+        "Exclusive: Female-founded AI startup raises £1M to grade exams. Here’s the pitch deck - Tech Funding News",
+        "Female-founded AI LegalTech startup Aavalynx raises €1.75 million to bring “death to disputes” - EU-Startups",
         "‘I thought, why not run a half marathon five months post-partum with no training?’ - Award-winning businesswoman raises over £2,000 for Caithness schools - John O'Groat Journal",
-        "Meet the 8 women powering India’s deeptech future; Anthropic raises a record $81.3B in IPO - YourStory.com",
-        "Kiwi startup Backkr raises NZ$500,000 to deliver client better leads - Startup Daily",
-        "The extraordinary life of the Duchess of Alba, Spain's richest woman, who befriended Jackie Kennedy and turned down Picasso - Tatler",
-        "Forbes Richest Self-Made Women in America 2026 - Forbes",
-        "Russia’s richest woman faces EU sanctions over links to Europe's largest armed conflict a year after taking her $5 billion online retail empire into Africa - Business Insider Africa"
+        "Lune & Wild raises €2.3 million to scale female-founded, chef-led baby and children’s food brand - EU-Startups",
+        "Italy’s female-founded HospitalityTech startup Bestie Bite raises €1.5 million to expand its video review app in the US - EU-Startups",
+        "New Index Reveals The First 200 US-Based Black Women Founders To Raise $1M In VC Funding - AfroTech",
+        "Ayr businesswoman raises over £700 for charity through 2000s fundraiser - Ayr Advertiser"
       ],
       "no_female_signal": [
         "Family office Mutual Trust makes dual partner hires - InvestorDaily",
-        "Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
         "Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
-        "Senior exec quits Cannon-Brookes’ family office - The Australian",
+        "Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
         "TPG boss Joel Thickins buys Roxy Jacenko’s Sweaty Betty HQ - The Daily Telegraph",
+        "Senior exec quits Cannon-Brookes’ family office - The Australian",
         "Acorn Capital sells Dredge Robotics stake to Perth family office - AFR",
         "Giving Circle Supports All Ages - Door County Pulse",
         "Giving Circle Awards $70,000 in Early Childhood Education Grants - The Pilot Newspaper"
@@ -223,10 +223,316 @@
         "Roz Hervey had hours left to live. She asked her family to press record - ABC News & Headlines – Australian Broadcasting Corporation",
         "Australian Apprentice Jockey Izzy Neale Dies After Race Fall in Warren - JournalArta",
         "Senator Murray Reintroduces Jeanette Acosta Invest in Women’s Health Act to Increase Access to Life-Saving Cancer Screenings - Senator Patty Murray (.gov)",
-        "Building a divorce law firm for women, by women - ASBN Small Business Network",
         "I love being self-employed. It also nearly broke me the week my mum died. - Women's Agenda",
-        "The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda"
+        "The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda",
+        "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help"
       ]
+    },
+    "bySource": {
+      "w-founder-exit": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] Nvidia CEO affair scandal widens as Chinese businesswoman reportedly questioned by Singapore authorities - The Standard (HK)",
+          "[no_signal_type] This Liverpool mum-of-four ran an Instagram counterfeit clothing trade and had over £4m deposited into her business accounts. All while claiming Universal Credit. 😡 Megan Carney-Borrowman sold fake luxury items from brands like Chanel, Burberry, Hugo B - Facebook",
+          "[no_signal_type] Nvidia Chief Seen as Target of Chinese Spy Plot - The New York Times",
+          "[not_australian] Owner of liquidated West Coast pie business buys it back under new company - The Press",
+          "[no_signal_type] What will be sold at Gibraltar Trade Center 2 at the Mall of Monroe? - Monroe Evening News"
+        ],
+        "no_signal_type": 5,
+        "older_than_lookback": 16,
+        "not_australian": 1
+      },
+      "w-founder-raise": {
+        "kept": 0,
+        "samples": [
+          "[foreign] German female-founded startup Finches raises €2 million to bring AI early warnings to agricultural sourcing - EU-Startups",
+          "[not_australian] I’m a female founder with a liberal arts degree and my company has raised $280 million. You don’t need a PhD to build a robotics startup - Yahoo Finance",
+          "[not_australian] Tailevu businesswoman raises concerns over cattle theft, market access and ice plant - Fijivillage",
+          "[no_signal_type] ‘Hot Girl Soda’: Female-Founded Feisty Bags Funding for Fizzy Plant Protein Drinks - Green Queen Media",
+          "[foreign] Exclusive: Female-founded AI startup raises £1M to grade exams. Here’s the pitch deck - Tech Funding News"
+        ],
+        "foreign": 8,
+        "not_australian": 5,
+        "no_signal_type": 2,
+        "older_than_lookback": 79
+      },
+      "w-founder-ipo": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] 2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun",
+          "[foreign] Meet the 8 women powering India’s deeptech future; Anthropic raises a record $81.3B in IPO - YourStory.com",
+          "[no_signal_type] 46 Public Companies Founded by Women - The Story Exchange"
+        ],
+        "older_than_lookback": 29,
+        "no_signal_type": 2,
+        "foreign": 1
+      },
+      "w-founder-pe": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] WOCstar looks to turn women founders into rock stars - PEI Private Equity",
+          "[not_australian] In 2021, Reese Witherspoon sold a majority stake in Hello Sunshine at a $900 million valuation; five year - The Times of India"
+        ],
+        "not_australian": 2,
+        "older_than_lookback": 33
+      },
+      "w-site-startupdaily": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] Victoria's government-backed Alice Anderson Fund for women founders scores another $10 million - Startup Daily",
+          "[no_signal_type] Edition’s $15,000 female founder grant is open for applications - Startup Daily",
+          "[no_signal_type] Nicola Forrest anchors Antler’s $70 million 3rd fund in $30m push for women founders - Startup Daily",
+          "[no_signal_type] Twiggy Forrest’s Minderoo Foundation backs Startmate with $8 million - Startup Daily",
+          "[no_signal_type] Innovation Victoria's startup fund has a bumper $166 million return as it faces the axe after the state election - Startup Daily"
+        ],
+        "no_signal_type": 16,
+        "older_than_lookback": 1,
+        "foreign": 1
+      },
+      "w-site-smartcompany": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] How to summarise PDFs with AI and more ways to simplify your document workflows - SmartCompany",
+          "[no_signal_type] VIDEO: Targeted offers to grow customer spend - SmartCompany",
+          "[no_signal_type] The small bookkeeping mistake that became a six-figure tax problem - SmartCompany",
+          "[no_signal_type] 30. Sunny Balcony - SmartCompany",
+          "[no_signal_type] Businesses We Love: Madebox founder Samantha Finnegan on why gifting is a missed branding opportunity - SmartCompany"
+        ],
+        "no_signal_type": 25,
+        "older_than_lookback": 2
+      },
+      "w-site-capitalbrief": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] Jensen Huang resigns as Nvidia CEO, shares plunge - Capital Brief",
+          "[no_signal_type] Nvidia’s Jensen Huang targeted by alleged Chinese spy: NYT - Capital Brief",
+          "[no_signal_type] Life360 ready to hire again, signalling end to AI-driven layoffs - Capital Brief",
+          "[no_signal_type] Xero’s culture in shock as staff come to grips with its AI pivot - Capital Brief",
+          "[no_signal_type] Rules of engagement - Capital Brief"
+        ],
+        "no_signal_type": 6
+      },
+      "w-rich-list": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] Anthropic co-founder Daniela Amodei enters world’s top 15 richest women - Adgully",
+          "[foreign] The extraordinary life of the Duchess of Alba, Spain's richest woman, who befriended Jackie Kennedy and turned down Picasso - Tatler",
+          "[not_australian] After Anthropic’s IPO, Daniela Amodei is now the world’s 15th richest woman - Fortune",
+          "[not_australian] Russia’s richest woman hit by EU sanctions - Financial Times",
+          "[foreign] Forbes Richest Self-Made Women in America 2026 - Forbes"
+        ],
+        "not_australian": 17,
+        "foreign": 6,
+        "older_than_lookback": 45,
+        "no_signal_type": 1
+      },
+      "w-site-forbes": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] How Alexandra Murray built Be Seen Socials by 21 - Forbes Australia",
+          "[no_signal_type] Jane Goodall’s lasting lessons for our planet - Forbes Australia",
+          "[no_signal_type] How FutureTechFemale Is Building Technical Pathways for Women in Technology - Forbes Australia",
+          "[no_signal_type] Taylor Swift and Travis Kelce likely will wed at Madison Square Garden, reports - Forbes Australia",
+          "[no_signal_type] ‘Get back up’: The struggle that inspired Amber Thanas’ therapy revolution - Forbes Australia"
+        ],
+        "no_signal_type": 12
+      },
+      "w-awards": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] Clean energy tech company founder to deliver Women of Influence Lecture at Alfred University - Alfred University",
+          "[no_signal_type] Five Questions With Karla Congson, CEO of Agentiiv - Women of Influence",
+          "[not_australian] Meet venture capital’s 2026 Women of Influence - PEI Private Equity",
+          "[no_signal_type] Women of Influence: Accounting 2026 – Bridget Ahern - Los Angeles Business Journal",
+          "[no_signal_type] 50 Women of Influence in Irish Sport 2026 – Sarah Keane - Sport for Business"
+        ],
+        "no_signal_type": 31,
+        "not_australian": 2
+      },
+      "w-family": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] Developing the next generation of family businesses - kpmg.com",
+          "[no_signal_type] Beloved Chinatown restaurant serves robot noodles at new Marrickville spin-off - SMH.com.au",
+          "[not_australian] Family business succession planning and the next generation, 2026 - Deloitte",
+          "[not_australian] With robot feedlots, Strathdale Wagyu embraces the next generation of farming - CommBank",
+          "[not_australian] Family business: Brodie George’s daughter Ngoorloona features in new Jalayimiya collection - National Indigenous Times"
+        ],
+        "not_australian": 5,
+        "no_signal_type": 2,
+        "older_than_lookback": 26,
+        "foreign": 1
+      },
+      "w-family-chair": {
+        "kept": 0,
+        "samples": [],
+        "older_than_lookback": 10
+      },
+      "w-family-office": {
+        "kept": 0,
+        "samples": [
+          "[no_female_signal] Family office Mutual Trust makes dual partner hires - InvestorDaily",
+          "[no_signal_type] Mutual Trust turns to Grant Thornton, EY for Partners - Financial Newswire",
+          "[no_female_signal] Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
+          "[no_female_signal] Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
+          "[no_signal_type] Nicola Forrest anchors Antler’s $70 million 3rd fund in $30m push for women founders - Startup Daily"
+        ],
+        "no_female_signal": 6,
+        "no_signal_type": 8,
+        "about_a_man": 1
+      },
+      "w-philanthropy": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] ‘Forever in our hearts’: Jockey Izzy Neale’s final gift after fatal racing fall - News24",
+          "[sensitive] 22yo jockey dies from injuries sustained in race fall - ABC News & Headlines – Australian Broadcasting Corporation",
+          "[sensitive] Jemma Stapleton, Australian sprinter and Stawell Gift finalist, dies aged 25 on family holiday - The Guardian",
+          "[no_signal_type] A young author’s gift to refugees - Australia for UNHCR",
+          "[no_signal_type] First home buyer scores historic cottage despite $60,000 higher bid - ABC News & Headlines – Australian Broadcasting Corporation"
+        ],
+        "no_signal_type": 4,
+        "sensitive": 4,
+        "older_than_lookback": 18,
+        "not_australian": 1
+      },
+      "w-philanthropy-orgs": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] Meet the four Northern Rivers groups receiving this year’s Women’s Giving Circle grants - Times News Group",
+          "[not_australian] PHOTOS: 70 locals gather as Bega Women's Giving Circle awards first grants - Bega District News",
+          "[no_signal_type] No Small Thing: Inspiring Women Leaders to Tackle Big Challenges in Murwillumbah - Northern Rivers Times",
+          "[not_australian] Steamy weather doesn’t stifle Women’s Giving Circle’s Christmas spirit - Catholic Diocese of Cleveland",
+          "[not_australian] Women's Giving Circle Celebrates Its Mission Impact - Roman Catholic Diocese of Baton Rouge"
+        ],
+        "not_australian": 19,
+        "no_signal_type": 3,
+        "no_female_signal": 6
+      },
+      "w-invest-women": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] New guidance on applying a child perspective within gender lens investing (2X Criteria) - Unicef",
+          "[not_australian] Why investing in women’s education pays off - World Economic Forum",
+          "[foreign] State Threats in Sub-Saharan Africa Through a Gender Lens - Royal United Services Institute (RUSI)",
+          "[not_australian] The business case for investing in women? New evidence on how 2X qualification is giving funds an edge - New Private Markets",
+          "[not_australian] Earthquakes and governance: why we need a gender lens in Venezuela’s compounding crises - ODI: Think change"
+        ],
+        "not_australian": 35,
+        "foreign": 3,
+        "sensitive": 1
+      },
+      "w-angels": {
+        "kept": 1,
+        "samples": [],
+        "older_than_lookback": 8
+      },
+      "w-angel-groups": {
+        "kept": 2,
+        "samples": [
+          "[no_female_signal] VC fund backed by Zampatti and Forrest families looks to raise $50m - AFR",
+          "[no_signal_type] Melbourne startup Elita doubles down on dog longevity - Capital Brief",
+          "[no_signal_type] Space Mission Offer Giant Leap For Australian Science - Mirage News",
+          "[no_signal_type] Alisha Palmowski takes giant leap towards F1 Academy title with Race 1 victory - Motorsport Week",
+          "[no_signal_type] French astronaut Adenot takes giant leap with historic spacewalk - RFI"
+        ],
+        "no_female_signal": 1,
+        "no_signal_type": 23,
+        "foreign": 1,
+        "not_australian": 3
+      },
+      "w-networks": {
+        "kept": 2,
+        "samples": [
+          "[not_australian] Women in Super puts data at the heart of retirement equity push - Professional Planner",
+          "[not_australian] Hello Pearl Selected for Springboard Enterprises' Inaugural Longevity Accelerator - Yahoo Finance",
+          "[not_australian] Derry woman Siobhan Moran unveils plans for major conference for women in banking and finance - Derry Journal",
+          "[not_australian] Women’s Economic Ventures Celebrates 35 Years, Recognizes Trailblazer Awardee Kelly Mooney and WEV’s Giving Circle the League of Extraordinary Women - The Santa Barbara Independent",
+          "[not_australian] Major new Belfast conference launched for women in banking and finance - LoveBelfast"
+        ],
+        "not_australian": 6
+      },
+      "w-women-wealth": {
+        "kept": 0,
+        "samples": [],
+        "older_than_lookback": 8
+      },
+      "w-ref-law": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] Winners for Women in Law Awards 2026 revealed - Lawyers Weekly",
+          "[not_australian] Building a divorce law firm for women, by women - ASBN Small Business Network",
+          "[not_australian] SC Judge Calls For 33% Quota For Women In Legal Profession - BW People",
+          "[not_australian] Women Lawyers Must Have 1/3rd Representation On Government Panels : Justice BV Nagarathna - Live Law",
+          "[not_australian] The Woman's Guide to Estate Planning: Protect Your Health and Wealth - Kiplinger"
+        ],
+        "not_australian": 7,
+        "older_than_lookback": 23
+      },
+      "w-ref-accounting": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] Right Property Group confirmed as principal partner for Women in Accounting Awards - Accountants Daily",
+          "[not_australian] ASB Awards celebrate changing role of Scottish women in business - Edinburgh Chamber of Commerce",
+          "[not_australian] The 2026 UEFA Business Case for Women's Football - Key Insights & Takeaways - LawInSport"
+        ],
+        "not_australian": 3,
+        "older_than_lookback": 17
+      },
+      "w-ref-networks": {
+        "kept": 0,
+        "samples": [
+          "[not_australian] Future Faces member recognised with inspirational women in law award - Greater Birmingham Chambers of Commerce"
+        ],
+        "not_australian": 1,
+        "older_than_lookback": 11
+      },
+      "w-site-womensagenda": {
+        "kept": 47,
+        "samples": [
+          "[sensitive] I love being self-employed. It also nearly broke me the week my mum died. - Women's Agenda",
+          "[sensitive] The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda",
+          "[foreign] She grew up with 18-hour blackouts in Nepal. Now Ash Kansakaar has raised $3m to keep critical infrastructure running - Women's Agenda"
+        ],
+        "sensitive": 2,
+        "foreign": 1
+      },
+      "w-womensagenda": {
+        "kept": 0,
+        "samples": [
+          "[sensitive] “I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
+          "[no_signal_type] Nearly 40% of MPs say poor mental health has stopped them speaking out on issues that matter",
+          "[no_signal_type] What a mother eats during pregnancy could influence her child’s future mental health, new research suggests",
+          "[no_signal_type] A breastfeeding mum walked into the club I led and changed how I think",
+          "[sensitive] Former Liberal minister Sharman Stone dies on her own terms via voluntary assisted dying"
+        ],
+        "sensitive": 2,
+        "no_signal_type": 9
+      },
+      "w-startupdaily": {
+        "kept": 0,
+        "samples": [
+          "[no_female_signal] Brisbane medtech lands $5 million pre-Series A to give patients back their lost voices",
+          "[no_signal_type] Off yer bike: Electric motorcycle maker Savic calls in administrators",
+          "[no_signal_type] Canva brings in AI f-off button for users",
+          "[no_signal_type] The worst of LinkedIn, 2026 – and what you need to stop doing",
+          "[no_female_signal] Kiwi startup Backkr raises NZ$500,000 to deliver client better leads"
+        ],
+        "no_female_signal": 4,
+        "no_signal_type": 6
+      },
+      "w-smartcompany": {
+        "kept": 0,
+        "samples": [
+          "[no_signal_type] Happy hours and later nights: Queensland pubs set for liquor law shake-up",
+          "[no_signal_type] Coalition pushes bill to make debanking illegal, shielding fintechs, farms, and adult industries",
+          "[no_signal_type] Labor’s 30% trust tax set for Senate showdown before Christmas break",
+          "[about_a_man] “Unbelievable”: Anthropic’s $3 trillion IPO puts global spotlight on Melbourne gardening business",
+          "[no_signal_type] David Jones collapse: Everything we learned about the troubled retailer last week"
+        ],
+        "no_signal_type": 7,
+        "about_a_man": 1,
+        "no_female_signal": 2
+      }
     }
   },
   "signals": [
@@ -1172,7 +1478,7 @@
       "femaleFromSearch": false,
       "auConfidence": 2,
       "headline": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
-      "firstSeen": "2026-11-23T11:30:00.566Z",
+      "firstSeen": "2026-11-23T11:32:33.678Z",
       "articles": [
         {
           "title": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
@@ -1242,7 +1548,7 @@
       "femaleFromSearch": false,
       "auConfidence": 2,
       "headline": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
-      "firstSeen": "2026-11-23T11:30:00.566Z",
+      "firstSeen": "2026-11-23T11:32:33.678Z",
       "articles": [
         {
           "title": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
@@ -1312,7 +1618,7 @@
       "femaleFromSearch": false,
       "auConfidence": 1,
       "headline": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",
-      "firstSeen": "2026-11-23T11:30:00.566Z",
+      "firstSeen": "2026-11-23T11:32:33.678Z",
       "articles": [
         {
           "title": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",

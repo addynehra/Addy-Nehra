@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T11:29:33.522Z",
+  "generatedAt": "2026-11-23T11:32:06.217Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -21,7 +21,7 @@
     {
       "id": "pe-firms",
       "ok": true,
-      "count": 70
+      "count": 100
     },
     {
       "id": "funding-late",
@@ -31,17 +31,17 @@
     {
       "id": "funding-any",
       "ok": true,
-      "count": 34
+      "count": 35
     },
     {
       "id": "ipo",
       "ok": true,
-      "count": 26
+      "count": 27
     },
     {
       "id": "takeover",
       "ok": true,
-      "count": 63
+      "count": 32
     },
     {
       "id": "selldown",
@@ -56,12 +56,12 @@
     {
       "id": "site-smartcompany",
       "ok": true,
-      "count": 43
+      "count": 42
     },
     {
       "id": "site-businessnews",
       "ok": true,
-      "count": 23
+      "count": 24
     },
     {
       "id": "site-capitalbrief",
@@ -2192,6 +2192,38 @@
       "score": 43,
       "reasons": [
         "Takeover / scheme (+28)",
+        "Australian signal 2/3 (+7)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:glencores asx float lights the path for other global miners",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "Glencore’s ASX float lights the path for other global miners to follow Glencore’s ASX float lights the path for other global miners to follow AFR",
+      "firstSeen": "2026-11-23T11:32:06.217Z",
+      "articles": [
+        {
+          "title": "Glencore’s ASX float lights the path for other global miners to follow",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVW95amF3SGdDSFZ6N1dYRTdPRVQ1elhBa0otZzN0ODR6bDVfOEl2M0tHTWUwQkdQMUJ0ZVdFUXpkWkF5c3V3WFFKZWhtVC1YY21UMkdDeGFiRDNfNTMyU05xcXJIcUV2X3FCeENSZTk3cFQ3U1p6UjRoU3pzeFVzR182a29KdGplTXlKQVJlQWVjRUJyZ3RKSERRYUhiU3VkazVlZkxtZG5kOEJwczc2NlU5b2pRYUFobFlXaUxSTHdSSVpTSEg4cUstVnE5bnNM?oc=5",
+          "source": "AFR",
+          "pubDate": "Mon, 23 Nov 2026 01:00:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-23T01:00:00.000Z",
+      "score": 43,
+      "reasons": [
+        "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
         "recent (0d ago, +8)"
       ]
