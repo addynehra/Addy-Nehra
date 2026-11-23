@@ -21,9 +21,13 @@ const WOMEN_INVESTING = /\b(scale investors|angel investors?|angel network|inves
 const FEMALE = /\b(she|her|hers|herself|woman|women|female|businesswom[ae]n|chairwoman|matriarch|heiress|daughters?|mother|sisters?|granddaughter|niece|mum|mrs|ms|dame|lady)\b/gi;
 
 // Sensitive or exploitative contexts: bereavement, estates, family law, disputes.
-// Bereavement, estates and family law: excluded so the scan never surfaces
+// Bereavement, illness, estates and family law: excluded so the scan never surfaces
 // recently bereaved women or private family matters.
-const SENSITIVE = /\b(obituar\w*|dies|died|death of|funeral|passed away|mourn\w*|the late|widow\w*|probate|estate (?:battle|dispute|fight|war)|will (?:dispute|battle)|contest\w* (?:the |her )?(?:will|estate)|inheritance (?:battle|fight|dispute|row|war)|divorce\w*|custody|family court|domestic violence)\b/i;
+const SENSITIVE = /\b(obituar\w*|dies|died|death of|funeral|passed away|mourn\w*|the late|widow\w*|probate|estate (?:battle|dispute|fight|war)|will (?:dispute|battle)|contest\w* (?:the |her )?(?:will|estate)|inheritance (?:battle|fight|dispute|row|war)|divorce\w*|custody|family court|domestic violence|terminal(?:ly)? ill|hours (?:left )?to live|dying|end of life|assisted dying|cancer|diagnos\w*|illness)\b/i;
+
+// Overseas markers in a headline. Dropped unless the headline also names Australia.
+const FOREIGN = /\b(U\.?S\.?|USA|America(?:n|ns)?|Canad(?:a|ian)|UK|U\.K\.|Brit(?:ain|ish)|England|English|London|Liverpool|Manchester|Scotland|Ireland|Irish|Europe(?:an)?|German(?:y)?|France|French|Ital(?:y|ian)|Spain|Spanish|Dutch|Swed(?:en|ish)|India(?:n)?|Nepal|China|Chinese|Japan(?:ese)?|Singapore(?:an)?|Hong Kong|Dubai|Africa(?:n)?|Kiwi|New Zealand|NZ|Auckland|Wellington|Chicago|Baltimore|Dayton|Ohio|Texas|California|Silicon Valley|New York|Ontario|Toronto|Vancouver|Nvidia|Hollywood)\b|NZ\$|€|£/;
+const AU_IN_HEADLINE = /\b(Australia(?:n|ns)?|Aussie|Sydney|Melbourne|Brisbane|Perth|Adelaide|Hobart|Canberra|Darwin|Gold Coast|ASX|NSW|Victoria(?:n)?|Queensland|Tasmania(?:n)?)\b/;
 
 const MALE = /\b(he|his|him|himself|businessman|son|father and son|brothers)\b/i;
 
@@ -76,7 +80,9 @@ export function evaluateArticle(article, meta = {}) {
   let cats = categorise(headline);
   if (!cats.length) cats = categorise(text);
   let inferred = false;
-  if (!cats.length && meta.category) { cats = [meta.category]; inferred = true; }
+  // Only initiative stories may borrow the search's category; for the rest, the
+  // headline/snippet must say what happened (sale, raise, gift, list...).
+  if (!cats.length && meta.category === 'women_investing' && femaleSignal(text) > 0) { cats = [meta.category]; inferred = true; }
   if (!cats.length) return { reason: 'no_signal_type' };
   const category = cats.slice().sort((a, b) => CATEGORIES[b].weight - CATEGORIES[a].weight)[0];
 
@@ -85,8 +91,11 @@ export function evaluateArticle(article, meta = {}) {
   const femaleFromSearch = female === 0 && meta.female;
   if (female === 0 && !meta.female && !cats.includes('women_investing')) return { reason: 'no_female_signal' };
 
+  if (FOREIGN.test(headline) && !AU_IN_HEADLINE.test(headline)) return { reason: 'foreign' };
   let au = auConfidence(text, article.source, article.link);
-  if (au === 0 && meta.au) au = 1;
+  // Only searches restricted to Australian outlets (site: searches, direct feeds) vouch for Australia;
+  // Google's Australian edition still returns plenty of overseas stories.
+  if (au === 0 && meta.au === 'outlet') au = 1;
   if (au === 0) return { reason: 'not_australian' };
 
   const amount = extractAmount(text);
@@ -130,7 +139,7 @@ export function scoreSignal(s, now = new Date()) {
   const f = s.femaleSignal >= 3 ? 10 : s.femaleSignal === 2 ? 7 : s.femaleSignal === 1 ? 4 : 0;
   if (f) { score += f; reasons.push(`clearly about a woman (+${f})`); }
   else if (s.femaleFromSearch) { score += 2; reasons.push('women-specific search matched the article (+2, verify)'); }
-  if (s.categoryInferred) { score -= 6; reasons.push('signal type inferred from the search, not the headline (−6)'); }
+  if (s.categoryInferred) { score -= 15; reasons.push('signal type inferred from the search, not the headline (−15)'); }
   if (s.person) { score += 6; reasons.push('named person in headline (+6)'); }
 
   const au = s.auConfidence >= 3 ? 10 : s.auConfidence === 2 ? 7 : s.auConfidence === 1 ? 3 : 0;

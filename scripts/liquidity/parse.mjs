@@ -55,7 +55,7 @@ export function extractAmount(text) {
 
 // ---------- Australia relevance ----------
 const AU_TERMS = /\b(australian?s?|aussie|sydney|melbourne|brisbane|perth|adelaide|hobart|canberra|darwin|gold coast|sunshine coast|newcastle|geelong|wollongong|townsville|cairns|nsw|new south wales|victoria(?:n)?|queensland|tasmania(?:n)?|western australia|south australia|asx(?::\w+)?)\b/gi;
-const AU_SOURCES = /(\.com\.au|\.net\.au|\.org\.au|\.au\b|financial review|afr\b|the australian|smartcompany|startup daily|business news|capital brief|sydney morning herald|the age|courier-mail|the west australian|adelaide now|indaily|mumbrella|itnews|crn australia|news\.com\.au|abc news|sbs|9news|7news|herald sun|the mercury|brisbane times|wa today|anthill|marketindex|stockhead|the market herald|livewire|ausbiz|motley fool australia|proactive investors au|insurance news|mergermarket)/i;
+const AU_SOURCES = /(\.com\.au|\.net\.au|\.org\.au|\.au\b|financial review|afr\b|the australian|smartcompany|startup daily|business news|capital brief|sydney morning herald|the age|courier-mail|the west australian|adelaide now|indaily|mumbrella|itnews|crn australia|news\.com\.au|abc news|sbs|9news|7news|herald sun|the mercury|brisbane times|wa today|anthill|marketindex|stockhead|the market herald|livewire|ausbiz|motley fool australia|proactive investors au|insurance news|mergermarket|women's agenda|womensagenda|forbes australia|forbes\.com\.au|the mandarin|crikey|the conversation au|afr\.com|smh\.com\.au)/i;
 
 // 0 = no Australian signal, 1 = weak, 2 = clear, 3 = strong
 export function auConfidence(text, source = '', link = '') {
@@ -109,7 +109,9 @@ function tidyName(raw) {
     const stripped = s.replace(DESCRIPTOR, '').trim();
     if (stripped) s = stripped;
   }
-  s = s.replace(/^(?:the\s+)/i, '').replace(/['’]s$/, '').trim();
+  s = s.replace(/^(?:the\s+)/i, '').replace(/['’]s?$/, '').trim();
+  if (/^[a-z]/.test(s)) return null; // starts lowercase: a phrase, not a name
+  if (/^(?:I|I['’]m|We|You|My|Our|Their|Her|His)$/i.test(s)) return null;
   const words = s.split(/\s+/);
   if (!s || words.length > 6 || s.length < 2) return null;
   if (/^(it|they|he|she|this|who|founder|owners?|investors?|buyers?|rival|giant|deal)$/i.test(s)) return null;

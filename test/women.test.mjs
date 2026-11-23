@@ -44,3 +44,8 @@ test('end-to-end scan on fixtures', async () => {
   for (const bad of ['w-obit', 'w-dispute', 'w-male']) assert.ok(!links.some(l => l.endsWith(bad)), bad + ' should be excluded');
   assert.equal(o.signals[0].person, 'Priya Example');
 });
+
+test('overseas stories and end-of-life stories are excluded', () => {
+  assert.equal(articleToSignal(art('German female-founded startup Finches raises €2 million', 'She said', 'Startup Daily'), { female: true, au: 'outlet' }), null);
+  assert.equal(articleToSignal(art('Roz Hervey had hours left to live. She asked her family to press record', '', "Women's Agenda"), { female: true, au: 'outlet', category: 'philanthropy' }), null);
+});

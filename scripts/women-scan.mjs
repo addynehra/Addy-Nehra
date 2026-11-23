@@ -35,8 +35,12 @@ async function run(now = new Date()) {
   const retentionCutoff = new Date(now - RETENTION_DAYS * 86400000);
   const lookbackCutoff = new Date(now - LOOKBACK_DAYS * 86400000);
   const byId = new Map();
+  let pruned = 0;
   for (const s of existing.signals || []) {
     if ((dateOf(s.latestPubDate) || dateOf(s.firstSeen)) < retentionCutoff) continue;
+    // Re-check saved signals against the current rules, so tightening a filter cleans old results too.
+    const stillValid = s.articles.some(a => evaluateArticle({ ...a, title: a.title + (a.source ? ' - ' + a.source : '') }, SEARCH_META[a.via] || {}).signal);
+    if (!stillValid && !(s.enrichment && s.enrichment.is_woman_identified)) { pruned++; continue; }
     byId.set(s.id, s);
   }
   const seen = new Set([...byId.values()].flatMap(s => s.articles.map(a => a.link)));
@@ -113,7 +117,7 @@ async function run(now = new Date()) {
     enrichment: enrichNote,
     sources: log,
     categories: Object.fromEntries(Object.entries(CATEGORIES).map(([k, v]) => [k, v.label])),
-    diagnostics: { articlesFetched: articles.length, added, merged, belowMinScore: signals.length - kept.length, dropped, droppedSamples },
+    diagnostics: { articlesFetched: articles.length, added, merged, prunedByNewRules: pruned, belowMinScore: signals.length - kept.length, dropped, droppedSamples },
     signals: kept,
   }, null, 2) + '\n');
   console.log(`Done: ${added} new, ${merged} merged, ${enriched} researched, ${kept.length} kept → ${path.relative(ROOT, OUT_PATH)}`);
