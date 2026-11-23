@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T10:18:15.133Z",
+  "generatedAt": "2026-11-23T11:30:00.566Z",
   "lookbackDays": 180,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -41,7 +41,7 @@
     {
       "id": "w-rich-list",
       "ok": true,
-      "count": 70
+      "count": 71
     },
     {
       "id": "w-site-forbes",
@@ -66,7 +66,7 @@
     {
       "id": "w-family-office",
       "ok": true,
-      "count": 56
+      "count": 16
     },
     {
       "id": "w-philanthropy",
@@ -76,7 +76,7 @@
     {
       "id": "w-philanthropy-orgs",
       "ok": true,
-      "count": 48
+      "count": 28
     },
     {
       "id": "w-invest-women",
@@ -96,7 +96,7 @@
     {
       "id": "w-networks",
       "ok": true,
-      "count": 8
+      "count": 9
     },
     {
       "id": "w-women-wealth",
@@ -104,9 +104,24 @@
       "count": 10
     },
     {
+      "id": "w-ref-law",
+      "ok": true,
+      "count": 30
+    },
+    {
+      "id": "w-ref-accounting",
+      "ok": true,
+      "count": 64
+    },
+    {
+      "id": "w-ref-networks",
+      "ok": true,
+      "count": 12
+    },
+    {
       "id": "w-site-womensagenda",
       "ok": true,
-      "count": 60
+      "count": 59
     },
     {
       "id": "w-womensagenda",
@@ -129,20 +144,21 @@
     "rich_list": "Rich List",
     "family_business": "Family business / family office",
     "philanthropy": "Philanthropy",
-    "women_investing": "Women investing initiative"
+    "women_investing": "Women investing initiative",
+    "referral_partner": "Referral partner (law / accounting)"
   },
   "diagnostics": {
-    "articlesFetched": 678,
-    "added": 41,
+    "articlesFetched": 725,
+    "added": 55,
     "merged": 0,
-    "prunedByNewRules": 175,
-    "belowMinScore": 53,
+    "prunedByNewRules": 3,
+    "belowMinScore": 49,
     "dropped": {
-      "no_signal_type": 196,
-      "older_than_lookback": 236,
-      "not_australian": 95,
+      "no_signal_type": 161,
+      "older_than_lookback": 326,
+      "not_australian": 110,
       "foreign": 16,
-      "no_female_signal": 40,
+      "no_female_signal": 19,
       "about_a_man": 2,
       "sensitive": 10
     },
@@ -174,8 +190,8 @@
         "200 Black Women Founders Who've Raised $1 Million In Funding Spotlighted On New List - - Black Enterprise",
         "WOCstar looks to turn women founders into rock stars - PEI Private Equity",
         "In 2021, Reese Witherspoon sold a majority stake in Hello Sunshine at a $900 million valuation; five year - The Times of India",
-        "After Anthropic’s IPO, Daniela Amodei is now the world’s 15th richest woman - Fortune",
-        "Russia’s richest woman hit by EU sanctions - Financial Times"
+        "Anthropic co-founder Daniela Amodei enters world’s top 15 richest women - Adgully",
+        "After Anthropic’s IPO, Daniela Amodei is now the world’s 15th richest woman - Fortune"
       ],
       "foreign": [
         "German female-founded startup Finches raises €2 million to bring AI early warnings to agricultural sourcing - EU-Startups",
@@ -184,18 +200,18 @@
         "Meet the 8 women powering India’s deeptech future; Anthropic raises a record $81.3B in IPO - YourStory.com",
         "Kiwi startup Backkr raises NZ$500,000 to deliver client better leads - Startup Daily",
         "The extraordinary life of the Duchess of Alba, Spain's richest woman, who befriended Jackie Kennedy and turned down Picasso - Tatler",
-        "Russia’s richest woman faces EU sanctions over links to Europe's largest armed conflict a year after taking her $5 billion online retail empire into Africa - Business Insider Africa",
-        "Former factory worker is crowned China’s richest woman, again - The Straits Times"
+        "Forbes Richest Self-Made Women in America 2026 - Forbes",
+        "Russia’s richest woman faces EU sanctions over links to Europe's largest armed conflict a year after taking her $5 billion online retail empire into Africa - Business Insider Africa"
       ],
       "no_female_signal": [
         "Family office Mutual Trust makes dual partner hires - InvestorDaily",
         "Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
         "Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
-        "HSBC appoints APAC family, philanthropy lead - FS Sustainability",
-        "TPG boss Joel Thickins buys Roxy Jacenko’s Sweaty Betty HQ - The Australian",
-        "Acorn Capital sells Dredge Robotics stake to Perth family office - AFR",
         "Senior exec quits Cannon-Brookes’ family office - The Australian",
-        "Roxy Jacenko’s Sweaty Betty office sold amid Firmus IPO - Adelaide Now"
+        "TPG boss Joel Thickins buys Roxy Jacenko’s Sweaty Betty HQ - The Daily Telegraph",
+        "Acorn Capital sells Dredge Robotics stake to Perth family office - AFR",
+        "Giving Circle Supports All Ages - Door County Pulse",
+        "Giving Circle Awards $70,000 in Early Childhood Education Grants - The Pilot Newspaper"
       ],
       "about_a_man": [
         "Felix Lee tries to dodge his billionaire family’s long shadow - AFR",
@@ -206,8 +222,8 @@
         "Jemma Stapleton, Australian sprinter and Stawell Gift finalist, dies aged 25 on family holiday - The Guardian",
         "Roz Hervey had hours left to live. She asked her family to press record - ABC News & Headlines – Australian Broadcasting Corporation",
         "Australian Apprentice Jockey Izzy Neale Dies After Race Fall in Warren - JournalArta",
-        "Janis Kaye Dvoracek Obituary Aug 26, 2026 - https://www.cremationsociety-wi.com/",
         "Senator Murray Reintroduces Jeanette Acosta Invest in Women’s Health Act to Increase Access to Life-Saving Cancer Screenings - Senator Patty Murray (.gov)",
+        "Building a divorce law firm for women, by women - ASBN Small Business Network",
         "I love being self-employed. It also nearly broke me the week my mum died. - Women's Agenda",
         "The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda"
       ]
@@ -1074,6 +1090,41 @@
       ]
     },
     {
+      "id": "p:heidi forbes",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": true,
+      "person": "Heidi Forbes",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 2,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Heidi Forbes left finance for the arts. Now she’s building a business to help Australian creatives thrive",
+      "firstSeen": "2026-11-23T11:30:00.566Z",
+      "articles": [
+        {
+          "title": "Heidi Forbes left finance for the arts. Now she’s building a business to help Australian creatives thrive",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNYUhtbXVUbDFGWUc4TW5wbEJwalVheGNRYjE4RU1BOUJOQkMwaUh0dVR1RG9iZFdaSzlLX2stRUJxSWpfNTZxNURmWTlPUFFMdTc2ZHlBXzZrUlRMaGFFVU5TOHRyYWc1bzZXZzVQdVVnYjNLeHFVZE1TbkFzN2k5Qk5qVVU0M1FaSmREUXl3UUpDR2V6OUFyOEhXcWdrUlBrVkhwa2hfeHlqVm9aOEhsX2cwU3VUOEVBc1QyMndTbV8tRzVJcWlVbGdFdng1bm94LTlJbm1R?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Mon, 19 Oct 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-10-19T07:00:00.000Z",
+      "score": 33,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+7)",
+        "signal type inferred from the search, not the headline (−15)",
+        "named person in headline (+6)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
       "id": "h:why the governments new office of ai needs a gender",
       "category": "women_investing",
       "tags": [
@@ -1121,7 +1172,7 @@
       "femaleFromSearch": false,
       "auConfidence": 2,
       "headline": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
-      "firstSeen": "2026-11-23T10:18:15.133Z",
+      "firstSeen": "2026-11-23T11:30:00.566Z",
       "articles": [
         {
           "title": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
@@ -1142,6 +1193,41 @@
       ]
     },
     {
+      "id": "h:meet australias 50 women to watch in health",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": true,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Meet Australia’s 50 Women to Watch in Health",
+      "firstSeen": "2026-11-23T11:30:00.566Z",
+      "articles": [
+        {
+          "title": "Meet Australia’s 50 Women to Watch in Health",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5SMUxLVkhJdjBqTXRMOUR4Y0hJbDNDamJTZVNOZ214aW1Vd1g1bzhQYlNsOGFBb0swSExDd1piOV9UdFJnRThwWTMwekQ2cE9lRUxmRmcyY2lBT2w3TFhwQW50RVFGWlU?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Fri, 20 Nov 2026 11:50:02 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-11-20T11:50:02.000Z",
+      "score": 32,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "signal type inferred from the search, not the headline (−15)",
+        "Australian signal 2/3 (+7)",
+        "recent (3d ago, +8)"
+      ]
+    },
+    {
       "id": "h:victorias next government needs a plan for ending mens violence",
       "category": "women_investing",
       "tags": [
@@ -1156,7 +1242,7 @@
       "femaleFromSearch": false,
       "auConfidence": 2,
       "headline": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
-      "firstSeen": "2026-11-23T10:18:15.133Z",
+      "firstSeen": "2026-11-23T11:30:00.566Z",
       "articles": [
         {
           "title": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
@@ -1173,7 +1259,42 @@
         "clearly about a woman (+4)",
         "signal type inferred from the search, not the headline (−15)",
         "Australian signal 2/3 (+7)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
+      ]
+    },
+    {
+      "id": "h:victoria doubles funding for women founded startups with 10 million",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": true,
+      "person": null,
+      "organisation": null,
+      "amountAudM": 10,
+      "amountText": "$10 million",
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Victoria doubles funding for women-founded startups with $10 million Alice Anderson Fund boost",
+      "firstSeen": "2026-11-23T11:30:00.566Z",
+      "articles": [
+        {
+          "title": "Victoria doubles funding for women-founded startups with $10 million Alice Anderson Fund boost",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVTN5QnkxRXhGdjQzWkV6Mk9LR2tLZjFTRXNiZVp1NDFfRmh3Rkw5eTVDVVY3SWgtWE1iWl9QLXlFbElfc1NjRUhQYlc2YUhxclF4c1NxejRZMTNTZkNkbnhlSGNVb0dxa25uWjYwcnU4YmZpNEJpR0s4UGl6Z0NVZlVRUzFUU3hpa3dWZE9xZms2c29QSUhOVUZPMUJkNVZmU1c3dkZmVnhDYVozeldtcHI2TVowaDYzV0VHTlVMT01IeDdzOHdkQg?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-10-23T07:00:00.000Z",
+      "score": 32,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "~A$10m mentioned (+8)",
+        "clearly about a woman (+4)",
+        "signal type inferred from the search, not the headline (−15)",
+        "Australian signal 2/3 (+7)"
       ]
     },
     {
@@ -1191,7 +1312,7 @@
       "femaleFromSearch": false,
       "auConfidence": 1,
       "headline": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",
-      "firstSeen": "2026-11-23T10:18:15.133Z",
+      "firstSeen": "2026-11-23T11:30:00.566Z",
       "articles": [
         {
           "title": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",
