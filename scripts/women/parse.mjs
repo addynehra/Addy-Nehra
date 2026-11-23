@@ -20,7 +20,7 @@ const WOMEN_INVESTING = /\b(scale investors|angel investors?|angel network|inves
 
 // Lawyers and accountants whose work is aimed at women clients: referral partners.
 const PROFESSIONAL = /\b(law firms?|lawyers?|solicitors?|barristers?|legal (?:practice|firm)|family law|estate planning|wills and estates|succession law|accountants?|accounting (?:firm|practice)|chartered accountants?|CA ANZ|CPA(?: Australia)?|tax (?:advisers?|advisors?|agents?)|bookkeep\w*)\b/i;
-const WOMEN_FOCUS = /\b(for women|women clients|female clients|women in business|women business owners|female business owners|female founders|women founders|women'?s (?:network|program|programme|event|series|wealth|financial)|women and money|financial (?:independence|literacy|confidence) for women|women in (?:law|accounting|finance)|women lawyers|women accountants)\b/i;
+const WOMEN_FOCUS = /\b(for women|women clients|female clients|women in business|women business owners|female business owners|female founders|women founders|women'?s (?:network|program|programme|event|series|wealth|financial)|women and money|financial (?:independence|literacy|confidence) for women|women in (?:law|accounting|finance)|women lawyers|women accountants|by women|women-led (?:firm|practice)|helping women|help women|empower(?:ing)? women|women'?s (?:legal|financial|money))\b/i;
 
 // Explicit textual reference to a woman. Gender is never guessed from a name.
 const FEMALE = /\b(she|her|hers|herself|woman|women|female|businesswom[ae]n|chairwoman|matriarch|heiress|daughters?|mother|sisters?|granddaughter|niece|mum|mrs|ms|dame|lady)\b/gi;
@@ -35,6 +35,8 @@ const FOREIGN = /\b(U\.?S\.?|USA|America(?:n|ns)?|Canad(?:a|ian)|UK|U\.K\.|Brit(
 const AU_IN_HEADLINE = /\b(Australia(?:n|ns)?|Aussie|Sydney|Melbourne|Brisbane|Perth|Adelaide|Hobart|Canberra|Darwin|Gold Coast|ASX|NSW|Victoria(?:n)?|Queensland|Tasmania(?:n)?)\b/;
 
 const MALE = /\b(he|his|him|himself|businessman|son|father and son|brothers)\b/i;
+
+const BEREAVEMENT = /\b(obituar\w*|dies|died|death of|funeral|passed away|mourn\w*|the late|widow\w*|terminal(?:ly)? ill|hours (?:left )?to live|dying|end of life|cancer|illness)\b/i;
 
 export function femaleSignal(text) {
   return new Set((text.match(FEMALE) || []).map(s => s.toLowerCase())).size;
@@ -89,7 +91,10 @@ export function evaluateArticle(article, meta = {}) {
   const headline = cleanTitle(article.title || '', article.source || '');
   if (!headline) return { reason: 'empty' };
   const text = `${headline} ${article.description || ''}`;
-  if (isSensitive(text)) return { reason: 'sensitive' };
+  // A law or accounting firm's women-focused practice (e.g. a divorce law firm for women) is about
+  // the firm, not someone's private life, so only bereavement/illness terms exclude it.
+  const firmStory = PROFESSIONAL.test(text) && (WOMEN_FOCUS.test(text) || /\bfor women\b|\bwomen\b/i.test(text));
+  if (firmStory ? BEREAVEMENT.test(text) : isSensitive(text)) return { reason: 'sensitive' };
   if (isNoise(headline)) return { reason: 'noise' };
 
   let cats = categorise(headline);

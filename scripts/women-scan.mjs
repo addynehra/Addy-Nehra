@@ -51,9 +51,13 @@ async function run(now = new Date()) {
   let added = 0, merged = 0;
   const dropped = {};            // reason -> count
   const droppedSamples = {};     // reason -> a few headlines, for tuning
+  const bySource = {};           // search id -> { kept, reason: count }
   const drop = (reason, a) => {
     dropped[reason] = (dropped[reason] || 0) + 1;
     (droppedSamples[reason] ||= []).length < 8 && droppedSamples[reason].push(a.title);
+    const b = (bySource[a.via] ||= { kept: 0, samples: [] });
+    b[reason] = (b[reason] || 0) + 1;
+    if (reason !== 'older_than_lookback' && b.samples.length < 5) b.samples.push(`[${reason}] ${a.title}`);
   };
   for (const a of articles) {
     if (seen.has(a.link)) continue;
@@ -61,6 +65,7 @@ async function run(now = new Date()) {
     if (pub && pub < lookbackCutoff) { drop('older_than_lookback', a); continue; }
     const { signal: c, reason } = evaluateArticle(a, SEARCH_META[a.via] || {});
     if (!c) { drop(reason, a); continue; }
+    (bySource[a.via] ||= { kept: 0, samples: [] }).kept++;
     seen.add(a.link);
     const id = signalKey(c);
     const article = { title: c.headline, link: a.link, source: a.source, pubDate: a.pubDate, via: a.via };
@@ -117,7 +122,7 @@ async function run(now = new Date()) {
     enrichment: enrichNote,
     sources: log,
     categories: Object.fromEntries(Object.entries(CATEGORIES).map(([k, v]) => [k, v.label])),
-    diagnostics: { articlesFetched: articles.length, added, merged, prunedByNewRules: pruned, belowMinScore: signals.length - kept.length, dropped, droppedSamples },
+    diagnostics: { articlesFetched: articles.length, added, merged, prunedByNewRules: pruned, belowMinScore: signals.length - kept.length, dropped, droppedSamples, bySource },
     signals: kept,
   }, null, 2) + '\n');
   console.log(`Done: ${added} new, ${merged} merged, ${enriched} researched, ${kept.length} kept → ${path.relative(ROOT, OUT_PATH)}`);
