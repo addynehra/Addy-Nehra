@@ -11,8 +11,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { collectArticles } from './liquidity/sources.mjs';
-import { articleToSignal, signalKey, scoreSignal, CATEGORIES } from './women/parse.mjs';
-import { QUERIES, FEEDS, PROFILE_TOOL, SYSTEM, signalPrompt } from './women/config.mjs';
+import { evaluateArticle, signalKey, scoreSignal, CATEGORIES } from './women/parse.mjs';
+import { QUERIES, FEEDS, SEARCH_META, PROFILE_TOOL, SYSTEM, signalPrompt } from './women/config.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (n, d = null) => { const i = process.argv.indexOf(n); return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : d; };
@@ -20,8 +20,8 @@ const OUT_PATH = path.resolve(arg('--out', path.join(ROOT, 'data', 'women-signal
 const FIXTURES = arg('--fixtures') ? path.resolve(arg('--fixtures')) : null;
 const NO_ENRICH = process.argv.includes('--no-enrich');
 
-const LOOKBACK_DAYS = parseInt(process.env.LOOKBACK_DAYS || '30', 10);
-const RETENTION_DAYS = 180;
+const LOOKBACK_DAYS = parseInt(process.env.WOMEN_LOOKBACK_DAYS || '180', 10);
+const RETENTION_DAYS = Math.max(365, LOOKBACK_DAYS);
 const MIN_SCORE_TO_KEEP = 30;
 const ENRICH_MAX = parseInt(process.env.WOMEN_ENRICH_MAX || process.env.ENRICH_MAX || '8', 10);
 const ENRICH_MIN_SCORE = parseInt(process.env.WOMEN_ENRICH_MIN_SCORE || '50', 10);
@@ -45,12 +45,18 @@ async function run(now = new Date()) {
   console.log(`Fetched ${articles.length} articles from ${log.filter(l => l.ok).length}/${log.length} sources.`);
 
   let added = 0, merged = 0;
+  const dropped = {};            // reason -> count
+  const droppedSamples = {};     // reason -> a few headlines, for tuning
+  const drop = (reason, a) => {
+    dropped[reason] = (dropped[reason] || 0) + 1;
+    (droppedSamples[reason] ||= []).length < 8 && droppedSamples[reason].push(a.title);
+  };
   for (const a of articles) {
     if (seen.has(a.link)) continue;
     const pub = dateOf(a.pubDate);
-    if (pub && pub < lookbackCutoff) continue;
-    const c = articleToSignal(a);
-    if (!c) continue;
+    if (pub && pub < lookbackCutoff) { drop('older_than_lookback', a); continue; }
+    const { signal: c, reason } = evaluateArticle(a, SEARCH_META[a.via] || {});
+    if (!c) { drop(reason, a); continue; }
     seen.add(a.link);
     const id = signalKey(c);
     const article = { title: c.headline, link: a.link, source: a.source, pubDate: a.pubDate, via: a.via };
@@ -63,6 +69,8 @@ async function run(now = new Date()) {
       s.person ||= c.person;
       s.organisation ||= c.organisation;
       s.femaleSignal = Math.max(s.femaleSignal, c.femaleSignal);
+      s.femaleFromSearch = s.femaleSignal === 0 && (s.femaleFromSearch || c.femaleFromSearch);
+      s.categoryInferred = s.categoryInferred && c.categoryInferred;
       s.auConfidence = Math.max(s.auConfidence, c.auConfidence);
       merged++;
     } else {
@@ -105,6 +113,7 @@ async function run(now = new Date()) {
     enrichment: enrichNote,
     sources: log,
     categories: Object.fromEntries(Object.entries(CATEGORIES).map(([k, v]) => [k, v.label])),
+    diagnostics: { articlesFetched: articles.length, added, merged, belowMinScore: signals.length - kept.length, dropped, droppedSamples },
     signals: kept,
   }, null, 2) + '\n');
   console.log(`Done: ${added} new, ${merged} merged, ${enriched} researched, ${kept.length} kept → ${path.relative(ROOT, OUT_PATH)}`);

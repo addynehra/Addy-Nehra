@@ -21,7 +21,11 @@ const WOMEN_INVESTING = /\b(scale investors|angel investors?|angel network|inves
 const FEMALE = /\b(she|her|hers|herself|woman|women|female|businesswom[ae]n|chairwoman|matriarch|heiress|daughters?|mother|sisters?|granddaughter|niece|mum|mrs|ms|dame|lady)\b/gi;
 
 // Sensitive or exploitative contexts: bereavement, estates, family law, disputes.
-const SENSITIVE = /\b(obituar\w*|dies|died|death|dead|funeral|passed away|mourn\w*|tribute|the late|widow\w*|probate|estate (?:battle|dispute|fight|war)|will (?:dispute|battle)|contest\w* (?:the |her )?(?:will|estate)|inheritance (?:battle|fight|dispute|row|war)|divorce\w*|separation|custody|family court|domestic violence|court (?:battle|case)|sues?|sued|lawsuit|scandal|charged|alleged)\b/i;
+// Bereavement, estates and family law: excluded so the scan never surfaces
+// recently bereaved women or private family matters.
+const SENSITIVE = /\b(obituar\w*|dies|died|death of|funeral|passed away|mourn\w*|the late|widow\w*|probate|estate (?:battle|dispute|fight|war)|will (?:dispute|battle)|contest\w* (?:the |her )?(?:will|estate)|inheritance (?:battle|fight|dispute|row|war)|divorce\w*|custody|family court|domestic violence)\b/i;
+
+const MALE = /\b(he|his|him|himself|businessman|son|father and son|brothers)\b/i;
 
 export function femaleSignal(text) {
   return new Set((text.match(FEMALE) || []).map(s => s.toLowerCase())).size;
@@ -56,35 +60,54 @@ export function extractPerson(headline) {
   return null;
 }
 
-export function articleToSignal(article) {
+// Evaluates one article. `meta` describes the search that found it:
+//   female:   the search required explicit female wording (e.g. "female founder")
+//             that Google matched in the article, so it counts as a signal
+//   au:       the search required Australian terms
+//   category: fallback signal type when the headline alone doesn't say
+// Returns { signal } or { reason } (why it was dropped).
+export function evaluateArticle(article, meta = {}) {
   const headline = cleanTitle(article.title || '', article.source || '');
-  if (!headline) return null;
+  if (!headline) return { reason: 'empty' };
   const text = `${headline} ${article.description || ''}`;
-  if (isNoise(headline) || isSensitive(text)) return null;
+  if (isSensitive(text)) return { reason: 'sensitive' };
+  if (isNoise(headline)) return { reason: 'noise' };
 
-  const cats = categorise(headline).length ? categorise(headline) : categorise(text);
-  if (!cats.length) return null;
-  const category = cats.sort((a, b) => CATEGORIES[b].weight - CATEGORIES[a].weight)[0];
+  let cats = categorise(headline);
+  if (!cats.length) cats = categorise(text);
+  let inferred = false;
+  if (!cats.length && meta.category) { cats = [meta.category]; inferred = true; }
+  if (!cats.length) return { reason: 'no_signal_type' };
+  const category = cats.slice().sort((a, b) => CATEGORIES[b].weight - CATEGORIES[a].weight)[0];
 
-  const female = femaleSignal(text);
-  if (female === 0 && !cats.includes('women_investing')) return null;
+  let female = femaleSignal(text);
+  if (female === 0 && MALE.test(text)) return { reason: 'about_a_man' };
+  const femaleFromSearch = female === 0 && meta.female;
+  if (female === 0 && !meta.female && !cats.includes('women_investing')) return { reason: 'no_female_signal' };
 
-  const au = auConfidence(text, article.source, article.link);
-  if (au === 0) return null;
+  let au = auConfidence(text, article.source, article.link);
+  if (au === 0 && meta.au) au = 1;
+  if (au === 0) return { reason: 'not_australian' };
 
   const amount = extractAmount(text);
-  return {
+  return { signal: {
     category,
     tags: cats,
+    categoryInferred: inferred,
     person: extractPerson(headline),
     organisation: extractParties(headline).target,
     amountAudM: amount ? amount.audM : null,
     amountText: amount ? amount.text : null,
     femaleSignal: female,
+    femaleFromSearch,
     auConfidence: au,
     headline,
     text,
-  };
+  } };
+}
+
+export function articleToSignal(article, meta = {}) {
+  return evaluateArticle(article, meta).signal || null;
 }
 
 export function signalKey(s) {
@@ -106,6 +129,8 @@ export function scoreSignal(s, now = new Date()) {
   }
   const f = s.femaleSignal >= 3 ? 10 : s.femaleSignal === 2 ? 7 : s.femaleSignal === 1 ? 4 : 0;
   if (f) { score += f; reasons.push(`clearly about a woman (+${f})`); }
+  else if (s.femaleFromSearch) { score += 2; reasons.push('women-specific search matched the article (+2, verify)'); }
+  if (s.categoryInferred) { score -= 6; reasons.push('signal type inferred from the search, not the headline (−6)'); }
   if (s.person) { score += 6; reasons.push('named person in headline (+6)'); }
 
   const au = s.auConfidence >= 3 ? 10 : s.auConfidence === 2 ? 7 : s.auConfidence === 1 ? 3 : 0;
