@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T11:32:06.217Z",
+  "generatedAt": "2026-11-23T11:34:33.491Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -16,7 +16,7 @@
     {
       "id": "private-equity",
       "ok": true,
-      "count": 73
+      "count": 33
     },
     {
       "id": "pe-firms",
@@ -41,7 +41,7 @@
     {
       "id": "takeover",
       "ok": true,
-      "count": 32
+      "count": 31
     },
     {
       "id": "selldown",
@@ -56,7 +56,7 @@
     {
       "id": "site-smartcompany",
       "ok": true,
-      "count": 42
+      "count": 43
     },
     {
       "id": "site-businessnews",
@@ -66,7 +66,7 @@
     {
       "id": "site-capitalbrief",
       "ok": true,
-      "count": 77
+      "count": 100
     },
     {
       "id": "startupdaily",
@@ -1129,6 +1129,38 @@
         "~A$180m deal (+20)",
         "Australian signal 1/3 (+3)",
         "3 articles (+4)"
+      ]
+    },
+    {
+      "id": "co:arena",
+      "company": "Arena",
+      "counterparty": "Viridian",
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Viridian acquires Wealth Arena Viridian acquires Wealth Arena ifa",
+      "firstSeen": "2026-11-23T11:34:33.491Z",
+      "articles": [
+        {
+          "title": "Viridian acquires Wealth Arena",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1NZ1k1T2R3X29sUGNndkU0M1VxemNZWFdKYmFwamFGWHpHcXg0SS1DY2FodDV0dVFwdUFiVFRYbTBqWk9sZXQzUEVyclhiUHktc2lLcmxQVDhZQU9femRHWWhrN1Q?oc=5",
+          "source": "ifa",
+          "pubDate": "Sun, 22 Nov 2026 23:32:10 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-11-22T23:32:10.000Z",
+      "score": 51,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (1d ago, +8)"
       ]
     },
     {
@@ -3566,7 +3598,7 @@
         "Funding round (+14)",
         "~A$92m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (6d ago, +8)",
+        "recent (7d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -4401,6 +4433,38 @@
       "score": 35,
       "reasons": [
         "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (27d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:challenger rejects tal takeover bid",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Challenger rejects TAL takeover bid Challenger rejects TAL takeover bid ifa",
+      "firstSeen": "2026-11-23T11:34:33.491Z",
+      "articles": [
+        {
+          "title": "Challenger rejects TAL takeover bid",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5pZTFKbTEtX0NvQUM1eGE0NnY1RTA5X3dNU2VFVGVmeXJyU1NWSTFmN2d4VW90RWpQd3pvUE1QZnRsNmQzdUI0U3U5WFlIWGRuODB1ZTBwelBDSWhaR3FRQXNMdDVYeTkwampv?oc=5",
+          "source": "ifa",
+          "pubDate": "Tue, 27 Oct 2026 07:00:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-10-27T07:00:00.000Z",
+      "score": 35,
+      "reasons": [
+        "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
         "recent (27d ago, +4)"
       ]

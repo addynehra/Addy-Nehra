@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T11:32:33.678Z",
+  "generatedAt": "2026-11-23T11:35:00.301Z",
   "lookbackDays": 180,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
@@ -11,7 +11,7 @@
     {
       "id": "w-founder-raise",
       "ok": true,
-      "count": 94
+      "count": 46
     },
     {
       "id": "w-founder-ipo",
@@ -76,12 +76,12 @@
     {
       "id": "w-philanthropy-orgs",
       "ok": true,
-      "count": 28
+      "count": 29
     },
     {
       "id": "w-invest-women",
       "ok": true,
-      "count": 42
+      "count": 43
     },
     {
       "id": "w-angels",
@@ -114,6 +114,21 @@
       "count": 20
     },
     {
+      "id": "w-site-lawyersweekly",
+      "ok": true,
+      "count": 60
+    },
+    {
+      "id": "w-site-accountantsdaily",
+      "ok": true,
+      "count": 54
+    },
+    {
+      "id": "w-site-ifa",
+      "ok": true,
+      "count": 62
+    },
+    {
       "id": "w-ref-networks",
       "ok": true,
       "count": 12
@@ -121,7 +136,7 @@
     {
       "id": "w-site-womensagenda",
       "ok": true,
-      "count": 59
+      "count": 100
     },
     {
       "id": "w-womensagenda",
@@ -148,19 +163,20 @@
     "referral_partner": "Referral partner (law / accounting)"
   },
   "diagnostics": {
-    "articlesFetched": 727,
-    "added": 52,
-    "merged": 0,
+    "articlesFetched": 898,
+    "added": 128,
+    "merged": 1,
     "prunedByNewRules": 3,
-    "belowMinScore": 49,
+    "belowMinScore": 97,
     "dropped": {
-      "no_signal_type": 162,
-      "older_than_lookback": 326,
-      "not_australian": 107,
-      "foreign": 22,
-      "no_female_signal": 19,
+      "no_signal_type": 285,
+      "older_than_lookback": 302,
+      "not_australian": 103,
+      "foreign": 18,
+      "no_female_signal": 22,
       "about_a_man": 2,
-      "sensitive": 9
+      "sensitive": 12,
+      "noise": 1
     },
     "droppedSamples": {
       "no_signal_type": [
@@ -169,9 +185,9 @@
         "Nvidia Chief Seen as Target of Chinese Spy Plot - The New York Times",
         "What will be sold at Gibraltar Trade Center 2 at the Mall of Monroe? - Monroe Evening News",
         "'Half my business will be gone' - firms in Canada and US fear trade war - BBC",
-        "‘Hot Girl Soda’: Female-Founded Feisty Bags Funding for Fizzy Plant Protein Drinks - Green Queen Media",
-        "Women founders and CEOs got only 8.2% of Q1 startup funding - Technext24.com",
-        "2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun"
+        "2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun",
+        "46 Public Companies Founded by Women - The Story Exchange",
+        "Victoria's government-backed Alice Anderson Fund for women founders scores another $10 million - Startup Daily"
       ],
       "older_than_lookback": [
         "The Apprentice winner says she's done 'something huge' - BBC",
@@ -187,31 +203,31 @@
         "Owner of liquidated West Coast pie business buys it back under new company - The Press",
         "I’m a female founder with a liberal arts degree and my company has raised $280 million. You don’t need a PhD to build a robotics startup - Yahoo Finance",
         "Tailevu businesswoman raises concerns over cattle theft, market access and ice plant - Fijivillage",
-        "Lubbock-raised businesswoman shares Palestinian roots with food brand - Yahoo",
         "200 Black Women Founders Who've Raised $1 Million In Funding Spotlighted On New List - - Black Enterprise",
-        "Black Women Founders Raise $4.5 Million for Their Innovative Hair Extensions Brand - Black Enterprise",
         "WOCstar looks to turn women founders into rock stars - PEI Private Equity",
-        "In 2021, Reese Witherspoon sold a majority stake in Hello Sunshine at a $900 million valuation; five year - The Times of India"
+        "In 2021, Reese Witherspoon sold a majority stake in Hello Sunshine at a $900 million valuation; five year - The Times of India",
+        "Anthropic co-founder Daniela Amodei enters world’s top 15 richest women - Adgully",
+        "After Anthropic’s IPO, Daniela Amodei is now the world’s 15th richest woman - Fortune"
       ],
       "foreign": [
         "German female-founded startup Finches raises €2 million to bring AI early warnings to agricultural sourcing - EU-Startups",
-        "Exclusive: Female-founded AI startup raises £1M to grade exams. Here’s the pitch deck - Tech Funding News",
-        "Female-founded AI LegalTech startup Aavalynx raises €1.75 million to bring “death to disputes” - EU-Startups",
-        "‘I thought, why not run a half marathon five months post-partum with no training?’ - Award-winning businesswoman raises over £2,000 for Caithness schools - John O'Groat Journal",
         "Lune & Wild raises €2.3 million to scale female-founded, chef-led baby and children’s food brand - EU-Startups",
-        "Italy’s female-founded HospitalityTech startup Bestie Bite raises €1.5 million to expand its video review app in the US - EU-Startups",
-        "New Index Reveals The First 200 US-Based Black Women Founders To Raise $1M In VC Funding - AfroTech",
-        "Ayr businesswoman raises over £700 for charity through 2000s fundraiser - Ayr Advertiser"
+        "‘I thought, why not run a half marathon five months post-partum with no training?’ - Award-winning businesswoman raises over £2,000 for Caithness schools - John O'Groat Journal",
+        "Meet the 8 women powering India’s deeptech future; Anthropic raises a record $81.3B in IPO - YourStory.com",
+        "Kiwi startup Backkr raises NZ$500,000 to deliver client better leads - Startup Daily",
+        "The extraordinary life of the Duchess of Alba, Spain's richest woman, who befriended Jackie Kennedy and turned down Picasso - Tatler",
+        "Forbes Richest Self-Made Women in America 2026 - Forbes",
+        "Russia’s richest woman faces EU sanctions over links to Europe's largest armed conflict a year after taking her $5 billion online retail empire into Africa - Business Insider Africa"
       ],
       "no_female_signal": [
         "Family office Mutual Trust makes dual partner hires - InvestorDaily",
-        "Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
         "Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
-        "TPG boss Joel Thickins buys Roxy Jacenko’s Sweaty Betty HQ - The Daily Telegraph",
+        "Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
         "Senior exec quits Cannon-Brookes’ family office - The Australian",
+        "TPG boss Joel Thickins buys Roxy Jacenko’s Sweaty Betty HQ - The Daily Telegraph",
         "Acorn Capital sells Dredge Robotics stake to Perth family office - AFR",
-        "Giving Circle Supports All Ages - Door County Pulse",
-        "Giving Circle Awards $70,000 in Early Childhood Education Grants - The Pilot Newspaper"
+        "Request for Applications: Giving Circle Grants (Australia) - fundsforNGOs - Grants and Resources for Sustainability",
+        "Giving Circle Supports All Ages - Door County Pulse"
       ],
       "about_a_man": [
         "Felix Lee tries to dodge his billionaire family’s long shadow - AFR",
@@ -223,9 +239,12 @@
         "Roz Hervey had hours left to live. She asked her family to press record - ABC News & Headlines – Australian Broadcasting Corporation",
         "Australian Apprentice Jockey Izzy Neale Dies After Race Fall in Warren - JournalArta",
         "Senator Murray Reintroduces Jeanette Acosta Invest in Women’s Health Act to Increase Access to Life-Saving Cancer Screenings - Senator Patty Murray (.gov)",
+        "Veteran family law litigator appointed magistrate of WA Family Court - Lawyers Weekly",
         "I love being self-employed. It also nearly broke me the week my mum died. - Women's Agenda",
-        "The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda",
-        "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help"
+        "The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda"
+      ],
+      "noise": [
+        "‘Something has to change’: Sam Kerr calls for urgent investment in the A-League Women - Women's Agenda"
       ]
     },
     "bySource": {
@@ -248,13 +267,12 @@
           "[foreign] German female-founded startup Finches raises €2 million to bring AI early warnings to agricultural sourcing - EU-Startups",
           "[not_australian] I’m a female founder with a liberal arts degree and my company has raised $280 million. You don’t need a PhD to build a robotics startup - Yahoo Finance",
           "[not_australian] Tailevu businesswoman raises concerns over cattle theft, market access and ice plant - Fijivillage",
-          "[no_signal_type] ‘Hot Girl Soda’: Female-Founded Feisty Bags Funding for Fizzy Plant Protein Drinks - Green Queen Media",
-          "[foreign] Exclusive: Female-founded AI startup raises £1M to grade exams. Here’s the pitch deck - Tech Funding News"
+          "[foreign] Lune & Wild raises €2.3 million to scale female-founded, chef-led baby and children’s food brand - EU-Startups",
+          "[foreign] ‘I thought, why not run a half marathon five months post-partum with no training?’ - Award-winning businesswoman raises over £2,000 for Caithness schools - John O'Groat Journal"
         ],
-        "foreign": 8,
-        "not_australian": 5,
-        "no_signal_type": 2,
-        "older_than_lookback": 79
+        "foreign": 3,
+        "not_australian": 3,
+        "older_than_lookback": 40
       },
       "w-founder-ipo": {
         "kept": 0,
@@ -341,8 +359,8 @@
         "kept": 0,
         "samples": [
           "[no_signal_type] Clean energy tech company founder to deliver Women of Influence Lecture at Alfred University - Alfred University",
-          "[no_signal_type] Five Questions With Karla Congson, CEO of Agentiiv - Women of Influence",
           "[not_australian] Meet venture capital’s 2026 Women of Influence - PEI Private Equity",
+          "[no_signal_type] Five Questions With Karla Congson, CEO of Agentiiv - Women of Influence",
           "[no_signal_type] Women of Influence: Accounting 2026 – Bridget Ahern - Los Angeles Business Journal",
           "[no_signal_type] 50 Women of Influence in Irish Sport 2026 – Sarah Keane - Sport for Business"
         ],
@@ -355,8 +373,8 @@
           "[not_australian] Developing the next generation of family businesses - kpmg.com",
           "[no_signal_type] Beloved Chinatown restaurant serves robot noodles at new Marrickville spin-off - SMH.com.au",
           "[not_australian] Family business succession planning and the next generation, 2026 - Deloitte",
-          "[not_australian] With robot feedlots, Strathdale Wagyu embraces the next generation of farming - CommBank",
-          "[not_australian] Family business: Brodie George’s daughter Ngoorloona features in new Jalayimiya collection - National Indigenous Times"
+          "[no_signal_type] Calabria Family Wines: The migrant dynasty betting big on the future - The Australian",
+          "[not_australian] With robot feedlots, Strathdale Wagyu embraces the next generation of farming - CommBank"
         ],
         "not_australian": 5,
         "no_signal_type": 2,
@@ -372,9 +390,9 @@
         "kept": 0,
         "samples": [
           "[no_female_signal] Family office Mutual Trust makes dual partner hires - InvestorDaily",
-          "[no_signal_type] Mutual Trust turns to Grant Thornton, EY for Partners - Financial Newswire",
-          "[no_female_signal] Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
           "[no_female_signal] Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
+          "[no_female_signal] Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
+          "[no_signal_type] Mutual Trust turns to Grant Thornton, EY for Partners - Financial Newswire",
           "[no_signal_type] Nicola Forrest anchors Antler’s $70 million 3rd fund in $30m push for women founders - Startup Daily"
         ],
         "no_female_signal": 6,
@@ -399,14 +417,14 @@
         "kept": 0,
         "samples": [
           "[not_australian] Meet the four Northern Rivers groups receiving this year’s Women’s Giving Circle grants - Times News Group",
+          "[no_female_signal] Request for Applications: Giving Circle Grants (Australia) - fundsforNGOs - Grants and Resources for Sustainability",
           "[not_australian] PHOTOS: 70 locals gather as Bega Women's Giving Circle awards first grants - Bega District News",
           "[no_signal_type] No Small Thing: Inspiring Women Leaders to Tackle Big Challenges in Murwillumbah - Northern Rivers Times",
-          "[not_australian] Steamy weather doesn’t stifle Women’s Giving Circle’s Christmas spirit - Catholic Diocese of Cleveland",
-          "[not_australian] Women's Giving Circle Celebrates Its Mission Impact - Roman Catholic Diocese of Baton Rouge"
+          "[not_australian] Steamy weather doesn’t stifle Women’s Giving Circle’s Christmas spirit - Catholic Diocese of Cleveland"
         ],
         "not_australian": 19,
-        "no_signal_type": 3,
-        "no_female_signal": 6
+        "no_female_signal": 7,
+        "no_signal_type": 3
       },
       "w-invest-women": {
         "kept": 0,
@@ -414,10 +432,10 @@
           "[not_australian] New guidance on applying a child perspective within gender lens investing (2X Criteria) - Unicef",
           "[not_australian] Why investing in women’s education pays off - World Economic Forum",
           "[foreign] State Threats in Sub-Saharan Africa Through a Gender Lens - Royal United Services Institute (RUSI)",
-          "[not_australian] The business case for investing in women? New evidence on how 2X qualification is giving funds an edge - New Private Markets",
-          "[not_australian] Earthquakes and governance: why we need a gender lens in Venezuela’s compounding crises - ODI: Think change"
+          "[not_australian] How investing in women's leadership strengthens climate resilience - PreventionWeb.net",
+          "[not_australian] The business case for investing in women? New evidence on how 2X qualification is giving funds an edge - New Private Markets"
         ],
-        "not_australian": 35,
+        "not_australian": 36,
         "foreign": 3,
         "sensitive": 1
       },
@@ -431,25 +449,24 @@
         "samples": [
           "[no_female_signal] VC fund backed by Zampatti and Forrest families looks to raise $50m - AFR",
           "[no_signal_type] Melbourne startup Elita doubles down on dog longevity - Capital Brief",
+          "[not_australian] The Next Giant Leap: Women and the Future of Spaceflight - Women’s Media Center",
           "[no_signal_type] Space Mission Offer Giant Leap For Australian Science - Mirage News",
-          "[no_signal_type] Alisha Palmowski takes giant leap towards F1 Academy title with Race 1 victory - Motorsport Week",
           "[no_signal_type] French astronaut Adenot takes giant leap with historic spacewalk - RFI"
         ],
         "no_female_signal": 1,
-        "no_signal_type": 23,
-        "foreign": 1,
-        "not_australian": 3
+        "no_signal_type": 22,
+        "not_australian": 4,
+        "foreign": 1
       },
       "w-networks": {
-        "kept": 2,
+        "kept": 4,
         "samples": [
-          "[not_australian] Women in Super puts data at the heart of retirement equity push - Professional Planner",
-          "[not_australian] Hello Pearl Selected for Springboard Enterprises' Inaugural Longevity Accelerator - Yahoo Finance",
           "[not_australian] Derry woman Siobhan Moran unveils plans for major conference for women in banking and finance - Derry Journal",
           "[not_australian] Women’s Economic Ventures Celebrates 35 Years, Recognizes Trailblazer Awardee Kelly Mooney and WEV’s Giving Circle the League of Extraordinary Women - The Santa Barbara Independent",
-          "[not_australian] Major new Belfast conference launched for women in banking and finance - LoveBelfast"
+          "[not_australian] Major new Belfast conference launched for women in banking and finance - LoveBelfast",
+          "[not_australian] Zim Women in Super Six - Herald.co.zw"
         ],
-        "not_australian": 6
+        "not_australian": 4
       },
       "w-women-wealth": {
         "kept": 0,
@@ -457,26 +474,63 @@
         "older_than_lookback": 8
       },
       "w-ref-law": {
-        "kept": 0,
+        "kept": 1,
         "samples": [
-          "[not_australian] Winners for Women in Law Awards 2026 revealed - Lawyers Weekly",
           "[not_australian] Building a divorce law firm for women, by women - ASBN Small Business Network",
           "[not_australian] SC Judge Calls For 33% Quota For Women In Legal Profession - BW People",
           "[not_australian] Women Lawyers Must Have 1/3rd Representation On Government Panels : Justice BV Nagarathna - Live Law",
-          "[not_australian] The Woman's Guide to Estate Planning: Protect Your Health and Wealth - Kiplinger"
+          "[not_australian] The Woman's Guide to Estate Planning: Protect Your Health and Wealth - Kiplinger",
+          "[not_australian] Partner María Laura Bacigalupo named International Trade Lawyer of the Year at the Women in Business Law Americas Awards 2026 - Bruchou & Funes de Rioja"
         ],
-        "not_australian": 7,
+        "not_australian": 6,
         "older_than_lookback": 23
       },
       "w-ref-accounting": {
-        "kept": 0,
+        "kept": 1,
         "samples": [
-          "[not_australian] Right Property Group confirmed as principal partner for Women in Accounting Awards - Accountants Daily",
           "[not_australian] ASB Awards celebrate changing role of Scottish women in business - Edinburgh Chamber of Commerce",
           "[not_australian] The 2026 UEFA Business Case for Women's Football - Key Insights & Takeaways - LawInSport"
         ],
-        "not_australian": 3,
-        "older_than_lookback": 17
+        "older_than_lookback": 17,
+        "not_australian": 2
+      },
+      "w-site-lawyersweekly": {
+        "kept": 17,
+        "samples": [
+          "[no_signal_type] Cultivate a mindset of continuous learning - Lawyers Weekly",
+          "[no_signal_type] How motherhood inspired a more inclusive boutique law firm - Lawyers Weekly",
+          "[no_signal_type] Advertise - Lawyers Weekly",
+          "[no_signal_type] Dimitrios Katsaros is the Principal and Founder of Katsaros & Associates - Lawyers Weekly",
+          "[no_signal_type] Nathan Weinberger – Why Specialist Boutique Litigation Firms Are Shaping the Future of Law - Lawyers Weekly"
+        ],
+        "older_than_lookback": 10,
+        "no_signal_type": 32,
+        "sensitive": 1
+      },
+      "w-site-accountantsdaily": {
+        "kept": 7,
+        "samples": [
+          "[no_signal_type] QC Accountants appoints new partner - Accountants Daily",
+          "[no_signal_type] Designing workflows to save time and better serve clients - Accountants Daily",
+          "[no_signal_type] What’s a leading finance team doing with AI that you’re not? - Accountants Daily",
+          "[no_signal_type] 7 dates for your client's diary: less chasing, more advising in 2027 - Accountants Daily",
+          "[no_signal_type] The $500m equity strategy - Accountants Daily"
+        ],
+        "no_signal_type": 45,
+        "no_female_signal": 1
+      },
+      "w-site-ifa": {
+        "kept": 7,
+        "samples": [
+          "[no_signal_type] The $3.2 trillion wealth transfer begins with trust - Money Management",
+          "[no_signal_type] CALI unveils 2026 ReCALIbrate recipients - ifa",
+          "[no_signal_type] ASX Investor Study reveals opportunities for advisers - Money Management",
+          "[no_signal_type] How Australian investing has changed in 40 years - InvestorDaily",
+          "[no_signal_type] ASX urged to set 40:40:20 board gender benchmark - InvestorDaily"
+        ],
+        "no_signal_type": 49,
+        "older_than_lookback": 5,
+        "no_female_signal": 1
       },
       "w-ref-networks": {
         "kept": 0,
@@ -487,14 +541,17 @@
         "older_than_lookback": 11
       },
       "w-site-womensagenda": {
-        "kept": 47,
+        "kept": 89,
         "samples": [
           "[sensitive] I love being self-employed. It also nearly broke me the week my mum died. - Women's Agenda",
-          "[sensitive] The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda",
-          "[foreign] She grew up with 18-hour blackouts in Nepal. Now Ash Kansakaar has raised $3m to keep critical infrastructure running - Women's Agenda"
+          "[noise] ‘Something has to change’: Sam Kerr calls for urgent investment in the A-League Women - Women's Agenda",
+          "[foreign] After losing on birthright citizenship, Trump looks to ban pregnant women from entering US - Women's Agenda",
+          "[foreign] Devastating floods in Nepal leave thousands at risk, especially women and girls. - Women's Agenda",
+          "[sensitive] The frustrating reason behind key breast cancer and endometriosis drug being pulled from Australia - Women's Agenda"
         ],
-        "sensitive": 2,
-        "foreign": 1
+        "sensitive": 4,
+        "noise": 1,
+        "foreign": 2
       },
       "w-womensagenda": {
         "kept": 0,
@@ -925,6 +982,40 @@
       ]
     },
     {
+      "id": "p:dolly partons",
+      "category": "philanthropy",
+      "tags": [
+        "philanthropy"
+      ],
+      "categoryInferred": false,
+      "person": "Dolly Parton’s",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Dolly Parton’s philanthropic Imagination Library had a proven effect in Australia, and around the world",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Dolly Parton’s philanthropic Imagination Library had a proven effect in Australia, and around the world",
+          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSXdEMXY4X0k2Rk03Y2tMOVplZjNPenBnYVZaVmpkaHVZZEViRkdMT3hsMjJQcUVEeTFkUmF1VTYwQVhJelNfUGUzQUhRUEZhVF9YWGRpS1FIRVdvc0RxNFdyQm80akd3MDZVTEZSQ2lRTXAwNVpQeTIwdHc0WkxjMjJoX3loSEJZQUdoMGtyMVU5VDUxa0o1NU1BdFQzNHg2MWdZdm8xeWVWdm5xYnV0d21ZSFQ4YXhuLVNfQWpLempkMGRUeE1mR25qQ0NSLURFdVhj?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Wed, 26 Aug 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-08-26T07:00:00.000Z",
+      "score": 47,
+      "reasons": [
+        "Philanthropy (+30)",
+        "clearly about a woman (+4)",
+        "named person in headline (+6)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
       "id": "h:a woman founder just sold her ai startup to a",
       "category": "women_investing",
       "tags": [
@@ -1163,6 +1254,177 @@
       ]
     },
     {
+      "id": "h:banking and finance lawyers celebrated at the women in finance",
+      "category": "women_investing",
+      "tags": [
+        "women_investing",
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Banking and finance lawyers celebrated at the Women in Finance Awards 2026",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Banking and finance lawyers celebrated at the Women in Finance Awards 2026",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQcnA1N2xkUWFTY3M1NW1GZkRDYWw2TDRIVkxGaElSdi03endJYVpRNVhyUXN0U3J1X0Ixbm5VRERLdmNsdURLVE1LQ0ZuNzVMdVgtRXgzQUFQd2dIQmxBLXhHVE9RZTRpMkh4dmI5Skp4aUJMXzd6XzBQY1c3ZU9nTGllRG90SElXZEpUcVhPREpwX1JiQnFRRmhMM1FDaVVtZkdRSWVCTGIxcmFBa0Z5ZElvS0ktSW9zX1FsNg?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Sun, 15 Nov 2026 18:00:49 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-15T18:00:49.000Z",
+      "score": 44,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "also referral partner (law / accounting) (+5)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (8d ago, +4)"
+      ]
+    },
+    {
+      "id": "p:right property",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": "Right Property Group",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Right Property Group confirmed as principal partner for Women in Accounting Awards",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Right Property Group confirmed as principal partner for Women in Accounting Awards",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQR3NjYXhHZ09fZUM2M28xd19wQUNsV0JDTTVyYk9xNEU3b1lWaXVSV0gza0JXWXFrTzV3NmNpRThqR3lRbmdjUTVfQ3RPLXVmNjJ2VXJkUFVqQm1rbHVFZnFCTk5rWjBMeS1LekdYSUM0YlQ2YWZCWHZfaWpXVkRWcWdUZ3hMbkVwLVJla2xIWjRHU1RPaEtHVnRMTFh0UUZNWEJ5NHBiLTFDb3VNZTBfeDZJYWdzRVRDemFoMFVyZU9QWnN4dEZNVnBDZlhHQQ?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Tue, 10 Nov 2026 19:53:11 GMT",
+          "via": "w-ref-accounting"
+        }
+      ],
+      "latestPubDate": "2026-11-10T19:53:11.000Z",
+      "score": 43,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "named person in headline (+6)",
+        "Australian signal 1/3 (+3)",
+        "recent (13d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:poolside with a billionaire podcast with the far right a",
+      "category": "rich_list",
+      "tags": [
+        "rich_list"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Poolside with a billionaire, podcast with the far-right: A week in the life for Pauline Hanson",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Poolside with a billionaire, podcast with the far-right: A week in the life for Pauline Hanson",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbVNZYUJSSDJ1aWFJS2hmWnFRYVRtUXpoYzUtTE9vcHRZTVVab2JnVlhpczR2dmJ0QndKUURjcDBrTk45LU5qcUxFYXQxbm1mS1RZWnVrYlZaZ21zd2VjTm1CR0E5RnN5b3JQMXhhODBqYlZ2TmpMRk1zbjlnblhRNWtpQzAtcXVaUXZrN1lLdVMwbTNGZU8tN2c2WVg4NEIxVlhtQWFwQm5KMDhTdkxrQ2hOaVdZaXhRc3JTSmlBVlBzZHgzRTV3?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Fri, 17 Jul 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-07-17T07:00:00.000Z",
+      "score": 43,
+      "reasons": [
+        "Rich List (+36)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:victorian labor pledges to make abortion care free if re",
+      "category": "philanthropy",
+      "tags": [
+        "philanthropy"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Victorian Labor pledges to make abortion care free if re-elected",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Victorian Labor pledges to make abortion care free if re-elected",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZEUzeno0cmRGMS1RRmlPSHpydS1wM0hKYk9WSXpuRXMxMnltYzVnZXNlTGJQUWc4bVVTcUx6MElBZmZKUnZxYVFjYkhEWlN6aDlPa3pHdHByOUMxMlhOdGp6anEzUDZYTGY1Vjhub09CS2ZBdEsxWW05eFl6LTZYWWJ4UlFkNUtWYjFxeUxzNHhGUW9CaWdqNlZMaWdZaDNaQV9KYjZkVEZPU0FsX3h3dTZ0dw?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-10-15T07:00:00.000Z",
+      "score": 41,
+      "reasons": [
+        "Philanthropy (+30)",
+        "clearly about a woman (+4)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
+      "id": "p:turia pitt",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": false,
+      "person": "Turia Pitt",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Turia Pitt to keynote Women in Finance Summit 2026",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Turia Pitt to keynote Women in Finance Summit 2026",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNWROSHRTVmJqUy0yNXdLZWl2dzZvZWRsVERWQWVGUWpBdEVkN0VCSzNMVGFwMFVkZmg1dzdpSlJoMGp3VG9ac2NpcEZPcVhTQ0h0dU9zNjU0bk4wcjVueGVEcFJwb3RuLUpfcGhUTHdjZkczUUN5bDN2cV9ucTRRZEJYZXZiQjBIRmpIaXFrVGF2SEhXM245QXNhcnNZdEpiWC1B?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Wed, 26 Aug 2026 07:00:00 GMT",
+          "via": "w-site-accountantsdaily"
+        }
+      ],
+      "latestPubDate": "2026-08-26T07:00:00.000Z",
+      "score": 41,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "named person in headline (+6)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
       "id": "h:wisetech billionaire richard white in afp human trafficking probe",
       "category": "rich_list",
       "tags": [
@@ -1228,6 +1490,117 @@
         "clearly about a woman (+4)",
         "signal type inferred from the search, not the headline (−15)",
         "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:greens call for 4 6 billion social housing investment to",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": true,
+      "person": null,
+      "organisation": null,
+      "amountAudM": 4600,
+      "amountText": "$4.6 billion",
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Greens call for $4.6 billion social housing investment to keep women and children safe",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Greens call for $4.6 billion social housing investment to keep women and children safe",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPYlJtaXRKdHR5dWg2ZHlHNEEzbmZnSTJwMXRlTWpFaWxEaWJfQlRwdGRqeUp4T0lTbkZTQ3lGX1BKUlIxQmZyMGtVd3U2Z0FlWFc1UHRnMkxIQ1hBdl9FNGtEWE4xUWszb1RjNnloU1JuVF9fSFpoLTd2a1N5RVpqQ3NtaVdTUjQ5ZHFBSUtOWVoya3NMTl9vSkRUSEFySVl3cDgtQzZYYkt2V0p2MEJMUU9MOHFrNnZMNTFmM3RB?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Fri, 07 Aug 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-08-07T07:00:00.000Z",
+      "score": 40,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "~A$4600m mentioned (+20)",
+        "clearly about a woman (+4)",
+        "signal type inferred from the search, not the headline (−15)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:accounting professionals celebrated at the women in finance awards 2026",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Accounting professionals celebrated at the Women in Finance Awards 2026",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Accounting professionals celebrated at the Women in Finance Awards 2026",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPckxVSFZPMVlIQXdJUE1IWDVpcWVrQ2o5eVhLb2xLcTJLUHlPQXZseGs3WjRYRmFxOUdCM1J4U3J4X0E0SE9oSlM4VDZiRWRCVE1RZVJLWEZGdDk0QkhqRkZRVHJnWndQaTdaRTZuY3lycXlndlRPeXBia3hxcV9kZkdwX3NOTTV1ZzNUR2VPczF5Nl9OYXVrU3hINmk4M0I5Vk1LSS1xamVtUm55TmpfdHJiUThkOS1ZSFc4NDhaMA?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Sun, 15 Nov 2026 19:52:40 GMT",
+          "via": "w-site-accountantsdaily"
+        }
+      ],
+      "latestPubDate": "2026-11-15T19:52:40.000Z",
+      "score": 39,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (8d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:winners for women in law awards 2026 revealed",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Winners for Women in Law Awards 2026 revealed",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Winners for Women in Law Awards 2026 revealed",
+          "link": "https://news.google.com/rss/articles/CBMi2gNBVV95cUxNOGZhTkFxLXIxaUQyQzY0N0lQaW1wX1R6U0trdDZpMEtuSE9tQUtWeGRPcDNZLXBlZnVFOE5uWWZabjhpeGVDM1E0S1lhbkNHRmp4WlNWNjB1TkR0NG5PTHplOTE3amx1WnU0UG1qeVNLVzVIR3hlbkxEdkdTelI4MWRoc0FJcDBRZzJSYkpIUC1Jdl9YQW56bFNNY1hKa1AxQ3UwUFhRb2JHNXRhR0FrLWlpTlNLVlZEQ0JVVDFqcWFZTGlmMVB5MWhfbzF0VDdmRENHX0hxdkhySnpSQlViaFEwUTliSzl3ZEhSWWVwZHRZaG1aN290UU5EN1dKTXRqN21la3dMLU0wRWhxR3JrZ2VqLXBweGZpcHJJbVlIODBidWdGUnlaWjlyZ21jVzRwYUhhTnhFd2F2bTdPclktSURCWWhfcG1GWnIyRXA0RHpRZ0RvazZYa3Y2R1ctd1JFczdBM0QzdDA2OG4zdTR5VFRSTm5SeVl2SThINnc4WTVEclVlaGZMX0FUck95UFFvb0YwVzdTVGpDc3RXc0RJcVpHUEkxTjVWbGx6VUlfaW04RmlKbmVwZjhpMVBRVUZWckdKN1I0NVVEQ2dVSGdpS2JHN0w4SldDWkE?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Thu, 12 Nov 2026 11:50:00 GMT",
+          "via": "w-site-lawyersweekly"
+        },
+        {
+          "title": "Winners for Women in Law Awards 2026 revealed",
+          "link": "https://news.google.com/rss/articles/CBMirwNBVV95cUxNbk5vSHdIcFM4bVhXNnVoeEk4RFdjTk1JcllSWU1oRWhmN19QX1p4c3h0U1ZMaVNYS0V6TlVrZ3M4QTdDU0EwUjhUZVo3SXNxcW1UZW5qcEFWczROTm53cHlVVHBGSEU3UWdLc2RhcXNZelJMY0hlbGpTaTV5bWFPTEZwNEFUQnZ3dWcteWhzMlJNN2oxbzdwcW5nNmJWd3Nmd3JnakQxVEhRZExia1JRT1RHZzZpNERxVExMMTJjZDBzMmNQQ1FjeGJMTklzVjVwblFFckFhbGhmVV9LUENORTEyeVFPQXZISjNycGoydFg5b2VRTHN1ZmVQLUlWTVJOQWkwenBXekpPdy1OVWE0V0NQRzd2a0VYRnRGeVN6bjN2bXJ1WW5yeEgtSUpRSVlqVzhtXzhsWGdDdjdYeHM4R0dsVi1GZTA1d3JGZDZyS2ltUDVHaDJoWV9Xc1M3VXdYLVNIMDNDWVBSbzdKQ3U3ZGFMalA5NWlqckVYZTY0TkIzdXRIS2tjZ3hUbkQ3ZHMzX0QzdWNhUkJWSkZ6NXFFTXVuSlljV3VsdzVxdFVMZw?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Thu, 12 Nov 2026 11:50:00 GMT",
+          "via": "w-ref-law"
+        }
+      ],
+      "latestPubDate": "2026-11-12T11:50:00.000Z",
+      "score": 39,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (11d ago, +4)",
+        "2 articles (+2)"
       ]
     },
     {
@@ -1297,6 +1670,346 @@
       ]
     },
     {
+      "id": "p:professor fiona coulson",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": true,
+      "person": "Professor Fiona Coulson",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Professor Fiona Coulson to lead Charles Darwin University as Vice-Chancellor and President",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Professor Fiona Coulson to lead Charles Darwin University as Vice-Chancellor and President",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZi1KeUZjdzJYcWlLQ25SU1pjLS1UaWVaUW51bmNjZ1pGYlhRLTA5ajRUOEhnRk5XSWVyZlRUTmJBUnlTcUV2S1ZxYjVPa3p1c0llZGFzMExvMXFWRkZyXzFHUlh0bWdfWDd2REhsR1BFTllXRG8xbDBHYXdVN3dTVnUyQmpRYVNicFdyRGZEdGh4d2xlbEN6UXozYThPMWRXVGFIV1FBd1I0ZVZMOFdaaURuV3ZzeGJpLWVjeWQ3Q1pRNlZkMkVJcllUQU5HVFBNcFpGcGVn?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Mon, 16 Nov 2026 22:24:31 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-11-16T22:24:31.000Z",
+      "score": 38,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "signal type inferred from the search, not the headline (−15)",
+        "named person in headline (+6)",
+        "Australian signal 2/3 (+7)",
+        "recent (7d ago, +8)"
+      ]
+    },
+    {
+      "id": "h:women in law awards 2026 finalists",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Awards - 2026 Finalists",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Awards - 2026 Finalists",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOOVJwYlFIeHNJSWJIQkt6OFMweExCazhxcEV1eVVVYVMyR2lWbk9pZWxRb2hfeFpPbG0zZm1xelpUM01iSGFGWUNtM3E0Wk44X3ZXc1RWT1hTLXM3MTQ2N3NBaU5LV0dpenRiTjQyTk0tVE5BUlowbDdoQUc3SUluX1VWUzZUR09mTG1KWkRUdUc?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Fri, 13 Nov 2026 00:07:57 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-13T00:07:57.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (10d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:agenda women in law forum 2026",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Agenda — Women in Law Forum 2026",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Agenda — Women in Law Forum 2026",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE53c0pBeHNGRUtDcHdYR28zSWJUT1NJNXAtdkJSTDBHM2VWUWg4MUJWbzd0aEtPT3ozeE1TeDFaNjA0RkZZVU04NUFEV2hURzhvNTFVLWhCaHUtMXlublB1dXo1WWVEV2dLSEE?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-12T08:00:00.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (11d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:women in law forum 2025 dennis law",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - dennis.law",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2025 - dennis.law",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBEVW1VanpHT0g3ck5FUGM4YnltTTJfdW5SeVVJM0dpRXlzWVNLa01LdC1wYy1HVHJHdnBBbml6Q0pvaUhqM2NIeHVBUGZoVmx5UVZ6NERkUWQyRG4tLXFqTzFsUl9jb2p1d2hyS0FGNFFaQlF3cXhLcXZn?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Tue, 10 Nov 2026 05:51:17 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-10T05:51:17.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (13d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:women in law forum 2025 avocado digital",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - Avocado Digital",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2025 - Avocado Digital",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPYVM0NXdOWFRXVjg2X3NIRTJ0WjhmMjVDUm5YbEdfVWdYTDZpeHEza0k2WWRZMnhmRTVGR2ZEZFRndEtCM3N6UWtQaDhRdmlubGF0YWMydlhxaXB4NU5BMzZTVFRKQkxwSy1QQnIzTTVVdDV4MUkwR2EtaWM5UWRuc3JR?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Tue, 10 Nov 2026 05:51:16 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-10T05:51:16.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (13d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:women in law forum 2025 jude platform",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - Jude Platform Limited",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2025 - Jude Platform Limited",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOS09fdHpRUUg1WkYwQ0lGa3FfNXlBYkZONTJfaWY1QTRLY1F3ZVFrbTdaLXRYeThDWmpqZEhaQlJwM25EXzR3Y2hSWVllYzE0b2txVXpoSTBJQm9jX3h2bTgtcGRLX3ZjRTkzck1FUTNwcnRrb3NVSTlxSWdURkY2ZUY5LTAxMWpr?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Tue, 10 Nov 2026 05:51:15 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-10T05:51:15.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (13d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:women in law forum 2025 tahlia rodrigues",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - Tahlia Rodrigues",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2025 - Tahlia Rodrigues",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNkZjcDduZFR1X1M2OUR6WkJ3TUpwMW1xcGZ4dEJOOTh5NFFTVEJ5YUdCYUtnaERrdmRoQ01YMmg2T3ZuV3R5Z2xjOV9La0VJUkhENXBCaGNqdVdYeGlJQnFvek5GRFF0b1ZMeDFpS0hVTVB0Z3BWanFJMWNqZ0FDLUNR?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Tue, 10 Nov 2026 05:51:14 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-10T05:51:14.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (13d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:women in law forum 2025 meryem apak",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - Meryem Apak",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2025 - Meryem Apak",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB2Nkx4bHNJQkFwSlM5dGRlTDdCZS1xWWRlYk4tYzEzZ0ZXS0NxbzFpeWN4MXZiOGthenU2aWxDVEJZZElXNkVRbm1XNUlud3lUSndvUER2NFRQdlZ6VUpiZEFOY2JVZXd4MUVDSWFJUG50S0ZFLWVzckI2MA?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Tue, 10 Nov 2026 05:51:14 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-11-10T05:51:14.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (13d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:women in law awards melbourne lawyers mediators",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Women in Law Awards - Melbourne Lawyers & Mediators",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Awards - Melbourne Lawyers & Mediators",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPR0Z6NmxieDI5RWhVZ3ZQd2x2R3BJc3BoWEZKejZ6WjdaQmlfNlk3S2xKNGJiRW1ObFo0Wm5FTkk1QWJMRFkxMnJhNHVJWFZnaXR3WS1SVERkbW81ajBIQmg1SFBmSmZiM3NTU1dHbjFpN3l0MGRRS2l2aEJEb3JWamRNalIyZDMwOHgzcTdIMA?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Thu, 20 Aug 2026 08:40:21 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-08-20T08:40:21.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
+      "id": "h:women in law forum 2026 melbourne",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Women in Law Forum 2026 — Melbourne",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2026 — Melbourne",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9lOFNBZm5NSUpQcjAyQXp0N2h1dXYyT2JrNUFOOWc3RDN1YkVJTXRMYUZFaUVWMzJ3djRwS0NpdHJpOC1vMVhXWEtYREQ1WkE1eER3LXY5V1NuUFZ5ekVPYUtobGxkTXl6WEJv?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Wed, 22 Jul 2026 07:04:00 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-07-22T07:04:00.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
       "id": "h:policy experts champion australian gender lens amid growing climate emergency",
       "category": "women_investing",
       "tags": [
@@ -1325,6 +2038,72 @@
         "Women investing initiative (+28)",
         "Australian signal 1/3 (+3)",
         "recent (11d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:accounting profession excels at 10th women in finance awards 2026",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Accounting profession excels at 10th Women in Finance Awards 2026",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Accounting profession excels at 10th Women in Finance Awards 2026",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTnZ1TDhTZDdCVG15OTNTWDhMamlZRnZKNWhNaUJVelB1SDVid3VjNTljaGZubGF5eG0yejAzOWM5U0tqVWRSR0YyRlc0YTRBR2VOWWFqbFA3VEc2dXNxY0hYUGdHR0htSGE0dDd3OU5WUHVBMzdYdkFvd3YzM1JUTTVQRkh2aHBWNVBTV2QyZU1yckZoazlFS1RxWUw2Y1FwbklpLXNaTlYyUVh4dGZPMVhfRENhR2s?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Tue, 22 Sep 2026 07:00:00 GMT",
+          "via": "w-site-accountantsdaily"
+        }
+      ],
+      "latestPubDate": "2026-09-22T07:00:00.000Z",
+      "score": 35,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:submissions open for 10th annual women in finance awards",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Submissions open for 10th annual Women in Finance Awards",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Submissions open for 10th annual Women in Finance Awards",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNEt3RjNtZ1hzVm44SGpCSVFXeEpGYVhVdmtfeGJlUXdPQ0M5czFuTlpHQ011Zy1weE56eE9UbVRPbnpzREVYemZKQ1pHckdTcWxUR0c3bWU5Y09oV0M0QmFIVE8xOXVlWGFsUXpqUHpyQTdNWHNkSHJQQVJBbGthaHFfbEFSdW11d1JaSF82aXRYUE5aLU94ZUpEYXU1LUtRVnFZRFRfQVoyYTA?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Tue, 21 Jul 2026 07:00:00 GMT",
+          "via": "w-site-accountantsdaily"
+        }
+      ],
+      "latestPubDate": "2026-07-21T07:00:00.000Z",
+      "score": 35,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -1431,6 +2210,72 @@
       ]
     },
     {
+      "id": "h:brand new awards to spotlight exceptional women in accounting",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Brand-new awards to spotlight exceptional women in accounting",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Brand-new awards to spotlight exceptional women in accounting",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOLTNOTlYwZzZUOXJDMktoS1Vxc1BkYjhYazgwSHZ4blN0RlRSRWhxaEJHS0VEcURtQktvTXIteTdvanFObW9BOXVyamh6Q2NqQWZ1dXVGamxSYkFGay1lSmI3N2x6RjlhdkFZUTItXzFPS0VGOHJMbWd3MEtBVzhMd283UC04enFaNkFIdEhFWVNNQldjbDFfUy1xcWl1b094WkpwU2ljYWkyVC1PZTQxbjBn?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Tue, 29 Sep 2026 07:00:00 GMT",
+          "via": "w-site-accountantsdaily"
+        }
+      ],
+      "latestPubDate": "2026-09-29T07:00:00.000Z",
+      "score": 33,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:women in law awards 2026 finalists unveiled",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Awards 2026 finalists unveiled",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Awards 2026 finalists unveiled",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWnptcTdhbzZ3TFgxSHB2T0ZYVUozWTVRMWNKSUNnaUdlb3poemdNZk43aTlLLWV0eUVxd0x0bHRsU1AwVDlxeTduZGZBMm9hb2VLLTJUQjJFS0hiUDNfVUx0Sm5kR3NqUWRFc2RBWmw5NkhtSXdHTmJhTW9xUDVub2hPUTBIT3lKX3J4V3p1bjJhSVE?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Thu, 24 Sep 2026 07:00:00 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-09-24T07:00:00.000Z",
+      "score": 33,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
       "id": "h:why the governments new office of ai needs a gender",
       "category": "women_investing",
       "tags": [
@@ -1464,38 +2309,168 @@
       ]
     },
     {
-      "id": "h:i told them everything nothing really happened australia is still",
-      "category": "women_investing",
+      "id": "h:women in law forum 2025 the honourable lorraine walker",
+      "category": "referral_partner",
       "tags": [
-        "women_investing"
+        "referral_partner"
       ],
-      "categoryInferred": true,
+      "categoryInferred": false,
       "person": null,
       "organisation": null,
       "amountAudM": null,
       "amountText": null,
       "femaleSignal": 1,
       "femaleFromSearch": false,
-      "auConfidence": 2,
-      "headline": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
-      "firstSeen": "2026-11-23T11:32:33.678Z",
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - The Honourable Lorraine Walker",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
       "articles": [
         {
-          "title": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
-          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQVWlrRm9Ha2xDSklMNm5IWGNvbE5VS0ZvWC1YQ0RqV2pTVVRYRFBucjNTbl9OYkFlOFRKZEpXcTdpZkp3UXlIRE5zd1psUG10YmJnY2ZSVzhnQWlFQjVYeEEzSkFxVWMwS05RLTZ3M2JLOElmVEJHNzlqaVlTSnhOZ2R3Tk0tTE5NcC1xQ1QtU1BtUGlHN0FJSm4tOGozaWJCdnVKdHNHNi12OWF0eWRrZDFFUldLM2hMaDh6ZXZHM3FkNU1mZXJTbk56eU1KVlE5cFJNeGNPR3ZPQ09kdklSR1V2OWhaU0xPUUtV?oc=5",
-          "source": "Women's Agenda",
-          "pubDate": "Mon, 23 Nov 2026 00:57:21 GMT",
-          "via": "w-site-womensagenda"
+          "title": "Women in Law Forum 2025 - The Honourable Lorraine Walker",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOVWxLblR4LWxQcG5pOHRDMjJjSUZqSWVZSzA4clZMWC1pb2QtR3NBVUhsaUNvcXVOMXA2eG1rQ3J3SU9YMjcxZVdKSDBfd0Q1azRCdUU5NFVLY1c0dlJrN0hxZ3FQc2NNanNBdm4xRkZmNTZFSnpVdVNuSU9hR2NVYlVB?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Wed, 12 Aug 2026 22:04:15 GMT",
+          "via": "w-site-lawyersweekly"
         }
       ],
-      "latestPubDate": "2026-11-23T00:57:21.000Z",
-      "score": 32,
+      "latestPubDate": "2026-08-12T22:04:15.000Z",
+      "score": 33,
       "reasons": [
-        "Women investing initiative (+28)",
+        "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
-        "signal type inferred from the search, not the headline (−15)",
-        "Australian signal 2/3 (+7)",
-        "recent (0d ago, +8)"
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:women in law forum 2025 belinda cohen",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - Belinda Cohen",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2025 - Belinda Cohen",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGSXRUVmJSVFRycnBoTVU4RnJzVTJPMVFGSXNKSUJmYTliWDJPbHZMckxBSzNsQUNWZ1VZbW5ERWRaUnhIVHNjM0Y5MkkwRjVMOXVHdC10ZVBJWG5TYXdob196QlZuemlWLTBMZGVHSXhPREpya0tKZFJFQXJNT0U?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Sat, 01 Aug 2026 11:39:18 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-08-01T11:39:18.000Z",
+      "score": 33,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "o:women",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": "Women",
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2026 launches",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2026 launches",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2lTMlZxd2VWaHhJX0FKN0ZZVm5oWTd5eXY2UnppV0Y0WkV0blJNNElod053WlpHMUJnLS1aRGhYZHpoOVlIbTg5TTZyOG40bVloT3Flb0N2VlFoeThlVFQ0VmhWTGtOLUlRUVpoNTAzR1lVNEpoN1owaVJjcHhWd3JTOFg?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Fri, 24 Jul 2026 07:00:00 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-07-24T07:00:00.000Z",
+      "score": 33,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:women in accounting awards 2026 nominations open",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Accounting Awards 2026 Nominations Open",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Accounting Awards 2026 Nominations Open",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOOUwyamhmUWtLMHhGVDVkWHEwR0pGVWlfS2dKdnpsaHBvajEwMXVwUDZVc25Sbm1COTBFazdxU2RWYWdZVHhHWTZFRmM1cHB5TGUyRjNtNkVMT2Q3V1JmQmp4dDM1ZzBmYm9DSmh6Z1h6MmtEX0hDT1VsSElldG5jOWRDTmFzRVpORE50WDE5SDZVRWkxUXdvUGJ1V1ZSX2Nj?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Fri, 26 Jun 2026 07:00:00 GMT",
+          "via": "w-site-accountantsdaily"
+        }
+      ],
+      "latestPubDate": "2026-06-26T07:00:00.000Z",
+      "score": 33,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "h:women in accounting awards 2026 nominations now open",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Accounting Awards 2026 nominations now open",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Women in Accounting Awards 2026 nominations now open",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPS3VHa3NKOThyZVZWRTJBUUVxYy10Q0lYT19razZrd1VsOUQ1T1FjTG9sSWc5UF84Zk9teDRHa2hCUXZpTTJ6b2lhWk11N1lmSHRIUVBSUU5fTExkY1MxcGF3N2hVZlVMTmFBblR3VHl3U29jYnJ4aVRHSHQ5ZmVvVEN2Zk1WeTFfeWVDODBxb1lrX3g5NVpTd3VWZ0I5aWlyT2V5cDB3?oc=5",
+          "source": "Accountants Daily",
+          "pubDate": "Wed, 17 Jun 2026 07:00:00 GMT",
+          "via": "w-site-accountantsdaily"
+        }
+      ],
+      "latestPubDate": "2026-06-17T07:00:00.000Z",
+      "score": 33,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -1534,41 +2509,6 @@
       ]
     },
     {
-      "id": "h:victorias next government needs a plan for ending mens violence",
-      "category": "women_investing",
-      "tags": [
-        "women_investing"
-      ],
-      "categoryInferred": true,
-      "person": null,
-      "organisation": null,
-      "amountAudM": null,
-      "amountText": null,
-      "femaleSignal": 1,
-      "femaleFromSearch": false,
-      "auConfidence": 2,
-      "headline": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
-      "firstSeen": "2026-11-23T11:32:33.678Z",
-      "articles": [
-        {
-          "title": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWVhwem84Q0dXRnJ5a0JiTFl6UkxTQUhHMXoyME5tZkZjVmxhR1hUSzBWTEZSZW5SSkU5YUcxOWZEcnBSeUF5dHNnQzdGTzl1Q1NBeUxjNTNtMFgyZ1JUeEVpMXF3UXVuaHlRYm1hVnpsbFBmR19SMWdNN0IwX1VHNTRQQ0YxUmZobnpQLXVDZ093SXhqVy1kMXBueW9JSnMzM0ZEdEE2cUdUTjFfa0Rr?oc=5",
-          "source": "Women's Agenda",
-          "pubDate": "Tue, 17 Nov 2026 22:24:15 GMT",
-          "via": "w-site-womensagenda"
-        }
-      ],
-      "latestPubDate": "2026-11-17T22:24:15.000Z",
-      "score": 32,
-      "reasons": [
-        "Women investing initiative (+28)",
-        "clearly about a woman (+4)",
-        "signal type inferred from the search, not the headline (−15)",
-        "Australian signal 2/3 (+7)",
-        "recent (6d ago, +8)"
-      ]
-    },
-    {
       "id": "h:victoria doubles funding for women founded startups with 10 million",
       "category": "women_investing",
       "tags": [
@@ -1604,39 +2544,108 @@
       ]
     },
     {
-      "id": "p:leah armstrong",
+      "id": "p:sam wood",
       "category": "women_investing",
       "tags": [
         "women_investing"
       ],
       "categoryInferred": true,
-      "person": "Leah Armstrong",
+      "person": "Sam Wood",
       "organisation": null,
       "amountAudM": null,
       "amountText": null,
       "femaleSignal": 1,
       "femaleFromSearch": false,
-      "auConfidence": 1,
-      "headline": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",
-      "firstSeen": "2026-11-23T11:32:33.678Z",
+      "auConfidence": 2,
+      "headline": "Sam Wood was Australia’s dreamboat. The allegations against him should make us reflect.",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
       "articles": [
         {
-          "title": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNjcwaTlHUG4tTFF1UHc5MVAtNG5fNllpSFJld3d0ZU5ob192TjVYX2JtZkhWZHdqRDlST1hYMVJNUVR4WW85aFhXWlNUcFh4VEtfVlQtUVR2Zi1iMlI1V0xIMjg1ODhwMUZxTDZnU3dCN0w4TWx2UWo1aFk3Zlp6QkJReEd2NVZBN05lbTRObUJjMVpkbzlONVp1YjY0NG9Ja0cxUklVbw?oc=5",
+          "title": "Sam Wood was Australia’s dreamboat. The allegations against him should make us reflect.",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONWtXUjhCX2pMYWgxNElhaTNORHNINXZsd2J0SGVsdXlrUGFESzN6aHpHYmhmaXo5T1RIVUdIX194R09wLTBlclpDVTJNdzZLMXBDYnk4Xy1NQWx2ZFpaLU5aNUZIV0htc0JpTzZOeVlObVdyRm1pWXZfc2FtMGE2X0cza1hDWUdkU0RyUUd5SzFzUHJSMzNIQ04zaHJMczg5WmhKY29nSUFwbWE3U0d1SkZmQkdCN0hva2FqMVBnbENSeVROc1Jrcw?oc=5",
           "source": "Women's Agenda",
-          "pubDate": "Wed, 04 Nov 2026 08:00:00 GMT",
+          "pubDate": "Tue, 06 Oct 2026 07:00:00 GMT",
           "via": "w-site-womensagenda"
         }
       ],
-      "latestPubDate": "2026-11-04T08:00:00.000Z",
+      "latestPubDate": "2026-10-06T07:00:00.000Z",
       "score": 30,
       "reasons": [
         "Women investing initiative (+28)",
         "clearly about a woman (+4)",
         "signal type inferred from the search, not the headline (−15)",
         "named person in headline (+6)",
-        "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)"
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
+      "id": "p:can australian",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": true,
+      "person": "Can Australian",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Can Australian businesses legally ban customers from using smart glasses?",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Can Australian businesses legally ban customers from using smart glasses?",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNU2EwRTdRTDFTMklrYWlFQjZMMm55OTlxV2g0TTBoM21LbzIySDQ4blVDWGJaVVlKT0lYem5fdlF0MFRjZktKNnRaMUVlWGVzNy1mT2tWNklxOS1YVm9qcmxvUmQwQlVJeHhnY2VkcUNmQ2h5US1jQm5GeTlodUo5RHltR29ZYm14dkcwTnZHXy0tNTl3X051THhxRmJMLXp0UEhOOTVzb3hMdV84?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Sun, 06 Sep 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-09-06T07:00:00.000Z",
+      "score": 30,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "signal type inferred from the search, not the headline (−15)",
+        "named person in headline (+6)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
+      "id": "p:rebel wilson",
+      "category": "women_investing",
+      "tags": [
+        "women_investing"
+      ],
+      "categoryInferred": true,
+      "person": "Rebel Wilson",
+      "organisation": "Rebel Wilson",
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Rebel Wilson wins defamation case brought by young Australian actor",
+      "firstSeen": "2026-11-23T11:35:00.301Z",
+      "articles": [
+        {
+          "title": "Rebel Wilson wins defamation case brought by young Australian actor",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZFNsXzMyR2hORVFBaTBfbU43aVRjSmtNczdOaTc3ZjRRbHNMNEtaNEJfeE1YT1QwTVJJZmRGdDZFdjcyQUs1OUZad1BpSElFajhTYU5MNDFfbUxIWWJYeVo2czZXSGVxdkswSzBrZXJ0a0wxdXlnZUxvWlZ3aHkwNmFQYkxnSWp0V0FXSm04aGlmNjN1MXN4Ry1nUG9la1lOX003SG9B?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Wed, 22 Jul 2026 07:00:00 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-07-22T07:00:00.000Z",
+      "score": 30,
+      "reasons": [
+        "Women investing initiative (+28)",
+        "clearly about a woman (+4)",
+        "signal type inferred from the search, not the headline (−15)",
+        "named person in headline (+6)",
+        "Australian signal 2/3 (+7)"
       ]
     }
   ]
