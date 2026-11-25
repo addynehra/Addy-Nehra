@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-24T04:22:26.407Z",
+  "generatedAt": "2026-11-25T03:07:27.765Z",
   "lookbackDays": 180,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
     {
       "id": "w-founder-exit",
       "ok": true,
-      "count": 22
+      "count": 20
     },
     {
       "id": "w-founder-raise",
       "ok": true,
-      "count": 96
+      "count": 97
     },
     {
       "id": "w-founder-ipo",
       "ok": true,
-      "count": 78
+      "count": 31
     },
     {
       "id": "w-founder-pe",
       "ok": true,
-      "count": 77
+      "count": 76
     },
     {
       "id": "w-site-startupdaily",
@@ -36,42 +36,42 @@
     {
       "id": "w-site-capitalbrief",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "id": "w-rich-list",
       "ok": true,
-      "count": 100
+      "count": 61
     },
     {
       "id": "w-site-forbes",
       "ok": true,
-      "count": 13
+      "count": 14
     },
     {
       "id": "w-awards",
       "ok": true,
-      "count": 34
+      "count": 33
     },
     {
       "id": "w-family",
       "ok": true,
-      "count": 35
+      "count": 78
     },
     {
       "id": "w-family-chair",
       "ok": true,
-      "count": 12
+      "count": 49
     },
     {
       "id": "w-family-office",
       "ok": true,
-      "count": 19
+      "count": 17
     },
     {
       "id": "w-philanthropy",
       "ok": true,
-      "count": 29
+      "count": 31
     },
     {
       "id": "w-philanthropy-orgs",
@@ -81,37 +81,37 @@
     {
       "id": "w-invest-women",
       "ok": true,
-      "count": 86
+      "count": 44
     },
     {
       "id": "w-angels",
       "ok": true,
-      "count": 9
+      "count": 53
     },
     {
       "id": "w-angel-groups",
       "ok": true,
-      "count": 71
+      "count": 69
     },
     {
       "id": "w-networks",
       "ok": true,
-      "count": 9
+      "count": 16
     },
     {
       "id": "w-women-wealth",
       "ok": true,
-      "count": 49
+      "count": 10
     },
     {
       "id": "w-ref-law",
       "ok": true,
-      "count": 30
+      "count": 100
     },
     {
       "id": "w-ref-accounting",
       "ok": true,
-      "count": 22
+      "count": 68
     },
     {
       "id": "w-site-lawyersweekly",
@@ -121,17 +121,17 @@
     {
       "id": "w-site-accountantsdaily",
       "ok": true,
-      "count": 56
+      "count": 58
     },
     {
       "id": "w-site-ifa",
       "ok": true,
-      "count": 79
+      "count": 77
     },
     {
       "id": "w-ref-networks",
       "ok": true,
-      "count": 16
+      "count": 66
     },
     {
       "id": "w-site-womensagenda",
@@ -163,61 +163,51 @@
     "referral_partner": "Referral partner (law / accounting)"
   },
   "diagnostics": {
-    "articlesFetched": 1240,
-    "added": 72,
+    "articlesFetched": 1367,
+    "added": 75,
     "merged": 1,
-    "prunedByNewRules": 3,
-    "belowMinScore": 59,
+    "prunedByNewRules": 5,
+    "belowMinScore": 62,
     "dropped": {
-      "no_signal_type": 384,
-      "sensitive": 18,
-      "older_than_lookback": 434,
-      "not_australian": 188,
-      "foreign": 53,
-      "no_female_signal": 32,
-      "about_a_man": 2,
+      "no_signal_type": 386,
+      "sensitive": 17,
+      "older_than_lookback": 637,
+      "foreign": 24,
+      "not_australian": 134,
+      "no_female_signal": 35,
+      "about_a_man": 1,
       "noise": 2
     },
     "droppedSamples": {
       "no_signal_type": [
         "Nvidia CEO affair scandal widens as Chinese businesswoman reportedly questioned by Singapore authorities - The Standard (HK)",
-        "Nvidia Chief Seen as Target of Chinese Spy Plot - The New York Times",
         "This Liverpool mum-of-four ran an Instagram counterfeit clothing trade and had over £4m deposited into her business accounts. All while claiming Universal Credit. 😡 Megan Carney-Borrowman sold fake luxury items from brands like Chanel, Burberry, Hugo B - Facebook",
+        "Nvidia Chief Seen as Target of Chinese Spy Plot - The New York Times",
         "'Half my business will be gone' - firms in Canada and US fear trade war - BBC",
         "‘Hot Girl Soda’: Female-Founded Feisty Bags Funding for Fizzy Plant Protein Drinks - Green Queen Media",
-        "Women founders and CEOs got only 8.2% of Q1 startup funding - Technext24.com",
+        "2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun",
         "49 Public Companies Founded by Women - The Story Exchange",
-        "2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun"
+        "Winston Taylor advises Blume Equity on investment in AI-powered fleet intelligence platform CameraMatics - Winston Taylor"
       ],
       "sensitive": [
         "In 1935, An Illinois Secretary Bought 3 Shares Of Her Company's Stock For $180. She Never Sold A Single Share And Always Reinvested Dividends. By The Time She Died In 2010 Her 3 Abbott Shares Had Turned Into $7.2 Million. - 24/7 Wall St.",
-        "Jensen Huang's wife could become one of world's richest women in divorce - The Business Standard",
-        "Would Lori Huang become the world’s richest woman if she divorced Jensen Huang? No, but she would be close - Nacionale",
         "Jemma Stapleton, Australian sprinter and Stawell Gift finalist, dies aged 25 on family holiday - The Guardian",
+        "22yo jockey dies from injuries sustained in race fall - ABC News & Headlines – Australian Broadcasting Corporation",
         "Roz Hervey had hours left to live. She asked her family to press record - ABC News & Headlines – Australian Broadcasting Corporation",
         "Australian Apprentice Jockey Izzy Neale Dies After Race Fall in Warren - JournalArta",
+        "Obituary: Susan Edward Wright Kelton - Williamson Herald",
         "Janis Kaye Dvoracek Obituary Aug 26, 2026 - https://www.cremationsociety-wi.com/",
         "Senator Murray Reintroduces Jeanette Acosta Invest in Women’s Health Act to Increase Access to Life-Saving Cancer Screenings - Senator Patty Murray (.gov)"
       ],
       "older_than_lookback": [
-        "US small business owner says China tariffs endanger her company: ‘I could lose my home’ - The Guardian",
         "Main opposition asks Trade Minister to address corruption allegations - Duvar English",
-        "Millennial couple buys $25m Bellevue Hill home – before they’ve sold - SMH.com.au",
+        "US small business owner says China tariffs endanger her company: ‘I could lose my home’ - The Guardian",
         "Vera Wang on why she’s selling her brand after 35 years - Vogue",
         "What U.S. tariffs look like from a Chinese trade city - OPB",
         "The Apprentice winner says she's done 'something huge' - BBC",
-        "Ingham’s Gerringong South Coast site has record in view - Real Estate",
-        "Meet 22 women who launched and led startups to an IPO, an accomplishment few female founders have ever reached - Business Insider"
-      ],
-      "not_australian": [
-        "Owner of liquidated West Coast pie business buys it back under new company - The Press",
-        "Lubbock-raised businesswoman shares Palestinian roots with food brand - Yahoo",
-        "Tailevu businesswoman raises concerns over cattle theft, market access and ice plant - Fijivillage",
-        "I’m a female founder with a liberal arts degree and my company has raised $280 million. You don’t need a PhD to build a robotics startup - Yahoo Finance",
-        "200 Black Women Founders Who've Raised $1 Million In Funding Spotlighted On New List - - Black Enterprise",
-        "Black Women Founders Raise $4.5 Million for Their Innovative Hair Extensions Brand - Black Enterprise",
-        "Video: Becc Judd boogies as her brand JAGGAD raises $120k for fire relief - Daily Mail",
-        "Aquis IPO Academy reveals inaugural 2026 cohort - BusinessCloud"
+        "Meet 22 women who launched and led startups to an IPO, an accomplishment few female founders have ever reached - Business Insider",
+        "Bumble IPO: The female founder behind the dating app making market history - CNBC",
+        "Daisy Cakes: Here's What Happened After Shark Tank - foodrepublic.com"
       ],
       "foreign": [
         "German female-founded startup Finches raises €2 million to bring AI early warnings to agricultural sourcing - EU-Startups",
@@ -229,19 +219,28 @@
         "Lune & Wild raises €2.3 million to scale female-founded, chef-led baby and children’s food brand - EU-Startups",
         "Ayr businesswoman raises over £700 for charity through 2000s fundraiser - Ayr Advertiser"
       ],
+      "not_australian": [
+        "Lubbock-raised businesswoman shares Palestinian roots with food brand - Yahoo",
+        "I’m a female founder with a liberal arts degree and my company has raised $280 million. You don’t need a PhD to build a robotics startup - Fortune",
+        "Tailevu businesswoman raises concerns over cattle theft, market access and ice plant - Fijivillage",
+        "200 Black Women Founders Who've Raised $1 Million In Funding Spotlighted On New List - - Black Enterprise",
+        "Black Women Founders Raise $4.5 Million for Their Innovative Hair Extensions Brand - Black Enterprise",
+        "Video: Becc Judd boogies as her brand JAGGAD raises $120k for fire relief - Daily Mail",
+        "WOCstar looks to turn women founders into rock stars - PEI Private Equity",
+        "In 2021, Reese Witherspoon sold a majority stake in Hello Sunshine at a $900 million valuation; five year - The Times of India"
+      ],
       "no_female_signal": [
-        "Family office Mutual Trust makes dual partner hires - InvestorDaily",
         "Family Office panel discussion - Arnold Bloch Leibler",
+        "Family office Mutual Trust makes dual partner hires - InvestorDaily",
         "Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
         "Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
-        "TPG boss Joel Thickins buys Roxy Jacenko’s Sweaty Betty HQ - The Australian",
-        "Acorn Capital sells Dredge Robotics stake to Perth family office - AFR",
         "Senior exec quits Cannon-Brookes’ family office - The Australian",
-        "Philanthropy Australia Conference 2026 - Alliance magazine"
+        "ABL advises Melbourne Storm on landmark private equity investment - Arnold Bloch Leibler",
+        "Acorn Capital sells Dredge Robotics stake to Perth family office - AFR",
+        "ABL’s expanding Private Equity practice recognised by the AFR - Arnold Bloch Leibler"
       ],
       "about_a_man": [
-        "Felix Lee tries to dodge his billionaire family’s long shadow - AFR",
-        "“Unbelievable”: Anthropic’s $3 trillion IPO puts global spotlight on Melbourne gardening business"
+        "Felix Lee tries to dodge his billionaire family’s long shadow - AFR"
       ],
       "noise": [
         "Women's cricket gets its first Lord's Test as England face India - The New Indian Express",
@@ -253,43 +252,37 @@
         "kept": 0,
         "samples": [
           "[no_signal_type] Nvidia CEO affair scandal widens as Chinese businesswoman reportedly questioned by Singapore authorities - The Standard (HK)",
-          "[no_signal_type] Nvidia Chief Seen as Target of Chinese Spy Plot - The New York Times",
           "[no_signal_type] This Liverpool mum-of-four ran an Instagram counterfeit clothing trade and had over £4m deposited into her business accounts. All while claiming Universal Credit. 😡 Megan Carney-Borrowman sold fake luxury items from brands like Chanel, Burberry, Hugo B - Facebook",
           "[sensitive] In 1935, An Illinois Secretary Bought 3 Shares Of Her Company's Stock For $180. She Never Sold A Single Share And Always Reinvested Dividends. By The Time She Died In 2010 Her 3 Abbott Shares Had Turned Into $7.2 Million. - 24/7 Wall St.",
-          "[not_australian] Owner of liquidated West Coast pie business buys it back under new company - The Press"
+          "[no_signal_type] Nvidia Chief Seen as Target of Chinese Spy Plot - The New York Times",
+          "[no_signal_type] 'Half my business will be gone' - firms in Canada and US fear trade war - BBC"
         ],
         "no_signal_type": 4,
         "sensitive": 1,
-        "older_than_lookback": 16,
-        "not_australian": 1
+        "older_than_lookback": 15
       },
       "w-founder-raise": {
         "kept": 0,
         "samples": [
           "[foreign] German female-founded startup Finches raises €2 million to bring AI early warnings to agricultural sourcing - EU-Startups",
           "[not_australian] Lubbock-raised businesswoman shares Palestinian roots with food brand - Yahoo",
+          "[not_australian] I’m a female founder with a liberal arts degree and my company has raised $280 million. You don’t need a PhD to build a robotics startup - Fortune",
           "[foreign] Exclusive: Female-founded AI startup raises £1M to grade exams. Here’s the pitch deck - Tech Funding News",
-          "[no_signal_type] ‘Hot Girl Soda’: Female-Founded Feisty Bags Funding for Fizzy Plant Protein Drinks - Green Queen Media",
-          "[not_australian] Tailevu businesswoman raises concerns over cattle theft, market access and ice plant - Fijivillage"
+          "[no_signal_type] ‘Hot Girl Soda’: Female-Founded Feisty Bags Funding for Fizzy Plant Protein Drinks - Green Queen Media"
         ],
         "foreign": 8,
         "not_australian": 6,
-        "no_signal_type": 2,
-        "older_than_lookback": 80
+        "no_signal_type": 1,
+        "older_than_lookback": 82
       },
       "w-founder-ipo": {
         "kept": 0,
         "samples": [
-          "[no_signal_type] 49 Public Companies Founded by Women - The Story Exchange",
-          "[not_australian] Aquis IPO Academy reveals inaugural 2026 cohort - BusinessCloud",
           "[no_signal_type] 2026 Carroll Biz Challenge: Harmony Hub Health offers a different approach to wellness - Baltimore Sun",
-          "[no_signal_type] Exclusive-Ex-Nvidia CEO misled top lawyer on affair with Chinese businesswoman, sources say - Yahoo Finance",
-          "[foreign] Meet the 8 women powering India’s deeptech future; Anthropic raises a record $81.3B in IPO - YourStory.com"
+          "[no_signal_type] 49 Public Companies Founded by Women - The Story Exchange"
         ],
-        "no_signal_type": 4,
-        "not_australian": 2,
-        "older_than_lookback": 69,
-        "foreign": 2
+        "older_than_lookback": 28,
+        "no_signal_type": 2
       },
       "w-founder-pe": {
         "kept": 0,
@@ -302,7 +295,7 @@
         ],
         "not_australian": 5,
         "no_signal_type": 2,
-        "older_than_lookback": 70
+        "older_than_lookback": 69
       },
       "w-site-startupdaily": {
         "kept": 0,
@@ -336,24 +329,23 @@
           "[no_signal_type] Nvidia’s Jensen Huang targeted by alleged Chinese spy: NYT - Capital Brief",
           "[no_signal_type] Life360 ready to hire again, signalling end to AI-driven layoffs - Capital Brief",
           "[no_signal_type] Xero’s culture in shock as staff come to grips with its AI pivot - Capital Brief",
-          "[no_signal_type] Rules of engagement - Capital Brief"
+          "[no_signal_type] ⚛️ Quantum leap - Capital Brief"
         ],
-        "no_signal_type": 6
+        "no_signal_type": 7
       },
       "w-rich-list": {
-        "kept": 4,
+        "kept": 0,
         "samples": [
           "[foreign] The extraordinary life of the Duchess of Alba, Spain's richest woman, who befriended Jackie Kennedy and turned down Picasso - Tatler",
-          "[not_australian] Anthropic co-founder Daniela Amodei enters world’s top 15 richest women - Adgully",
           "[not_australian] After Anthropic’s IPO, Daniela Amodei is now the world’s 15th richest woman - Fortune",
-          "[not_australian] Russia’s richest woman hit by EU sanctions - Financial Times",
-          "[not_australian] Russia's richest woman, Wildberries' CEO added to EU's sanctions list | Daily Sabah - Daily Sabah"
+          "[foreign] South Africa’s richest woman accused of using a get-rich-quick scheme at her own company - Daily Investor",
+          "[not_australian] Anthropic co-founder Daniela Amodei enters world’s top 15 richest women - Adgully",
+          "[no_signal_type] In 2018, she joined OpenAI and left in 2020 to start Anthropic in 2021; five years later, she’s a billion - The Times of India"
         ],
-        "foreign": 31,
-        "not_australian": 52,
-        "no_signal_type": 3,
-        "sensitive": 2,
-        "older_than_lookback": 6
+        "foreign": 6,
+        "not_australian": 7,
+        "no_signal_type": 1,
+        "older_than_lookback": 45
       },
       "w-site-forbes": {
         "kept": 0,
@@ -364,63 +356,69 @@
           "[no_signal_type] Taylor Swift and Travis Kelce likely will wed at Madison Square Garden, reports - Forbes Australia",
           "[no_signal_type] ‘Get back up’: The struggle that inspired Amber Thanas’ therapy revolution - Forbes Australia"
         ],
-        "no_signal_type": 12
+        "no_signal_type": 13
       },
       "w-awards": {
         "kept": 0,
         "samples": [
+          "[no_signal_type] Five Questions With Reece Tomlinson - Women of Influence",
           "[no_signal_type] Clean energy tech company founder to deliver Women of Influence Lecture at Alfred University - Alfred University",
-          "[no_signal_type] The Skills Gap Isn’t Coming. It’s Already Here. - Women of Influence",
           "[not_australian] Meet venture capital’s 2026 Women of Influence - PEI Private Equity",
-          "[no_signal_type] CMP Top 50 Women of Influence 2026 - Mortgage Professional America",
-          "[no_signal_type] Introducing the 2026 Women of Influence - HousingWire"
+          "[no_signal_type] Meet 914INC.’s Women of Influence in 2026 - https://914inc.com/",
+          "[no_signal_type] Well-known Galway entrepreneur wins big at Businesswoman of the Year awards - Connacht Tribune"
         ],
         "no_signal_type": 32,
-        "not_australian": 2
+        "not_australian": 1
       },
       "w-family": {
-        "kept": 0,
+        "kept": 3,
         "samples": [
           "[not_australian] Developing the next generation of family businesses - kpmg.com",
-          "[no_signal_type] Beloved Chinatown restaurant serves robot noodles at new Marrickville spin-off - SMH.com.au",
           "[not_australian] Family business succession planning and the next generation, 2026 - Deloitte",
-          "[not_australian] With robot feedlots, Strathdale Wagyu embraces the next generation of farming - CommBank",
-          "[not_australian] Family business: Brodie George’s daughter Ngoorloona features in new Jalayimiya collection - National Indigenous Times"
+          "[not_australian] Leveraging the family business advantage - kpmg.com",
+          "[no_signal_type] Spotlight on the award-winning McGregor Finance Group - Australian Broker News",
+          "[no_signal_type] Beloved Chinatown restaurant serves robot noodles at new Marrickville spin-off - WAtoday"
         ],
-        "not_australian": 5,
-        "no_signal_type": 3,
-        "older_than_lookback": 26
+        "not_australian": 3,
+        "older_than_lookback": 69,
+        "no_signal_type": 3
       },
       "w-family-chair": {
         "kept": 0,
-        "samples": [],
-        "older_than_lookback": 12
+        "samples": [
+          "[no_signal_type] Top 50 leaders and CEOs of 2026 - Gulf Business",
+          "[no_signal_type] Top 50 leaders and CEOs of 2026 - Gulf Business",
+          "[no_signal_type] Pearl Expeditions celebrates its first anniversary as demand grows - travelweekly.com.au",
+          "[no_signal_type] Noah Opens 19th Global Black Diamond Summit to Explore New Approaches to Wealth Security in the AI Era - TradingView"
+        ],
+        "no_signal_type": 4,
+        "older_than_lookback": 45
       },
       "w-family-office": {
         "kept": 0,
         "samples": [
-          "[no_female_signal] Family office Mutual Trust makes dual partner hires - InvestorDaily",
           "[no_female_signal] Family Office panel discussion - Arnold Bloch Leibler",
+          "[no_female_signal] Family office Mutual Trust makes dual partner hires - InvestorDaily",
           "[no_female_signal] Baillieu v Baillieu: Insider attack on Melbourne family office - AFR",
           "[no_female_signal] Kerry Stokes’ family office grows to $3.23bn thanks to unglamorous investments - SMH.com.au",
-          "[no_signal_type] Watch: 2026 Allan Gyngell Lecture: Senator Penny Wong - Lowy Institute"
+          "[no_signal_type] Nicola Forrest anchors Antler’s $70 million 3rd fund in $30m push for women founders - Startup Daily"
         ],
-        "no_female_signal": 7,
-        "no_signal_type": 10,
+        "no_female_signal": 8,
+        "no_signal_type": 7,
         "about_a_man": 1
       },
       "w-philanthropy": {
-        "kept": 0,
+        "kept": 1,
         "samples": [
           "[no_signal_type] ‘Forever in our hearts’: Jockey Izzy Neale’s final gift after fatal racing fall - News24",
           "[sensitive] Jemma Stapleton, Australian sprinter and Stawell Gift finalist, dies aged 25 on family holiday - The Guardian",
           "[no_signal_type] A young author’s gift to refugees - Australia for UNHCR",
           "[no_signal_type] Anna’s daughter saved the lives of four people. She’s not allowed to meet them - Nine.com.au",
-          "[no_signal_type] First home buyer scores historic cottage despite $60,000 higher bid - ABC News & Headlines – Australian Broadcasting Corporation"
+          "[sensitive] 22yo jockey dies from injuries sustained in race fall - ABC News & Headlines – Australian Broadcasting Corporation"
         ],
-        "no_signal_type": 6,
-        "sensitive": 3,
-        "older_than_lookback": 19
+        "no_signal_type": 7,
+        "sensitive": 4,
+        "older_than_lookback": 18
       },
       "w-philanthropy-orgs": {
         "kept": 0,
@@ -432,31 +430,35 @@
           "[not_australian] Steamy weather doesn’t stifle Women’s Giving Circle’s Christmas spirit - Catholic Diocese of Cleveland"
         ],
         "not_australian": 21,
-        "no_female_signal": 16,
+        "no_female_signal": 15,
         "no_signal_type": 11,
-        "sensitive": 1
+        "sensitive": 2
       },
       "w-invest-women": {
-        "kept": 1,
+        "kept": 0,
         "samples": [
           "[not_australian] New guidance on applying a child perspective within gender lens investing (2X Criteria) - Unicef",
           "[not_australian] Why investing in women’s education pays off - World Economic Forum",
-          "[foreign] State Threats in Sub-Saharan Africa Through a Gender Lens - Royal United Services Institute (RUSI)",
           "[not_australian] The business case for investing in women? New evidence on how 2X qualification is giving funds an edge - New Private Markets",
+          "[foreign] State Threats in Sub-Saharan Africa Through a Gender Lens - Royal United Services Institute (RUSI)",
           "[not_australian] Earthquakes and governance: why we need a gender lens in Venezuela’s compounding crises - ODI: Think change"
         ],
-        "not_australian": 71,
-        "foreign": 9,
-        "sensitive": 1,
-        "no_signal_type": 1
+        "not_australian": 37,
+        "foreign": 3,
+        "sensitive": 1
       },
       "w-angels": {
-        "kept": 1,
-        "samples": [],
-        "older_than_lookback": 7
+        "kept": 2,
+        "samples": [
+          "[not_australian] Meet the founder of the world’s first C-suite angel investor syndicate - Singapore Economic Development Board (EDB)",
+          "[no_female_signal] VC fund backed by Zampatti and Forrest families looks to raise $50m - AFR"
+        ],
+        "older_than_lookback": 48,
+        "not_australian": 1,
+        "no_female_signal": 1
       },
       "w-angel-groups": {
-        "kept": 5,
+        "kept": 3,
         "samples": [
           "[no_female_signal] VC fund backed by Zampatti and Forrest families looks to raise $50m - AFR",
           "[no_signal_type] Melbourne startup Elita doubles down on dog longevity - Capital Brief",
@@ -465,63 +467,66 @@
           "[no_signal_type] Space Mission Offer Giant Leap For Australian Science - Mirage News"
         ],
         "no_female_signal": 2,
-        "no_signal_type": 52,
+        "no_signal_type": 50,
         "not_australian": 8,
         "foreign": 1,
         "sensitive": 2,
         "noise": 1
       },
       "w-networks": {
-        "kept": 3,
+        "kept": 5,
         "samples": [
+          "[no_signal_type] ASX urged to set 40:40:20 board gender benchmark - InvestorDaily",
+          "[no_signal_type] CEW urges ASX to set gender diversity goal for boards - Financial Newswire",
           "[not_australian] Hello Pearl Selected for Springboard Enterprises' Inaugural Longevity Accelerator - Yahoo Finance",
           "[not_australian] Derry woman Siobhan Moran unveils plans for major conference for women in banking and finance - Derry Journal",
-          "[not_australian] Women’s Economic Ventures Celebrates 35 Years, Recognizes Trailblazer Awardee Kelly Mooney and WEV’s Giving Circle the League of Extraordinary Women - The Santa Barbara Independent",
-          "[not_australian] Seven Valley shops form ‘League of Extraordinary Women-Owned Businesses’ for July passport event - Turlock Journal",
-          "[not_australian] Major new Belfast conference launched for women in banking and finance - LoveBelfast"
+          "[not_australian] Women’s Economic Ventures Celebrates 35 Years, Recognizes Trailblazer Awardee Kelly Mooney and WEV’s Giving Circle the League of Extraordinary Women - The Santa Barbara Independent"
         ],
-        "not_australian": 6
+        "no_signal_type": 3,
+        "not_australian": 8
       },
       "w-women-wealth": {
-        "kept": 1,
-        "samples": [
-          "[no_signal_type] More Australians than ever are investing, but each generation is doing it differently - CommBank"
-        ],
-        "older_than_lookback": 45,
-        "no_signal_type": 1
+        "kept": 0,
+        "samples": [],
+        "older_than_lookback": 8
       },
       "w-ref-law": {
-        "kept": 0,
+        "kept": 3,
         "samples": [
+          "[no_signal_type] How to recognise the warning signs of domestic abuse - The Weekly Times",
           "[not_australian] Building a divorce law firm for women, by women - ASBN Small Business Network",
+          "[no_signal_type] Law firm to investigate Uber sexual misconduct complaints - Drive",
           "[not_australian] One Law Firm Stops and Asks for Directions for Women Lawyers in the Workplace - Legal 500",
-          "[not_australian] SC Judge Calls For 33% Quota For Women In Legal Profession - BW People",
-          "[not_australian] Women Lawyers Must Have 1/3rd Representation On Government Panels : Justice BV Nagarathna - Live Law",
-          "[not_australian] The Woman's Guide to Estate Planning: Protect Your Health and Wealth - Kiplinger"
+          "[not_australian] Updated legislation decriminalises abortion for women who terminate a pregnancy - Today's Family Lawyer"
         ],
-        "not_australian": 6,
-        "older_than_lookback": 23
+        "no_signal_type": 6,
+        "not_australian": 26,
+        "foreign": 4,
+        "older_than_lookback": 60
       },
       "w-ref-accounting": {
         "kept": 0,
         "samples": [
           "[not_australian] ASB Awards celebrate changing role of Scottish women in business - Edinburgh Chamber of Commerce",
-          "[not_australian] The 2026 UEFA Business Case for Women's Football - Key Insights & Takeaways - LawInSport"
+          "[not_australian] Women accountants push for greater leadership opportunities - Punch Newspapers",
+          "[not_australian] Clark Nuber PS Named a Best Public Accounting Firm for Women and Best Firm for Leadership Equity - Clark Nuber PS",
+          "[not_australian] AWCA looks to keep more women in the profession and move them into leadership - Mail & Guardian",
+          "[not_australian] Women in Business: Missouri Highlands CEO Karen White brings... - Daily American Republic"
         ],
-        "older_than_lookback": 19,
-        "not_australian": 2
+        "older_than_lookback": 62,
+        "not_australian": 5
       },
       "w-site-lawyersweekly": {
-        "kept": 4,
+        "kept": 3,
         "samples": [
+          "[no_signal_type] Q&A: Lana White, Boudica Criminal Law - Lawyers Weekly",
           "[no_signal_type] Cultivate a mindset of continuous learning - Lawyers Weekly",
           "[no_signal_type] How motherhood inspired a more inclusive boutique law firm - Lawyers Weekly",
           "[no_signal_type] Advertise - Lawyers Weekly",
-          "[no_signal_type] Dimitrios Katsaros is the Principal and Founder of Katsaros & Associates - Lawyers Weekly",
-          "[no_signal_type] Nathan Weinberger – Why Specialist Boutique Litigation Firms Are Shaping the Future of Law - Lawyers Weekly"
+          "[no_signal_type] Dimitrios Katsaros is the Principal and Founder of Katsaros & Associates - Lawyers Weekly"
         ],
-        "older_than_lookback": 19,
-        "no_signal_type": 56,
+        "older_than_lookback": 18,
+        "no_signal_type": 58,
         "sensitive": 4,
         "noise": 1,
         "no_female_signal": 1
@@ -535,7 +540,8 @@
           "[no_signal_type] 7 dates for your client's diary: less chasing, more advising in 2027 - Accountants Daily",
           "[no_signal_type] The $500m equity strategy - Accountants Daily"
         ],
-        "no_signal_type": 47,
+        "no_signal_type": 48,
+        "older_than_lookback": 1,
         "no_female_signal": 1
       },
       "w-site-ifa": {
@@ -543,21 +549,25 @@
         "samples": [
           "[no_signal_type] The $3.2 trillion wealth transfer begins with trust - Money Management",
           "[no_signal_type] CALI unveils 2026 ReCALIbrate recipients - ifa",
+          "[no_signal_type] ETF knowledge gap leaves many Aussies hesitant to start investing - InvestorDaily",
           "[no_signal_type] ASX Investor Study reveals opportunities for advisers - Money Management",
-          "[no_signal_type] How Australian investing has changed in 40 years - InvestorDaily",
-          "[no_signal_type] ASX urged to set 40:40:20 board gender benchmark - InvestorDaily"
+          "[no_signal_type] How Australian investing has changed in 40 years - InvestorDaily"
         ],
-        "no_signal_type": 66,
-        "older_than_lookback": 5,
+        "no_signal_type": 63,
+        "older_than_lookback": 6,
         "no_female_signal": 1
       },
       "w-ref-networks": {
         "kept": 0,
         "samples": [
-          "[not_australian] Future Faces member recognised with inspirational women in law award - Greater Birmingham Chambers of Commerce"
+          "[not_australian] Future Faces member recognised with inspirational women in law award - Greater Birmingham Chambers of Commerce",
+          "[not_australian] Florida association marks two years of advancing women in law enforcement - Caribbean National Weekly",
+          "[not_australian] Car crash inspires woman’s legal win - Toowoomba Chronicle",
+          "[not_australian] Illinois State Police Host 'Career Pathway' Event For Women In Law Enforcement - Patch",
+          "[not_australian] Hon. Madam Justice Cornelius Thorne Addresses Gender-Sensitive Adjudication at Women in Law Event - TCI SUN"
         ],
-        "not_australian": 1,
-        "older_than_lookback": 15
+        "older_than_lookback": 60,
+        "not_australian": 6
       },
       "w-site-womensagenda": {
         "kept": 47,
@@ -570,41 +580,40 @@
         "foreign": 1
       },
       "w-womensagenda": {
-        "kept": 0,
+        "kept": 2,
         "samples": [
+          "[no_signal_type] Professor Georgina Long takes out top science prize for pioneering melanoma research",
+          "[no_signal_type] Australia throws out hundreds of tonnes of unwanted clothing each day: how Indigenous op shops are fighting the waste",
+          "[no_signal_type] Five women killed every hour by intimate partner or family member last year",
           "[no_signal_type] Elizabeth Holmes went from a startup darling to powerful seductress – these gendered portrayals profited investors",
-          "[no_signal_type] The six-week postpartum check-up can’t be where the conversation ends",
-          "[no_signal_type] Tim Minchin to perform at Sydney vigil honouring women and children killed by violence",
-          "[no_signal_type] Jensen Huang is back. Tech bros don’t do accountability",
-          "[no_signal_type] The unintended trap for women founders in Labor’s innovative business CGT concession"
+          "[no_signal_type] The six-week postpartum check-up can’t be where the conversation ends"
         ],
-        "no_signal_type": 9,
-        "sensitive": 2
+        "no_signal_type": 8,
+        "sensitive": 1
       },
       "w-startupdaily": {
         "kept": 0,
         "samples": [
+          "[no_female_signal] AFP ends human trafficking investigation into WiseTech’s Richard White, taking no action",
+          "[no_female_signal] Telehealth startup scores $2 million Seed round",
+          "[no_female_signal] Ordering platform me&u exits to OpenTable for $450 million",
           "[no_signal_type] Biotechs warn Labor’s 15-year tax cut-off could send clinical trials offshore",
-          "[no_female_signal] Swiss chipmaker launches takeover bid for NRF-backed cybersecurity firm QuintessenceLabs",
-          "[no_female_signal] Satellite maker Myriota lands first $60 million in Series C build",
-          "[no_signal_type] Huang way, go back: Nvidia shares soar as CEO returns, and Trump faces corruption claims",
-          "[no_signal_type] Advanced Navigation comes aboard as ‘F1’ flying car creator Airspeeder readies to race"
+          "[no_female_signal] Swiss chipmaker launches takeover bid for NRF-backed cybersecurity firm QuintessenceLabs"
         ],
-        "no_signal_type": 7,
-        "no_female_signal": 3
+        "no_female_signal": 5,
+        "no_signal_type": 5
       },
       "w-smartcompany": {
         "kept": 0,
         "samples": [
-          "[no_signal_type] From house calls to video consults: NSW opens new doors for vets",
-          "[no_signal_type] Inside the AI agent platform that’s saved Deel one million hours over 90 days",
-          "[no_signal_type] A carve-out, but when? Government Digital Duty of Care plan leaves small businesses hanging",
-          "[no_female_signal] Adelaide satellite maker Myriota raises $60 million in 100 days",
-          "[no_signal_type] Nvidia reinstates Jensen Huang as CEO and Trump takes the credit"
+          "[no_signal_type] Australia’s world-first criminal AI penalties pose an accountability conundrum",
+          "[no_signal_type] ‘I lost some sleep over that’: Three founders on the biggest lessons they’ve learned about cash flow",
+          "[no_signal_type] How virtual fencing scaleup Halter cut sales admin by up to 70% with agents",
+          "[no_signal_type] Telstra worker loses unfair dismissal claim after calling himself 236 times",
+          "[no_signal_type] New ombudsman could help businesses battle social media account bans, dodgy online conduct"
         ],
-        "no_signal_type": 8,
-        "no_female_signal": 1,
-        "about_a_man": 1
+        "no_signal_type": 9,
+        "no_female_signal": 1
       }
     }
   },
@@ -717,6 +726,50 @@
       ]
     },
     {
+      "id": "p:remy tucker",
+      "category": "founder_liquidity",
+      "tags": [
+        "founder_liquidity"
+      ],
+      "categoryInferred": false,
+      "person": "Remy Tucker",
+      "organisation": "Remy Tucker",
+      "amountAudM": 5.5,
+      "amountText": "$5.5m",
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Remy Tucker has raised $5.5m to make pads as free as toilet paper",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "Remy Tucker has raised $5.5m to make pads as free as toilet paper",
+          "link": "https://womensagenda.com.au/latest/eds-blog/remy-tucker-has-raised-5-5m-to-make-pads-as-free-as-toilet-paper/",
+          "source": "Women's Agenda",
+          "pubDate": "Wed, 25 Nov 2026 01:19:15 +0000",
+          "via": "w-womensagenda"
+        },
+        {
+          "title": "Remy Tucker has raised $5.5m to make pads as free as toilet paper",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbng1d0NLRGdrb2pFX3VKeDZoXzN2ZDVPaDFGb0R4Yi1XS19rMjRMWWVId05idTJ1LURLdFFENnFCMnJOZWpMYWZfMVFVS3REYUt4TnpGLTVVdEZSSzM1OWNscWI2TkxSc19ZOVdOVXBEYkVveTVjalNveVB5VjRYSjJtSEpsbWJGalp1ZXlrUktqV2Vha3I2NHJCRE51U1Q3cVNJWVREY2lJdlF6YkE?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Wed, 25 Nov 2026 01:19:15 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-11-25T01:19:15.000Z",
+      "score": 67,
+      "reasons": [
+        "Founder: sale / raise / listing (+36)",
+        "~A$5.5m mentioned (+8)",
+        "clearly about a woman (+4)",
+        "named person in headline (+6)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)",
+        "2 articles (+2)"
+      ]
+    },
+    {
       "id": "h:australias richest women invested 1 4 billion in the worlds",
       "category": "rich_list",
       "tags": [
@@ -785,6 +838,41 @@
       ]
     },
     {
+      "id": "h:a passion for bark and leaves the billionaire couple donating",
+      "category": "rich_list",
+      "tags": [
+        "rich_list"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": 120,
+      "amountText": "$120m",
+      "femaleSignal": 0,
+      "femaleFromSearch": true,
+      "auConfidence": 1,
+      "headline": "‘A passion for bark and leaves’: The billionaire couple donating $120m to boost nature",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "‘A passion for bark and leaves’: The billionaire couple donating $120m to boost nature",
+          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOT1kzZTZPNWhNWFd2Rml6LWNhUzlydEdtZ1lmNHVlLTlPdk96X1R6bGY4dFRLbmRYZEtQVDZ1Z0tESlVkY0NVMGotd1NkWXlCRXNBeVhhTW1CMk9EQmtEb19yemItdEp1eTdpTi1UZFhGcjI5SGktOGMtTTZUSlliWVR0RjBPaTNoRUMzclNEckdDaHpIOGo3RFduWjdHWk5mV0g5MmcyUU5iR0FodmdPb3RaLV9YV1ZfbVV2WjhGLTBBYk56QUZscHNCRUJLRXhsZmRsVkRNUkFFSTBZM2c?oc=5",
+          "source": "SMH.com.au",
+          "pubDate": "Thu, 05 Nov 2026 08:00:00 GMT",
+          "via": "w-philanthropy"
+        }
+      ],
+      "latestPubDate": "2026-11-05T08:00:00.000Z",
+      "score": 61,
+      "reasons": [
+        "Rich List (+36)",
+        "~A$120m mentioned (+16)",
+        "women-specific search matched the article (+2, verify)",
+        "Australian signal 1/3 (+3)",
+        "recent (20d ago, +4)"
+      ]
+    },
+    {
       "id": "h:10 million funding round to engage boys and men in",
       "category": "founder_liquidity",
       "tags": [
@@ -814,7 +902,7 @@
         "~A$10m mentioned (+8)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -853,6 +941,41 @@
       ]
     },
     {
+      "id": "p:macadamias australia",
+      "category": "family_business",
+      "tags": [
+        "family_business"
+      ],
+      "categoryInferred": false,
+      "person": "Macadamias Australia",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 0,
+      "femaleFromSearch": true,
+      "auConfidence": 2,
+      "headline": "Macadamias Australia and Farmfresh Fine Foods win Queensland family business award",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "Macadamias Australia and Farmfresh Fine Foods win Queensland family business award",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQLU9lc1dydnF4bnJySTFsY1pMYjRReDJWY2F0WjdlTFNfRFRHNXpCSHFQRmhiN2ZBc1dBQ3FkMzF1ZlVMd3lhTDVaSW1rWVU1MkZuYWc1a01tXzhsMHl4Q2N1dE04UmRmU1E2dE1TbDBuRm43a002MUU5Q3NIZEloOGk4dEdYV3gyZmVfVHVjWlU4YjJXVG5lU1lFaGVYREktQzBVcW5veHVOUTkwQlJQT2tHY2xROURxc0ctS0w2azhwNnFPNWdhWmNFQS1xVHc?oc=5",
+          "source": "FreshPlaza",
+          "pubDate": "Mon, 16 Nov 2026 15:39:54 GMT",
+          "via": "w-family"
+        }
+      ],
+      "latestPubDate": "2026-11-16T15:39:54.000Z",
+      "score": 51,
+      "reasons": [
+        "Family business / family office (+32)",
+        "women-specific search matched the article (+2, verify)",
+        "named person in headline (+6)",
+        "Australian signal 2/3 (+7)",
+        "recent (8d ago, +4)"
+      ]
+    },
+    {
       "id": "p:invest rural",
       "category": "founder_liquidity",
       "tags": [
@@ -884,7 +1007,7 @@
         "women-specific search matched the article (+2, verify)",
         "named person in headline (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -968,6 +1091,42 @@
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
         "3 articles (+4)"
+      ]
+    },
+    {
+      "id": "h:women are set to inherit trillions could it help end",
+      "category": "philanthropy",
+      "tags": [
+        "philanthropy",
+        "women_investing"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women are set to inherit trillions. Could it help end violence against women?",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "Women are set to inherit trillions. Could it help end violence against women?",
+          "link": "https://womensagenda.com.au/latest/women-philanthropists-gather-at-admiralty-house-to-chart-a-bigger-role-in-ending-violence-against-women/",
+          "source": "Women's Agenda",
+          "pubDate": "Tue, 24 Nov 2026 22:56:19 +0000",
+          "via": "w-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-11-24T22:56:19.000Z",
+      "score": 50,
+      "reasons": [
+        "Philanthropy (+30)",
+        "also women investing initiative (+5)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
       ]
     },
     {
@@ -1069,7 +1228,7 @@
         "Rich List (+36)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (27d ago, +4)"
+        "recent (28d ago, +4)"
       ]
     },
     {
@@ -1155,7 +1314,7 @@
       "femaleFromSearch": false,
       "auConfidence": 1,
       "headline": "Ovum raises AUD $4 million to expand women's health app",
-      "firstSeen": "2026-11-24T04:22:26.407Z",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
       "articles": [
         {
           "title": "Ovum raises AUD $4 million to expand women's health app",
@@ -1210,6 +1369,40 @@
       ]
     },
     {
+      "id": "h:women philanthropists gather at admiralty house to chart a bigger",
+      "category": "philanthropy",
+      "tags": [
+        "philanthropy"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women philanthropists gather at Admiralty House to chart a bigger role in ending violence against women",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "Women philanthropists gather at Admiralty House to chart a bigger role in ending violence against women",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTRhbWVHWGZYQk85bDBFVjM0SVJkMFNwNlRva0tZazRqNXJwQVZURXRBd2pjcFkxUmdZNnZWVWFkUml6SlJhaXVkaVhxOGR4R3BXLXo4eGRTcGNBUEtMeUQtVjNTRVhXeFQzLVVNci1KX2Z1bmR2ZURNTlUyWS1yRzhETlgydDJQOUY2RlJDUVo1SEx2bUZZdjdDTzl0MDV0X0Yxazk1SXhodEF5NVlMNHU4cDlrNldoMTI4dk5mRHMzLWU2VGp5UkR4ZTMySXdJMmVzWHF3?oc=5",
+          "source": "Women's Agenda",
+          "pubDate": "Tue, 24 Nov 2026 22:56:19 GMT",
+          "via": "w-site-womensagenda"
+        }
+      ],
+      "latestPubDate": "2026-11-24T22:56:19.000Z",
+      "score": 45,
+      "reasons": [
+        "Philanthropy (+30)",
+        "clearly about a woman (+4)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
+      ]
+    },
+    {
       "id": "h:live australias real time rich list",
       "category": "rich_list",
       "tags": [
@@ -1240,7 +1433,7 @@
         "Rich List (+36)",
         "women-specific search matched the article (+2, verify)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -1445,7 +1638,7 @@
         "also referral partner (law / accounting) (+5)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -1480,7 +1673,7 @@
         "clearly about a woman (+4)",
         "named person in headline (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -1515,7 +1708,7 @@
         "clearly about a woman (+4)",
         "named person in headline (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -1647,6 +1840,39 @@
       "reasons": [
         "Philanthropy (+30)",
         "clearly about a woman (+4)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
+      "id": "h:sas next generation winemakers",
+      "category": "family_business",
+      "tags": [
+        "family_business"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 0,
+      "femaleFromSearch": true,
+      "auConfidence": 2,
+      "headline": "SA’s next generation winemakers",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "SA’s next generation winemakers",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMlFPMFFiUzlLM3pHcWNwS19yNnAxLXY1Skt1Sm1odl9iNEQ2T1p5c1RTbmtSZHlTUEFocWEzc0t5Q0t2NHZYV2pHakNHOHBrbGVwUk9Fc0d3RHZTZ3pHV1p1aEtqOGZVWUVUeHFvSE5vWmxjcHNicmkwWTBIXy1mTU9Lc0YwSWtNLVhqa3lEYjFzZEEzb3FWMW1Xdw?oc=5",
+          "source": "InDaily South Australia",
+          "pubDate": "Thu, 27 Aug 2026 07:00:00 GMT",
+          "via": "w-family"
+        }
+      ],
+      "latestPubDate": "2026-08-27T07:00:00.000Z",
+      "score": 41,
+      "reasons": [
+        "Family business / family office (+32)",
+        "women-specific search matched the article (+2, verify)",
         "Australian signal 2/3 (+7)"
       ]
     },
@@ -1818,7 +2044,7 @@
         "Women investing initiative (+28)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -1859,8 +2085,42 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (12d ago, +4)",
+        "recent (13d ago, +4)",
         "2 articles (+2)"
+      ]
+    },
+    {
+      "id": "p:libby pallot",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": "Libby Pallot",
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 1,
+      "headline": "Women in Law Forum 2025 - Libby Pallot",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "Women in Law Forum 2025 - Libby Pallot",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBPcUd1cTM1NTlwNmxHOXVwMFpLZENsa3JPbFJLendBcUQzTTRFRFdyOFhTdnN1N19vblZRb0p2Q1JqYUtpb0xmQmhaZ21SbHRnUjhyOWx0Y0FnaGNNa0gtQ05XeGJVY19rYVRCRHBwQmJqVTkwaVhOZEkzajcydw?oc=5",
+          "source": "Lawyers Weekly",
+          "pubDate": "Fri, 14 Aug 2026 00:26:57 GMT",
+          "via": "w-site-lawyersweekly"
+        }
+      ],
+      "latestPubDate": "2026-08-14T00:26:57.000Z",
+      "score": 39,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "named person in headline (+6)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -2028,7 +2288,7 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -2062,7 +2322,7 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (12d ago, +4)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -2096,7 +2356,7 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (13d ago, +4)"
+        "recent (14d ago, +4)"
       ]
     },
     {
@@ -2130,7 +2390,7 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -2164,7 +2424,7 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -2198,7 +2458,7 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -2232,7 +2492,40 @@
         "Referral partner (law / accounting) (+26)",
         "clearly about a woman (+4)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
+      ]
+    },
+    {
+      "id": "h:lawyer for women in sydney swans hotel scandal makes explosive",
+      "category": "referral_partner",
+      "tags": [
+        "referral_partner"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 1,
+      "femaleFromSearch": false,
+      "auConfidence": 2,
+      "headline": "Lawyer for women in Sydney Swans hotel scandal makes explosive new claim",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "Lawyer for women in Sydney Swans hotel scandal makes explosive new claim",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTzc2dUx0a0ZqaFN3eV9oQlNETmZqTkxReERDMUZ6dldmU19xQkUwU1gwcDVkOWNUTGxELVBpTGdYR1g4RDllY3RHSTVpZnA3TkduT3g5X0NCN1ZOTU1wLTFTbnF0SjhTeG9xbmc5dElpZF9mNDFMMGFOTjBGSDd2M2Z2cFluX0M5WkFiWC1SeFJhbm9FVUJhR0p4bWZaaVdtb2lWMHVNOWpMa1JBbXZ5NGMwa0zSAboBQVVfeXFMT0VYTWZkOTFJQlRzUkZycVlUQWYzS0ozMEl3cVV4bFREcVZHc0JQQ0EzVW5YbGdUaXByNG9nakJvcHhWWmg5YTFSRURmakYweDJmUzAtcERJVzhfVEFpVzlFX29sVkFOMG9GVm5zazlGSFUwYUpYNmszR2NSSEhjcGtCUlB4TmdoLTNtcU5UT0hWU1lWTDJEOHFfTW1XcEpER1lQdUtPaGpUVW0walJGRzZwRlFEbXduRHhB?oc=5",
+          "source": "7NEWS",
+          "pubDate": "Fri, 21 Aug 2026 07:00:00 GMT",
+          "via": "w-ref-law"
+        }
+      ],
+      "latestPubDate": "2026-08-21T07:00:00.000Z",
+      "score": 37,
+      "reasons": [
+        "Referral partner (law / accounting) (+26)",
+        "clearly about a woman (+4)",
+        "Australian signal 2/3 (+7)"
       ]
     },
     {
@@ -2302,6 +2595,39 @@
       ]
     },
     {
+      "id": "h:family owned sydney candle co celebrates 20 years in cortland",
+      "category": "family_business",
+      "tags": [
+        "family_business"
+      ],
+      "categoryInferred": false,
+      "person": null,
+      "organisation": null,
+      "amountAudM": null,
+      "amountText": null,
+      "femaleSignal": 0,
+      "femaleFromSearch": true,
+      "auConfidence": 1,
+      "headline": "Family-owned Sydney Candle Co. celebrates 20 years in Cortland",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
+      "articles": [
+        {
+          "title": "Family-owned Sydney Candle Co. celebrates 20 years in Cortland",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0xUzFNM0h6Q3oyN1V5WWc3SE9SbzJTTzZWcXNQYUlBX1k4cUJSTUV4Ynl6ODFPdzl2QVFEaWUtVHpIV1ZUYko5RUI1VjVCTW05NFZjTTNEaDZVSjNJQUo4eFRxc2NjMEc3dTVEN05mRGF5SWJLeEE?oc=5",
+          "source": "Mahoning Matters",
+          "pubDate": "Fri, 19 Jun 2026 07:00:00 GMT",
+          "via": "w-family"
+        }
+      ],
+      "latestPubDate": "2026-06-19T07:00:00.000Z",
+      "score": 37,
+      "reasons": [
+        "Family business / family office (+32)",
+        "women-specific search matched the article (+2, verify)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
       "id": "h:policy experts champion australian gender lens amid growing climate emergency",
       "category": "women_investing",
       "tags": [
@@ -2329,7 +2655,7 @@
       "reasons": [
         "Women investing initiative (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -2514,7 +2840,7 @@
       "femaleFromSearch": false,
       "auConfidence": 1,
       "headline": "Elizabeth Holmes went from a startup darling to powerful seductress – these gendered portrayals profited investors",
-      "firstSeen": "2026-11-24T04:22:26.407Z",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
       "articles": [
         {
           "title": "Elizabeth Holmes went from a startup darling to powerful seductress – these gendered portrayals profited investors",
@@ -2532,7 +2858,7 @@
         "signal type inferred from the search, not the headline (−15)",
         "named person in headline (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (0d ago, +8)"
+        "recent (1d ago, +8)"
       ]
     },
     {
@@ -2769,7 +3095,7 @@
       ]
     },
     {
-      "id": "h:i told them everything nothing really happened australia is still",
+      "id": "h:australia throws out hundreds of tonnes of unwanted clothing each",
       "category": "women_investing",
       "tags": [
         "women_investing"
@@ -2782,25 +3108,25 @@
       "femaleSignal": 1,
       "femaleFromSearch": false,
       "auConfidence": 2,
-      "headline": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
-      "firstSeen": "2026-11-24T04:22:26.407Z",
+      "headline": "Australia throws out hundreds of tonnes of unwanted clothing each day: how Indigenous op shops are fighting the waste",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
       "articles": [
         {
-          "title": "“I told them everything. Nothing really happened.” Australia is still failing child victim-survivors when they ask for help",
-          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQVWlrRm9Ha2xDSklMNm5IWGNvbE5VS0ZvWC1YQ0RqV2pTVVRYRFBucjNTbl9OYkFlOFRKZEpXcTdpZkp3UXlIRE5zd1psUG10YmJnY2ZSVzhnQWlFQjVYeEEzSkFxVWMwS05RLTZ3M2JLOElmVEJHNzlqaVlTSnhOZ2R3Tk0tTE5NcC1xQ1QtU1BtUGlHN0FJSm4tOGozaWJCdnVKdHNHNi12OWF0eWRrZDFFUldLM2hMaDh6ZXZHM3FkNU1mZXJTbk56eU1KVlE5cFJNeGNPR3ZPQ09kdklSR1V2OWhaU0xPUUtV?oc=5",
+          "title": "Australia throws out hundreds of tonnes of unwanted clothing each day: how Indigenous op shops are fighting the waste",
+          "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUUxHWFF5cTNISnZmNFJoRk1Ka2JIRWRiMVV3QmJBWGtiaW5rU041Q3FYTTJzZ2ZLamJkMlpTOUxJc2g4aVl4a1E1QVlPcHpkX2RsNThoMHlucnZQZnZFeGJaeHFONjlXY21iSzh6MlFWRnZaVnNmTUpoYjI4UjJMVElaTTJIQUxGTTg2S2pqTVRNSHJna2M3ZWVSOE1nZ3FWOHNIODdrOHFBek0tSFZkN3RZZGZ0aERaWnNzLWpYTlZRM0U0bFV1RWludXV6cFl0bHlhbXdiajRjVzdoZmhOT09RdnVpRk0?oc=5",
           "source": "Women's Agenda",
-          "pubDate": "Mon, 23 Nov 2026 00:57:21 GMT",
+          "pubDate": "Tue, 24 Nov 2026 22:53:25 GMT",
           "via": "w-site-womensagenda"
         }
       ],
-      "latestPubDate": "2026-11-23T00:57:21.000Z",
+      "latestPubDate": "2026-11-24T22:53:25.000Z",
       "score": 32,
       "reasons": [
         "Women investing initiative (+28)",
         "clearly about a woman (+4)",
         "signal type inferred from the search, not the headline (−15)",
         "Australian signal 2/3 (+7)",
-        "recent (1d ago, +8)"
+        "recent (0d ago, +8)"
       ]
     },
     {
@@ -2835,42 +3161,7 @@
         "clearly about a woman (+4)",
         "signal type inferred from the search, not the headline (−15)",
         "Australian signal 2/3 (+7)",
-        "recent (4d ago, +8)"
-      ]
-    },
-    {
-      "id": "h:victorias next government needs a plan for ending mens violence",
-      "category": "women_investing",
-      "tags": [
-        "women_investing"
-      ],
-      "categoryInferred": true,
-      "person": null,
-      "organisation": null,
-      "amountAudM": null,
-      "amountText": null,
-      "femaleSignal": 1,
-      "femaleFromSearch": false,
-      "auConfidence": 2,
-      "headline": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
-      "firstSeen": "2026-11-24T04:22:26.407Z",
-      "articles": [
-        {
-          "title": "Victoria’s next government needs a plan for ending men's violence that goes beyond condolences",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWVhwem84Q0dXRnJ5a0JiTFl6UkxTQUhHMXoyME5tZkZjVmxhR1hUSzBWTEZSZW5SSkU5YUcxOWZEcnBSeUF5dHNnQzdGTzl1Q1NBeUxjNTNtMFgyZ1JUeEVpMXF3UXVuaHlRYm1hVnpsbFBmR19SMWdNN0IwX1VHNTRQQ0YxUmZobnpQLXVDZ093SXhqVy1kMXBueW9JSnMzM0ZEdEE2cUdUTjFfa0Rr?oc=5",
-          "source": "Women's Agenda",
-          "pubDate": "Tue, 17 Nov 2026 22:24:15 GMT",
-          "via": "w-site-womensagenda"
-        }
-      ],
-      "latestPubDate": "2026-11-17T22:24:15.000Z",
-      "score": 32,
-      "reasons": [
-        "Women investing initiative (+28)",
-        "clearly about a woman (+4)",
-        "signal type inferred from the search, not the headline (−15)",
-        "Australian signal 2/3 (+7)",
-        "recent (6d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2941,7 +3232,7 @@
         "signal type inferred from the search, not the headline (−15)",
         "named person in headline (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -2959,7 +3250,7 @@
       "femaleFromSearch": false,
       "auConfidence": 1,
       "headline": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",
-      "firstSeen": "2026-11-24T04:22:26.407Z",
+      "firstSeen": "2026-11-25T03:07:27.765Z",
       "articles": [
         {
           "title": "Leah Armstrong and Cat Fay appointed to Paul Ramsay Foundation board",
@@ -2977,7 +3268,7 @@
         "signal type inferred from the search, not the headline (−15)",
         "named person in headline (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (20d ago, +4)"
+        "recent (21d ago, +4)"
       ]
     }
   ]
