@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-27T02:21:11.474Z",
+  "generatedAt": "2026-11-28T02:06:00.414Z",
   "lookbackDays": 30,
   "enrichment": "off (no ANTHROPIC_API_KEY secret set)",
   "sources": [
     {
       "id": "founder-exit",
       "ok": true,
-      "count": 79
+      "count": 34
     },
     {
       "id": "trade-sale",
       "ok": true,
-      "count": 12
+      "count": 45
     },
     {
       "id": "private-equity",
       "ok": true,
-      "count": 33
+      "count": 71
     },
     {
       "id": "pe-firms",
       "ok": true,
-      "count": 70
+      "count": 69
     },
     {
       "id": "funding-late",
@@ -31,23 +31,22 @@
     {
       "id": "funding-any",
       "ok": true,
-      "count": 70
+      "count": 71
     },
     {
       "id": "ipo",
       "ok": true,
-      "count": 60
+      "count": 59
     },
     {
       "id": "takeover",
       "ok": true,
-      "count": 33
+      "count": 32
     },
     {
       "id": "selldown",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP 429"
+      "ok": true,
+      "count": 2
     },
     {
       "id": "site-startupdaily",
@@ -56,19 +55,18 @@
     },
     {
       "id": "site-smartcompany",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP 429"
+      "ok": true,
+      "count": 42
     },
     {
       "id": "site-businessnews",
       "ok": true,
-      "count": 18
+      "count": 24
     },
     {
       "id": "site-capitalbrief",
       "ok": true,
-      "count": 78
+      "count": 73
     },
     {
       "id": "startupdaily",
@@ -120,7 +118,7 @@
         "Acquisition / trade sale (+40)",
         "~A$800m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -153,7 +151,7 @@
         "Acquisition / trade sale (+40)",
         "~A$800m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (5d ago, +8)"
+        "recent (6d ago, +8)"
       ]
     },
     {
@@ -187,7 +185,7 @@
         "Acquisition / trade sale (+40)",
         "~A$975m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -220,7 +218,7 @@
         "Acquisition / trade sale (+40)",
         "~A$450m deal (+20)",
         "Australian signal 2/3 (+7)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -253,7 +251,7 @@
         "Founder sell-down (+38)",
         "~A$800m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -293,7 +291,7 @@
         "Acquisition / trade sale (+40)",
         "~A$1450m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)",
+        "recent (25d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -328,7 +326,7 @@
         "Acquisition / trade sale (+40)",
         "~A$760m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -361,7 +359,7 @@
         "Acquisition / trade sale (+40)",
         "~A$1450m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -426,7 +424,7 @@
         "Acquisition / trade sale (+40)",
         "~A$450m deal (+20)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -459,7 +457,7 @@
         "Acquisition / trade sale (+40)",
         "~A$450m deal (+20)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -492,7 +490,7 @@
         "Acquisition / trade sale (+40)",
         "~A$450m deal (+20)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -525,7 +523,7 @@
         "Acquisition / trade sale (+40)",
         "~A$450m deal (+20)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -558,7 +556,7 @@
         "Private equity deal (+34)",
         "~A$604m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -591,7 +589,7 @@
         "Private equity deal (+34)",
         "~A$834m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -624,7 +622,7 @@
         "Private equity deal (+34)",
         "~A$4000m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -657,7 +655,7 @@
         "Private equity deal (+34)",
         "~A$3400m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (26d ago, +4)"
+        "recent (27d ago, +4)"
       ]
     },
     {
@@ -690,7 +688,7 @@
         "Private equity deal (+34)",
         "~A$123m deal (+20)",
         "Australian signal 2/3 (+7)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -744,7 +742,7 @@
         "Acquisition / trade sale (+40)",
         "founder/family-owned mention (+12)",
         "Australian signal 2/3 (+7)",
-        "recent (11d ago, +4)",
+        "recent (12d ago, +4)",
         "4 articles (+6)"
       ]
     },
@@ -778,7 +776,7 @@
         "Acquisition / trade sale (+40)",
         "~A$244m deal (+20)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -812,7 +810,7 @@
         "Private equity deal (+34)",
         "~A$1000m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -845,41 +843,7 @@
         "Private equity deal (+34)",
         "~A$550m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (19d ago, +4)"
-      ]
-    },
-    {
-      "id": "co:advent",
-      "company": "Advent",
-      "counterparty": null,
-      "type": "pe",
-      "tags": [
-        "pe",
-        "funding"
-      ],
-      "amountAudM": 43000,
-      "amountText": "$43 billion",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Advent raises $43 billion private equity fund, expands in Asia Pacific Advent raises $43 billion private equity fund, expands in Asia Pacific Capital Brief",
-      "firstSeen": "2026-11-17T02:34:03.253Z",
-      "articles": [
-        {
-          "title": "Advent raises $43 billion private equity fund, expands in Asia Pacific",
-          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTVZUaWlMV19wRVRNNWg3eG5BVjZPbjRBMXNkY0wwQTRud3FONTlmdnhxamE4RDhSTUVPX2E4UmtpejhmRTNGVjkybW0xQW90bHNRTGJYZGxEMnYtRjRTVVRMSE5qUzZ6akt0YWNfOUlSZEl4bWpFX2FkUVJ3NkJXMFNJNjlsTzVkWnd1a1JmX2RUUTMzVmhBVVotLV9WQ3NyU0RmZ0xEZTdHZFdXcDdKS0xYRUV5ektJaU1waU9OYmlRaWZjSnF6NU9PdnBhRDVjS3ZoejRCOXNsMlgy?oc=5",
-          "source": "Capital Brief",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "via": "site-capitalbrief"
-        }
-      ],
-      "latestPubDate": "2026-10-28T07:00:00.000Z",
-      "score": 66,
-      "reasons": [
-        "Private equity deal (+34)",
-        "~A$43000m deal (+25)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
+        "recent (20d ago, +4)"
       ]
     },
     {
@@ -976,7 +940,7 @@
         "IPO / listing (+28)",
         "~A$1700m deal (+25)",
         "Australian signal 2/3 (+7)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -1016,7 +980,7 @@
         "IPO / listing (+28)",
         "~A$1100m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (22d ago, +4)",
+        "recent (23d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -1050,7 +1014,40 @@
         "Acquisition / trade sale (+40)",
         "~A$70m deal (+15)",
         "Australian signal 1/3 (+3)",
-        "recent (22d ago, +4)"
+        "recent (23d ago, +4)"
+      ]
+    },
+    {
+      "id": "co:advent",
+      "company": "Advent",
+      "counterparty": null,
+      "type": "pe",
+      "tags": [
+        "pe",
+        "funding"
+      ],
+      "amountAudM": 43000,
+      "amountText": "$43 billion",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Advent raises $43 billion private equity fund, expands in Asia Pacific Advent raises $43 billion private equity fund, expands in Asia Pacific Capital Brief",
+      "firstSeen": "2026-11-17T02:34:03.253Z",
+      "articles": [
+        {
+          "title": "Advent raises $43 billion private equity fund, expands in Asia Pacific",
+          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTVZUaWlMV19wRVRNNWg3eG5BVjZPbjRBMXNkY0wwQTRud3FONTlmdnhxamE4RDhSTUVPX2E4UmtpejhmRTNGVjkybW0xQW90bHNRTGJYZGxEMnYtRjRTVVRMSE5qUzZ6akt0YWNfOUlSZEl4bWpFX2FkUVJ3NkJXMFNJNjlsTzVkWnd1a1JmX2RUUTMzVmhBVVotLV9WQ3NyU0RmZ0xEZTdHZFdXcDdKS0xYRUV5ektJaU1waU9OYmlRaWZjSnF6NU9PdnBhRDVjS3ZoejRCOXNsMlgy?oc=5",
+          "source": "Capital Brief",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "site-capitalbrief"
+        }
+      ],
+      "latestPubDate": "2026-10-28T07:00:00.000Z",
+      "score": 62,
+      "reasons": [
+        "Private equity deal (+34)",
+        "~A$43000m deal (+25)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -1115,7 +1112,7 @@
         "Acquisition / trade sale (+40)",
         "~A$16m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -1155,7 +1152,7 @@
         "Acquisition / trade sale (+40)",
         "founder/family-owned mention (+12)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)",
+        "recent (9d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -1189,7 +1186,7 @@
         "Takeover / scheme (+28)",
         "~A$945m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -1222,7 +1219,7 @@
         "Takeover / scheme (+28)",
         "~A$604m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -1255,7 +1252,7 @@
         "Takeover / scheme (+28)",
         "~A$604m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -1289,7 +1286,7 @@
         "IPO / listing (+28)",
         "~A$1200m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -1322,7 +1319,7 @@
         "Takeover / scheme (+28)",
         "~A$9300m deal (+25)",
         "Australian signal 1/3 (+3)",
-        "recent (22d ago, +4)"
+        "recent (23d ago, +4)"
       ]
     },
     {
@@ -1387,7 +1384,7 @@
         "Founder sell-down (+38)",
         "~A$20m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -1420,7 +1417,7 @@
         "IPO / listing (+28)",
         "~A$180m deal (+20)",
         "Australian signal 2/3 (+7)",
-        "recent (12d ago, +4)"
+        "recent (13d ago, +4)"
       ]
     },
     {
@@ -1460,7 +1457,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 2/3 (+7)",
-        "recent (1d ago, +8)",
+        "recent (2d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -1501,7 +1498,7 @@
         "IPO / listing (+28)",
         "~A$34.4m deal (+15)",
         "Australian signal 2/3 (+7)",
-        "recent (15d ago, +4)",
+        "recent (16d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -1586,6 +1583,110 @@
       ]
     },
     {
+      "id": "co:pickles",
+      "company": "Pickles",
+      "counterparty": "EQT",
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "EQT to acquire Australian auction platform Pickles from Apax EQT to acquire Australian auction platform Pickles from Apax Alternatives Watch EQT to acquire Australian auction marketplace Pickles from Apax Funds EQT to acquire Australian auction marketplace Pickles from Apax Funds PEI Private Equity",
+      "firstSeen": "2026-11-21T23:52:47.416Z",
+      "articles": [
+        {
+          "title": "EQT to acquire Australian auction platform Pickles from Apax",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObEV5WXZ6TmRFSVozUUNwX21Qd3AtRDZPQ0E2VXVBVHR2OXhpYW44UFh0em01Q2huUWI3R0hhc2t5bEZOWGQyQUpuZ2gtVC0xSmpqMnV3MjJNTVBGcW93R2ZsSllJbGhxVlZlcHVuVW02NE9Wd0FrTTl0aDRTOXJRYlMwdzZ2VHcwc3FzdUVZbDk5cXVBMUZESVdZUm96ajlzU01z?oc=5",
+          "source": "Alternatives Watch",
+          "pubDate": "Sat, 21 Nov 2026 23:07:54 GMT",
+          "via": "private-equity"
+        },
+        {
+          "title": "EQT to acquire Australian auction marketplace Pickles from Apax Funds",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPV1owRUxsZVdEVzZuMGV2MHRtSHpoWlV1TkxfanRTZ1FnMFBic3BkS1k5Q1gzV2o5NXVkLVpyejgxYzFBeUMxTndnUTlLWkJUdzNzdXFLWU5UbzJsMEpYM2NqWnI5SGRoOGNPU2pfWHBtTl9kUlRGMDRsRW9Ya1FJSGlhUlNUQkRQZGJ6NW13TkZmOVNMT2l1Unp6UllZNEd6ejQwRmRXVmd3YmFNXzBHcEk3Zw?oc=5",
+          "source": "PEI Private Equity",
+          "pubDate": "Fri, 20 Nov 2026 12:27:08 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-11-21T23:07:54.000Z",
+      "score": 53,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (6d ago, +8)",
+        "2 articles (+2)"
+      ]
+    },
+    {
+      "id": "co:515 000 shares",
+      "company": "515,000 Shares",
+      "counterparty": "Austral Resources Australia Director Michael Hansel",
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Austral Resources Australia Director Michael Hansel Acquires 515,000 Shares for $25,001.47 Austral Resources Australia Director Michael Hansel Acquires 515,000 Shares for $25,001.47 Kalkine",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
+      "articles": [
+        {
+          "title": "Austral Resources Australia Director Michael Hansel Acquires 515,000 Shares for $25,001.47",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPN0ZiZWFNWTlSUWJSOVdzdVkwc2F4TXo1bndreWlJNjV2Ymp5bEpNMVpFQjFubWpTd1lPUTFmWFp6ZHlFdDFzWkw3M2hwMkNFd05PMTg3WVFtOGZEWEhkV0lVNS1IanpKeWVDem1ZcXYwVFFsbFJMbzhtMzhOaEZXZ1NYZmFncEZwdzJBS1NsMnB5b0NXdUpDZ0NJODIyMVc3ZkVpN2M5bUptdkxKQzR2T2NYVUhzWlI1UTRIWVJORlpvVlBISTlF?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 27 Nov 2026 03:42:45 GMT",
+          "via": "private-equity"
+        }
+      ],
+      "latestPubDate": "2026-11-27T03:42:45.000Z",
+      "score": 51,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (1d ago, +8)"
+      ]
+    },
+    {
+      "id": "co:wa",
+      "company": "WA",
+      "counterparty": null,
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Global company acquires WA rockbreaking business Global company acquires WA rockbreaking business businessnews.com.au",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
+      "articles": [
+        {
+          "title": "Global company acquires WA rockbreaking business",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOamhtMHFhU29MYXBzZWN2OXlMX1U3eWMtTlVvLW5pWElQUzNBR1Y1Q2RENjJmcU5IOVZvd2dVYVl1cnFSOUM4eGFPRGlRYWhMR3VmWU5Nb0hNX0p0dTYzMkIxdzd6NGtDRjBJd0RLRW9Yb3A4a2xOZEdUNkZLRzYwR1VOM19GUXRWQmNpbWQ2Z0ZtTDB6RngyYmw4NjVETVJsNkdGSFdjckw2UWNoZEE?oc=5",
+          "source": "businessnews.com.au",
+          "pubDate": "Thu, 26 Nov 2026 07:43:19 GMT",
+          "via": "site-businessnews"
+        }
+      ],
+      "latestPubDate": "2026-11-26T07:43:19.000Z",
+      "score": 51,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)",
+        "recent (2d ago, +8)"
+      ]
+    },
+    {
       "id": "co:studio labels",
       "company": "Studio Labels",
       "counterparty": "Reflex Labels & Packaging Asia Pacific",
@@ -1614,7 +1715,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -1646,7 +1747,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -1674,38 +1775,6 @@
         }
       ],
       "latestPubDate": "2026-11-22T23:32:10.000Z",
-      "score": 51,
-      "reasons": [
-        "Acquisition / trade sale (+40)",
-        "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
-      ]
-    },
-    {
-      "id": "co:pickles",
-      "company": "Pickles",
-      "counterparty": "EQT",
-      "type": "exit",
-      "tags": [
-        "exit"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "EQT to acquire Australian auction platform Pickles from Apax EQT to acquire Australian auction platform Pickles from Apax Alternatives Watch",
-      "firstSeen": "2026-11-21T23:52:47.416Z",
-      "articles": [
-        {
-          "title": "EQT to acquire Australian auction platform Pickles from Apax",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObEV5WXZ6TmRFSVozUUNwX21Qd3AtRDZPQ0E2VXVBVHR2OXhpYW44UFh0em01Q2huUWI3R0hhc2t5bEZOWGQyQUpuZ2gtVC0xSmpqMnV3MjJNTVBGcW93R2ZsSllJbGhxVlZlcHVuVW02NE9Wd0FrTTl0aDRTOXJRYlMwdzZ2VHcwc3FzdUVZbDk5cXVBMUZESVdZUm96ajlzU01z?oc=5",
-          "source": "Alternatives Watch",
-          "pubDate": "Sat, 21 Nov 2026 23:07:54 GMT",
-          "via": "private-equity"
-        }
-      ],
-      "latestPubDate": "2026-11-21T23:07:54.000Z",
       "score": 51,
       "reasons": [
         "Acquisition / trade sale (+40)",
@@ -1742,7 +1811,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 2/3 (+7)",
-        "recent (29d ago, +4)"
+        "recent (30d ago, +4)"
       ]
     },
     {
@@ -1807,7 +1876,7 @@
         "IPO / listing (+28)",
         "~A$45m deal (+15)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -1841,7 +1910,7 @@
         "IPO / listing (+28)",
         "~A$80m deal (+15)",
         "Australian signal 1/3 (+3)",
-        "recent (20d ago, +4)"
+        "recent (21d ago, +4)"
       ]
     },
     {
@@ -1874,55 +1943,7 @@
         "IPO / listing (+28)",
         "~A$8m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (1d ago, +8)"
-      ]
-    },
-    {
-      "id": "co:jacaranda natural resources",
-      "company": "Jacaranda Natural Resources",
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": 8,
-      "amountText": "$8 million",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 2,
-      "text": "Jacaranda Natural Resources debuts on ASX after $8 million IPO Jacaranda Natural Resources debuts on ASX after $8 million IPO Mining.com.au Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share Kalkine Jacaranda Natural Resources Debuts on ASX Following Successful $8M IPO Jacaranda Natural Resources Debuts on ASX Following Successful $8M IPO Sharecafe",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Jacaranda Natural Resources debuts on ASX after $8 million IPO",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYjBTd25rYWZ6RW5vcWVycmp5djhxb1lZeEtlXzk1eUpkY0hZZDlrYTFvNDk0a2VTMGdEcnU3NHBTdWlmYmIwX0RKV0JDYmpiQkFuR3JYTV8wRHU5dHhvVDBUejNTc05XZFZaY2dtM1pXVDRMUF9tWllOcE5ESjN0d3FUNjIzbEItMUxrQg?oc=5",
-          "source": "Mining.com.au",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "via": "ipo"
-        },
-        {
-          "title": "Jacaranda Natural Resources Debuts on ASX Following Successful $8M IPO",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPV3pUaGJ5VndzVDJKM2pWZFVMM1hrOVEzZDVyZXc3NVlPOWo1NWlxbmxIdWRYLVY3VEhQV0x5UW1UcEthcXZGb21zUlZiRG01Y2JZYldWLUpzX0ZVSy1CYjJNY0dYSU41M2xkUjljZ2hzVHJLTmtvUWdMTzBoMldTRkwzMVZOTTVsZkVhM01IdzdvMjJuMFVWdy1DdEd6dV9yQTFCTVBsRzBIRE1mck1R?oc=5",
-          "source": "Sharecafe",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "via": "ipo"
-        },
-        {
-          "title": "Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORjdFaTBtOFIwRHdMcFk2QTd5eVVuV0VnMmxGTktESVJJV2tWV3NRNVcxRkF6bUFJeU45eW80OFc2aGl1Vm9ZQ1NRWlZiZ0F3dzZvNEpRYUUwTjFZcjRNRzdMaFV5eTF3NlY3SUJpQmZ2OG9neGRZLU9TLUVEVHc3cVBGMkppY1ZET0tlXzNpdUR0THNYeFhSeExYU3VqZHlRUTVnOTZzeFlid2Vmc051R3lMcjYzNmU4NE1TZkR1T1JKZw?oc=5",
-          "source": "Kalkine",
-          "pubDate": "Wed, 28 Oct 2026 00:53:39 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-10-28T07:00:00.000Z",
-      "score": 48,
-      "reasons": [
-        "IPO / listing (+28)",
-        "~A$8m deal (+5)",
-        "Australian signal 2/3 (+7)",
-        "recent (30d ago, +4)",
-        "3 articles (+4)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -1984,7 +2005,7 @@
         "~A$160m deal (+10)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (0d ago, +8)",
+        "recent (1d ago, +8)",
         "5 articles (+6)"
       ]
     },
@@ -2033,7 +2054,7 @@
         "~A$60m deal (+8)",
         "late-stage round (+6)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)",
+        "recent (4d ago, +8)",
         "3 articles (+4)"
       ]
     },
@@ -2073,7 +2094,7 @@
       "reasons": [
         "Founder sell-down (+38)",
         "Australian signal 1/3 (+3)",
-        "recent (7d ago, +4)",
+        "recent (8d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -2106,7 +2127,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (7d ago, +4)"
+        "recent (8d ago, +4)"
       ]
     },
     {
@@ -2138,7 +2159,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -2170,7 +2191,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -2202,7 +2223,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -2234,7 +2255,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -2266,7 +2287,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -2298,7 +2319,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -2330,7 +2351,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -2362,7 +2383,7 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
@@ -2395,71 +2416,39 @@
       "reasons": [
         "Acquisition / trade sale (+40)",
         "Australian signal 1/3 (+3)",
-        "recent (25d ago, +4)"
+        "recent (26d ago, +4)"
       ]
     },
     {
-      "id": "co:alfred cove",
-      "company": "Alfred Cove",
-      "counterparty": "Willetton",
-      "type": "exit",
+      "id": "hl:australian super funds tighten direct lending criteria as spreads narrow",
+      "company": null,
+      "counterparty": null,
+      "type": "pe",
       "tags": [
-        "exit"
+        "pe"
       ],
       "amountAudM": null,
       "amountText": null,
       "founderSignal": false,
       "secondarySignal": false,
       "auConfidence": 1,
-      "text": "Willetton doctor buys Alfred Cove office Willetton doctor buys Alfred Cove office businessnews.com.au",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "text": "Australian super funds tighten direct lending criteria as spreads narrow Australian super funds tighten direct lending criteria as spreads narrow Private Equity Wire",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
       "articles": [
         {
-          "title": "Willetton doctor buys Alfred Cove office",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdnU0VDhsSGJRc2ptSGZvVWN1dGhRQlNyOGxEcmVOSzdpNS1JOW42X3o4MFdKUE1iaVZkNEVONEJBa0VzMV9ueWp4LUZyZklqUGs4ME1TSTRxV3htWkxIOW9FOWZ0MWJPSTVsWkp4RkNKdlBoN0FXSnh0OFJGSDBFM1lWWkN6YTA?oc=5",
-          "source": "businessnews.com.au",
-          "pubDate": "Wed, 28 Oct 2026 05:29:14 GMT",
-          "via": "site-businessnews"
+          "title": "Australian super funds tighten direct lending criteria as spreads narrow",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPS1drYmx2V1doQ1BWQkNEbFN5VndpUWdTXzY3Z3lYcnNpRU1nZG1NWWc0R0VDcWFmTy1PQ3FlMUhaQWMxRXQyNmhZZTdyQUNBd3VBbnVxWHdTUTZEQW5qZlNwYkVHbFJSSjNvUi03V1FLdGJTN0NsRHZtTFRCRTE1bFNUT3pLdTFMNGlLaGYydlR5MUdZQUlaN2UzYTlRMXpzZktZajBaQzJtSFk?oc=5",
+          "source": "Private Equity Wire",
+          "pubDate": "Fri, 27 Nov 2026 10:17:04 GMT",
+          "via": "private-equity"
         }
       ],
-      "latestPubDate": "2026-10-28T05:29:14.000Z",
-      "score": 47,
+      "latestPubDate": "2026-11-27T10:17:04.000Z",
+      "score": 45,
       "reasons": [
-        "Acquisition / trade sale (+40)",
+        "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:anthropic breaks ipo record asx set to drop",
-      "company": null,
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 3,
-      "text": "Anthropic breaks IPO record, ASX set to drop Anthropic breaks IPO record, ASX set to drop The Australian",
-      "firstSeen": "2026-11-21T00:55:14.477Z",
-      "articles": [
-        {
-          "title": "Anthropic breaks IPO record, ASX set to drop",
-          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPRndjODlZM1JMRm1QOWIwM19zZWJNeVNJN2ZZWWVrVE1lMXFsVmt4a3QxN2RfSE4xNVJITDNGRUZUbE04N3hZMVhkUDdJZk9palc4a2YwdF9KZUF5andDV0g0SGNtWW91blhpckt5Q0VFWFhWYWJCZ2N6TERyV1ZqSXFlZlVOMmdpSVBfVmxfMk9LblRmMGR3QmlGSXB5aUZoWWk3NjUwMFMtWl9PbWtHd2Y0eC0talJLeTd2MWxYbHlURXBXMkpVMVRxclBNNXhnOW5yTlo5TEdob05XLVpWZ1VUNmlienpUaURGejRn?oc=5",
-          "source": "The Australian",
-          "pubDate": "Fri, 20 Nov 2026 05:01:12 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-11-20T05:01:12.000Z",
-      "score": 46,
-      "reasons": [
-        "IPO / listing (+28)",
-        "Australian signal 3/3 (+10)",
-        "recent (7d ago, +8)"
+        "recent (1d ago, +8)"
       ]
     },
     {
@@ -2491,7 +2480,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -2523,7 +2512,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -2562,7 +2551,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)",
+        "recent (4d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -2595,7 +2584,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 2/3 (+7)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -2627,7 +2616,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 2/3 (+7)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -2664,6 +2653,46 @@
       ]
     },
     {
+      "id": "hl:anthropic breaks ipo record asx set to drop",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 3,
+      "text": "Anthropic breaks IPO record, ASX set to drop Anthropic breaks IPO record, ASX set to drop The Australian Anthropic breaks IPO record, ASX set to drop Anthropic breaks IPO record, ASX set to drop Adelaide Now",
+      "firstSeen": "2026-11-21T00:55:14.477Z",
+      "articles": [
+        {
+          "title": "Anthropic breaks IPO record, ASX set to drop",
+          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPRndjODlZM1JMRm1QOWIwM19zZWJNeVNJN2ZZWWVrVE1lMXFsVmt4a3QxN2RfSE4xNVJITDNGRUZUbE04N3hZMVhkUDdJZk9palc4a2YwdF9KZUF5andDV0g0SGNtWW91blhpckt5Q0VFWFhWYWJCZ2N6TERyV1ZqSXFlZlVOMmdpSVBfVmxfMk9LblRmMGR3QmlGSXB5aUZoWWk3NjUwMFMtWl9PbWtHd2Y0eC0talJLeTd2MWxYbHlURXBXMkpVMVRxclBNNXhnOW5yTlo5TEdob05XLVpWZ1VUNmlienpUaURGejRn?oc=5",
+          "source": "The Australian",
+          "pubDate": "Fri, 20 Nov 2026 05:01:12 GMT",
+          "via": "ipo"
+        },
+        {
+          "title": "Anthropic breaks IPO record, ASX set to drop",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQT2tiUDVISUVsVTVrS19tcG9od1ZDaXR3MWIzTFBudDExTHI4QjBUUUg4U2M0aVdOamZ5RTBLOVItc2kxY1QzMmRoNEpGNE5MT3dyRjVNTlhkVVNncFZ6RXJUeC1XNkRxN1dnY3BJRU5pTkRsZmktMGgwNktqaGNicENqeFR3ZWlXbF9uMUdNYkVlZ0JrUW5tenR4X09nOXZEWUJWOFlEM25TSnd3LWN6TllBU1JDU2VYXzBjMEpaaE1RQlRVVjhOVWZQVU9NZGVWQk1HTTJSUm44Y0x0N0pIcw?oc=5",
+          "source": "Adelaide Now",
+          "pubDate": "Thu, 19 Nov 2026 19:21:34 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-20T05:01:12.000Z",
+      "score": 44,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 3/3 (+10)",
+        "recent (8d ago, +4)",
+        "2 articles (+2)"
+      ]
+    },
+    {
       "id": "hl:quantum of unicorn q ctrl hits 1 4 billion valuation",
       "company": null,
       "counterparty": null,
@@ -2694,7 +2723,7 @@
         "~A$1400m deal (+13)",
         "late-stage round (+6)",
         "Australian signal 2/3 (+7)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -2733,13 +2762,13 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (15d ago, +4)",
+        "recent (16d ago, +4)",
         "2 articles (+2)"
       ]
     },
     {
-      "id": "hl:what will jacaranda natural resources asx jrl explore after its",
-      "company": null,
+      "id": "co:jacaranda natural resources",
+      "company": "Jacaranda Natural Resources",
       "counterparty": null,
       "type": "ipo",
       "tags": [
@@ -2750,14 +2779,28 @@
       "founderSignal": false,
       "secondarySignal": false,
       "auConfidence": 2,
-      "text": "What will Jacaranda Natural Resources (ASX:JRL) explore after its $8 million IPO and ASX debut? What will Jacaranda Natural Resources (ASX:JRL) explore after its $8 million IPO and ASX debut? Kalkine",
-      "firstSeen": "2026-11-19T01:20:51.225Z",
+      "text": "Jacaranda Natural Resources debuts on ASX after $8 million IPO Jacaranda Natural Resources debuts on ASX after $8 million IPO Mining.com.au Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share Kalkine Jacaranda Natural Resources Debuts on ASX Following Successful $8M IPO Jacaranda Natural Resources Debuts on ASX Following Successful $8M IPO Sharecafe",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
       "articles": [
         {
-          "title": "What will Jacaranda Natural Resources (ASX:JRL) explore after its $8 million IPO and ASX debut?",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPR2t2eTNUSFVGeWJUTV9NQnA5RTFodWN5LVFqbDY4dXI3X1hHczNPNTFYNmFNVWcwX0c5MVlQbGN4dEtfS0xMaEpmMExfOGFGbTlNQ01OTFdrZ2drbjRfQkMxMEtSbEpRUlpHSjRpSVF6endCaDd4Vm5qeTdEUDNQMENVaTUzQ3pVX0NEWHl1bHRmc2ZMWk1IekkzNUZrUm9pQWxEdllBeWdSZHVXV1RTcFBEcGtZenNoemh6ZmNfTE9HbGlKRDBkS3Fzdw?oc=5",
-          "source": "Kalkine",
+          "title": "Jacaranda Natural Resources debuts on ASX after $8 million IPO",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYjBTd25rYWZ6RW5vcWVycmp5djhxb1lZeEtlXzk1eUpkY0hZZDlrYTFvNDk0a2VTMGdEcnU3NHBTdWlmYmIwX0RKV0JDYmpiQkFuR3JYTV8wRHU5dHhvVDBUejNTc05XZFZaY2dtM1pXVDRMUF9tWllOcE5ESjN0d3FUNjIzbEItMUxrQg?oc=5",
+          "source": "Mining.com.au",
           "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "ipo"
+        },
+        {
+          "title": "Jacaranda Natural Resources Debuts on ASX Following Successful $8M IPO",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPV3pUaGJ5VndzVDJKM2pWZFVMM1hrOVEzZDVyZXc3NVlPOWo1NWlxbmxIdWRYLVY3VEhQV0x5UW1UcEthcXZGb21zUlZiRG01Y2JZYldWLUpzX0ZVSy1CYjJNY0dYSU41M2xkUjljZ2hzVHJLTmtvUWdMTzBoMldTRkwzMVZOTTVsZkVhM01IdzdvMjJuMFVWdy1DdEd6dV9yQTFCTVBsRzBIRE1mck1R?oc=5",
+          "source": "Sharecafe",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "ipo"
+        },
+        {
+          "title": "Jacaranda Natural Resources Debuts on ASX After Completing $8M IPO at $0.20 Per Share",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORjdFaTBtOFIwRHdMcFk2QTd5eVVuV0VnMmxGTktESVJJV2tWV3NRNVcxRkF6bUFJeU45eW80OFc2aGl1Vm9ZQ1NRWlZiZ0F3dzZvNEpRYUUwTjFZcjRNRzdMaFV5eTF3NlY3SUJpQmZ2OG9neGRZLU9TLUVEVHc3cVBGMkppY1ZET0tlXzNpdUR0THNYeFhSeExYU3VqZHlRUTVnOTZzeFlid2Vmc051R3lMcjYzNmU4NE1TZkR1T1JKZw?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Wed, 28 Oct 2026 00:53:39 GMT",
           "via": "ipo"
         }
       ],
@@ -2767,7 +2810,39 @@
         "IPO / listing (+28)",
         "~A$8m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (30d ago, +4)"
+        "3 articles (+4)"
+      ]
+    },
+    {
+      "id": "hl:what does the asx debut mean for capability x asx",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "What Does the ASX Debut Mean for Capability X (ASX:CX8)? What Does the ASX Debut Mean for Capability X (ASX:CX8)? Kalkine",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
+      "articles": [
+        {
+          "title": "What Does the ASX Debut Mean for Capability X (ASX:CX8)?",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNk1DUnhBTWpBY1lVRmRzSlZvSkZ2Y0RqeHNVQmUzd0RHMUxvSGVBVDZfOWZKOTBmOE9nTUxfZFotV1pEVVFfem9QSnFkd2IzQlRsRktmc010ekZ6ZU9DREtHcU43YUdJZXgzM1p4WmtYN3JSWkZubTIwMlJLTkxOemg2Sml1M05lZmFOX0kzOFdtdjFvRllvcW54MU8zdVdtMUpKdjFVNA?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 27 Nov 2026 05:26:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-27T05:26:00.000Z",
+      "score": 43,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 2/3 (+7)",
+        "recent (1d ago, +8)"
       ]
     },
     {
@@ -2799,7 +2874,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -2831,7 +2906,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -2863,7 +2938,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -2895,7 +2970,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2927,7 +3002,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -2959,7 +3034,38 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
+      ]
+    },
+    {
+      "id": "co:alfred cove",
+      "company": "Alfred Cove",
+      "counterparty": "Willetton",
+      "type": "exit",
+      "tags": [
+        "exit"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Willetton doctor buys Alfred Cove office Willetton doctor buys Alfred Cove office businessnews.com.au",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Willetton doctor buys Alfred Cove office",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdnU0VDhsSGJRc2ptSGZvVWN1dGhRQlNyOGxEcmVOSzdpNS1JOW42X3o4MFdKUE1iaVZkNEVONEJBa0VzMV9ueWp4LUZyZklqUGs4ME1TSTRxV3htWkxIOW9FOWZ0MWJPSTVsWkp4RkNKdlBoN0FXSnh0OFJGSDBFM1lWWkN6YTA?oc=5",
+          "source": "businessnews.com.au",
+          "pubDate": "Wed, 28 Oct 2026 05:29:14 GMT",
+          "via": "site-businessnews"
+        }
+      ],
+      "latestPubDate": "2026-10-28T05:29:14.000Z",
+      "score": 43,
+      "reasons": [
+        "Acquisition / trade sale (+40)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -3217,7 +3323,7 @@
         "IPO / listing (+28)",
         "~A$6m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)",
+        "recent (12d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -3250,7 +3356,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 3/3 (+10)",
-        "recent (29d ago, +4)"
+        "recent (30d ago, +4)"
       ]
     },
     {
@@ -3290,7 +3396,7 @@
         "Funding round (+14)",
         "~A$111.2m deal (+10)",
         "Australian signal 2/3 (+7)",
-        "recent (0d ago, +8)",
+        "recent (1d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -3330,7 +3436,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (8d ago, +4)",
+        "recent (9d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -3364,7 +3470,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -3396,7 +3502,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -3428,7 +3534,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (22d ago, +4)"
+        "recent (23d ago, +4)"
       ]
     },
     {
@@ -3460,7 +3566,7 @@
       "reasons": [
         "Private equity deal (+34)",
         "Australian signal 1/3 (+3)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -3499,7 +3605,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (29d ago, +4)",
+        "recent (30d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -3531,6 +3637,38 @@
       "score": 41,
       "reasons": [
         "Private equity deal (+34)",
+        "Australian signal 2/3 (+7)"
+      ]
+    },
+    {
+      "id": "hl:what will jacaranda natural resources asx jrl explore after its",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": 8,
+      "amountText": "$8 million",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 2,
+      "text": "What will Jacaranda Natural Resources (ASX:JRL) explore after its $8 million IPO and ASX debut? What will Jacaranda Natural Resources (ASX:JRL) explore after its $8 million IPO and ASX debut? Kalkine",
+      "firstSeen": "2026-11-19T01:20:51.225Z",
+      "articles": [
+        {
+          "title": "What will Jacaranda Natural Resources (ASX:JRL) explore after its $8 million IPO and ASX debut?",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPR2t2eTNUSFVGeWJUTV9NQnA5RTFodWN5LVFqbDY4dXI3X1hHczNPNTFYNmFNVWcwX0c5MVlQbGN4dEtfS0xMaEpmMExfOGFGbTlNQ01OTFdrZ2drbjRfQkMxMEtSbEpRUlpHSjRpSVF6endCaDd4Vm5qeTdEUDNQMENVaTUzQ3pVX0NEWHl1bHRmc2ZMWk1IekkzNUZrUm9pQWxEdllBeWdSZHVXV1RTcFBEcGtZenNoemh6ZmNfTE9HbGlKRDBkS3Fzdw?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-10-28T07:00:00.000Z",
+      "score": 40,
+      "reasons": [
+        "IPO / listing (+28)",
+        "~A$8m deal (+5)",
         "Australian signal 2/3 (+7)"
       ]
     },
@@ -3568,6 +3706,102 @@
       ]
     },
     {
+      "id": "hl:accent group limited asx ax1 how does the dividend story",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Accent Group Limited (ASX:AX1): How Does the Dividend Story Run Alongside a Takeover Bid? Accent Group Limited (ASX:AX1): How Does the Dividend Story Run Alongside a Takeover Bid? Kalkine",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
+      "articles": [
+        {
+          "title": "Accent Group Limited (ASX:AX1): How Does the Dividend Story Run Alongside a Takeover Bid?",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPVnlKWERjdjdnd3FYWktsVXNVN3Q3cGthaTdiSlFhejlRNzA4WWdYdDd2cXB6ckI4eXZtQXJ4c0VvR0lzVHhGMDFoZXhuOGFXQmVKUzFpX01KQ29ocW1yaHYzMlFYbVd6Q3U0WHQ4Sy1YSmFTMzlBN19ncG1XZjFvX2IzVkVkVlBrNFNPYncybWtNS25ybTA0ZzEyamJsQmtTaFp1VG5xTFdVUVA2SWZpbUc2Y1phWEZPYUlv?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 27 Nov 2026 11:28:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-11-27T11:28:00.000Z",
+      "score": 39,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (1d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:how ausgold limited asx auc shareholders voted on the oceanagold",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "How Ausgold Limited (ASX:AUC) shareholders voted on the OceanaGold scheme of arrangement How Ausgold Limited (ASX:AUC) shareholders voted on the OceanaGold scheme of arrangement Kalkine",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
+      "articles": [
+        {
+          "title": "How Ausgold Limited (ASX:AUC) shareholders voted on the OceanaGold scheme of arrangement",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNS1U0NUphamkxaU9EOElHQ1pzLXJ3TjFrZFpnekluU3pVOGczNm1wSHZvd0VROVpYZDZZSC02aTFBa25UbkVYNzdFWlR5cUpyUFJOUVlTMnp0b1dRdmtSTWJEbFF1VUlsVFVOU1BOZkl1RkRkSE5oZnJNTUZoRjdUMXJVX2wyWlBYM3ZRa0NGOHNvbVlrZjR5c1dOa2RpSWJpUDk5djBpcFRCd2hMby11Tjc3dVFkV2w3czJ5MA?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 27 Nov 2026 08:02:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-11-27T08:02:00.000Z",
+      "score": 39,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (1d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:what does first aus asx fau 61 relevant interest mean",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "What does First AU's (ASX:FAU) 61% relevant interest mean for its Javelin Minerals takeover offer? What does First AU's (ASX:FAU) 61% relevant interest mean for its Javelin Minerals takeover offer? Kalkine",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
+      "articles": [
+        {
+          "title": "What does First AU's (ASX:FAU) 61% relevant interest mean for its Javelin Minerals takeover offer?",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWkhCTG4tb2JHOUhWZFo5OE15SFhiaHNacUQ0X2lJRDIyOVYwc2c5NnBnUGFjcjQ0bEFRcFo2ZlYyUUhhd1I1OE9pVzM0VnFmdGZRaUVEc0s0WldMMHJ0R05Fam0xdXRKaGdoV0pPdzZJQ3NQMlZRZkhFTUt1NWE5djZrX2NNVldWVUpaa25neVFjMDhxVF8xQUxFTzc5UmRrQ2RvSzdSaDFMNGR6THlOOG9ESXNmT1ZxcHJSdjFvMFQ4X3g1N1E?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 27 Nov 2026 08:02:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-11-27T08:02:00.000Z",
+      "score": 39,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (1d ago, +8)"
+      ]
+    },
+    {
       "id": "hl:vault minerals delisted from asx following genesis minerals acquisition via",
       "company": null,
       "counterparty": null,
@@ -3596,7 +3830,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (0d ago, +8)"
+        "recent (1d ago, +8)"
       ]
     },
     {
@@ -3628,7 +3862,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (0d ago, +8)"
+        "recent (1d ago, +8)"
       ]
     },
     {
@@ -3660,7 +3894,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -3692,7 +3926,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (1d ago, +8)"
+        "recent (2d ago, +8)"
       ]
     },
     {
@@ -3726,7 +3960,7 @@
         "~A$40m deal (+8)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -3758,7 +3992,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -3790,7 +4024,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -3822,7 +4056,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -3854,7 +4088,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -3888,7 +4122,7 @@
         "~A$60m deal (+8)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -3920,7 +4154,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -3952,71 +4186,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
-      ]
-    },
-    {
-      "id": "hl:ceretas limited asx cts advances cere calm alzheimers trial ahead",
-      "company": null,
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Ceretas Limited (ASX:CTS) Advances CERE-CALM Alzheimer's Trial Ahead of Schedule After IPO Ceretas Limited (ASX:CTS) Advances CERE-CALM Alzheimer's Trial Ahead of Schedule After IPO Kalkine",
-      "firstSeen": "2026-11-21T00:55:14.477Z",
-      "articles": [
-        {
-          "title": "Ceretas Limited (ASX:CTS) Advances CERE-CALM Alzheimer's Trial Ahead of Schedule After IPO",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUXRBMDNhY2JtdWtONE1taEFxa2hqVnJ3WVVJOVRJZ1BzTHZiMVFLaWNXc0d2dVFHanBHaUJPSjB4NlJINTNJb0FPaDhBOVBrWXBqWi10Y3F6M0dKYTlkOEdxWURZYWRIOHk4N0ROVFQ0LUFVQ2NLTW9GVGQtaWNHLTM4bDUtNlBaM3pqV0p1dTlONngwLWxKTmkwbWNUY0lRbk0yY3o2WlhtWFFZbGw1TnVBb2k3dEptZjZpUFJWTDdGY0k?oc=5",
-          "source": "Kalkine",
-          "pubDate": "Fri, 20 Nov 2026 05:04:00 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-11-20T05:04:00.000Z",
-      "score": 39,
-      "reasons": [
-        "IPO / listing (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)"
-      ]
-    },
-    {
-      "id": "hl:on the call capital brief in san francisco anthropics ipo",
-      "company": null,
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "On the Call: Capital Brief in San Francisco; Anthropic’s IPO On the Call: Capital Brief in San Francisco; Anthropic’s IPO Capital Brief",
-      "firstSeen": "2026-11-24T04:21:58.314Z",
-      "articles": [
-        {
-          "title": "On the Call: Capital Brief in San Francisco; Anthropic’s IPO",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNHVGM0NrazBVTGZVd2VzLUYzZVJxZkpmd3pPN3p4bVhISUVrTGJ2TFZMTkJqdS1LdG80MjQ0a0hPdXFaNWJHSGtTWHhvNnA3bHpUT1lma19aMzRoeXA1T2EtcjRLNVN2TlVkblFkVi03bXVPQnB5ZVIwVEpLTldUY3A4TTZ5M1o4bTR2Q012em5CYkdIVUF2WkVtU2JBN1dFNVVtTVRGT01jUTZRUHZpd0Yyd1hkUkpZaGo0VU9JZHNaaE9PN0ZoTEpfakQ?oc=5",
-          "source": "Capital Brief",
-          "pubDate": "Fri, 20 Nov 2026 04:35:00 GMT",
-          "via": "site-capitalbrief"
-        }
-      ],
-      "latestPubDate": "2026-11-20T04:35:00.000Z",
-      "score": 39,
-      "reasons": [
-        "IPO / listing (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -4048,7 +4218,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -4080,7 +4250,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -4112,7 +4282,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -4144,7 +4314,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -4176,7 +4346,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -4208,7 +4378,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (26d ago, +4)"
+        "recent (27d ago, +4)"
       ]
     },
     {
@@ -4240,7 +4410,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 2/3 (+7)",
-        "recent (28d ago, +4)"
+        "recent (29d ago, +4)"
       ]
     },
     {
@@ -4304,7 +4474,7 @@
         "Funding round (+14)",
         "~A$60m deal (+8)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -4338,7 +4508,7 @@
         "~A$415m deal (+10)",
         "late-stage round (+6)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -4434,7 +4604,7 @@
         "~A$3.7m deal (+3)",
         "founder/family-owned mention (+12)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -4474,7 +4644,7 @@
         "Funding round (+14)",
         "~A$525m deal (+13)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)",
+        "recent (15d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -4605,7 +4775,71 @@
         "Funding round (+14)",
         "~A$240m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
+      ]
+    },
+    {
+      "id": "hl:ceretas limited asx cts advances cere calm alzheimers trial ahead",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Ceretas Limited (ASX:CTS) Advances CERE-CALM Alzheimer's Trial Ahead of Schedule After IPO Ceretas Limited (ASX:CTS) Advances CERE-CALM Alzheimer's Trial Ahead of Schedule After IPO Kalkine",
+      "firstSeen": "2026-11-21T00:55:14.477Z",
+      "articles": [
+        {
+          "title": "Ceretas Limited (ASX:CTS) Advances CERE-CALM Alzheimer's Trial Ahead of Schedule After IPO",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUXRBMDNhY2JtdWtONE1taEFxa2hqVnJ3WVVJOVRJZ1BzTHZiMVFLaWNXc0d2dVFHanBHaUJPSjB4NlJINTNJb0FPaDhBOVBrWXBqWi10Y3F6M0dKYTlkOEdxWURZYWRIOHk4N0ROVFQ0LUFVQ2NLTW9GVGQtaWNHLTM4bDUtNlBaM3pqV0p1dTlONngwLWxKTmkwbWNUY0lRbk0yY3o2WlhtWFFZbGw1TnVBb2k3dEptZjZpUFJWTDdGY0k?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Fri, 20 Nov 2026 05:04:00 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-11-20T05:04:00.000Z",
+      "score": 35,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (8d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:on the call capital brief in san francisco anthropics ipo",
+      "company": null,
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "On the Call: Capital Brief in San Francisco; Anthropic’s IPO On the Call: Capital Brief in San Francisco; Anthropic’s IPO Capital Brief",
+      "firstSeen": "2026-11-24T04:21:58.314Z",
+      "articles": [
+        {
+          "title": "On the Call: Capital Brief in San Francisco; Anthropic’s IPO",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNHVGM0NrazBVTGZVd2VzLUYzZVJxZkpmd3pPN3p4bVhISUVrTGJ2TFZMTkJqdS1LdG80MjQ0a0hPdXFaNWJHSGtTWHhvNnA3bHpUT1lma19aMzRoeXA1T2EtcjRLNVN2TlVkblFkVi03bXVPQnB5ZVIwVEpLTldUY3A4TTZ5M1o4bTR2Q012em5CYkdIVUF2WkVtU2JBN1dFNVVtTVRGT01jUTZRUHZpd0Yyd1hkUkpZaGo0VU9JZHNaaE9PN0ZoTEpfakQ?oc=5",
+          "source": "Capital Brief",
+          "pubDate": "Fri, 20 Nov 2026 04:35:00 GMT",
+          "via": "site-capitalbrief"
+        }
+      ],
+      "latestPubDate": "2026-11-20T04:35:00.000Z",
+      "score": 35,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)",
+        "recent (8d ago, +4)"
       ]
     },
     {
@@ -4637,7 +4871,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -4669,7 +4903,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -4701,7 +4935,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (8d ago, +4)"
+        "recent (9d ago, +4)"
       ]
     },
     {
@@ -4733,7 +4967,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -4765,7 +4999,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -4797,7 +5031,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -4829,7 +5063,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -4861,7 +5095,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -4893,7 +5127,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -4925,7 +5159,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -4957,7 +5191,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -4989,7 +5223,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -5021,7 +5255,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -5053,7 +5287,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (11d ago, +4)"
+        "recent (12d ago, +4)"
       ]
     },
     {
@@ -5085,7 +5319,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -5117,7 +5351,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (14d ago, +4)"
+        "recent (15d ago, +4)"
       ]
     },
     {
@@ -5149,7 +5383,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -5181,7 +5415,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -5213,7 +5447,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -5245,7 +5479,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -5277,7 +5511,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -5309,7 +5543,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -5341,7 +5575,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -5373,7 +5607,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -5405,7 +5639,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (17d ago, +4)"
+        "recent (18d ago, +4)"
       ]
     },
     {
@@ -5437,7 +5671,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (20d ago, +4)"
+        "recent (21d ago, +4)"
       ]
     },
     {
@@ -5469,7 +5703,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -5501,7 +5735,7 @@
       "reasons": [
         "Takeover / scheme (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -5534,7 +5768,7 @@
         "Funding round (+14)",
         "~A$125m deal (+10)",
         "Australian signal 2/3 (+7)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -5566,7 +5800,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (23d ago, +4)"
+        "recent (24d ago, +4)"
       ]
     },
     {
@@ -5598,7 +5832,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (24d ago, +4)"
+        "recent (25d ago, +4)"
       ]
     },
     {
@@ -5630,7 +5864,7 @@
       "reasons": [
         "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
-        "recent (26d ago, +4)"
+        "recent (27d ago, +4)"
       ]
     },
     {
@@ -5661,136 +5895,6 @@
       "score": 35,
       "reasons": [
         "Takeover / scheme (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (29d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:cygnus metals removed from asx official list following central asia",
-      "company": null,
-      "counterparty": null,
-      "type": "takeover",
-      "tags": [
-        "takeover"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Cygnus Metals Removed from ASX Official List Following Central Asia Metals Scheme of Arrangement Cygnus Metals Removed from ASX Official List Following Central Asia Metals Scheme of Arrangement Kalkine",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Cygnus Metals Removed from ASX Official List Following Central Asia Metals Scheme of Arrangement",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZjMtQmxCQXUtdlUwdTJ1cGg2dWhMUWljU3hJQS1Nc1B3aXp1NDQ4NlEtOXI4THNEWEdCeVAwUUVMTDY0MmtEWXRwUXFYYTY5dHNNNjRVNGtSTlgzVTE5bTFxWEpSdDVtT0dXSTdiOGZQMnJlaVF5Q3RKWXBia3RUY2o0dnd4VkNxdFlMRXpzSDdKT2YzSENJblE3UXlxTUhxbXUtMzllNC15bnNkbEItaTRsamtBZGxCLVplcGQ3Mmx6TXdMOWdhVWdteW9oZ0pYYkF3NQ?oc=5",
-          "source": "Kalkine",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "via": "takeover"
-        }
-      ],
-      "latestPubDate": "2026-10-28T07:00:00.000Z",
-      "score": 35,
-      "reasons": [
-        "Takeover / scheme (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:warburg pincus raises ingenia takeover offer following competing avid bid",
-      "company": null,
-      "counterparty": null,
-      "type": "takeover",
-      "tags": [
-        "takeover",
-        "funding"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Warburg Pincus raises Ingenia takeover offer following competing AVID bid Warburg Pincus raises Ingenia takeover offer following competing AVID bid Capital Brief",
-      "firstSeen": "2026-11-14T23:14:05.714Z",
-      "articles": [
-        {
-          "title": "Warburg Pincus raises Ingenia takeover offer following competing AVID bid",
-          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQVUFtT0JrdmxNYjdndk1zOHRDVktfOU9vb2ZJQkRrVW01NGZVQ0F3NzltZTlKWVR1RFZxcTBqcVJJRldPM0p3emRFT2RXQkdIZXBjTmZxRldFYUtkeGl0cHl0d19tU2ZFZHp6QTlWZEVhUVRrWEhlSmg1TkY4WUgwV2doYUxTdzV3N3BBQUJab3IyNUgtZ2JsR1NzM1YxczhsTG5QRFJlOElEVk96dkFKaV9vQnpFcldrb0VQNFVaWVlPVGpSZDFqQVdzVHQ3VE0zWEJaazFmWGJwWVNWczU1N2tzUQ?oc=5",
-          "source": "Capital Brief",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "via": "site-capitalbrief"
-        }
-      ],
-      "latestPubDate": "2026-10-28T07:00:00.000Z",
-      "score": 35,
-      "reasons": [
-        "Takeover / scheme (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
-      ]
-    },
-    {
-      "id": "hl:what lynas rare earths agreed scheme of arrangement means for",
-      "company": null,
-      "counterparty": null,
-      "type": "takeover",
-      "tags": [
-        "takeover"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "What Lynas Rare Earths' agreed scheme of arrangement means for Meteoric Resources Limited (ASX:MEI) What Lynas Rare Earths' agreed scheme of arrangement means for Meteoric Resources Limited (ASX:MEI) Kalkine",
-      "firstSeen": "2026-11-17T02:34:03.253Z",
-      "articles": [
-        {
-          "title": "What Lynas Rare Earths' agreed scheme of arrangement means for Meteoric Resources Limited (ASX:MEI)",
-          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNc1cxTG43Q2JkN3dwNk14d0kzOERBckhBMklDOGlKZGtyXzBxajZpTHB6NzVKMHZNVWZ5VDZRbUl4UzE0b3YxZ3hqV1doRml2UWFLQTBZZi05OC15LWxxN0JFbWp4LVFxX29ja1VBa25Rbi1NOWhvYWptbFc0em1PODl5cGFsUmluT2Y5T0ZLYWxGUm43ZFFFZkN1amFmSUJwei1jRTkyZ1hmYUJEMmFRNnJJUjk5czZxQ3VhMVI4WnVoN0ZRd0JMdEtR?oc=5",
-          "source": "Kalkine",
-          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
-          "via": "takeover"
-        }
-      ],
-      "latestPubDate": "2026-10-28T07:00:00.000Z",
-      "score": 35,
-      "reasons": [
-        "Takeover / scheme (+28)",
-        "Australian signal 1/3 (+3)",
-        "recent (30d ago, +4)"
-      ]
-    },
-    {
-      "id": "co:macallum new energy",
-      "company": "Macallum New Energy",
-      "counterparty": null,
-      "type": "ipo",
-      "tags": [
-        "ipo",
-        "funding"
-      ],
-      "amountAudM": 2.1,
-      "amountText": "$2.11M",
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Macallum New Energy raises $2.11M months after ASX debut Macallum New Energy raises $2.11M months after ASX debut Dealroom",
-      "firstSeen": "2026-11-15T23:27:48.212Z",
-      "articles": [
-        {
-          "title": "Macallum New Energy raises $2.11M months after ASX debut",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWjFCc0dSMlpfRm90aFg5WWplZkRfcFJqOVpkRE1lejBIUWNrZklKVFpyUmFUQ3ZNRmJyRlJGMVVaSTNsV01RWVZSeFdaU05vM0pYb2FPUG5jeW9ISkJLOFJTVF9ZZW00ei1ORmxPdGRnMkwtcWRIbENyMFNvM3U5WkxkVWxsWUwyWXU2dk5DT2hmWlE?oc=5",
-          "source": "Dealroom",
-          "pubDate": "Wed, 28 Oct 2026 03:21:07 GMT",
-          "via": "ipo"
-        }
-      ],
-      "latestPubDate": "2026-10-28T03:21:07.000Z",
-      "score": 35,
-      "reasons": [
-        "IPO / listing (+28)",
         "Australian signal 1/3 (+3)",
         "recent (30d ago, +4)"
       ]
@@ -5956,7 +6060,7 @@
         "Funding round (+14)",
         "~A$5m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (4d ago, +8)",
+        "recent (5d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -5990,7 +6094,7 @@
         "Funding round (+14)",
         "~A$46.5m deal (+8)",
         "Australian signal 2/3 (+7)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -6023,7 +6127,7 @@
         "Funding round (+14)",
         "~A$31m deal (+8)",
         "Australian signal 2/3 (+7)",
-        "recent (28d ago, +4)"
+        "recent (29d ago, +4)"
       ]
     },
     {
@@ -6056,7 +6160,7 @@
         "Funding round (+14)",
         "~A$9.5m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -6089,40 +6193,7 @@
         "Funding round (+14)",
         "~A$9.5m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (3d ago, +8)"
-      ]
-    },
-    {
-      "id": "hl:australian startups raise from series c to seed across five",
-      "company": null,
-      "counterparty": null,
-      "type": "funding",
-      "tags": [
-        "funding"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Australian startups raise from Series C to seed across five sectors Australian startups raise from Series C to seed across five sectors Dynamic Business",
-      "firstSeen": "2026-11-21T00:55:14.477Z",
-      "articles": [
-        {
-          "title": "Australian startups raise from Series C to seed across five sectors",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcEpDcmp3M0RBRW95bndvWXNrSU8zV0MtbGp2S0Fyd0dkcUZoLU9qaXFraGh4WTJXMFdodUxqcDBpbDFySU5BLUp5ZElHRGZMYmJ3WE9qQ3Roby13S0pDcm44NkliQlZzRUJxQWhITkhnZG9zTU9PZUs0eHFucGk5dXIyRFJrOUJ4T2NlemQtSW9OTW9RNlFTTktiTlFIQUZrSlgtUjFPYm5zUDliMWpQOW9WZDFZdjEwREE?oc=5",
-          "source": "Dynamic Business",
-          "pubDate": "Fri, 20 Nov 2026 04:03:34 GMT",
-          "via": "funding-late"
-        }
-      ],
-      "latestPubDate": "2026-11-20T04:03:34.000Z",
-      "score": 31,
-      "reasons": [
-        "Funding round (+14)",
-        "late-stage round (+6)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -6162,7 +6233,7 @@
         "Funding round (+14)",
         "~A$92m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)",
+        "recent (11d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -6196,7 +6267,7 @@
         "Funding round (+14)",
         "~A$420m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)"
+        "recent (16d ago, +4)"
       ]
     },
     {
@@ -6229,7 +6300,7 @@
         "Funding round (+14)",
         "~A$115m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (21d ago, +4)"
+        "recent (22d ago, +4)"
       ]
     },
     {
@@ -6262,7 +6333,133 @@
         "Funding round (+14)",
         "~A$304m deal (+10)",
         "Australian signal 1/3 (+3)",
-        "recent (28d ago, +4)"
+        "recent (29d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:cygnus metals removed from asx official list following central asia",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Cygnus Metals Removed from ASX Official List Following Central Asia Metals Scheme of Arrangement Cygnus Metals Removed from ASX Official List Following Central Asia Metals Scheme of Arrangement Kalkine",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Cygnus Metals Removed from ASX Official List Following Central Asia Metals Scheme of Arrangement",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZjMtQmxCQXUtdlUwdTJ1cGg2dWhMUWljU3hJQS1Nc1B3aXp1NDQ4NlEtOXI4THNEWEdCeVAwUUVMTDY0MmtEWXRwUXFYYTY5dHNNNjRVNGtSTlgzVTE5bTFxWEpSdDVtT0dXSTdiOGZQMnJlaVF5Q3RKWXBia3RUY2o0dnd4VkNxdFlMRXpzSDdKT2YzSENJblE3UXlxTUhxbXUtMzllNC15bnNkbEItaTRsamtBZGxCLVplcGQ3Mmx6TXdMOWdhVWdteW9oZ0pYYkF3NQ?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-10-28T07:00:00.000Z",
+      "score": 31,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "hl:warburg pincus raises ingenia takeover offer following competing avid bid",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover",
+        "funding"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Warburg Pincus raises Ingenia takeover offer following competing AVID bid Warburg Pincus raises Ingenia takeover offer following competing AVID bid Capital Brief",
+      "firstSeen": "2026-11-14T23:14:05.714Z",
+      "articles": [
+        {
+          "title": "Warburg Pincus raises Ingenia takeover offer following competing AVID bid",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQVUFtT0JrdmxNYjdndk1zOHRDVktfOU9vb2ZJQkRrVW01NGZVQ0F3NzltZTlKWVR1RFZxcTBqcVJJRldPM0p3emRFT2RXQkdIZXBjTmZxRldFYUtkeGl0cHl0d19tU2ZFZHp6QTlWZEVhUVRrWEhlSmg1TkY4WUgwV2doYUxTdzV3N3BBQUJab3IyNUgtZ2JsR1NzM1YxczhsTG5QRFJlOElEVk96dkFKaV9vQnpFcldrb0VQNFVaWVlPVGpSZDFqQVdzVHQ3VE0zWEJaazFmWGJwWVNWczU1N2tzUQ?oc=5",
+          "source": "Capital Brief",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "site-capitalbrief"
+        }
+      ],
+      "latestPubDate": "2026-10-28T07:00:00.000Z",
+      "score": 31,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "hl:what lynas rare earths agreed scheme of arrangement means for",
+      "company": null,
+      "counterparty": null,
+      "type": "takeover",
+      "tags": [
+        "takeover"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "What Lynas Rare Earths' agreed scheme of arrangement means for Meteoric Resources Limited (ASX:MEI) What Lynas Rare Earths' agreed scheme of arrangement means for Meteoric Resources Limited (ASX:MEI) Kalkine",
+      "firstSeen": "2026-11-17T02:34:03.253Z",
+      "articles": [
+        {
+          "title": "What Lynas Rare Earths' agreed scheme of arrangement means for Meteoric Resources Limited (ASX:MEI)",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNc1cxTG43Q2JkN3dwNk14d0kzOERBckhBMklDOGlKZGtyXzBxajZpTHB6NzVKMHZNVWZ5VDZRbUl4UzE0b3YxZ3hqV1doRml2UWFLQTBZZi05OC15LWxxN0JFbWp4LVFxX29ja1VBa25Rbi1NOWhvYWptbFc0em1PODl5cGFsUmluT2Y5T0ZLYWxGUm43ZFFFZkN1amFmSUJwei1jRTkyZ1hmYUJEMmFRNnJJUjk5czZxQ3VhMVI4WnVoN0ZRd0JMdEtR?oc=5",
+          "source": "Kalkine",
+          "pubDate": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "via": "takeover"
+        }
+      ],
+      "latestPubDate": "2026-10-28T07:00:00.000Z",
+      "score": 31,
+      "reasons": [
+        "Takeover / scheme (+28)",
+        "Australian signal 1/3 (+3)"
+      ]
+    },
+    {
+      "id": "co:macallum new energy",
+      "company": "Macallum New Energy",
+      "counterparty": null,
+      "type": "ipo",
+      "tags": [
+        "ipo",
+        "funding"
+      ],
+      "amountAudM": 2.1,
+      "amountText": "$2.11M",
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Macallum New Energy raises $2.11M months after ASX debut Macallum New Energy raises $2.11M months after ASX debut Dealroom",
+      "firstSeen": "2026-11-15T23:27:48.212Z",
+      "articles": [
+        {
+          "title": "Macallum New Energy raises $2.11M months after ASX debut",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWjFCc0dSMlpfRm90aFg5WWplZkRfcFJqOVpkRE1lejBIUWNrZklKVFpyUmFUQ3ZNRmJyRlJGMVVaSTNsV01RWVZSeFdaU05vM0pYb2FPUG5jeW9ISkJLOFJTVF9ZZW00ei1ORmxPdGRnMkwtcWRIbENyMFNvM3U5WkxkVWxsWUwyWXU2dk5DT2hmWlE?oc=5",
+          "source": "Dealroom",
+          "pubDate": "Wed, 28 Oct 2026 03:21:07 GMT",
+          "via": "ipo"
+        }
+      ],
+      "latestPubDate": "2026-10-28T03:21:07.000Z",
+      "score": 31,
+      "reasons": [
+        "IPO / listing (+28)",
+        "Australian signal 1/3 (+3)"
       ]
     },
     {
@@ -6829,7 +7026,7 @@
         "Funding round (+14)",
         "~A$5.5m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)",
+        "recent (3d ago, +8)",
         "2 articles (+2)"
       ]
     },
@@ -6870,7 +7067,7 @@
         "Funding round (+14)",
         "~A$7m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (9d ago, +4)",
+        "recent (10d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -6911,7 +7108,7 @@
         "Funding round (+14)",
         "~A$3.7m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (11d ago, +4)",
+        "recent (12d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -6952,7 +7149,7 @@
         "Funding round (+14)",
         "~A$6.3m deal (+3)",
         "Australian signal 2/3 (+7)",
-        "recent (12d ago, +4)",
+        "recent (13d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -6986,7 +7183,7 @@
         "Funding round (+14)",
         "~A$22m deal (+5)",
         "Australian signal 2/3 (+7)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
       ]
     },
     {
@@ -7032,7 +7229,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)",
+        "recent (3d ago, +8)",
         "3 articles (+4)"
       ]
     },
@@ -7066,7 +7263,7 @@
         "Funding round (+14)",
         "~A$62m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (10d ago, +4)"
+        "recent (11d ago, +4)"
       ]
     },
     {
@@ -7099,7 +7296,7 @@
         "Funding round (+14)",
         "~A$67m deal (+8)",
         "Australian signal 1/3 (+3)",
-        "recent (16d ago, +4)"
+        "recent (17d ago, +4)"
       ]
     },
     {
@@ -7132,7 +7329,7 @@
         "Funding round (+14)",
         "~A$7.8m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (2d ago, +8)"
+        "recent (3d ago, +8)"
       ]
     },
     {
@@ -7165,7 +7362,7 @@
         "Funding round (+14)",
         "~A$5m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -7198,7 +7395,7 @@
         "Funding round (+14)",
         "~A$5m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -7231,7 +7428,7 @@
         "Funding round (+14)",
         "~A$5m deal (+3)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
@@ -7271,7 +7468,7 @@
         "Funding round (+14)",
         "~A$16.7m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (7d ago, +4)",
+        "recent (8d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -7312,8 +7509,41 @@
         "Funding round (+14)",
         "~A$10m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (15d ago, +4)",
+        "recent (16d ago, +4)",
         "2 articles (+2)"
+      ]
+    },
+    {
+      "id": "hl:australian startups raise from series c to seed across five",
+      "company": null,
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Australian startups raise from Series C to seed across five sectors Australian startups raise from Series C to seed across five sectors Dynamic Business",
+      "firstSeen": "2026-11-21T00:55:14.477Z",
+      "articles": [
+        {
+          "title": "Australian startups raise from Series C to seed across five sectors",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcEpDcmp3M0RBRW95bndvWXNrSU8zV0MtbGp2S0Fyd0dkcUZoLU9qaXFraGh4WTJXMFdodUxqcDBpbDFySU5BLUp5ZElHRGZMYmJ3WE9qQ3Roby13S0pDcm44NkliQlZzRUJxQWhITkhnZG9zTU9PZUs0eHFucGk5dXIyRFJrOUJ4T2NlemQtSW9OTW9RNlFTTktiTlFIQUZrSlgtUjFPYm5zUDliMWpQOW9WZDFZdjEwREE?oc=5",
+          "source": "Dynamic Business",
+          "pubDate": "Fri, 20 Nov 2026 04:03:34 GMT",
+          "via": "funding-late"
+        }
+      ],
+      "latestPubDate": "2026-11-20T04:03:34.000Z",
+      "score": 27,
+      "reasons": [
+        "Funding round (+14)",
+        "late-stage round (+6)",
+        "Australian signal 1/3 (+3)",
+        "recent (8d ago, +4)"
       ]
     },
     {
@@ -7352,7 +7582,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 2/3 (+7)",
-        "recent (7d ago, +4)",
+        "recent (8d ago, +4)",
         "2 articles (+2)"
       ]
     },
@@ -7386,7 +7616,7 @@
         "Funding round (+14)",
         "~A$11m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (9d ago, +4)"
+        "recent (10d ago, +4)"
       ]
     },
     {
@@ -7419,7 +7649,39 @@
         "Funding round (+14)",
         "~A$15m deal (+5)",
         "Australian signal 1/3 (+3)",
-        "recent (18d ago, +4)"
+        "recent (19d ago, +4)"
+      ]
+    },
+    {
+      "id": "hl:calvary hospital takeover raises concerns over ivf and end of",
+      "company": null,
+      "counterparty": null,
+      "type": "funding",
+      "tags": [
+        "funding"
+      ],
+      "amountAudM": null,
+      "amountText": null,
+      "founderSignal": false,
+      "secondarySignal": false,
+      "auConfidence": 1,
+      "text": "Calvary hospital takeover raises concerns over IVF and end-of-life care in Australia Calvary hospital takeover raises concerns over IVF and end-of-life care in Australia London Daily News",
+      "firstSeen": "2026-11-28T02:06:00.414Z",
+      "articles": [
+        {
+          "title": "Calvary hospital takeover raises concerns over IVF and end-of-life care in Australia",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVldMMjRJRkRlcU9wZUZ0SnNGNUkyNFdQUXo1RE1JeWZYRHFFQ0JfLThaSU9qdFpSQnhSWktZbTBjMlh3bTF4U2VScG5nTlduWjQ3NEliTndTZVhqdTNBY0M5Nk9mRDk5ckRMcnMxQnczaHdHYlJ5NUJHeUpGWnAwMTJUVVY3c0ljXzJrSWc2M0NQMFF0UnZSc1ZoMGdISHRWRUxEbV9LOUJiTEsxUy1PRkFBcXo?oc=5",
+          "source": "London Daily News",
+          "pubDate": "Fri, 27 Nov 2026 16:45:09 GMT",
+          "via": "funding-any"
+        }
+      ],
+      "latestPubDate": "2026-11-27T16:45:09.000Z",
+      "score": 25,
+      "reasons": [
+        "Funding round (+14)",
+        "Australian signal 1/3 (+3)",
+        "recent (0d ago, +8)"
       ]
     },
     {
@@ -7451,7 +7713,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -7483,7 +7745,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (3d ago, +8)"
+        "recent (4d ago, +8)"
       ]
     },
     {
@@ -7515,39 +7777,7 @@
       "reasons": [
         "Funding round (+14)",
         "Australian signal 1/3 (+3)",
-        "recent (4d ago, +8)"
-      ]
-    },
-    {
-      "id": "hl:cap raise crucible broker bonanza gold and ai glory",
-      "company": null,
-      "counterparty": null,
-      "type": "funding",
-      "tags": [
-        "funding"
-      ],
-      "amountAudM": null,
-      "amountText": null,
-      "founderSignal": false,
-      "secondarySignal": false,
-      "auConfidence": 1,
-      "text": "Cap Raise Crucible: Broker bonanza, gold and AI glory Cap Raise Crucible: Broker bonanza, gold and AI glory Business News",
-      "firstSeen": "2026-11-21T00:55:14.477Z",
-      "articles": [
-        {
-          "title": "Cap Raise Crucible: Broker bonanza, gold and AI glory",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUhxXzFBdHU4TXotc1YxYThIRzhta0YxUnVJRlJ3QmVJLVJ5bDc1eU1tazhkbk5wNGd4dVZoOWE2Mm5JS0tkOENPQ2ZyNnRnOWJtdFl2SkRJdGZLYnE4ZkdhX1NDdjdzbHJBMlFmYi0weFk3Q1U0VUIzRTRYcnRkMWdwNy1lN2s2Y3dyMExfLTYta2h0UEE?oc=5",
-          "source": "Business News",
-          "pubDate": "Fri, 20 Nov 2026 06:32:32 GMT",
-          "via": "site-businessnews"
-        }
-      ],
-      "latestPubDate": "2026-11-20T06:32:32.000Z",
-      "score": 25,
-      "reasons": [
-        "Funding round (+14)",
-        "Australian signal 1/3 (+3)",
-        "recent (7d ago, +8)"
+        "recent (5d ago, +8)"
       ]
     },
     {
